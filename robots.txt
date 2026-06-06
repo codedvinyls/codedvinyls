@@ -3,6 +3,7 @@
 User-agent: *
 Allow: /
 Disallow: /assets/jackets/
+Disallow: /new-arrivals-260606.html   # 디스콕스 자켓 제거·우리 촬영본 교체 전까지 색인 보류(260607)
 
 # AI 검색·답변 크롤러 명시 허용 (브랜드 노출·인용)
 User-agent: GPTBot
