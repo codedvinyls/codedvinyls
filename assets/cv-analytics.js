@@ -13,3 +13,17 @@
   gtag('js', new Date());
   gtag('config', GA_ID);
 })();
+
+/* 네이버 애널리틱스 (wcs) — 네이버 검색유입 추적. wa=공개 클라이언트 ID(시크릿 아님). */
+(function () {
+  var NA_ID = 'a855c1ef37a6a8';
+  var w = document.createElement('script');
+  w.async = true;
+  w.src = 'https://wcs.pstatic.net/wcslog.js';
+  w.onload = function () {
+    if (!window.wcs_add) window.wcs_add = {};
+    window.wcs_add['wa'] = NA_ID;
+    if (window.wcs) window.wcs_do();
+  };
+  document.head.appendChild(w);
+})();
