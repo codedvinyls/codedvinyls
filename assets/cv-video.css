@@ -1,0 +1,36 @@
+/* cv-video — 커스텀 동영상 스크러버 (브랜드 옐로, 클릭·드래그 시킹)
+   네이티브 controls 대체. JS 미동작 시 controls fallback 유지(JS가 제거). */
+.cvv{position:relative;width:100%;height:100%}
+.cvv>video{width:100%;height:100%;object-fit:cover;display:block;cursor:pointer}
+.cvv-bar{
+  position:absolute;left:0;right:0;bottom:0;z-index:3;
+  display:flex;align-items:center;gap:10px;
+  padding:18px 12px 10px;
+  background:linear-gradient(to top,rgba(20,19,15,.80),rgba(20,19,15,0));
+  font-family:"Courier New",monospace;
+  opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;
+}
+.cvv:hover .cvv-bar,.cvv.playing .cvv-bar,.cvv.scrubbing .cvv-bar{opacity:1;visibility:visible}
+.cvv-play{
+  flex:none;width:24px;height:24px;padding:0;border:0;background:transparent;
+  color:#fff;cursor:pointer;font-size:12px;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+}
+.cvv-track{
+  position:relative;flex:1;height:18px;display:flex;align-items:center;
+  cursor:pointer;touch-action:none;
+}
+.cvv-rail{position:absolute;left:0;right:0;height:4px;background:rgba(255,255,255,.32);border-radius:2px}
+.cvv-fill{position:absolute;left:0;height:4px;background:#ffcd00;border-radius:2px;width:0}
+.cvv-buf{position:absolute;left:0;height:4px;background:rgba(255,255,255,.22);border-radius:2px;width:0}
+.cvv-knob{
+  position:absolute;left:0;top:50%;width:13px;height:13px;margin-top:-6.5px;
+  border-radius:50%;background:#ffcd00;transform:translateX(-50%);
+  box-shadow:0 0 0 2px rgba(20,19,15,.5);
+}
+.cvv-track:focus-visible{outline:none}
+.cvv-track:focus-visible .cvv-knob{box-shadow:0 0 0 2px rgba(20,19,15,.5),0 0 0 5px rgba(255,205,0,.5)}
+.cvv-time{
+  flex:none;font-size:11px;color:#fff;letter-spacing:.02em;
+  min-width:80px;text-align:right;font-variant-numeric:tabular-nums;
+}

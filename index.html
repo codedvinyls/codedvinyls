@@ -7,6 +7,7 @@
 
 <meta name="description" content="음악이 기록된 순간을 탐구하는 빈티지 바이닐 갤러리. 미국·유럽 오리지널 프레싱 LP 전문. 재즈·클래식·팝록·소울 초판 큐레이션.">
 <link rel="stylesheet" href="assets/cv-nav.css">
+<link rel="stylesheet" href="assets/cv-video.css">
 <link rel="canonical" href="https://codedvinyls.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="코디드바이닐즈">
@@ -106,7 +107,7 @@ img{display:block;max-width:100%}
 .cur-card .archive-tag{margin-top:auto;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;border-top:1px solid var(--line);padding-top:14px}
 
 /* B2 확장 교육 콘텐츠 */
-.feature{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.feature{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
 .feature-card.arrival{background:var(--ink);color:var(--paper)}
 .feature-card.arrival .kicker{color:var(--yellow)}
 .feature-card.arrival .ft{color:var(--paper)}
@@ -154,6 +155,8 @@ img{display:block;max-width:100%}
 .about-info{border-left:1px solid var(--line);padding:clamp(44px,5vw,70px) clamp(24px,3vw,42px);display:grid;gap:16px;align-content:center;background:var(--surface)}
 .about-info div{font-family:var(--mono);font-size:13px;color:var(--muted);line-height:1.6}
 .about-info b{color:var(--ink);font-weight:400}
+.about-mark{display:flex;justify-content:center;padding:0 0 10px}
+.about-mark img{width:72px;height:72px;opacity:.9}
 
 /* VISIT(D) */
 .visit{display:grid;grid-template-columns:1.2fr .8fr;background:var(--surface);border-bottom:1px solid var(--line)}
@@ -225,13 +228,13 @@ footer{background:var(--ink);color:var(--paper)}
     <a class="nav-cell" href="#curation">CURATION<span class="nav-dot"></span></a>
     <a class="nav-cell" href="#about">ABOUT<span class="nav-dot"></span></a>
     <a class="nav-cell" href="#visit">VISIT<span class="nav-dot"></span></a>
-    <a class="nav-cell store" href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">STORE<span class="nav-dot"></span></a>
+    <a class="nav-cell store" href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">SHOP<span class="nav-dot"></span></a>
   </header>
 
   <div class="signal-row">
     <div class="left">
       <span class="tick"></span>
-      <span class="mono">MUSIC AT THE MOMENT IT WAS PRESSED · ORIGINAL PRESSING LP</span>
+      <span class="mono">THE ORIGINAL SOUND · ORIGINAL PRESSING LP</span>
     </div>
     <div class="right">
       <span class="mono">THE VINYL ARCHIVE</span>
@@ -321,12 +324,6 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="fd">래커 커팅부터 스탬퍼 마모, 매트릭스 세대까지 — 초반과 재발매의 음질 차이가 어디서 발생하는지 과학·공학 근거로 풀어봅니다.</div>
           <span class="link">JOURNAL — READ →</span>
         </a>
-        <div class="feature-card coming reveal">
-          <span class="kicker">EDITORIAL</span>
-          <div class="ft">음악사적·역사적 맥락의<br>교육형 아카이브</div>
-          <div class="fd">캐러셀·청음 세션에서 출발한 깊이 있는 큐레이션 콘텐츠가 이어집니다.</div>
-          <span class="link">COMING SOON</span>
-        </div>
       </div>
     </section>
 
@@ -391,10 +388,10 @@ footer{background:var(--ink);color:var(--paper)}
         </div>
       </div>
       <div class="about-info">
+        <div class="about-mark"><img src="assets/cv_symbol_ink.svg" alt=""></div>
         <div>FOCUS · <b>오리지널 초판 · 초반 프레싱 · 컬렉터블</b></div>
         <div>GRADING · <b>Goldmine · Record Collector 혼합</b></div>
         <div>HEAD OFFICE · <b>서울시 강남구 논현로 38길 20</b></div>
-        <div>STORE · <b>코디드바이닐즈 스마트스토어</b></div>
       </div>
     </section>
 
@@ -408,7 +405,7 @@ footer{background:var(--ink);color:var(--paper)}
         <p class="access">서울 지하철 4호선 회현역과 바로 연결된 회현지하쇼핑센터 안에 있습니다. 신세계백화점 본점·남대문시장과 가깝습니다.<br>Directly connected to Hoehyeon Station (Subway Line 4), inside Hoehyeon Underground Shopping Center.</p>
       </div>
       <div class="visit-info reveal">
-        <div>HOURS · <b>월–토 13:00–19:30 · 공휴일 등 휴무 별도 안내</b></div>
+        <div>HOURS · <b>월–토 13:00–19:30 · 공휴일 등 휴무일은 상단 공지를 확인해주세요</b></div>
         <div>TEL · <b>0507-1377-2895</b></div>
         <div>SUBWAY · <b>회현역 Hoehyeon Stn. (Line 4)</b></div>
         <div>MAP · <b>네이버 지도 · 코디드바이닐즈</b></div>
@@ -454,5 +451,6 @@ footer{background:var(--ink);color:var(--paper)}
 })();
 </script>
 <script src="assets/cv-nav.js" defer></script>
+<script src="assets/cv-video.js" defer></script>
 </body>
 </html>
