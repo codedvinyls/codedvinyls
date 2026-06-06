@@ -1,4 +1,19 @@
+# 코디드바이닐즈 codedvinyls.com — robots
+# ⚠ 배포 전까지 페이지 noindex 유지. 실배포 시 noindex 해제 후 이 robots 적용.
 User-agent: *
+Allow: /
+Disallow: /assets/jackets/
+
+# AI 검색·답변 크롤러 명시 허용 (브랜드 노출·인용)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://codedvinyls.com/sitemap.xml

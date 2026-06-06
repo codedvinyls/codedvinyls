@@ -1,0 +1,74 @@
+/* ──────────────────────────────────────────────────────────────
+   CODEDVINYLS 랜딩 네비게이터 (cv-nav) — 2026-06-06
+   전역 빠른이동 FAB(사이트맵 + 이 페이지 섹션) + 긴 글 우측 스크롤스파이 레일.
+   토큰: index.html 6색 상속(--ink/--paper/--yellow/--line/--muted/--surface).
+   마크업은 cv-nav.js가 주입한다. 페이지엔 이 CSS + JS 링크만 추가.
+   ────────────────────────────────────────────────────────────── */
+:root{
+  --cv-ink:#1f1e1b; --cv-paper:#f7f4ec; --cv-yellow:#ffcd00;
+  --cv-line:#e4dcd0; --cv-muted:#817b70; --cv-surface:#fffdf8;
+}
+
+/* ── FAB ── */
+.cv-fab{
+  position:fixed; right:clamp(16px,2.4vw,30px); bottom:clamp(16px,2.4vw,30px);
+  z-index:1100; display:inline-flex; align-items:center; gap:10px;
+  padding:13px 18px; border:1px solid var(--cv-ink); background:var(--cv-yellow);
+  color:var(--cv-ink); font-family:"Courier New",monospace; font-size:12.5px;
+  letter-spacing:.06em; cursor:pointer; box-shadow:0 6px 24px rgba(31,30,27,.18);
+  transition:background .2s,color .2s;
+}
+.cv-fab:hover,.cv-fab[aria-expanded="true"]{background:var(--cv-ink);color:var(--cv-paper)}
+.cv-fab .cv-fab-bars{display:inline-flex;flex-direction:column;gap:3px;flex:none}
+.cv-fab .cv-fab-bars i{display:block;width:16px;height:2px;background:currentColor;transition:transform .2s,opacity .2s}
+.cv-fab[aria-expanded="true"] .cv-fab-bars i:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.cv-fab[aria-expanded="true"] .cv-fab-bars i:nth-child(2){opacity:0}
+.cv-fab[aria-expanded="true"] .cv-fab-bars i:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+.cv-fab .cv-fab-here{max-width:0;overflow:hidden;white-space:nowrap;opacity:0;transition:max-width .3s,opacity .2s}
+.cv-fab.has-here .cv-fab-here{max-width:160px;opacity:1}
+
+/* ── 패널 ── */
+.cv-scrim{position:fixed;inset:0;z-index:1090;background:rgba(31,30,27,.34);opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s}
+.cv-scrim.open{opacity:1;visibility:visible}
+.cv-panel{
+  position:fixed; right:clamp(16px,2.4vw,30px); bottom:calc(clamp(16px,2.4vw,30px) + 58px);
+  z-index:1101; width:min(340px,calc(100vw - 32px)); max-height:min(74vh,640px); overflow:auto;
+  background:var(--cv-surface); border:1px solid var(--cv-ink);
+  box-shadow:0 18px 50px rgba(31,30,27,.26);
+  transform:translateY(10px) scale(.98); transform-origin:bottom right; opacity:0; visibility:hidden;
+  transition:opacity .2s,transform .2s,visibility .2s;
+}
+.cv-panel.open{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.cv-panel .cv-grp{padding:8px 0}
+.cv-panel .cv-grp + .cv-grp{border-top:1px solid var(--cv-line)}
+.cv-panel .cv-grp-h{padding:14px 20px 8px;font-family:"Courier New",monospace;font-size:10.5px;letter-spacing:.1em;color:var(--cv-muted);text-transform:uppercase}
+.cv-panel a{
+  display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  padding:11px 20px;color:var(--cv-ink);text-decoration:none;
+  font-size:14.5px;line-height:1.3;transition:background .15s;
+}
+.cv-panel a:hover,.cv-panel a:focus-visible{background:var(--cv-paper);outline:none}
+.cv-panel a .cv-en{font-family:"Courier New",monospace;font-size:10.5px;color:var(--cv-muted);letter-spacing:.06em;flex:none}
+.cv-panel a.is-current{background:var(--cv-paper)}
+.cv-panel a.is-current .cv-kr{border-bottom:2px solid var(--cv-yellow);padding-bottom:1px}
+.cv-panel a.is-active .cv-kr{font-weight:700}
+.cv-panel a.is-active::before{content:"";width:6px;height:6px;background:var(--cv-yellow);border-radius:50%;flex:none;align-self:center;margin-right:-4px}
+.cv-panel a.ext .cv-en::after{content:" ↗"}
+
+/* ── 우측 스크롤스파이 레일 (긴 글, 데스크톱) ── */
+.cv-rail{position:fixed;top:50%;right:14px;transform:translateY(-50%);z-index:1050;display:flex;flex-direction:column;gap:2px;align-items:flex-end}
+.cv-rail a{display:flex;align-items:center;gap:9px;justify-content:flex-end;padding:5px 2px;color:var(--cv-muted);font-family:"Courier New",monospace;font-size:11px;letter-spacing:.03em}
+.cv-rail a .cv-rail-dot{width:22px;height:2px;background:var(--cv-line);flex:none;transition:width .2s,background .2s}
+.cv-rail a .cv-rail-label{max-width:0;overflow:hidden;white-space:nowrap;opacity:0;transition:max-width .25s,opacity .2s;text-align:right}
+.cv-rail a:hover .cv-rail-label,.cv-rail a.is-active .cv-rail-label{max-width:200px;opacity:1}
+.cv-rail a:hover .cv-rail-dot{background:var(--cv-muted)}
+.cv-rail a.is-active{color:var(--cv-ink)}
+.cv-rail a.is-active .cv-rail-dot{width:34px;background:var(--cv-yellow)}
+
+@media (prefers-reduced-motion: reduce){
+  .cv-fab,.cv-panel,.cv-scrim,.cv-fab-here,.cv-rail a *{transition:none !important}
+  .cv-panel{transform:none}
+}
+/* 좁은 화면: 레일 숨기고 FAB 패널이 섹션 점프 담당 */
+@media(max-width:1240px){ .cv-rail{display:none} }
+@media print{ .cv-fab,.cv-panel,.cv-scrim,.cv-rail{display:none !important} }

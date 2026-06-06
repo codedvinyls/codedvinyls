@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>그레이딩 가이드 | 코디드바이닐즈 CODEDVINYLS | 바이닐 컨디션 등급 기준</title>
+
+<meta name="description" content="코디드바이닐즈 바이닐 컨디션 그레이딩 가이드. 국제 표준 Goldmine과 유럽 표준 Record Collector를 혼합한 등급 기준과 평가 방법 안내.">
+<link rel="stylesheet" href="assets/cv-nav.css">
+<link rel="canonical" href="https://codedvinyls.com/grading.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="코디드바이닐즈">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="그레이딩 가이드 | 코디드바이닐즈 | 바이닐 컨디션 등급 기준">
+<meta property="og:description" content="국제 표준 Goldmine과 유럽 표준 Record Collector를 혼합한 코디드바이닐즈 바이닐 컨디션 그레이딩 기준과 평가 방법.">
+<meta property="og:url" content="https://codedvinyls.com/grading.html">
+<meta property="og:image" content="https://codedvinyls.com/assets/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"그레이딩 가이드 — 바이닐 컨디션 등급 기준","description":"국제 표준 Goldmine과 유럽 표준 Record Collector를 혼합한 코디드바이닐즈 그레이딩 기준.","inLanguage":"ko","author":{"@type":"Organization","name":"코디드바이닐즈"},"publisher":{"@type":"Organization","name":"코디드바이닐즈","logo":{"@type":"ImageObject","url":"https://codedvinyls.com/assets/og-default.jpg"}},"mainEntityOfPage":"https://codedvinyls.com/grading.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"코디드바이닐즈","item":"https://codedvinyls.com/"},{"@type":"ListItem","position":2,"name":"그레이딩"}]}
+</script>
+<style>
+:root{
+  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
+  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
+  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.mono{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:.02em}
+.tick{display:inline-block;width:26px;height:3px;background:var(--yellow);vertical-align:middle;flex:none}
+.display{font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+
+/* 헤더 (홈 상속) */
+.top-grid{display:grid;grid-template-columns:260px repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
+.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.logo-cell img{width:188px;height:auto}
+.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
+.nav-cell:last-child{border-right:0}
+.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
+.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
+.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
+.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
+.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
+
+.signal-row{border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 300px;background:var(--surface)}
+.signal-row .left{display:flex;align-items:center;padding:18px 26px;gap:18px;flex-wrap:wrap}
+.signal-row .right{display:flex;align-items:center;justify-content:flex-end;border-left:1px solid var(--line);padding:18px 26px}
+
+/* 문서 본문 */
+.doc-hero{padding:clamp(48px,6vw,90px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;gap:18px}
+.doc-hero .kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+.doc-hero h1{margin:0;font-size:clamp(28px,4vw,44px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+.doc-hero .lede{font-size:clamp(15px,1.7vw,17px);line-height:1.8;color:var(--muted);max-width:42em}
+
+.grade-scale{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:24px clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--surface)}
+.grade-scale .chip{font-family:var(--mono);font-size:12px;border:1px solid var(--line);padding:6px 12px;letter-spacing:.04em;color:var(--ink)}
+.grade-scale .chip.top{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.grade-scale .sep{color:var(--muted);font-family:var(--mono);font-size:11px}
+.scale-note{padding:18px clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--surface)}
+.scale-note div{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.9}
+
+.doc-section{border-bottom:1px solid var(--line);padding:clamp(40px,5vw,68px) clamp(24px,4vw,56px)}
+.doc-section h2{margin:0 0 22px;font-size:clamp(20px,2.6vw,26px);font-weight:800}
+.doc-section h3{margin:30px 0 12px;font-size:15.5px;font-weight:700}
+.doc-section p{margin:0 0 14px;font-size:15px;line-height:1.85;color:var(--muted);max-width:48em}
+.doc-section ul{margin:0 0 14px;padding:0;list-style:none;display:grid;gap:11px;max-width:48em}
+.doc-section li{font-size:14.5px;line-height:1.7;color:var(--ink);display:flex;gap:12px;align-items:baseline}
+.doc-section li .tick{flex:none;margin-top:8px}
+.doc-section li b{font-weight:700}
+.doc-section .note{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.75;border-left:2px solid var(--line);padding-left:14px;margin:16px 0;max-width:48em}
+.gear{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);max-width:720px;margin:10px 0 16px}
+.gear .col{padding:22px;font-family:var(--mono);font-size:12.5px;line-height:1.9;color:var(--muted)}
+.gear .col:first-child{border-right:1px solid var(--line)}
+.gear .col b{display:block;color:var(--ink);font-weight:700;margin-bottom:10px;letter-spacing:.04em}
+
+.important{background:var(--ink);color:var(--paper);padding:clamp(28px,3vw,40px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
+.important .mono{color:var(--yellow)}
+.important p{margin:10px 0 0;font-size:15px;line-height:1.8;color:rgba(247,244,236,.85);max-width:50em}
+
+.grade-table{display:grid}
+.grade-row{display:grid;grid-template-columns:130px 150px 1fr;gap:20px;padding:24px clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
+.grade-row:last-child{border-bottom:0}
+.grade-row:hover{background:var(--surface)}
+.grade-row .code{font-family:var(--mono);font-weight:800;letter-spacing:.04em;font-size:14px}
+.grade-row .ko{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.grade-row .desc{font-size:14px;line-height:1.75;color:var(--ink);max-width:56em}
+
+footer{background:var(--ink);color:var(--paper)}
+.footer-docs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(247,244,236,.18)}
+.footer-docs a{padding:22px 26px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;display:flex;justify-content:space-between;border-right:1px solid rgba(247,244,236,.18)}
+.footer-docs a:last-child{border-right:0}
+.footer-docs a:hover{color:var(--yellow)}
+.footer-base{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 26px;font-family:var(--mono);font-size:12px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+@media(max-width:1080px){
+  .top-grid{grid-template-columns:1fr 1fr}
+  .logo-cell{grid-column:1/3;border-right:0;border-bottom:1px solid var(--line)}
+  .nav-cell:nth-child(even){border-right:0}
+}
+@media(max-width:680px){
+  .page{border-left:0;border-right:0}
+  .nav-cell{min-height:60px;padding:16px 14px;font-size:11.5px}
+  .signal-row{grid-template-columns:1fr}
+  .signal-row .right{justify-content:flex-start;border-left:0;border-top:1px solid var(--line)}
+  .gear{grid-template-columns:1fr}
+  .gear .col:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .grade-row{grid-template-columns:1fr;gap:6px}
+  .footer-docs{grid-template-columns:1fr}
+  .footer-docs a{border-right:0;border-bottom:1px solid rgba(247,244,236,.18)}
+  .footer-base{flex-direction:column;gap:8px;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="page" id="top">
+
+  <header class="top-grid">
+    <a class="logo-cell" href="index.html">
+      <img src="assets/cv_wordmark_ink.svg" alt="CODEDVINYLS">
+      <span class="logo-sub">코디드바이닐즈</span>
+    </a>
+    <a class="nav-cell" href="index.html#curation">CURATION<span class="nav-dot"></span></a>
+    <a class="nav-cell active" href="grading.html">GRADING<span class="nav-dot"></span></a>
+    <a class="nav-cell" href="index.html#about">ABOUT<span class="nav-dot"></span></a>
+    <a class="nav-cell store" href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">STORE<span class="nav-dot"></span></a>
+  </header>
+
+  <div class="signal-row">
+    <div class="left">
+      <span class="tick"></span>
+      <span class="mono">CONDITION GRADING · BLACK VINYL UNDER 3500–4000K</span>
+    </div>
+    <div class="right">
+      <span class="mono">GOLDMINE + RECORD COLLECTOR</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="doc-hero">
+      <span class="kicker">IDENTIFICATION & GRADING</span>
+      <h1>바이닐 컨디션<br>그레이딩 가이드</h1>
+      <p class="lede">코디드바이닐즈는 국제 표준 골드마인 그레이딩(Goldmine Grading)을 기반으로, 유럽 표준 레코드 컬렉터(Record Collector) 그레이딩의 Excellent(EX) 등급을 혼용해 평가합니다. 어떤 기준으로 레코드를 평가하고 등급을 부여하는지 안내해 드립니다.</p>
+    </div>
+
+    
+    <div class="grade-scale">
+      <span class="chip top">SS</span>
+      <span class="chip top">NM</span>
+      <span class="chip top">NM-</span>
+      <span class="chip top">EX</span>
+      <span class="chip top">VG+</span>
+      <span class="sep">·</span>
+      <span class="chip">VG</span>
+      <span class="chip">G+</span>
+      <span class="chip">G</span>
+      <span class="chip">P</span>
+    </div>
+    <div class="scale-note">
+      <div>· 모든 등급은 외관(육안)과 재생 품질을 종합해 부여합니다.</div>
+      <div>· EX는 코디드바이닐즈 고유 기준에 따라 NM-와 VG+ 사이의 우수 등급으로 운용합니다.</div>
+      <div>· Mint(M)은 부여하지 않습니다. 미개봉은 Still Sealed(SS)로 표기합니다.</div>
+    </div>
+
+    
+    <section class="doc-section">
+      <h2>평가 기준 및 방법</h2>
+      <p>모든 디스크는 DIY 세척액(3차 정제수 95%, 이소프로필알코올 5%)을 무봉제(seamless) 극세사에 분무해 가볍게 세척한 뒤, 기본적으로 육안 검수를 거치고 필요시 사운드 체크를 진행합니다.</p>
+      <div class="note">※ 해당 세척 방식은 당사 검수 목적에 한해 적용되며, 고객 세척을 위한 가이드로 제공되지 않습니다.</div>
+
+      <h3>1-1. 육안 평가 (Eye-Grading)</h3>
+      <p>레코드의 물리적 결함을 식별하여 음질에 미치는 영향을 예측합니다.</p>
+      <p><b>A. 스크래치 및 파손 식별</b></p>
+      <ul>
+        <li><span class="tick"></span><span><b>표면 마크 (Surface Marks)</b> — 깊지 않은 표면 자국. 손톱 스크래치가 해당하며, 재생에 큰 영향을 주지 않습니다.</span></li>
+        <li><span class="tick"></span><span><b>헤어라인 (Hairlines)</b> — 매우 가는 실선. 음반을 넣고 빼는 과정에서 생길 수 있으며, 재생에 미치는 영향은 미미합니다.</span></li>
+        <li><span class="tick"></span><span><b>스크래치 (Scratch)</b> — 주백색(약 3500–4000K)에서 빗각으로 관찰할 때 빛을 제대로 반사하지 못하며, 대체로 손끝에 만져집니다. '틱' 소리나, 심한 경우 스킵(Skip)을 유발합니다.</span></li>
+        <li><span class="tick"></span><span><b>카트리지 스크래치</b> — 안티스케이팅(anti-skating) 제어에 이상이 생겨 골을 따라 형성된 스크래치입니다. 트랙을 가로지르는 일반 스크래치보다 심각하며, 100% 스킵을 유발합니다.</span></li>
+        <li><span class="tick"></span><span><b>파임·파손으로 인한 골 변형</b> — 파임이나 파손으로 소리골이 변형되면 바늘이 골을 넘어가지 못해 재생이 불가능합니다.</span></li>
+      </ul>
+      <div class="note">검수 조명 — 주백색(Natural White, 약 3500–4000K)이 주광색(5000–6500K)보다 유리합니다. 너무 푸른 빛은 표면에서 강하게 튀어 미세 기스를 묻히지만, 주백색은 적절한 대비로 기스의 깊이감과 '하얀 선'을 더 선명하게 드러냅니다.</div>
+
+      <p><b>B. 프레싱 불량 구분 (Defect)</b></p>
+      <ul>
+        <li><span class="tick"></span><span><b>휨 (Warping)</b> — 레코드판이 휘어진 현상. 톤암이 위아래로 심하게 움직이며, 심하면 스킵을 유발합니다.</span></li>
+        <li><span class="tick"></span><span><b>센터 홀 불일치 (Off-centre)</b> — 스핀들 홀이 중심과 어긋나 와우(Wow)·플러터(Flutter) 등 음정 불안정을 유발합니다.</span></li>
+        <li><span class="tick"></span><span><b>논필 (Non-fill / Stitch)</b> — 소리골이 완전히 채워지지 않은 결함. 은색 점·선으로 나타나며 '쉬익' 잡음을 발생시킵니다.</span></li>
+        <li><span class="tick"></span><span><b>표면 기포·돌기 (Bubbles / Pimples)</b> — 표면의 작은 돌출부·기포. 바늘이 지날 때 팝·클릭 잡음을 유발합니다.</span></li>
+      </ul>
+
+      <h3>1-2. 사운드 체크 기준 및 환경</h3>
+      <p>육안 상태가 좋지 않거나 광택을 잃은 디스크, 표면 마이그레이션(얼룩·연흔)이 확인되는 디스크는 반드시 사운드 체크를 진행합니다.</p>
+      <div class="gear">
+        <div class="col"><b>회현동 매장</b>턴테이블 · Pro-Ject Debut Evo Carbon<br>카트리지 · Ortofon 2M Black (침압 1.5g)<br>앰프·스피커 · Pro-Ject MaiA S3 / Speaker Box 3E</div>
+        <div class="col"><b>온라인 스튜디오</b>턴테이블 · Technics SL-1200G<br>카트리지 · Nagaoka MP-500<br>앰프·스피커 · Rega Elicit MK5 / KEF Q15.2</div>
+      </div>
+      <div class="note">※ 본 환경은 기준 환경(reference setup)이며, 청음 결과는 동일 환경에서도 카트리지 상태·톤암 세팅·개별 프레싱 편차에 따라 달라질 수 있습니다.</div>
+
+      <h3>고주파 세척 (Ultrasonic Cleaning) — 제한적 실시</h3>
+      <p>PVC 재질의 물리적 특성을 고려하여 고주파 세척은 극히 제한적으로만 진행합니다. 장기 보관으로 이너슬리브의 대전방지제·오염물질이 표면에 고착되어 일반적인 건식·습식 세척만으로 재생이 불가능하다고 판단되는 경우에 한합니다. 과도한 고주파 진동은 표면의 미세플라스틱 이탈을 유도하여 특유의 음색과 질감을 훼손할 우려가 있기 때문입니다.</p>
+    </section>
+
+    
+    <div class="important">
+      <span class="mono">※ 중요 안내</span>
+      <p>바이닐 그레이딩은 외관 + 재생 품질을 종합적으로 평가합니다. 외관이 깨끗해 보여도 프레싱 결함이나 홈 마모로 낮은 등급을 받을 수 있으며, 반대로 외관상 사용감이 있어도 재생 품질이 우수하면 상위 등급으로 평가될 수 있습니다.</p>
+    </div>
+
+    
+    <section class="doc-section" style="padding-left:0;padding-right:0;padding-bottom:0">
+      <h2 style="padding:0 clamp(24px,4vw,56px)">등급별 상세 가이드</h2>
+      <div class="grade-table">
+        <div class="grade-row"><div class="code">SS</div><div class="ko">미개봉</div><div class="desc">공장 씰드(Factory Sealed)로 미개봉 상태입니다. 미개봉 특성상 청음·재생 평가는 진행하지 않으며, 외관(씰·자켓) 기준으로만 안내합니다.</div></div>
+        <div class="grade-row"><div class="code">NM</div><div class="ko">민트에 준함 (최상)</div><div class="desc">디스크는 음반을 넣고 빼는 과정의 매우 미세한 헤어라인과 이너슬리브 자국만 있을 수 있습니다. 거의 재생 이력이 없는 런아웃 언플레이드(unplayed) 수준입니다. 자켓은 링웨어·컷아웃·엣지 손상·변색이 없는 신품에 준하는 상태입니다.</div></div>
+        <div class="grade-row"><div class="code">NM-</div><div class="ko">민트에 준함 (상)</div><div class="desc">디스크는 NM 대비 이너슬리브 얼룩이 조금 더 있을 수 있으나, 실질적인 재생 이력이 느껴지지 않는 수준을 고수합니다. 자켓은 링웨어·엣지 손상·변색 중 단 한 가지 요소만 경미하게 있을 수 있습니다.</div></div>
+        <div class="grade-row"><div class="code">EX</div><div class="ko">우수</div><div class="desc">디스크 외관에 헤어라인·손톱 스크래치·세척 시 미세한 마찰 흔적(Handling Marks) 등이 있으나, 음골 손상이 없어 훌륭한 음질을 유지합니다. 자켓은 NM ~ NM- 등급에 준하되, 자켓 컷(cut-out)이 있을 경우 EX 등급으로 분류합니다.</div></div>
+        <div class="grade-row"><div class="code">VG+</div><div class="ko">양호 (상)</div><div class="desc">특정 트랙에서 미세한 손상으로 인한 간헐적 잡음이 있을 수 있습니다. 잡음이 따뜻한 빈티지 감성으로 다가올 수 있는 등급입니다(컬렉터 통용 'Strong VG'에 해당). 자켓은 식별 가능한 범위 내 변색·마모·손상이 있습니다.</div></div>
+        <div class="grade-row"><div class="code">VG</div><div class="ko">양호</div><div class="desc">디스크는 런아웃 재생 흔적, 광택 잃음 등 재생 흔적이 많이 보입니다. 미세한 손상과 옅은 스크래치가 부분적으로 얕게 보이지만, 골 안쪽 깊은 손상이 없어 스킵 없이 청음 가능합니다. 자켓은 솔기·척추의 손상과 뜯어짐(torn), 변색·마모가 VG+(생활 사용으로 생긴 가벼운 손상) 대비 뚜렷하게 더 있습니다.</div></div>
+        <div class="grade-row"><div class="code">G+</div><div class="ko">보통 (상)</div><div class="desc">디스크는 확실히 만져지는 스커프가 있으며, 반복적인 틱 잡음 구간이 있습니다. 자켓은 솔기·척추 손상·변색·링웨어 등 복합적 손상이 있으나 형태를 유지하고, 음반을 자켓에 보관할 수 있는 상태입니다.</div></div>
+        <div class="grade-row"><div class="code">G</div><div class="ko">보통</div><div class="desc">눈에 띄는 스크래치·파손이 확인되어, 밑잡음과 틱·덜컹거리는 잡음이 청음에 거슬리는 상태입니다. 음골 변형·스크래치로 밑잡음이 존재하며, 보편적인 침압(1.5~4.0g)에서 간헐적 튐(Jump)이 있을 수 있습니다. 자켓은 변색·마모·손상이 동시다발적입니다.</div></div>
+        <div class="grade-row"><div class="code">P</div><div class="ko">열악</div><div class="desc">디스크는 심한 긁힘으로 인한 스킵, 튐, 깊은 홈 손상으로 인한 잡음이 심합니다. 자켓은 상태가 매우 좋지 않으며 기능적으로도 손상이 심한 상태입니다.</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-docs">
+      <a href="grading.html"><span>GRADING — 그레이딩 기준</span><span>→</span></a>
+      <a href="standard.html"><span>ARCHIVAL — 보존 관리 기준</span><span>→</span></a>
+    </div>
+    <div class="footer-base">
+      <span>← <a href="index.html" style="border-bottom:1px solid var(--yellow)">CODEDVINYLS HOME</a></span>
+      <span>THE VINYL ARCHIVE</span>
+    </div>
+  </footer>
+</div>
+<script src="assets/cv-nav.js" defer></script>
+</body>
+</html>
