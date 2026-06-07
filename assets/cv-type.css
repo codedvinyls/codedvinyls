@@ -1,0 +1,52 @@
+/* ============================================================
+   CODEDVINYLS — Web Typography SOT v0  (2026-06-07)
+   이 파일이 웹(랜딩+저널) 타이포 정본. 각 페이지 <head> 마지막에 로드되어
+   인라인 <style>의 :root 토큰을 의도적으로 덮어쓴다(override layer).
+   SOT 문서: _design/intel/typography_system_v0_20260607.md
+   폰트 실로드(페이지 head): Archivo(영문 디스플레이) + IBM Plex Mono(라벨/메타)
+                            + Pretendard(국문 본문, jsDelivr dynamic-subset)
+   ============================================================ */
+
+:root{
+  --sans:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Segoe UI",system-ui,sans-serif;
+  --display:"Archivo","Pretendard Variable","Pretendard","Apple SD Gothic Neo",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,"Courier New",monospace;
+  --muted:#655f54;        /* 기존 #817b70 → paper 대비 ~5.3:1 (WCAG AA). 라벨·메타·수치용 */
+  --muted-strong:#46413a; /* 본문성 보조 텍스트(리드·덱·카드 설명) ~7:1 */
+}
+
+/* --- 렌더링 품질 --- */
+body{
+  font-family:var(--sans);
+  line-height:1.65;                 /* 국문 인지 기준 (기존 1.5 → 1.65) */
+  letter-spacing:normal;            /* 국문 본문엔 트래킹 없음 (자간 누수 차단) */
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+}
+
+/* --- 디스플레이: 영문은 Archivo, 한글은 자동 Pretendard 폴스루 --- */
+.display{font-family:var(--display)}
+.hero-copy h1,.art-hero h1{font-family:var(--display);word-break:keep-all}
+.cur-card .t,.li-card .t,.feature-card .ft,.prose h2,.prose h3{
+  font-family:var(--display);
+  font-weight:700;                  /* 카드·소제목 800→700 (소형에서 800은 둔탁) */
+  letter-spacing:-.005em;
+  word-break:keep-all;
+}
+
+/* --- 본문성 텍스트: 대비·행간 확보 --- */
+.hero-copy .lede,.art-hero .dek,.feature-card .fd{
+  color:var(--muted-strong);
+  line-height:1.8;
+  word-break:keep-all;
+}
+.prose p{color:#262420;line-height:1.95;word-break:keep-all}
+.prose .lead{color:var(--ink)}
+
+/* --- 모노 라벨/메타 시그니처 (IBM Plex Mono) --- */
+.mono,.kicker,.cur-card .kicker,.li-card .kicker,.feature-card .kicker,
+.nav-cell,.byline,.crumb,figure.fig figcaption,.spec-grid div,
+.cur-card .a,.cur-card .meta div,.li-card .a,.logo-sub{
+  font-family:var(--mono);
+}
