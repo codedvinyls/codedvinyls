@@ -43,6 +43,9 @@ body{
 }
 .prose p{color:#262420;line-height:1.95;word-break:keep-all}
 .prose .lead{color:var(--ink)}
+/* 다크 배경 callout: 본문색(어두움)이 덮어써 안 보이던 것 복구 — 밝은 글자 (0,2,1로 .prose p 이김) */
+.prose .callout p,.callout p{color:rgba(247,244,236,.94)}
+.prose .callout a,.callout a{color:var(--yellow)}
 
 /* --- 모노 라벨/메타 시그니처 (IBM Plex Mono) --- */
 .mono,.kicker,.cur-card .kicker,.li-card .kicker,.feature-card .kicker,
