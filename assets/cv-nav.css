@@ -72,3 +72,62 @@
 /* 좁은 화면: 레일 숨기고 FAB 패널이 섹션 점프 담당 */
 @media(max-width:1240px){ .cv-rail{display:none} }
 @media print{ .cv-fab,.cv-panel,.cv-scrim,.cv-rail{display:none !important} }
+
+/* ── 장르 서브스트립 (genre/journal/guide — gen_pages 주입) ───────────────
+   상단바 1차 nav는 깔끔히 유지하고, 장르 전환·거미줄은 이 얇은 모노 스트립이
+   담당. 정적 <a>(JS 비의존 — 검색 복리). 토큰은 페이지 :root에서 상속. */
+.genre-strip{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--line,#e3ddd0);
+  background:var(--paper,#faf7f0);font-family:var(--mono,'IBM Plex Mono',monospace)}
+.genre-strip a{flex:1 1 auto;min-width:88px;text-align:center;padding:11px 14px;
+  font-size:11.5px;letter-spacing:.12em;color:var(--ink,#1a1a1a);text-decoration:none;
+  border-right:1px solid var(--line,#e3ddd0);transition:background .18s,color .18s}
+.genre-strip a:last-child{border-right:0}
+.genre-strip a:hover{background:var(--ink,#1a1a1a);color:var(--paper,#faf7f0)}
+.genre-strip a[aria-current="page"]{background:var(--yellow,#ffcd00);color:var(--ink,#1a1a1a);font-weight:600}
+@media(max-width:560px){
+  .genre-strip a{flex:1 1 50%;min-width:0;border-bottom:1px solid var(--line,#e3ddd0)}
+  .genre-strip a:nth-child(even){border-right:0}
+}
+
+/* ── 장르 게이트웨이 밴드 (genre 허브 → 스마트스토어 장르 카테고리 깔때기) ──
+   허브가 입구이고 CTA는 스토어 장르 카테고리로. 본문 바닥, 잉크 풀폭 밴드.
+   gen_pages.apply_genre_gateway가 manifest store_category 있는 genre에만 주입. */
+.genre-gateway{background:var(--ink,#1f1e1b);color:var(--paper,#f7f4ec);
+  border-top:1px solid var(--line,#e4dcd0);
+  padding:clamp(40px,5vw,64px) clamp(24px,4vw,56px)}
+.genre-gateway .gw-meta{font-family:var(--mono,'IBM Plex Mono',ui-monospace,monospace);
+  font-size:12px;letter-spacing:.08em;color:rgba(247,244,236,.6);
+  display:flex;align-items:center;gap:10px;margin:0 0 18px}
+.genre-gateway .gw-title{margin:0 0 12px;font-size:clamp(22px,3vw,30px);
+  font-weight:800;line-height:1.25;max-width:760px}
+.genre-gateway .gw-sub{margin:0 0 26px;font-size:16px;line-height:1.8;
+  color:rgba(247,244,236,.82);max-width:680px}
+.genre-gateway .gw-cta{display:inline-flex;align-items:center;gap:10px;
+  background:var(--yellow,#ffcd00);color:var(--ink,#1f1e1b);font-weight:700;
+  font-size:15px;padding:15px 26px;letter-spacing:.01em;
+  transition:background .18s,transform .18s}
+.genre-gateway .gw-cta:hover{background:var(--paper,#f7f4ec);transform:translateX(3px)}
+
+/* ── 상단바 nav 레이아웃 중앙화 (gen_pages 주입 nav) ───────────────────────
+   nav 셀 개수를 5(+장르)로 늘리면서 페이지별 인라인 grid(repeat(4,1fr))와 칸수가
+   어긋남. 16개 인라인 CSS를 건드리지 않고, 더 높은 specificity(.page>.top-grid)로
+   셀 개수 무관한 flex로 덮어쓴다. 향후 N셀에도 안전. */
+.page > .top-grid{display:flex;flex-wrap:wrap}
+.page > .top-grid > .logo-cell{flex:0 0 260px}
+.page > .top-grid > .nav-cell{flex:1 1 0;min-width:0}
+/* 중간폭(681~1080)·모바일: 인라인 CSS의 104px 거대 셀이 2×2로 쌓여 헤더가 첫 화면을
+   다 먹음(위계 붕괴, 대표 지적 260610) → 슬림 바 압축. 데스크톱(>1080) 불변. */
+@media(max-width:1080px){
+  .page > .top-grid > .logo-cell{flex:0 0 100%;padding:14px 24px;border-bottom:1px solid var(--line,#e4dcd0);
+    display:flex;flex-direction:row;align-items:center;gap:12px}
+  .page > .top-grid > .logo-cell img{width:150px}
+  .page > .top-grid > .logo-cell .logo-sub{margin:0}
+  .page > .top-grid > .nav-cell{flex:1 1 0;min-height:0;padding:14px 14px;align-items:center;font-size:11.5px}
+}
+@media(max-width:680px){
+  .page > .top-grid > .nav-cell{flex:1 1 50%;min-height:0;padding:13px 14px;align-items:center}
+}
+
+/* 위키형 거미줄 — 본문 엔티티 자동 링크(gen_pages apply_entity_links) */
+.entity-link{border-bottom:1px solid var(--yellow,#ffcd00);transition:background .15s}
+.entity-link:hover{background:var(--yellow,#ffcd00)}

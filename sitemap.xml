@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://codedvinyls.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://codedvinyls.com/new-arrivals-260606.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://codedvinyls.com/online-update-260605.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://codedvinyls.com/journal-original-pressing.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://codedvinyls.com/journal-shuggie-otis.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://codedvinyls.com/journal-george-braith.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://codedvinyls.com/grading.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://codedvinyls.com/standard.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://codedvinyls.com/update/2026-06-05/</loc><lastmod>2026-06-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://codedvinyls.com/arrivals/2026-06-06/</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://codedvinyls.com/update/2026-06-10/</loc><lastmod>2026-06-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://codedvinyls.com/guide/archival-standard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://codedvinyls.com/label/blue-note/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://codedvinyls.com/genre/classical/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://codedvinyls.com/label/deutsche-grammophon/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://codedvinyls.com/genre/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://codedvinyls.com/journal/george-braith-soul-stream/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://codedvinyls.com/guide/grading/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://codedvinyls.com/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://codedvinyls.com/genre/jazz/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://codedvinyls.com/label/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://codedvinyls.com/guide/original-pressing/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://codedvinyls.com/label/prestige/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://codedvinyls.com/genre/rock/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://codedvinyls.com/journal/shuggie-otis-freedom-flight/</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://codedvinyls.com/genre/soul/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://codedvinyls.com/label/verve-records/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

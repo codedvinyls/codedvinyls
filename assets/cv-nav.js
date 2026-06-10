@@ -7,21 +7,33 @@
   "use strict";
   if (window.__cvNavLoaded) return; window.__cvNavLoaded = true;
 
-  // ── 사이트맵 정본 ──
+  // ── 사이트맵 정본 (디렉토리식·영속 URL — 변경=301) ──
   var SITE = [
-    { kr: "홈",          en: "HOME",         href: "index.html" },
-    { kr: "신보 입고",    en: "NEW ARRIVALS", href: "new-arrivals-260606.html" },
-    { kr: "큐레이션",     en: "CURATION",     href: "index.html#curation" },
-    { kr: "청음 세션",    en: "LISTENING",    href: "index.html#listening" },
-    { kr: "저널",        en: "JOURNAL",      href: "journal-original-pressing.html" },
-    { kr: "그레이딩",     en: "GRADING",      href: "grading.html" },
-    { kr: "보존 관리",    en: "ARCHIVAL",     href: "standard.html" },
-    { kr: "매장 방문",    en: "VISIT",        href: "index.html#visit" },
+    { kr: "홈",          en: "HOME",         href: "/" },
+    { kr: "신보 입고",    en: "NEW ARRIVALS", href: "/arrivals/2026-06-06/" },
+    { kr: "큐레이션",     en: "CURATION",     href: "/#curation" },
+    { kr: "청음 세션",    en: "LISTENING",    href: "/#listening" },
+    { kr: "장르",        en: "GENRES",       href: "/genre/" },
+    { kr: "— 재즈",      en: "JAZZ",         href: "/genre/jazz/" },
+    { kr: "— 록",       en: "ROCK",         href: "/genre/rock/" },
+    { kr: "— 클래식",    en: "CLASSICAL",    href: "/genre/classical/" },
+    { kr: "— 소울",      en: "SOUL",         href: "/genre/soul/" },
+    { kr: "레이블",       en: "LABELS",       href: "/label/" },
+    { kr: "저널",        en: "JOURNAL",      href: "/guide/original-pressing/" },
+    { kr: "그레이딩",     en: "GRADING",      href: "/guide/grading/" },
+    { kr: "보존 관리",    en: "ARCHIVAL",     href: "/guide/archival-standard/" },
+    { kr: "매장 방문",    en: "VISIT",        href: "/#visit" },
     { kr: "스토어",       en: "STORE",        href: "https://smartstore.naver.com/codedvinyls", ext: true }
   ];
 
-  var page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  function fileOf(href) { return (href.split("#")[0].split("/").pop() || "index.html").toLowerCase(); }
+  // 경로 정규화(디렉토리식 active 매칭 — 파일명 비교는 디렉토리 URL에서 전부 index.html로 축약돼 오탐)
+  function normPath(p) {
+    p = (p || "/").replace(/^https?:\/\/[^/]+/, "").split("#")[0].split("?")[0];
+    if (!p) p = "/";
+    if (!/\.[a-z0-9]+$/i.test(p) && p.charAt(p.length - 1) !== "/") p += "/";
+    return p.toLowerCase();
+  }
+  var page = normPath(location.pathname);
 
   // ── 이 페이지 섹션 수집 ──
   function slug(s, i) {
@@ -95,7 +107,7 @@
     a.innerHTML = '<span class="cv-kr"></span><span class="cv-en"></span>';
     a.querySelector(".cv-kr").textContent = item.kr;
     a.querySelector(".cv-en").textContent = item.en;
-    if (!item.ext && fileOf(item.href) === page && item.href.indexOf("#") === -1) {
+    if (!item.ext && item.href.indexOf("#") === -1 && normPath(item.href) === page) {
       a.classList.add("is-current"); a.setAttribute("aria-current", "page");
     }
     g2.appendChild(a);

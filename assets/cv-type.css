@@ -1,11 +1,5 @@
-/* ============================================================
-   CODEDVINYLS — Web Typography SOT v0  (2026-06-07)
-   이 파일이 웹(랜딩+저널) 타이포 정본. 각 페이지 <head> 마지막에 로드되어
-   인라인 <style>의 :root 토큰을 의도적으로 덮어쓴다(override layer).
-   SOT 문서: _design/intel/typography_system_v0_20260607.md
-   폰트 실로드(페이지 head): Archivo(영문 디스플레이) + IBM Plex Mono(라벨/메타)
-                            + Pretendard(국문 본문, jsDelivr dynamic-subset)
-   ============================================================ */
+/* CODEDVINYLS web typography.
+   Loaded after page styles to provide shared type and contrast defaults. */
 
 :root{
   --sans:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Segoe UI",system-ui,sans-serif;
