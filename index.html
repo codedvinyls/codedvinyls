@@ -238,6 +238,27 @@ footer{background:var(--ink);color:var(--paper)}
   .footer-docs a,.footer-channels a{border-right:0;border-bottom:1px solid rgba(247,244,236,.18)}
   .footer-base{flex-direction:column;gap:10px;align-items:flex-start}
 }
+
+/* ── B안: NEW IN 갤러리 (대표 확정 260613) ──
+   이미지 카드 2장=2열 갤러리(3:4 세로 썸네일+액자 매트), 에디토리얼=룰드 인덱스 행.
+   기존 @media .feature{1fr} 뒤에 와야 하므로 이 블록은 스타일 끝에 둔다(순서 의존). */
+.feature--gallery{grid-template-columns:repeat(2,1fr)}
+.feature--gallery .feature-card{padding:clamp(40px,5vw,72px) clamp(28px,4.5vw,64px) clamp(36px,4.5vw,56px);gap:0;min-height:0}
+.feature--gallery .thumb{width:100%;max-width:none;height:auto;margin:0 0 30px;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line)}
+.feature--gallery .kicker{margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.feature--gallery .kicker .tick{width:18px;height:3px}
+.feature--gallery .ft{font-size:clamp(20px,2vw,26px);line-height:1.32;margin-bottom:12px}
+.feature--gallery .fd{font-size:15px;line-height:1.8;max-width:30em}
+.feature--gallery .link{margin-top:28px}
+.journal-row{display:flex;align-items:baseline;gap:28px;border-top:1px solid var(--line);padding:26px clamp(28px,4.5vw,64px);font-family:var(--mono)}
+.journal-row .jt{font-size:14px;color:var(--ink);letter-spacing:.02em;font-family:var(--sans);font-weight:600}
+.journal-row .link{margin-left:auto;font-size:12px;color:var(--muted)}
+.journal-row:hover .link{color:var(--ink)}
+@media(max-width:1080px){.feature--gallery{grid-template-columns:1fr}}
+@media(max-width:680px){
+  .journal-row{flex-wrap:wrap;gap:10px}
+  .journal-row .link{margin-left:0;flex:1 1 100%}
+}
 </style>
 </head>
 <body>
@@ -305,30 +326,28 @@ footer{background:var(--ink);color:var(--paper)}
         <span class="more">최신 입고 · 온라인 업데이트</span>
       </div>
 
-      <div class="feature">
-        <a class="feature-card arrival reveal" href="/arrivals/2026-06-13/">
-          <img class="thumb" src="assets/newin/newin-offline-260613.webp" alt="6월 13일 매장 입고 — 입고 영상 스틸, 새로 들어온 재즈·록·소울 음반" loading="lazy" width="1200" height="900">
-          <span class="kicker">매장 신보 · 6월 2주차</span>
+      <div class="feature feature--gallery">
+        <a class="feature-card reveal" href="/arrivals/2026-06-13/">
+          <img class="thumb" src="assets/newin/newin-offline-260613-p34.webp" alt="6월 13일 매장 입고 — 입고 영상 스틸, 새로 들어온 재즈·록·소울 음반" loading="lazy" width="900" height="1200">
+          <span class="kicker"><span class="tick"></span>매장 신보 · 6월 2주차</span>
           <div class="ft">1950년대 모노 초반부터<br>퍼플 바이닐까지, 서른네 장</div>
-          <div class="fd">6월 13일 회현 매장에 들어가는 재즈·록·소울. Count Basie의 1957년 Verve 모노 초반과 Cream 〈Wheels Of Fire〉 2LP, KC-600 퍼플 바이닐의 The Police 〈Synchronicity〉가 입고 영상과 함께 기록되어 있습니다.</div>
+          <div class="fd">Sarah Vaughan의 재즈 보컬, Billy Cobham의 퓨전 — 입고 영상과 함께 한 장씩 적어 두었습니다.</div>
           <span class="link">입고 기록 보기 →</span>
         </a>
         <a class="feature-card reveal" href="/update/2026-06-12/">
-          <img class="thumb" src="assets/newin/newin-online-260612.webp" alt="6월 12일 온라인 업데이트 — 재즈와 클래식 자켓 그리드" loading="lazy" width="1200" height="900">
+          <img class="thumb" src="assets/newin/newin-online-260612-p34.webp" alt="6월 12일 온라인 업데이트 — 재즈와 클래식 자켓 그리드" loading="lazy" width="900" height="1200">
           <span class="kicker">온라인 신보 · 6월 2주차</span>
           <div class="ft">재즈와 클래식,<br>예순 장이 새로</div>
-          <div class="fd">6월 12일 온라인에 새로 올라온 재즈와 클래식 예순 장. Bill Evans·Duke Ellington부터 Carlos Kleiber·〈아마데우스〉 사운드트랙까지, 플립 영상과 자켓 그리드에 전 음반 상품 직링크를 함께 담았습니다.</div>
+          <div class="fd">Bill Evans부터 〈아마데우스〉 사운드트랙까지, 전 음반에 상품 직링크를 담았습니다.</div>
           <span class="link">온라인 업데이트 보기 →</span>
         </a>
-        
-        <a class="feature-card reveal" href="/guide/original-pressing/">
-          <span class="kicker">EDITORIAL · 식별 노트</span>
-          <div class="ft">오리지널 초반 프레싱을<br>찾는 이유</div>
-          <div class="fd">래커 커팅부터 스탬퍼 마모, 매트릭스 세대까지 — 초반과 재발매의 음질 차이가 어디서 발생하는지 과학·공학 근거로 풀어봅니다.</div>
-          <span class="link">JOURNAL — READ →</span>
-        </a>
-        
       </div>
+
+      <a class="journal-row reveal" href="/guide/original-pressing/">
+        <span class="kicker">EDITORIAL · 식별 노트</span>
+        <span class="jt">오리지널 초반 프레싱을 찾는 이유</span>
+        <span class="link">JOURNAL — READ →</span>
+      </a>
     </section>
 
     
