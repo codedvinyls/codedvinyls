@@ -250,9 +250,20 @@ footer{background:var(--ink);color:var(--paper)}
 .feature--gallery .ft{font-size:clamp(20px,2vw,26px);line-height:1.32;margin-bottom:12px}
 .feature--gallery .fd{font-size:15px;line-height:1.8;max-width:30em}
 .feature--gallery .link{margin-top:28px}
-.feature--notice{display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--line);padding:clamp(28px,3.5vw,44px) clamp(28px,4.5vw,64px);min-height:0}
-.feature--notice .ft{font-size:clamp(19px,2vw,24px);line-height:1.32}
-.feature--notice .fd{max-width:40em}
+/* CD 코너 소식 — hero 직후 풀폭 이미지 띠 (260613) */
+.cd-band{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:stretch;border-bottom:1px solid var(--line);background:var(--ink);color:var(--paper);text-decoration:none}
+.cd-band-img{width:100%;height:100%;min-height:240px;max-height:420px;object-fit:cover;display:block}
+.cd-band-copy{display:flex;flex-direction:column;justify-content:center;gap:14px;padding:clamp(32px,4vw,56px) clamp(28px,4.5vw,64px)}
+.cd-band .kicker{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--paper)}
+.cd-band .kicker .tick{width:18px;height:3px;background:var(--yellow,#FFCD00)}
+.cd-band .ft{font-size:clamp(24px,2.6vw,34px);line-height:1.18;font-weight:800;letter-spacing:-.01em}
+.cd-band .fd{font-size:clamp(14px,1.4vw,16px);line-height:1.75;color:#d8d4cc;max-width:34em}
+.cd-band .link{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--paper);opacity:.85}
+.cd-band:hover .link{opacity:1}
+@media(max-width:760px){
+  .cd-band{grid-template-columns:1fr}
+  .cd-band-img{max-height:300px;order:-1}
+}
 .journal-row{display:flex;align-items:baseline;gap:28px;border-top:1px solid var(--line);padding:26px clamp(28px,4.5vw,64px);font-family:var(--mono)}
 .journal-row .jt{font-size:14px;color:var(--ink);letter-spacing:.02em;font-family:var(--sans);font-weight:600}
 .journal-row .link{margin-left:auto;font-size:12px;color:var(--muted)}
@@ -323,6 +334,16 @@ footer{background:var(--ink);color:var(--paper)}
       </div>
     </section>
 
+    <a class="cd-band reveal" href="/cd/">
+        <img class="cd-band-img" src="/assets/cd-corner-1600x900.jpg" alt="회현 매장에 쌓인 클래식·재즈·팝록 CD" loading="lazy" width="1600" height="900">
+        <div class="cd-band-copy">
+          <span class="kicker"><span class="tick"></span>NEW · CD CORNER</span>
+          <div class="ft">CD 코너를 열었습니다</div>
+          <div class="fd">클래식 7,000원, 재즈와 팝록 9,000원. 별도 그레이딩 없이 매장에서 직접 보고 고르는 자리입니다.</div>
+          <span class="link">CD 코너 안내 보기 →</span>
+        </div>
+      </a>
+
     
     <section class="latest" id="latest">
       <div class="section-head">
@@ -346,13 +367,6 @@ footer{background:var(--ink);color:var(--paper)}
           <span class="link">온라인 업데이트 보기 →</span>
         </a>
       </div>
-
-      <a class="feature-card feature--notice reveal" href="/cd/">
-          <span class="kicker">CD · 균일가 코너</span>
-          <div class="ft">클래식·재즈·팝록<br>CD 코너를 열었습니다</div>
-          <div class="fd">클래식은 7,000원, 재즈와 팝록은 9,000원. 별도 그레이딩 없이 매장에서 직접 보고 고르는 자리입니다.</div>
-          <span class="link">CD 코너 안내 보기 →</span>
-        </a>
 
       <a class="journal-row reveal" href="/guide/original-pressing/">
         <span class="kicker">EDITORIAL · 식별 노트</span>
