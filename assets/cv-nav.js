@@ -22,6 +22,7 @@
     { kr: "저널",        en: "JOURNAL",      href: "/guide/original-pressing/" },
     { kr: "그레이딩",     en: "GRADING",      href: "/guide/grading/" },
     { kr: "보존 관리",    en: "ARCHIVAL",     href: "/guide/archival-standard/" },
+    { kr: "CD 코너",     en: "CD",           href: "/cd/" },
     { kr: "매장 방문",    en: "VISIT",        href: "/#visit" },
     { kr: "스토어",       en: "STORE",        href: "https://smartstore.naver.com/codedvinyls", ext: true }
   ];
