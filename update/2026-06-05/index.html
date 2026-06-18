@@ -118,6 +118,21 @@ img{display:block;max-width:100%}
 .cta-band .sub{font-family:var(--mono);font-size:12.5px;color:rgba(247,244,236,.72);letter-spacing:.04em;max-width:40em}
 .cta-band .btn{display:inline-flex;align-items:center;gap:12px;padding:17px 34px;font-family:var(--mono);font-size:13.5px;letter-spacing:.05em;background:var(--yellow);color:var(--ink);border:1px solid var(--yellow);margin-top:6px}
 .cta-band .btn:hover{background:var(--paper);border-color:var(--paper)}
+/* ── 회차 pager: 이전/다음 입고 (260618) ── */
+.update-pager{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.pg-cell{display:flex;align-items:center;gap:16px;padding:clamp(20px,2.5vw,30px) clamp(20px,3vw,40px);background:var(--paper);min-height:104px}
+.pg-cell.pg-next{flex-direction:row-reverse;text-align:right}
+.pg-cell.pg-empty{background:var(--surface)}
+a.pg-cell:hover{background:var(--surface)}
+.pg-cover{flex:0 0 auto;width:64px;aspect-ratio:1/1;border:1px solid var(--line);overflow:hidden;background:var(--surface)}
+.pg-cover img{width:100%;height:100%;object-fit:cover}
+.pg-text{display:flex;flex-direction:column;gap:5px;min-width:0}
+.pg-label{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);display:flex;align-items:center;gap:7px}
+.pg-next .pg-label{flex-direction:row-reverse}
+.pg-arrow{color:var(--ink)}
+.pg-date{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.pg-title{font-size:14px;line-height:1.4;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:680px){.update-pager{grid-template-columns:1fr}.pg-cell.pg-empty{display:none}}
 
 footer{background:var(--ink);color:var(--paper)}
 .footer-docs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(247,244,236,.18)}
@@ -1304,6 +1319,19 @@ footer{background:var(--ink);color:var(--paper)}
       <div class="sub">위 음반들은 코디드바이닐즈 스마트스토어에 올라가 있습니다. 자켓·음반 등급은 상품 라벨에 그대로 표기되어 있습니다.</div>
       <a class="btn" href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">스마트스토어 바로가기 →</a>
     </div>
+    
+    <nav class="update-pager" aria-label="회차 이동">
+        <span class="pg-cell pg-empty" aria-hidden="true"></span>
+        <a class="pg-cell pg-next" href="/update/2026-06-10/">
+          <div class="pg-cover"><img src="/assets/online/ou-260610-poprock1.jpg" alt="온라인 업데이트 2026.06.10 — 록·팝 / 포크·블루스" loading="lazy"></div>
+          <div class="pg-text">
+            <span class="pg-label">다음 입고<span class="pg-arrow">→</span></span>
+            <span class="pg-date">2026.06.10</span>
+            <span class="pg-title">온라인 업데이트 2026.06.10 — 록·팝 / 포크·블루스</span>
+          </div>
+        </a>
+    </nav>
+    
   </article>
 
   <footer>

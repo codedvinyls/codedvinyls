@@ -273,6 +273,19 @@ footer{background:var(--ink);color:var(--paper)}
   .journal-row{flex-wrap:wrap;gap:10px}
   .journal-row .link{margin-left:0;flex:1 1 100%}
 }
+/* ── 지난 입고 레일 (260618: 홈 아카이브 입구) ── */
+.home-updates{border-bottom:1px solid var(--line);padding:clamp(28px,3.5vw,44px) clamp(24px,4vw,56px)}
+.hu-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:20px}
+.hu-label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--muted)}
+.hu-all{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ink);border-bottom:2px solid var(--yellow);padding-bottom:2px;white-space:nowrap}
+.hu-rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(150px,1fr);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+.hu-chip{scroll-snap-align:start;display:flex;flex-direction:column;gap:10px}
+.hu-cover{aspect-ratio:1/1;border:1px solid var(--line);background:var(--surface);overflow:hidden}
+.hu-cover img{width:100%;height:100%;object-fit:cover}
+.hu-chip:hover .hu-cover{border-color:var(--ink)}
+.hu-date{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted)}
+.hu-title{font-size:13.5px;line-height:1.45;font-weight:600;color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:680px){.hu-rail{grid-auto-columns:minmax(132px,44%)}}
 </style>
 </head>
 <body>
@@ -368,6 +381,29 @@ footer{background:var(--ink);color:var(--paper)}
           <span class="link">온라인 업데이트 보기 →</span>
         </a>
       </div>
+
+      
+      <div class="home-updates">
+        <div class="hu-head"><span class="hu-label">지난 입고</span><a class="hu-all" href="/update/">전체 보기 →</a></div>
+        <div class="hu-rail">
+        <a class="hu-chip" href="/update/2026-06-12/">
+          <div class="hu-cover"><img src="/assets/online/ou-260612-jazz.jpg" alt="온라인 업데이트 2026.06.12 — 재즈 / 클래식" loading="lazy"></div>
+          <span class="hu-date">2026.06.12</span>
+          <span class="hu-title">온라인 업데이트 2026.06.12 — 재즈 / 클래식</span>
+        </a>
+        <a class="hu-chip" href="/update/2026-06-10/">
+          <div class="hu-cover"><img src="/assets/online/ou-260610-poprock1.jpg" alt="온라인 업데이트 2026.06.10 — 록·팝 / 포크·블루스" loading="lazy"></div>
+          <span class="hu-date">2026.06.10</span>
+          <span class="hu-title">온라인 업데이트 2026.06.10 — 록·팝 / 포크·블루스</span>
+        </a>
+        <a class="hu-chip" href="/update/2026-06-05/">
+          <div class="hu-cover"><img src="/assets/online/ou-260605-poprock.jpg" alt="온라인 업데이트 2026.06.05 — 록·팝록 / 클래식" loading="lazy"></div>
+          <span class="hu-date">2026.06.05</span>
+          <span class="hu-title">온라인 업데이트 2026.06.05 — 록·팝록 / 클래식</span>
+        </a>
+        </div>
+      </div>
+      
 
       <a class="journal-row reveal" href="/guide/original-pressing/">
         <span class="kicker">EDITORIAL · 식별 노트</span>
