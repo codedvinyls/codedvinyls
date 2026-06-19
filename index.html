@@ -231,6 +231,7 @@ footer{background:var(--ink);color:var(--paper)}
   .signal-row{grid-template-columns:1fr}
   .signal-row .right{justify-content:flex-start;border-left:0;border-top:1px solid var(--line)}
   .notice{flex-direction:column;align-items:flex-start;gap:10px}
+  .notice span{width:100%}   /* 260619: 모바일 공지 텍스트 줄바꿈(가로 오버플로우 차단) */
   .notice .go{margin-left:0}
   .hero-actions .cta{flex:1 1 100%;justify-content:center}
   .cur-card{flex:0 0 86%}
@@ -286,6 +287,22 @@ footer{background:var(--ink);color:var(--paper)}
 .hu-date{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted)}
 .hu-title{font-size:13.5px;line-height:1.45;font-weight:600;color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 @media(max-width:680px){.hu-rail{grid-auto-columns:minmax(132px,44%)}}
+/* ── Archive 입구 블록 (260619 개편: moat 전면 · 토큰 재사용) ── */
+.archive{background:var(--surface);border-bottom:1px solid var(--line)}
+.arch-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.arch-col{border-right:1px solid var(--line);padding:clamp(28px,3vw,40px) clamp(24px,3vw,44px);display:flex;flex-direction:column;gap:18px}
+.arch-col:last-child{border-right:0}
+.arch-k{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--muted);display:flex;align-items:center;gap:10px}
+.arch-k .tick{width:18px}
+.arch-links{display:flex;flex-direction:column}
+.arch-links a{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:13px 0;border-top:1px solid var(--line);font-size:15px;font-weight:600;color:var(--ink);line-height:1.4}
+.arch-links a:first-child{border-top:0}
+.arch-links a span{font-family:var(--mono);font-size:11.5px;font-weight:400;color:var(--muted);letter-spacing:.03em;text-align:right;flex:none}
+.arch-links a:hover{color:var(--muted)}
+.arch-all{margin-top:auto;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ink);border-bottom:2px solid var(--yellow);padding-bottom:3px;align-self:flex-start}
+.arch-all:hover{color:var(--muted)}
+@media(max-width:1080px){.arch-grid{grid-template-columns:1fr}.arch-col{border-right:0;border-bottom:1px solid var(--line)}.arch-col:last-child{border-bottom:0}}
+@media(max-width:680px){.arch-links a{flex-direction:column;align-items:flex-start;gap:3px}.arch-links a span{text-align:left}}
 </style>
 </head>
 <body>
@@ -298,11 +315,11 @@ footer{background:var(--ink);color:var(--paper)}
       <span class="logo-sub">코디드바이닐즈</span>
     </a>
     <a class="nav-cell" href="/#latest">NEW<span class="nav-dot"></span></a>
-    <a class="nav-cell" href="/#curation">CURATION<span class="nav-dot"></span></a>
     <a class="nav-cell" href="/genre/">GENRES<span class="nav-dot"></span></a>
-    <a class="nav-cell" href="/#about">ABOUT<span class="nav-dot"></span></a>
+    <a class="nav-cell" href="/label/">LABELS<span class="nav-dot"></span></a>
+    <a class="nav-cell" href="/#curation">JOURNAL<span class="nav-dot"></span></a>
+    <a class="nav-cell" href="/guide/grading/">GRADING<span class="nav-dot"></span></a>
     <a class="nav-cell" href="/#visit">VISIT<span class="nav-dot"></span></a>
-    <a class="nav-cell" href="/cd/">CD<span class="nav-dot"></span></a>
     <a class="nav-cell store" href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">STORE<span class="nav-dot"></span></a>
   </header>
 
@@ -317,16 +334,10 @@ footer{background:var(--ink);color:var(--paper)}
   </div>
 
   
-  <div class="notice notice--archive">
-    <span class="tag">NOTICE</span>
-    <span>블로그에서 이어온 코디드바이닐즈의 기록을 이제 이곳에 모읍니다.</span>
-  </div>
-
-  
   <div class="notice">
     <span class="tag">NOTICE</span>
-    <span>온라인 재고는 스마트스토어에서 업데이트됩니다.</span>
-    <a class="go" href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">스마트스토어 바로가기 →</a>
+    <span>블로그의 기록을 이곳에 모읍니다. 온라인 재고는 스마트스토어에서 업데이트됩니다.</span>
+    <a class="go" href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">스마트스토어 →</a>
   </div>
 
   <main>
@@ -339,24 +350,54 @@ footer{background:var(--ink);color:var(--paper)}
         </div>
         <h1>빈티지 바이닐<br>갤러리</h1>
         <p class="lede">음악이 기록된 순간을 탐구합니다. 미국·유럽 오리지널 초판·초반 프레싱을 한 장씩 식별하고 소개합니다.</p>
+        
         <div class="hero-actions">
-          <a class="cta cta-primary" href="#latest">이번 주 새로 들어온 음반 →</a>
-          <a class="cta cta-ghost" href="/selects/2026-06-c1/">이번 주 재고 프로모션 →</a>
-          <a class="cta cta-ghost" href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">스마트스토어</a>
-          <a class="cta cta-ghost" href="#visit">매장 방문 안내</a>
+          <a class="cta cta-primary" href="#archive">아카이브 둘러보기 →</a>
+          <a class="cta cta-ghost" href="#latest">이번 주 새 음반 →</a>
+          <a class="cta cta-ghost" href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">스마트스토어 →</a>
         </div>
       </div>
     </section>
 
-    <a class="cd-band reveal" href="/cd/">
-        <img class="cd-band-img" src="/assets/cd-corner-1600x900.jpg" alt="회현 매장에 쌓인 클래식·재즈·팝록 CD" loading="lazy" width="1600" height="900">
-        <div class="cd-band-copy">
-          <span class="kicker"><span class="tick"></span>NEW · CD CORNER</span>
-          <div class="ft">CD 코너를 열었습니다</div>
-          <div class="fd">클래식 7,000원, 재즈와 팝록 9,000원. 별도 그레이딩 없이 매장에서 직접 보고 고르는 자리입니다.</div>
-          <span class="link">CD 코너 안내 보기 →</span>
+    
+    <section class="archive" id="archive">
+      <div class="section-head">
+        <h2 class="display">The Archive</h2>
+        <span class="more">장르 · 레이블 · 딥다이브로 둘러보기</span>
+      </div>
+      <div class="arch-grid">
+        <div class="arch-col">
+          <div class="arch-k"><span class="tick"></span>장르 · GENRES</div>
+          <div class="arch-links">
+            <a href="/genre/jazz/">재즈<span>Jazz</span></a>
+            <a href="/genre/rock/">팝록<span>Pop · Rock</span></a>
+            <a href="/genre/classical/">클래식<span>Classical</span></a>
+            <a href="/genre/soul/">소울<span>Soul</span></a>
+          </div>
+          <a class="arch-all" href="/genre/">장르 전체 둘러보기 →</a>
         </div>
-      </a>
+        <div class="arch-col">
+          <div class="arch-k"><span class="tick"></span>레이블 · LABELS</div>
+          <div class="arch-links">
+            <a href="/label/blue-note/">Blue Note<span>블루노트</span></a>
+            <a href="/label/riverside-records/">Riverside<span>리버사이드</span></a>
+            <a href="/label/columbia/">Columbia<span>컬럼비아</span></a>
+            <a href="/label/mercury/">Mercury<span>머큐리</span></a>
+          </div>
+          <a class="arch-all" href="/label/">레이블 전체 보기 →</a>
+        </div>
+        <div class="arch-col">
+          <div class="arch-k"><span class="tick"></span>딥다이브 · JOURNAL</div>
+          <div class="arch-links">
+            <a href="/journal/jazz-messengers-cafe-bohemia-vol1/">Jazz Messengers<span>Café Bohemia</span></a>
+            <a href="/journal/gigi-gryce-jazz-lab-quintet/">Gigi Gryce<span>Jazz Lab Quintet</span></a>
+            <a href="/journal/george-braith-soul-stream/">George Braith<span>Soul Stream</span></a>
+            <a href="/journal/shuggie-otis-freedom-flight/">Shuggie Otis<span>Freedom Flight</span></a>
+          </div>
+          <a class="arch-all" href="#curation">딥다이브 더 보기 ↓</a>
+        </div>
+      </div>
+    </section>
 
     
     <section class="latest" id="latest">
@@ -369,7 +410,7 @@ footer{background:var(--ink);color:var(--paper)}
         <a class="feature-card reveal" href="/arrivals/2026-06-18/">
           <img class="thumb" src="assets/newin/newin-offline-260618.webp" alt="6월 18일 매장 입고 50장 — Led Zeppelin Physical Graffiti와 새로 들어온 음반" loading="lazy" width="900" height="1200">
           <span class="kicker"><span class="tick"></span>매장 신보 · 6월 3주차</span>
-          <div class="ft">하루에 들어온 50장,<br>대부분이 US 초판</div>
+          <div class="ft">하루에 들어온<br>50장입니다</div>
           <div class="fd">Led Zeppelin·Pink Floyd의 2LP, Frank Zappa의 세 장짜리 박스셋 — 두 편의 입고 영상과 함께 한 장씩 적어 두었습니다.</div>
           <span class="link">입고 기록 보기 →</span>
         </a>
@@ -413,10 +454,23 @@ footer{background:var(--ink);color:var(--paper)}
     </section>
 
     
+    <a class="cd-band reveal" href="/cd/">
+      <img class="cd-band-img" src="/assets/cd-corner-1600x900.jpg"
+           alt="회현 매장에 쌓인 클래식·재즈·팝록 CD" loading="lazy" width="1600" height="900">
+      <div class="cd-band-copy">
+        <span class="kicker"><span class="tick"></span>NEW · CD CORNER</span>
+        <div class="ft">CD 코너를 열었습니다</div>
+        <div class="fd">클래식 7,000원, 재즈와 팝록 9,000원. 별도 그레이딩 없이 매장에서 직접 보고 고르는 자리입니다.</div>
+        <span class="link">CD 코너 안내 보기 →</span>
+      </div>
+    </a>
+    
+
+    
     <section class="curation" id="curation">
       <div class="section-head">
-        <h2 class="display">Curation</h2>
-        <span class="more">VINYL IDENTIFIED</span>
+        <h2 class="display">Journal</h2>
+        <span class="more">딥다이브 · 한 장씩 깊이 읽기</span>
       </div>
 
       
@@ -425,6 +479,23 @@ footer{background:var(--ink);color:var(--paper)}
         <div class="cur-track" id="curTrack">
           
           
+          <div class="cur-card">
+            <a class="cur-main" href="/journal/wes-montgomery-incredible-jazz-guitar/">
+              <div class="jk"><img src="/assets/wes-montgomery-cover.jpg" alt="WES MONTGOMERY — The Incredible Jazz Guitar"></div>
+              <div>
+                <span class="kicker">JAZZ · RIVERSIDE · SINGLE ALBUM CURATION</span>
+                <div class="t">The Incredible Jazz Guitar</div>
+                <div class="a">WES MONTGOMERY</div>
+              </div>
+            </a>
+            <div class="meta">
+              <div><span>LABEL</span><b><a class="entity-link" href="/label/riverside-records/">Riverside</a></b></div>
+              <div><span>CAT NO</span><b>RLP 1169</b></div>
+              <div><span>EDITION</span><b>1960 First Stereo Press</b></div>
+              <div><span>FORMAT</span><b>Stereo · Deep Groove</b></div>
+            </div>
+            <a class="archive-tag" href="/journal/wes-montgomery-incredible-jazz-guitar/">JOURNAL — 딥다이브 읽기 →</a>
+          </div>
           <div class="cur-card">
             <a class="cur-main" href="/journal/gigi-gryce-jazz-lab-quintet/">
               <div class="jk"><img src="/assets/gigi-gryce-jazz-lab-quintet.jpg" alt="GIGI GRYCE — Jazz Lab Quintet"></div>

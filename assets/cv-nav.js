@@ -10,7 +10,7 @@
   // ── 사이트맵 정본 (디렉토리식·영속 URL — 변경=301) ──
   var SITE = [
     { kr: "홈",          en: "HOME",         href: "/" },
-    { kr: "신보 입고",    en: "NEW ARRIVALS", href: "/arrivals/2026-06-06/" },
+    { kr: "신보 입고",    en: "NEW ARRIVALS", href: "/#latest" },
     { kr: "큐레이션",     en: "CURATION",     href: "/#curation" },
     { kr: "청음 세션",    en: "LISTENING",    href: "/#listening" },
     { kr: "장르",        en: "GENRES",       href: "/genre/" },
@@ -19,7 +19,7 @@
     { kr: "— 클래식",    en: "CLASSICAL",    href: "/genre/classical/" },
     { kr: "— 소울",      en: "SOUL",         href: "/genre/soul/" },
     { kr: "레이블",       en: "LABELS",       href: "/label/" },
-    { kr: "저널",        en: "JOURNAL",      href: "/guide/original-pressing/" },
+    { kr: "저널",        en: "JOURNAL",      href: "/#curation" },
     { kr: "그레이딩",     en: "GRADING",      href: "/guide/grading/" },
     { kr: "보존 관리",    en: "ARCHIVAL",     href: "/guide/archival-standard/" },
     { kr: "CD 코너",     en: "CD",           href: "/cd/" },
