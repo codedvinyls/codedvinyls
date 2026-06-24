@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="/assets/cv-analytics.js"></script>
 <title>CD 균일가 안내 — 클래식 7,000원 · 팝록/재즈 9,000원 | 코디드바이닐즈 회현</title>
-<meta name="description" content="회현 지하쇼핑센터 코디드바이닐즈의 CD 코너. 클래식 7,000원, 팝록·재즈 9,000원 균일가, 전부 US·UK·Germany 프레스. 매주 200장 내외로 입고할 예정입니다. 7월 중순 이후 그레이딩을 거친 컬렉터블 CD를 소개합니다.">
+<meta name="description" content="회현 지하쇼핑센터 코디드바이닐즈의 CD 코너. 클래식 7,000원, 팝록·재즈 9,000원 균일가, 전부 US·UK·Germany 프레스. 매주 140~180장씩 입고합니다. 7월 중순 이후 그레이딩을 거친 컬렉터블 CD를 소개합니다.">
 <link rel="stylesheet" href="/assets/cv-nav.css">
 <link rel="canonical" href="https://codedvinyls.com/cd/">
 <meta property="og:type" content="article">
@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://codedvinyls.com/assets/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Article", "headline": "균일가 CD — 코디드바이닐즈 CD 코너 안내", "description": "회현 지하쇼핑센터 코디드바이닐즈의 CD 코너. 클래식 7,000원, 팝록·재즈 9,000원 균일가, 전부 US·UK·Germany 프레스. 매주 200장 내외로 입고할 예정입니다. 7월 중순 이후 그레이딩을 거친 컬렉터블 CD를 소개합니다.", "image": "https://codedvinyls.com/assets/og-default.jpg", "inLanguage": "ko", "about": ["균일가 CD", "중고 CD", "재즈 CD", "클래식 CD", "회현 레코드샵"], "author": {"@type": "Organization", "name": "코디드바이닐즈"}, "publisher": {"@type": "Organization", "name": "코디드바이닐즈", "logo": {"@type": "ImageObject", "url": "https://codedvinyls.com/assets/og-default.jpg"}}, "mainEntityOfPage": "https://codedvinyls.com/cd/"}
+{"@context": "https://schema.org", "@type": "Article", "headline": "균일가 CD — 코디드바이닐즈 CD 코너 안내", "description": "회현 지하쇼핑센터 코디드바이닐즈의 CD 코너. 클래식 7,000원, 팝록·재즈 9,000원 균일가, 전부 US·UK·Germany 프레스. 매주 140~180장씩 입고합니다. 7월 중순 이후 그레이딩을 거친 컬렉터블 CD를 소개합니다.", "image": "https://codedvinyls.com/assets/og-default.jpg", "inLanguage": "ko", "about": ["균일가 CD", "중고 CD", "재즈 CD", "클래식 CD", "회현 레코드샵"], "author": {"@type": "Organization", "name": "코디드바이닐즈"}, "publisher": {"@type": "Organization", "name": "코디드바이닐즈", "logo": {"@type": "ImageObject", "url": "https://codedvinyls.com/assets/og-default.jpg"}}, "mainEntityOfPage": "https://codedvinyls.com/cd/"}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "코디드바이닐즈", "item": "https://codedvinyls.com/"}, {"@type": "ListItem", "position": 2, "name": "균일가 CD"}]}
@@ -75,6 +75,12 @@ img{display:block;max-width:100%}
 /* 주간 갱신 블록 — 날짜 마커 */
 .week-stamp{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11.5px;color:var(--ink);letter-spacing:.04em}
 .week-stamp .tick{width:20px;height:3px}
+
+/* 입고 물량컷 — 문서 톤 유지(절제된 단일 도판, 갤러리 그리드 아님) */
+.doc-plate{margin:22px 0 6px;max-width:48em}
+.doc-plate img{width:100%;height:auto;border:1px solid var(--line);background:var(--surface)}
+.doc-plate figcaption{margin-top:9px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--muted);letter-spacing:.02em}
+.doc-plate + p{margin-top:8px}
 
 footer{background:var(--ink);color:var(--paper)}
 .footer-docs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(247,244,236,.18)}
@@ -141,10 +147,18 @@ footer{background:var(--ink);color:var(--paper)}
     </section>
 
     <section class="doc-section">
-      <span class="kicker">02 · 이번 주 입고 <span class="week-stamp"><span class="tick"></span>6월 13일 기준</span></span>
+      <span class="kicker">02 · 이번 주 입고 <span class="week-stamp"><span class="tick"></span>6월 24일 기준</span></span>
       <h2>이번 주 입고했습니다</h2>
-      <p>재즈가 가장 두텁고, 클래식과 팝록도 함께 들어왔습니다. 어떤 음반이 있는지는 매장에서 직접 보고 고르시는 자리입니다.</p>
-      <p>지금은 매장에 CD를 쌓아 둘 자리를 확보하는 중입니다. 자리가 갖춰지면 매주 200장 내외로 입고할 예정입니다.</p>
+      <p>재즈가 가장 두텁습니다. Miles Davis 〈Kind of Blue〉와 〈In a Silent Way〉, Sonny Rollins 〈Tenor Madness〉, Eric Dolphy 〈Out to Lunch〉, Dave Brubeck 〈Time Out〉, John Coltrane 〈Giant Steps〉가 들어왔습니다. 팝록도 함께 들어왔습니다 — Van Morrison 〈Moondance〉와 〈Astral Weeks〉, The Beatles 〈Abbey Road〉, Anita Baker 〈Rapture〉, Bob Dylan 〈Blood on the Tracks〉가 있습니다. 어떤 음반이 있는지는 매장에서 직접 보고 고르시는 자리입니다.</p>
+      <figure class="doc-plate">
+        <img src="/assets/cd-arrival-260624-jazz.jpg" width="1080" height="720" loading="lazy" alt="재즈 CD 입고 — 코디드바이닐즈 회현">
+        <figcaption>재즈 CD 입고분 — Miles Davis·John Coltrane·Sonny Rollins·Eric Dolphy</figcaption>
+      </figure>
+      <p>균일가 코너는 매장 한쪽에 자리를 잡았고, 매주 140~180장씩 채워지고 있습니다.</p>
+      <figure class="doc-plate">
+        <img src="/assets/cd-arrival-260624-poprock.jpg" width="1080" height="720" loading="lazy" alt="팝록 CD 입고 — 코디드바이닐즈 회현">
+        <figcaption>팝록 CD 입고분 — Van Morrison·The Beatles·Anita Baker·Bob Dylan</figcaption>
+      </figure>
     </section>
 
     <section class="doc-section">
