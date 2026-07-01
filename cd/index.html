@@ -81,6 +81,9 @@ img{display:block;max-width:100%}
 .doc-plate img{width:100%;height:auto;border:1px solid var(--line);background:var(--surface)}
 .doc-plate figcaption{margin-top:9px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--muted);letter-spacing:.02em}
 .doc-plate + p{margin-top:8px}
+/* 입고 로그 — 날짜별 엔트리 누적(최신 상단). 이미지는 촬영 방향(세로) 그대로, height:auto가 비율 수용 */
+.log-entry + .log-entry{margin-top:34px;padding-top:30px;border-top:1px solid var(--line)}
+.log-entry > .week-stamp{font-size:13px;font-weight:600;margin-bottom:6px}
 
 footer{background:var(--ink);color:var(--paper)}
 .footer-docs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(247,244,236,.18)}
@@ -147,18 +150,34 @@ footer{background:var(--ink);color:var(--paper)}
     </section>
 
     <section class="doc-section">
-      <span class="kicker">02 · 이번 주 입고 <span class="week-stamp"><span class="tick"></span>6월 24일 기준</span></span>
-      <h2>이번 주 입고했습니다</h2>
-      <p>재즈가 가장 두텁습니다. Miles Davis 〈Kind of Blue〉와 〈In a Silent Way〉, Sonny Rollins 〈Tenor Madness〉, Eric Dolphy 〈Out to Lunch〉, Dave Brubeck 〈Time Out〉, John Coltrane 〈Giant Steps〉가 들어왔습니다. 팝록도 함께 들어왔습니다 — Van Morrison 〈Moondance〉와 〈Astral Weeks〉, The Beatles 〈Abbey Road〉, Anita Baker 〈Rapture〉, Bob Dylan 〈Blood on the Tracks〉가 있습니다. 어떤 음반이 있는지는 매장에서 직접 보고 고르시는 자리입니다.</p>
-      <figure class="doc-plate">
-        <img src="/assets/cd-arrival-260624-jazz.jpg" width="1080" height="720" loading="lazy" alt="재즈 CD 입고 — 코디드바이닐즈 회현">
-        <figcaption>재즈 CD 입고분 — Miles Davis·John Coltrane·Sonny Rollins·Eric Dolphy</figcaption>
-      </figure>
-      <p>균일가 코너는 매장 한쪽에 자리를 잡았고, 매주 140~180장씩 채워지고 있습니다.</p>
-      <figure class="doc-plate">
-        <img src="/assets/cd-arrival-260624-poprock.jpg" width="1080" height="720" loading="lazy" alt="팝록 CD 입고 — 코디드바이닐즈 회현">
-        <figcaption>팝록 CD 입고분 — Van Morrison·The Beatles·Anita Baker·Bob Dylan</figcaption>
-      </figure>
+      <span class="kicker">02 · 입고 로그</span>
+      <h2>들어온 날짜대로 쌓입니다</h2>
+
+      <div class="log-entry">
+        <span class="week-stamp"><span class="tick"></span>7월 1일</span>
+        <p>이번엔 재즈가 가장 많습니다. Miles Davis 〈Kind Of Blue〉, John Coltrane, Diana Krall 다섯 장, Chet Baker 〈My Funny Valentine〉, Sonny Rollins 〈The Bridge〉가 들어왔습니다. 록·팝·소울에는 Tom Waits 여섯 장, The Beatles, Pink Floyd, Dire Straits, Sade, Marvin Gaye가 있습니다. 이번 배치는 전부 균일가 9,000원입니다.</p>
+        <figure class="doc-plate">
+          <img src="/assets/cd-arrival-260701-jazz.jpg" width="1080" height="1350" loading="lazy" alt="재즈 CD 입고 — 코디드바이닐즈 회현">
+          <figcaption>재즈 CD 입고분 — Miles Davis·John Coltrane·Diana Krall·Chet Baker·Sonny Rollins</figcaption>
+        </figure>
+        <figure class="doc-plate">
+          <img src="/assets/cd-arrival-260701-poprock.jpg" width="1080" height="1350" loading="lazy" alt="록·팝·소울 CD 입고 — 코디드바이닐즈 회현">
+          <figcaption>록·팝·소울 입고분 — Tom Waits·The Beatles·Dire Straits·Sade</figcaption>
+        </figure>
+      </div>
+
+      <div class="log-entry">
+        <span class="week-stamp"><span class="tick"></span>6월 24일</span>
+        <p>재즈가 가장 두텁습니다. Miles Davis 〈Kind of Blue〉와 〈In a Silent Way〉, Sonny Rollins 〈Tenor Madness〉, Eric Dolphy 〈Out to Lunch〉, Dave Brubeck 〈Time Out〉, John Coltrane 〈Giant Steps〉가 들어왔습니다. 팝록도 함께 들어왔습니다 — Van Morrison 〈Moondance〉와 〈Astral Weeks〉, The Beatles 〈Abbey Road〉, Anita Baker 〈Rapture〉, Bob Dylan 〈Blood on the Tracks〉가 있습니다.</p>
+        <figure class="doc-plate">
+          <img src="/assets/cd-arrival-260624-jazz.jpg" width="1080" height="720" loading="lazy" alt="재즈 CD 입고 — 코디드바이닐즈 회현">
+          <figcaption>재즈 CD 입고분 — Miles Davis·John Coltrane·Sonny Rollins·Eric Dolphy</figcaption>
+        </figure>
+        <figure class="doc-plate">
+          <img src="/assets/cd-arrival-260624-poprock.jpg" width="1080" height="720" loading="lazy" alt="팝록 CD 입고 — 코디드바이닐즈 회현">
+          <figcaption>팝록 CD 입고분 — Van Morrison·The Beatles·Anita Baker·Bob Dylan</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="doc-section">
