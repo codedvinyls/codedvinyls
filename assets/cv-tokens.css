@@ -1,0 +1,16 @@
+:root{
+  --paper:#f7f4ec;
+  --surface:#fffdf8;
+  --ink:#1f1e1b;
+  --line:#e4dcd0;
+  --yellow:#ffcd00;
+  --muted:#655f54;
+  --muted-strong:#46413a;
+  --max:1440px;
+  --sans:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Segoe UI",system-ui,sans-serif;
+  --display:"Archivo","Pretendard Variable","Pretendard","Apple SD Gothic Neo",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,"Courier New",monospace;
+  --state-sale:#8f2f24;
+  --state-sold:#6b665d;
+  --state-hold:#655f54;
+}
