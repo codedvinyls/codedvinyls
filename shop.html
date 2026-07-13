@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="assets/cv-analytics.js"></script>
+<title>온라인 숍 | 코디드바이닐즈 CODEDVINYLS</title>
+
+<meta name="description" content="코디드바이닐즈 온라인 숍 — 단일카피 중고 바이닐. 재즈·소울·클래식 초반 음반을 컨디션 등급과 함께 안내합니다.">
+<link rel="stylesheet" href="assets/cv-nav.css">
+<link rel="canonical" href="https://codedvinyls.com/shop.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="코디드바이닐즈">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="온라인 숍 | 코디드바이닐즈">
+<meta property="og:description" content="단일카피 중고 바이닐. 재즈·소울·클래식 초반 음반을 컨디션 등급과 함께 안내합니다.">
+<meta property="og:url" content="https://codedvinyls.com/shop.html">
+<meta property="og:image" content="https://codedvinyls.com/assets/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
+  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
+  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.mono{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:.02em}
+.tick{display:inline-block;width:26px;height:3px;background:var(--yellow);vertical-align:middle;flex:none}
+/* 헤더 */
+.top-grid{display:grid;grid-template-columns:260px repeat(5,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
+.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.logo-cell img{width:188px;height:auto}
+.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
+.nav-cell:last-child{border-right:0}
+.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
+.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
+.nav-cell.active{font-weight:700}
+.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
+.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
+.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
+.signal-row{border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 300px;background:var(--surface)}
+.signal-row .left{display:flex;align-items:center;padding:18px 26px;gap:18px;flex-wrap:wrap}
+.signal-row .right{display:flex;align-items:center;justify-content:flex-end;border-left:1px solid var(--line);padding:18px 26px}
+/* 히어로 */
+.doc-hero{padding:clamp(48px,6vw,90px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;gap:18px}
+.doc-hero .kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+.doc-hero h1{margin:0;font-size:clamp(28px,4vw,44px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+.doc-hero .lede{font-size:clamp(15px,1.7vw,17px);line-height:1.8;color:var(--muted);max-width:44em}
+/* 상품 그리드 */
+.shop-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.pcard{border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;background:var(--surface);transition:background .15s}
+.pcard:nth-child(3n){border-right:0}
+.pcard:hover{background:var(--paper)}
+.pcard .thumb{aspect-ratio:1/1;border-bottom:1px solid var(--line);background:var(--paper);overflow:hidden}
+.pcard .thumb img{width:100%;height:100%;object-fit:cover}
+.pcard .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pcard .genre{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.pcard .artist{font-size:17px;font-weight:800;line-height:1.25;letter-spacing:-.01em}
+.pcard .title{font-size:14px;color:var(--muted);line-height:1.4}
+.pcard .press{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.5}
+.pcard .grades{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.chip{font-family:var(--mono);font-size:11px;border:1px solid var(--line);padding:5px 9px;letter-spacing:.03em;color:var(--ink);white-space:nowrap}
+.pcard .foot{margin-top:auto;padding-top:14px;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.pcard .price{font-size:18px;font-weight:800;letter-spacing:-.01em}
+.pcard .go{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.pcard:hover .go{color:var(--ink)}
+/* 안내 스트립 */
+.info-strip{padding:26px clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--paper);font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.9}
+.info-strip a{border-bottom:1px solid var(--yellow)}
+/* 푸터 */
+footer{background:var(--ink);color:var(--paper)}
+.footer-docs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(247,244,236,.18)}
+.footer-docs a{padding:22px 26px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;display:flex;justify-content:space-between;border-right:1px solid rgba(247,244,236,.18)}
+.footer-docs a:nth-child(2n){border-right:0}
+.footer-docs a:hover{color:var(--yellow)}
+.biz-block{padding:24px 26px;border-bottom:1px solid rgba(247,244,236,.18);font-family:var(--mono);font-size:11.5px;line-height:1.95;color:rgba(247,244,236,.66)}
+.biz-block b{color:rgba(247,244,236,.9);font-weight:600}
+.footer-base{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 26px;font-family:var(--mono);font-size:12px;flex-wrap:wrap}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+@media(max-width:1080px){
+  .top-grid{grid-template-columns:1fr 1fr}
+  .logo-cell{grid-column:1/3;border-right:0;border-bottom:1px solid var(--line)}
+  .nav-cell:nth-child(even){border-right:0}
+  .shop-grid{grid-template-columns:repeat(2,1fr)}
+  .pcard:nth-child(3n){border-right:1px solid var(--line)}
+  .pcard:nth-child(2n){border-right:0}
+}
+@media(max-width:680px){
+  .page{border-left:0;border-right:0}
+  .nav-cell{min-height:60px;padding:16px 14px;font-size:11.5px}
+  .signal-row{grid-template-columns:1fr}
+  .signal-row .right{justify-content:flex-start;border-left:0;border-top:1px solid var(--line)}
+  .shop-grid{grid-template-columns:1fr}
+  .pcard,.pcard:nth-child(3n){border-right:0}
+  .footer-docs{grid-template-columns:1fr}
+  .footer-docs a{border-right:0;border-bottom:1px solid rgba(247,244,236,.18)}
+  .footer-base{flex-direction:column;gap:8px;align-items:flex-start}
+}
+.cv-notice{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--yellow);border-radius:6px;padding:13px 16px;font-family:var(--sans);font-size:13.5px;line-height:1.65;color:var(--ink);margin:0 0 14px}
+.cv-notice strong{font-weight:800}
+.cv-notice a{border-bottom:1px solid var(--ink);font-weight:700}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/cv-type.css">
+</head>
+<body>
+<div class="page" id="top">
+
+  <header class="top-grid">
+    <a class="logo-cell" href="index.html">
+      <img src="assets/cv_wordmark_ink.svg" alt="CODEDVINYLS">
+      <span class="logo-sub">코디드바이닐즈</span>
+    </a>
+    <a class="nav-cell" href="index.html#curation">CURATION<span class="nav-dot"></span></a>
+    <a class="nav-cell" href="grading.html">GRADING<span class="nav-dot"></span></a>
+    <a class="nav-cell active" href="shop.html">SHOP<span class="nav-dot"></span></a>
+    <a class="nav-cell" href="index.html#about">ABOUT<span class="nav-dot"></span></a>
+    <a class="nav-cell store" href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">STORE<span class="nav-dot"></span></a>
+  </header>
+
+  <div class="signal-row">
+    <div class="left">
+      <span class="tick"></span>
+      <span class="mono">SHOP · 단일카피 중고 바이닐</span>
+    </div>
+    <div class="right">
+      <span class="mono">codedvinyls.com</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="doc-hero">
+      <span class="kicker">ONLINE SHOP</span>
+      <h1>온라인 숍</h1>
+      <p class="lede">코디드바이닐즈가 검수를 마친 중고 바이닐을 한 장씩 소개합니다. 모든 음반은 단일카피이며, 매체(음반)와 슬리브(자켓) 컨디션을 골드마인 기준 등급으로 함께 표기합니다.</p>
+      <div class="cv-notice"><strong>온라인 결제 준비 중입니다.</strong> 실제 구매는 <a href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">스마트스토어</a>에서 이용해 주세요. 아래 상품 페이지의 결제 기능은 정식 오픈을 준비 중입니다.</div>
+    </div>
+
+    <section class="shop-grid">
+
+      <a class="pcard" href="shop-puzzle-people.html">
+        <div class="thumb"><img src="assets/jackets/11668744934.jpg" alt="The Temptations — Puzzle People 자켓"></div>
+        <div class="body">
+          <span class="genre">SOUL · 소울</span>
+          <span class="artist">The Temptations</span>
+          <span class="title">Puzzle People</span>
+          <span class="press">1969년 미국 스테레오 초반</span>
+          <span class="grades">
+            <span class="chip">음반 NM-</span>
+            <span class="chip">자켓 NM</span>
+          </span>
+          <span class="foot">
+            <span class="price">₩39,000</span>
+            <span class="go">상세 보기 →</span>
+          </span>
+        </div>
+      </a>
+
+      <a class="pcard" href="shop-hip-vibrations.html">
+        <div class="thumb"><img src="assets/jackets/12492050179.jpg" alt="Cal Tjader — Hip Vibrations 자켓"></div>
+        <div class="body">
+          <span class="genre">JAZZ · 재즈</span>
+          <span class="artist">Cal Tjader</span>
+          <span class="title">Hip Vibrations</span>
+          <span class="press">1967년 미국 스테레오 초반</span>
+          <span class="grades">
+            <span class="chip">음반 NM-</span>
+            <span class="chip">자켓 VG+</span>
+          </span>
+          <span class="foot">
+            <span class="price">₩39,000</span>
+            <span class="go">상세 보기 →</span>
+          </span>
+        </div>
+      </a>
+
+      <a class="pcard" href="shop-clara-haskil.html">
+        <div class="thumb"><img src="assets/jackets/11873808954.jpg" alt="Clara Haskil — Schumann: Waldscenen · Kinderscenen 자켓"></div>
+        <div class="body">
+          <span class="genre">CLASSICAL · 클래식</span>
+          <span class="artist">Clara Haskil</span>
+          <span class="title">Schumann: Waldscenen · Kinderscenen</span>
+          <span class="press">1957년 미국 모노 초반</span>
+          <span class="grades">
+            <span class="chip">음반 NM</span>
+            <span class="chip">자켓 EX</span>
+          </span>
+          <span class="foot">
+            <span class="price">₩29,000</span>
+            <span class="go">상세 보기 →</span>
+          </span>
+        </div>
+      </a>
+
+    </section>
+
+    <div class="info-strip">
+      · 모든 음반은 단일카피 중고입니다. 컨디션 등급 기준은 <a href="grading.html">그레이딩 가이드</a>를 참고해 주세요.<br>
+      · 배송·교환·환불(청약철회) 안내는 <a href="shipping-returns.html">배송·교환·환불</a> 페이지에 있습니다. 수령 후 7일 이내 청약철회가 가능합니다.
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-docs">
+      <a href="shipping-returns.html"><span>배송·교환·환불</span><span>→</span></a>
+      <a href="grading.html"><span>그레이딩 가이드</span><span>→</span></a>
+      <a href="terms.html"><span>이용약관</span><span>→</span></a>
+      <a href="privacy.html"><span>개인정보처리방침</span><span>→</span></a>
+    </div>
+    <div class="biz-block">
+      <b>코디드바이닐즈</b> · 대표자 최준홍<br>
+      사업자등록번호 286-51-00775 · 통신판매업 신고번호 제2026-서울강남-00575호<br>
+      주소 서울시 강남구 논현로 38길 20 · 전화 0507-1377-2895 · 이메일 gm@codedvinyls.com
+    </div>
+    <div class="footer-base">
+      <span>← <a href="index.html" style="border-bottom:1px solid var(--yellow)">CODEDVINYLS HOME</a></span>
+      <span>THE VINYL ARCHIVE</span>
+    </div>
+  </footer>
+</div>
+<script src="assets/cv-nav.js" defer></script>
+</body>
+</html>

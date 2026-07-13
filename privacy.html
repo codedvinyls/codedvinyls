@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="assets/cv-analytics.js"></script>
+<title>개인정보처리방침 | 코디드바이닐즈 CODEDVINYLS</title>
+<meta name="description" content="코디드바이닐즈 개인정보처리방침 — 개인정보 처리 목적·항목·보유기간·위탁·국외이전·정보주체의 권리 안내.">
+<link rel="stylesheet" href="assets/cv-nav.css">
+<link rel="canonical" href="https://codedvinyls.com/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="코디드바이닐즈">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="개인정보처리방침 | 코디드바이닐즈">
+<meta property="og:description" content="코디드바이닐즈 개인정보처리방침.">
+<meta property="og:url" content="https://codedvinyls.com/privacy.html">
+<meta property="og:image" content="https://codedvinyls.com/assets/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
+  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
+  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.mono{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:.02em}
+.tick{display:inline-block;width:26px;height:3px;background:var(--yellow);vertical-align:middle;flex:none}
+.top-grid{display:grid;grid-template-columns:260px repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
+.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.logo-cell img{width:188px;height:auto}
+.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
+.nav-cell:last-child{border-right:0}
+.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
+.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
+.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
+.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
+.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
+.signal-row{border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 300px;background:var(--surface)}
+.signal-row .left{display:flex;align-items:center;padding:18px 26px;gap:18px;flex-wrap:wrap}
+.signal-row .right{display:flex;align-items:center;justify-content:flex-end;border-left:1px solid var(--line);padding:18px 26px}
+.doc-hero{padding:clamp(48px,6vw,90px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;gap:18px}
+.doc-hero .kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+.doc-hero h1{margin:0;font-size:clamp(28px,4vw,44px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+.doc-hero .lede{font-size:clamp(15px,1.7vw,17px);line-height:1.8;color:var(--muted);max-width:42em}
+.doc-section{border-bottom:1px solid var(--line);padding:clamp(40px,5vw,68px) clamp(24px,4vw,56px)}
+.doc-section h2{margin:0 0 22px;font-size:clamp(20px,2.6vw,26px);font-weight:800}
+.doc-section h3{margin:26px 0 10px;font-size:15.5px;font-weight:700;color:var(--ink)}
+.doc-section p{margin:0 0 12px;font-size:14.5px;line-height:1.85;color:var(--muted);max-width:52em}
+.doc-section p.lead{color:var(--ink)}
+.clause{margin:0 0 34px}
+.doc-section ol.num{margin:0 0 12px;padding-left:1.5em;max-width:52em}
+.doc-section ol.num>li{display:list-item;font-size:14.5px;line-height:1.85;color:var(--muted);margin:0 0 8px;padding-left:4px}
+.doc-section ul.dash{margin:6px 0 14px;padding:0;list-style:none;max-width:52em;display:grid;gap:8px}
+.doc-section ul.dash>li{display:block;font-size:14px;line-height:1.75;color:var(--muted);padding-left:18px;position:relative}
+.doc-section ul.dash>li::before{content:"—";position:absolute;left:0;color:var(--muted)}
+.doc-section .note{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.75;border-left:2px solid var(--line);padding-left:14px;margin:14px 0;max-width:52em}
+.doc-section b{font-weight:700;color:var(--ink)}
+.table-wrap{overflow-x:auto;margin:8px 0 18px;max-width:100%}
+.doc-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.doc-table th,.doc-table td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top;line-height:1.7}
+.doc-table th{background:var(--surface);font-weight:700;font-family:var(--mono);font-size:12px;letter-spacing:.03em;color:var(--ink);white-space:nowrap}
+.doc-table td{color:var(--muted)}
+.doc-table td b{color:var(--ink)}
+.biz-table th{width:180px}
+footer{background:var(--ink);color:var(--paper)}
+.footer-docs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(247,244,236,.18)}
+.footer-docs a{padding:22px 26px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;display:flex;justify-content:space-between;border-right:1px solid rgba(247,244,236,.18)}
+.footer-docs a:nth-child(2n){border-right:0}
+.footer-docs a:last-child{border-right:0}
+.footer-docs a:hover{color:var(--yellow)}
+.footer-base{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 26px;font-family:var(--mono);font-size:12px;flex-wrap:wrap}
+.footer-base .biz{color:rgba(247,244,236,.6);font-size:11px;line-height:1.7;text-align:right}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+@media(max-width:1080px){
+  .top-grid{grid-template-columns:1fr 1fr}
+  .logo-cell{grid-column:1/3;border-right:0;border-bottom:1px solid var(--line)}
+  .nav-cell:nth-child(even){border-right:0}
+}
+@media(max-width:680px){
+  .page{border-left:0;border-right:0}
+  .nav-cell{min-height:60px;padding:16px 14px;font-size:11.5px}
+  .signal-row{grid-template-columns:1fr}
+  .signal-row .right{justify-content:flex-start;border-left:0;border-top:1px solid var(--line)}
+  .footer-docs{grid-template-columns:1fr}
+  .footer-docs a{border-right:0;border-bottom:1px solid rgba(247,244,236,.18)}
+  .footer-base{flex-direction:column;gap:8px;align-items:flex-start}
+  .footer-base .biz{text-align:left}
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/cv-type.css">
+</head>
+<body>
+<div class="page" id="top">
+
+  <header class="top-grid">
+    <a class="logo-cell" href="index.html">
+      <img src="assets/cv_wordmark_ink.svg" alt="CODEDVINYLS">
+      <span class="logo-sub">코디드바이닐즈</span>
+    </a>
+    <a class="nav-cell" href="index.html#curation">CURATION<span class="nav-dot"></span></a>
+    <a class="nav-cell" href="grading.html">GRADING<span class="nav-dot"></span></a>
+    <a class="nav-cell" href="index.html#about">ABOUT<span class="nav-dot"></span></a>
+    <a class="nav-cell store" href="https://smartstore.naver.com/codedvinyls" target="_blank" rel="noopener">STORE<span class="nav-dot"></span></a>
+  </header>
+
+  <div class="signal-row">
+    <div class="left">
+      <span class="tick"></span>
+      <span class="mono">PRIVACY POLICY · 개인정보처리방침</span>
+    </div>
+    <div class="right">
+      <span class="mono">codedvinyls.com</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="doc-hero">
+      <span class="kicker">LEGAL · 개인정보처리방침</span>
+      <h1>개인정보처리방침</h1>
+      <p class="lede">코디드바이닐즈가 개인정보를 처리하는 목적·항목·기간과 정보주체의 권리를 안내합니다.</p>
+    </div>
+
+    <section class="doc-section">
+      <p class="lead">코디드바이닐즈(이하 "판매자")는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 관련 고충을 신속·원활하게 처리하기 위해 다음과 같이 개인정보처리방침을 수립·공개합니다.</p>
+
+      <div class="clause">
+        <h2>1. 처리 목적 및 항목</h2>
+        <div class="table-wrap">
+          <table class="doc-table">
+            <thead>
+              <tr><th>목적</th><th>항목</th><th>근거</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>주문·결제·배송 (비회원 포함)</td><td>주문자 성명, 연락처(휴대전화), 배송지 주소, 이메일, 결제기록(승인번호 등 — 카드번호 원문 미보유)</td><td>계약 이행</td></tr>
+              <tr><td>회원 관리</td><td>이메일, 비밀번호(단방향 암호화), 주문 이력</td><td>계약 이행·동의</td></tr>
+              <tr><td>현금영수증 발급</td><td>휴대전화번호 또는 현금영수증 카드번호 (무통장 결제분·신청 시)</td><td>법령(소득세법)</td></tr>
+              <tr><td>입고 알림 등 정보성 알림</td><td>휴대전화번호 (신청자에 한함)</td><td>동의</td></tr>
+              <tr><td>고객 문의 응대</td><td>문의 내용에 포함된 연락처</td><td>계약 이행·동의</td></tr>
+              <tr><td>매장(오프라인) 구매 고객 식별·구매이력 관리 (POS — 희망 고객에 한함·미동의 시 구매 제한 없음)</td><td>휴대전화번호, 매장 구매 이력</td><td>동의</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="clause">
+        <h2>1-2. 쿠키 등 자동 수집 장치의 설치·운영 및 거부</h2>
+        <ol class="num">
+          <li>사이트는 서비스 이용 통계 분석과 서비스 개선을 위해 쿠키(cookie)와 웹 분석 도구를 사용하며, 이 과정에서 방문 기록·접속 로그·기기 및 브라우저 정보(온라인 식별자 포함)가 자동 수집됩니다.</li>
+          <li>사용 중인 웹 분석 도구:
+            <ul class="dash">
+              <li>Google Analytics 4 (Google LLC): 방문·이용 통계 분석. 수집 정보는 Google의 국외 서버에서 처리됩니다(4. 국외 이전 표 참조).</li>
+              <li>네이버 애널리틱스: 방문·유입 통계 분석.</li>
+            </ul>
+          </li>
+          <li>이용자는 브라우저 설정으로 쿠키 저장을 거부하거나 삭제할 수 있으며, Google Analytics는 차단 부가기능(tools.google.com/dlpage/gaoptout)으로 수집을 거부할 수 있습니다. 분석용 쿠키를 거부해도 주문·결제 등 서비스 이용에는 제한이 없습니다.</li>
+          <li>주문·결제 처리에 필요한 세션 쿠키(장바구니·로그인 유지)는 서비스 제공을 위한 필수 항목으로, 차단 시 주문 기능 이용이 제한될 수 있습니다.</li>
+        </ol>
+      </div>
+
+      <div class="clause">
+        <h2>2. 보유·이용 기간</h2>
+        <ul class="dash">
+          <li>회원 정보: 탈퇴 시까지 (탈퇴 즉시 파기, 아래 법정 보존 기록 제외)</li>
+          <li>매장 구매 고객 식별 정보(동의 수집분): 동의 철회 시까지 (철회 즉시 파기, 아래 법정 보존 기록 제외)</li>
+          <li>「전자상거래법」에 따른 거래기록 보존: 계약·청약철회 기록 5년 / 대금결제·재화공급 기록 5년 / 소비자 불만·분쟁처리 기록 3년 / 표시·광고 기록 6개월</li>
+          <li>「통신비밀보호법」에 따른 접속기록: 3개월</li>
+        </ul>
+      </div>
+
+      <div class="clause">
+        <h2>3. 처리 위탁</h2>
+        <div class="table-wrap">
+          <table class="doc-table">
+            <thead>
+              <tr><th>수탁자</th><th>위탁 업무</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>전자지급결제대행사: (주)코리아포트원(PortOne) 및 계약 PG사 (구체 PG사 상호는 계약 확정 후 고지)</td><td>결제 처리·에스크로·가상계좌</td></tr>
+              <tr><td>우체국택배</td><td>재화 배송</td></tr>
+              <tr><td>트랜잭션 메일 발송 서비스 (수탁사 상호는 확정 후 고지)</td><td>주문·인증 메일 발송</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="clause">
+        <h2>4. 국외 이전</h2>
+        <p>서비스 인프라 운영을 위해 다음과 같이 개인정보가 국외에서 처리(보관)될 수 있습니다. (「개인정보 보호법」 제28조의8)</p>
+        <div class="table-wrap">
+          <table class="doc-table">
+            <thead>
+              <tr><th>이전받는 자</th><th>국가</th><th>이전 항목</th><th>이전 일시·방법</th><th>목적·보유기간</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Supabase Inc. (데이터베이스 호스팅)</td><td>해당 서비스 정책에 따름</td><td>위 1.의 전 항목</td><td>서비스 이용 시 네트워크 전송</td><td>데이터 보관 · 위 2. 기간</td></tr>
+              <tr><td>Cloudflare Inc. (CDN·네트워크)</td><td>미국 외 글로벌 엣지</td><td>접속기록(IP 등)</td><td>접속 시 자동</td><td>전송 처리 · 3개월</td></tr>
+              <tr><td>Google LLC (Google Analytics 4 — 웹 분석)</td><td>미국 등 Google 인프라 소재국</td><td>쿠키·온라인 식별자·서비스 이용기록 (1-2. 참조)</td><td>접속 시 자동 수집·전송</td><td>이용 통계 분석 · 보존기간은 해당 서비스 정책에 따름</td></tr>
+              <tr><td>애플리케이션 호스팅(PaaS) 사업자 — 확정 후 고지</td><td>확정 후 고지</td><td>위 1.의 전 항목</td><td>서비스 이용 시</td><td>애플리케이션 구동</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="clause">
+        <h2>5. 제3자 제공</h2>
+        <p>판매자는 정보주체의 동의 또는 법령의 규정에 의한 경우를 제외하고 개인정보를 제3자에게 제공하지 않습니다.</p>
+      </div>
+
+      <div class="clause">
+        <h2>6. 파기</h2>
+        <p>보유 기간 경과 또는 처리 목적 달성 시 지체 없이 파기합니다. 전자 파일은 복구 불가능한 방법으로 삭제하고, 출력물은 분쇄·소각합니다.</p>
+      </div>
+
+      <div class="clause">
+        <h2>7. 정보주체의 권리</h2>
+        <p>정보주체는 판매자에 대해 개인정보 열람·정정·삭제·처리정지를 요구할 수 있습니다. 접수: gm@codedvinyls.com. 판매자는 요구를 받은 날부터 10일 이내에 조치 결과를 통지합니다.</p>
+      </div>
+
+      <div class="clause">
+        <h2>8. 안전성 확보 조치</h2>
+        <p>비밀번호 단방향 암호화, 전송 구간 암호화(TLS), 결제원문 미보유(PG 처리), 접근 권한 최소화, 접속기록 보관.</p>
+      </div>
+
+      <div class="clause">
+        <h2>9. 개인정보 보호책임자</h2>
+        <ul class="dash">
+          <li>성명: 최준홍 (개인사업자 대표)</li>
+          <li>연락처: gm@codedvinyls.com / 0507-1377-2895</li>
+        </ul>
+      </div>
+
+      <div class="clause">
+        <h2>10. 권익침해 구제</h2>
+        <p>개인정보분쟁조정위원회(1833-6972) / 개인정보침해신고센터(privacy.kisa.or.kr, 118) / 대검찰청(1301) / 경찰청(ecrm.police.go.kr, 182)</p>
+      </div>
+
+      <div class="clause">
+        <h2>11. 시행·변경</h2>
+        <p>시행일: 게시일</p>
+        <p>이 방침은 게시일부터 적용되며, 변경 시 시행 7일 전부터 사이트에 공지합니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-docs">
+      <a href="terms.html"><span>이용약관</span><span>→</span></a>
+      <a href="privacy.html"><span>개인정보처리방침</span><span>→</span></a>
+      <a href="shipping-returns.html"><span>배송·교환·환불</span><span>→</span></a>
+      <a href="about.html"><span>사업자 정보</span><span>→</span></a>
+    </div>
+    <div class="footer-base">
+      <span>← <a href="index.html" style="border-bottom:1px solid var(--yellow)">CODEDVINYLS HOME</a></span>
+      <span class="biz">코디드바이닐즈 · 대표 최준홍 · 사업자등록번호 286-51-00775 · 0507-1377-2895</span>
+    </div>
+  </footer>
+</div>
+<script src="assets/cv-nav.js" defer></script>
+</body>
+</html>
