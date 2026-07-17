@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="/assets/cv-analytics.js"></script>
-<title>오래 둔 음반일수록, 더 가볍게 — 코디드 온라인 스토어 SALE | 코디드바이닐즈 CODEDVINYLS</title>
-<meta name="description" content="코디드 온라인 스토어 창고에 오래 둔 음반을 모은 상시 SALE입니다. 재고에 오래 머물수록 할인율이 커져 최대 21%까지 내려갑니다. 팝·록·재즈·클래식·소울 네 갈래, 매주 화요일 새 음반이 채워집니다.">
+<title>가격대별 시작 할인 · 매주 +3%p | 코디드바이닐즈 CODEDVINYLS</title>
+<meta name="description" content="정가 구간별 15%·9%·3%로 시작해 매주 3%p씩 갱신되는 온라인 스토어 상시 SALE입니다.">
 <link rel="stylesheet" href="/assets/cv-nav.css">
 <link rel="canonical" href="https://codedvinyls.com/sale/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="코디드바이닐즈">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="오래 둔 음반일수록, 더 가볍게 — 코디드 온라인 스토어 SALE">
-<meta property="og:description" content="코디드 온라인 스토어 창고에 오래 둔 음반을 모은 상시 SALE입니다. 재고에 오래 머물수록 할인율이 커져 최대 21%까지 내려갑니다. 팝·록·재즈·클래식·소울 네 갈래, 매주 화요일 새 음반이 채워집니다.">
+<meta property="og:title" content="가격대별 시작 할인 · 매주 +3%p">
+<meta property="og:description" content="정가 구간별 15%·9%·3%로 시작해 매주 3%p씩 갱신되는 온라인 스토어 상시 SALE입니다.">
 <meta property="og:url" content="https://codedvinyls.com/sale/">
 <meta property="og:image" content="https://codedvinyls.com/assets/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -62,68 +62,27 @@ img{display:block;max-width:100%}
 .sale-hero h1{margin:0;font-size:clamp(34px,5.4vw,62px);line-height:1.06;font-weight:800;letter-spacing:-.022em}
 .sale-hero .dek{margin:0;max-width:680px;font-size:clamp(16px,1.8vw,19px);line-height:1.78;color:var(--body)}
 
-/* ── 가격대별 안내 밴드 (에디토리얼 레이트 카드 · 무채 · 노랑 0) ── */
-.tiers{padding:clamp(40px,5vw,66px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
-.tiers .wrap{max-width:880px;margin:0;display:flex;flex-direction:column;gap:clamp(22px,2.6vw,32px)}
-.tiers-head{display:flex;flex-direction:column;gap:9px}
-.tiers-head h2{margin:0;font-size:clamp(19px,2.1vw,23px);font-weight:700;letter-spacing:-.012em;color:var(--ink)}
-.tiers-note{margin:0;font-size:clamp(13px,1.45vw,14.5px);line-height:1.6;color:var(--body)}
-.tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
-.tier{display:flex;flex-direction:column;gap:clamp(9px,1vw,13px);padding:clamp(20px,2.4vw,28px) 0}
-.tier:not(:first-child){border-left:1px solid var(--line);padding-left:clamp(20px,2.4vw,30px)}
-.tier:not(:last-child){padding-right:clamp(16px,1.8vw,24px)}
-.tier-range{font-family:var(--mono);font-size:clamp(11.5px,1.25vw,13px);letter-spacing:.02em;color:var(--body);white-space:nowrap}
-.tier-pct{font-size:clamp(22px,2.4vw,26px);font-weight:600;letter-spacing:-.005em;color:var(--ink);line-height:1}
-.tier-pct .cap{font-size:.5em;font-weight:500;color:var(--body);letter-spacing:.03em;margin-right:6px}
-.tiers-fine{margin:0;font-size:clamp(11.5px,1.2vw,12.5px);line-height:1.55;color:var(--muted)}
-
-/* ── 이번 주 새로 든 (주간 히어로 밴드 · 데이터주도 swap · 크림 · 프레임리스 스포트라이트) ── */
-/* 스왑: weekly_hero_band.py 의 WEEK dict(히어로 3=이름·origin·노트·가격)만 갈고 자켓 3장 두면 됨. 마커 사이 재생성. */
-.weekly{padding:clamp(48px,6vw,84px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
-.weekly .wrap{max-width:1040px;margin:0;display:flex;flex-direction:column;gap:clamp(28px,3.4vw,44px)}
-.weekly-head{display:flex;flex-direction:column;gap:13px}
-.weekly-head .kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.11em}
-.weekly-head h2{margin:0;font-size:clamp(26px,3.4vw,40px);line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
-.weekly-head .lead{margin:0;max-width:640px;font-size:clamp(15px,1.7vw,18px);line-height:1.8;color:var(--body)}
-.weekly-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3vw,40px)}
-.wk-hero{display:flex;flex-direction:column;gap:16px;color:inherit;min-width:0}
-.wk-cover{width:100%}
-.wk-cover img{width:100%;aspect-ratio:1/1;object-fit:contain;filter:drop-shadow(0 0 5px rgba(31,28,20,.14)) drop-shadow(0 16px 30px rgba(31,28,20,.24)) drop-shadow(0 6px 12px rgba(31,28,20,.16));transition:transform .22s,filter .22s}
-.wk-hero:hover .wk-cover img{transform:translateY(-4px);filter:drop-shadow(0 0 6px rgba(31,28,20,.16)) drop-shadow(0 22px 38px rgba(31,28,20,.28)) drop-shadow(0 8px 16px rgba(31,28,20,.18))}
-.wk-body{display:flex;flex-direction:column;gap:9px}
-.wk-name{font-size:clamp(17px,1.95vw,21px);line-height:1.28;font-weight:700;letter-spacing:-.012em;color:var(--ink)}
-.wk-name .al{font-weight:600;color:var(--body)}
-.wk-note{margin:0;font-size:clamp(14px,1.5vw,15.5px);line-height:1.66;color:var(--body)}
-.wk-rate{margin-top:2px;font-family:var(--mono);font-size:clamp(12px,1.3vw,13px);letter-spacing:.02em;color:var(--body);white-space:nowrap}
-.weekly-more{display:flex;flex-direction:column;gap:8px;max-width:720px;border-top:1px solid var(--line);padding-top:clamp(20px,2.4vw,28px)}
-.weekly-more p{margin:0;font-size:clamp(14px,1.55vw,16px);line-height:1.74;color:var(--body)}
-
-/* ── 내러티브 (journal) ── */
-.lede{padding:clamp(44px,5.5vw,80px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
-.lede .wrap{max-width:660px;margin:0;display:flex;flex-direction:column;gap:26px}
-.lede p{margin:0;font-size:clamp(16px,1.7vw,18px);line-height:1.92;color:var(--body)}
-.lede .roster{color:var(--ink)}
-.lede .roster br{content:"";display:block;margin-bottom:2px}
-
-/* ── 장르 무브먼트 + 갤러리 ── */
-.movement{border-bottom:1px solid var(--line)}
-.mv-head{display:flex;align-items:baseline;gap:16px;padding:clamp(26px,3vw,40px) clamp(24px,4vw,56px) clamp(18px,2vw,26px);border-bottom:1px solid var(--line)}
-.mv-head .mv-en{font-family:var(--mono);font-size:13px;letter-spacing:.16em;color:var(--ink);text-transform:uppercase}
-.mv-head .mv-kr{font-size:13.5px;color:var(--muted);letter-spacing:.02em}
-.mv-head .mv-go{margin-left:auto;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--muted);white-space:nowrap;border-bottom:1px solid transparent;padding-bottom:1px;transition:color .16s,border-color .16s}
-.mv-head:hover .mv-go{color:var(--ink);border-color:var(--ink)}
-
-.gallery{display:grid;grid-template-columns:repeat(5,1fr)}
-.plate{aspect-ratio:1/1;background:var(--surface);border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:clamp(14px,1.7vw,26px);overflow:hidden;transition:background .18s}
-.plate:nth-child(5n){border-right:0}
-.plate:hover{background:#fffaef}
-.plate img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 10px 20px rgba(31,30,27,.22)) drop-shadow(0 3px 6px rgba(31,30,27,.15));transition:transform .22s,filter .22s}
-.plate:hover img{transform:translateY(-3px);filter:drop-shadow(0 16px 28px rgba(31,30,27,.28)) drop-shadow(0 5px 9px rgba(31,30,27,.16))}
-
-/* ── 상시성 노트 ── */
-.standing{padding:clamp(46px,6vw,82px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line);text-align:center}
-.standing p{margin:0 auto;max-width:560px;font-size:clamp(15px,1.6vw,17px);line-height:1.85;color:var(--body)}
-.standing .standing-fine{margin:14px auto 0;max-width:560px;font-size:clamp(12px,1.35vw,13px);line-height:1.6;color:var(--muted)}
+/* ── 이벤트 구조 ── */
+.mechanics,.rotation,.now-band{padding:clamp(46px,6vw,82px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
+.mechanics .wrap,.rotation .wrap,.now-band .wrap{max-width:1040px;margin:0}
+.section-kicker{display:block;margin-bottom:18px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--muted)}
+.mechanics h2,.rotation h2,.now-band h2{margin:0 0 24px;font-size:clamp(25px,3.3vw,38px);line-height:1.16;letter-spacing:-.018em}
+.rates{border-top:1px solid var(--line)}
+.rate-row{display:grid;grid-template-columns:minmax(220px,1fr) 110px 150px;align-items:baseline;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}
+.rate-price{font-size:clamp(15px,1.7vw,18px);color:var(--body)}
+.rate-start{font-size:clamp(28px,3.2vw,40px);font-weight:800;text-align:right}
+.rate-cap{font-size:clamp(14px,1.5vw,16px);color:var(--body);text-align:right}
+.fine{margin:20px 0 0;font-size:13px;line-height:1.7;color:var(--muted)}
+.rotation{background:var(--ink);color:var(--paper)}
+.rotation .section-kicker{color:rgba(247,244,236,.58)}
+.rotation .lead{margin:0 0 30px;max-width:760px;font-size:clamp(15px,1.7vw,18px);line-height:1.8;color:rgba(247,244,236,.78)}
+.flow{display:flex;border-top:1px solid rgba(247,244,236,.2);border-bottom:1px solid rgba(247,244,236,.2)}
+.flow-step{flex:1;min-width:0;padding:22px 18px 24px 0;display:flex;flex-direction:column;gap:8px}
+.flow-step+.flow-step{border-left:1px solid rgba(247,244,236,.2);padding-left:22px}
+.flow-step b{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--yellow)}
+.flow-step span{font-size:clamp(15px,1.65vw,18px);font-weight:700}
+.flow-step small{font-size:13px;color:rgba(247,244,236,.58)}
+.now-band p{margin:0;max-width:720px;font-size:clamp(15px,1.7vw,18px);line-height:1.8;color:var(--body)}
 
 /* ── CTA 밴드 (ink · 노랑 한 점=여기에만) ── */
 .cta{background:var(--ink);color:var(--paper);padding:clamp(46px,6vw,76px) clamp(24px,4vw,56px);display:flex;flex-direction:column;gap:clamp(26px,3vw,38px);align-items:center;text-align:center}
@@ -139,25 +98,15 @@ footer{background:var(--ink);color:var(--paper)}
   .top-grid{grid-template-columns:1fr 1fr}
   .logo-cell{grid-column:1/3;border-right:0;border-bottom:1px solid var(--line)}
   .nav-cell:nth-child(even){border-right:0}
-  .gallery{grid-template-columns:repeat(4,1fr)}
-  .plate:nth-child(5n){border-right:1px solid var(--line)}
-  .plate:nth-child(4n){border-right:0}
 }
 @media(max-width:680px){
   .page{border-left:0;border-right:0}
   .nav-cell{min-height:60px;padding:16px 14px;font-size:11.5px}
-  .mv-head{flex-wrap:wrap;gap:8px}
-  .mv-head .mv-go{margin-left:0;width:100%}
-  .gallery{grid-template-columns:repeat(2,1fr)}
-  .plate:nth-child(4n){border-right:1px solid var(--line)}
-  .plate:nth-child(2n){border-right:0}
-  .weekly-grid{grid-template-columns:1fr;gap:clamp(30px,8vw,44px)}
-  .wk-cover{max-width:360px}
-  .tiers-grid{grid-template-columns:1fr}
-  .tier{flex-direction:row;align-items:baseline;justify-content:space-between;gap:16px;padding:16px 0;border-left:0;border-bottom:1px solid var(--line)}
-  .tier:not(:first-child){padding-left:0}
-  .tier:not(:last-child){padding-right:0}
-  .tier:last-child{border-bottom:0}
+  .cv-fab{display:none!important}
+  .rate-row{grid-template-columns:1fr auto;gap:8px 18px}
+  .rate-cap{grid-column:1/3;text-align:left}
+  .flow{flex-direction:column}
+  .flow-step+.flow-step{border-left:0;border-top:1px solid rgba(247,244,236,.2);padding-left:0}
   .cta-buttons a{flex:1 1 44%}
   .footer-base{flex-direction:column;gap:8px;align-items:flex-start}
 }
@@ -188,151 +137,49 @@ footer{background:var(--ink);color:var(--paper)}
 
     <section class="sale-hero">
       <div class="wrap">
-        <span class="kicker">온라인 스토어 · SALE</span>
-        <h1>오래 둔 음반일수록,<br>더 가볍게.</h1>
-        <p class="dek">코디드 온라인 스토어 창고에 오래 보관해 온 음반을 모았습니다. 오래 머문 음반일수록 값이 더 내려가, 최대 21%까지 가벼워집니다. 팝·록, 재즈, 클래식, 소울 네 갈래입니다.</p>
+        <span class="kicker">온라인 스토어 · 상시 재고 SALE</span>
+        <h1>가격대별 시작 할인,<br>매주 +3%p.</h1>
+        <p class="dek">15%·9%·3%로 시작해 최대 21%·15%·9%까지 적용됩니다.</p>
       </div>
     </section>
 
     
-    <section class="weekly" aria-label="이번 주 새로 든 음반">
-      <div class="wrap">
-        <div class="weekly-head">
-          <span class="kicker">온라인 스토어 SALE</span>
-          <h2>네 장르, 최대 200장씩</h2>
-          <p class="lead">숫자를 맞추려고 6개월 미만 재고를 앞당겨 넣지는 않습니다. 오늘 조건을 통과한 재고만 편성했습니다.</p>
-        </div>
-        <div class="weekly-grid">
-          <a class="wk-hero" href="https://smartstore.naver.com/codedvinyls/category/83c24297cb44411aa539dec6bb5c3732" target="_blank" rel="noopener" aria-label="Isaac Stern · Leonard Bernstein — Beethoven: Violin Concerto · 클래식 SALE 보기">
-            <span class="wk-cover"><img src="/assets/jackets/12901194313.jpg" alt="Isaac Stern · Leonard Bernstein — Beethoven: Violin Concerto" loading="lazy"></span>
-            <span class="wk-body">
-              <span class="wk-name">Isaac Stern · Leonard Bernstein <span class="al">〈Beethoven: Violin Concerto〉</span></span>
-              <span class="wk-note">클래식 SALE 170장 가운데 한 장입니다.</span>
-              <span class="wk-rate">59,000원 · 9%</span>
-            </span>
-          </a>
-          <a class="wk-hero" href="https://smartstore.naver.com/codedvinyls/category/83c24297cb44411aa539dec6bb5c3732" target="_blank" rel="noopener" aria-label="Sviatoslav Richter — Beethoven: Appassionata · 클래식 SALE 보기">
-            <span class="wk-cover"><img src="/assets/jackets/12901227902.jpg" alt="Sviatoslav Richter — Beethoven: Appassionata" loading="lazy"></span>
-            <span class="wk-body">
-              <span class="wk-name">Sviatoslav Richter <span class="al">〈Beethoven: Appassionata〉</span></span>
-              <span class="wk-note">클래식 SALE 170장 가운데 한 장입니다.</span>
-              <span class="wk-rate">23,000원 · 15%</span>
-            </span>
-          </a>
-          <a class="wk-hero" href="https://smartstore.naver.com/codedvinyls/category/981de226cecd4749ac6041ab89898a87" target="_blank" rel="noopener" aria-label="The Temptations — Puzzle People · 소울 SALE 보기">
-            <span class="wk-cover"><img src="/assets/jackets/11668744934.jpg" alt="The Temptations — Puzzle People" loading="lazy"></span>
-            <span class="wk-body">
-              <span class="wk-name">The Temptations <span class="al">〈Puzzle People〉</span></span>
-              <span class="wk-note">소울 SALE 117장 가운데 한 장입니다.</span>
-              <span class="wk-rate">39,000원 · 21%</span>
-            </span>
-          </a>
-        </div>
-        <div class="weekly-more">
-          <p>오늘 편성은 팝·록 200장, 재즈 200장, 클래식 170장, 소울 117장입니다.</p>
-          <p>네이버 등록일 기준 6개월이 지난 20만 원 미만 재고만 SALE에 들어옵니다.</p>
-          <p>클래식은 이번 주 새로 조건을 통과한 15장을 채웠고, 소울은 기존 117장의 할인율을 다시 계산했습니다.</p>
-          <p>매주 화요일, 조건을 새로 통과한 음반으로 빈자리를 채우고 기존 재고의 할인율을 갱신합니다.</p>
-        </div>
-      </div>
-    </section>
+
     
 
-    <section class="tiers" aria-label="가격대별 첫 할인과 최대 할인">
+    <section class="mechanics" aria-label="할인율 안내">
       <div class="wrap">
-        <div class="tiers-head">
-          <h2>가격대별 첫 할인과 최대 할인</h2>
-          <p class="tiers-note">처음에는 15% · 9% · 3%, 오래 머물면 여기까지.</p>
+        <span class="section-kicker">STARTING RATE</span>
+        <h2>시작 할인과 최대 할인율</h2>
+        <div class="rates">
+          <div class="rate-row"><span class="rate-price">49,000원 미만</span><strong class="rate-start">15%</strong><span class="rate-cap">최대 21%</span></div>
+          <div class="rate-row"><span class="rate-price">49,000–99,999원</span><strong class="rate-start">9%</strong><span class="rate-cap">최대 15%</span></div>
+          <div class="rate-row"><span class="rate-price">100,000원 이상 SALE 상품</span><strong class="rate-start">3%</strong><span class="rate-cap">최대 9%</span></div>
         </div>
-        <div class="tiers-grid">
-          <div class="tier">
-            <span class="tier-range">49,000원 미만</span>
-            <span class="tier-pct"><span class="cap">15% 시작 · 최대</span>21%</span>
-          </div>
-          <div class="tier">
-            <span class="tier-range">49,000 ~ 100,000원 미만</span>
-            <span class="tier-pct"><span class="cap">9% 시작 · 최대</span>15%</span>
-          </div>
-          <div class="tier">
-            <span class="tier-range">100,000 ~ 200,000원 미만</span>
-            <span class="tier-pct"><span class="cap">3% 시작 · 최대</span>9%</span>
-          </div>
-        </div>
-        <p class="tiers-fine">등록 6개월이 지난 20만 원 미만 재고가 대상입니다. 회원 등급과 구매 이력에 따라 결제 단계에서 쿠폰 혜택이 별도로 적용됩니다.</p>
+        <p class="fine">정가 기준 · 상품별 적용 할인은 SALE 카테고리에서 확인할 수 있습니다.</p>
       </div>
     </section>
 
-    <section class="lede" aria-label="소개">
+    <section class="rotation" aria-label="상시 SALE 운영 흐름">
       <div class="wrap">
-        <p>한 번 들어온 뒤로 오래 자리를 지켜 온 음반들입니다.</p>
-        <p>팔린 음반은 자리를 비우고, 매주 화요일 오래 둔 음반이 그 자리를 더합니다.</p>
+        <span class="section-kicker">WEEKLY FLOW</span>
+        <h2>주마다 전부 바꾸지 않습니다.</h2>
+        <p class="lead">상품은 판매될 때까지 SALE에 유지되고, 판매된 자리는 다음 음반이 채웁니다.</p>
+        <div class="flow">
+          <div class="flow-step"><b>01</b><span>SALE 진입</span><small>가격대별 첫 할인</small></div>
+          <div class="flow-step"><b>02</b><span>1주 유지</span><small>+3%p</small></div>
+          <div class="flow-step"><b>03</b><span>2주 유지</span><small>최대 할인율</small></div>
+          <div class="flow-step"><b>04</b><span>판매</span><small>다음 음반 진입</small></div>
+        </div>
       </div>
     </section>
 
-    <section class="movement" aria-label="팝·록 SALE">
-      <a class="mv-head" href="https://smartstore.naver.com/codedvinyls/category/bf10cb32b9344e58aa9c3e2e1b4dfc7a" target="_blank" rel="noopener">
-        <span class="mv-en">POP / ROCK</span>
-        <span class="mv-kr">팝 · 록</span>
-        <span class="mv-go">SALE 전체 보기 →</span>
-      </a>
-      <div class="gallery">
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/bf10cb32b9344e58aa9c3e2e1b4dfc7a" target="_blank" rel="noopener" aria-label="Pink Floyd — Meddle · 팝·록 SALE 보기"><img src="/assets/jackets/11735165834.jpg" alt="Pink Floyd — Meddle" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/bf10cb32b9344e58aa9c3e2e1b4dfc7a" target="_blank" rel="noopener" aria-label="Queen — Greatest Hits · 팝·록 SALE 보기"><img src="/assets/jackets/12182035584.jpg" alt="Queen — Greatest Hits" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/bf10cb32b9344e58aa9c3e2e1b4dfc7a" target="_blank" rel="noopener" aria-label="The Rolling Stones — Flowers · 팝·록 SALE 보기"><img src="/assets/jackets/12154127038.jpg" alt="The Rolling Stones — Flowers" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/bf10cb32b9344e58aa9c3e2e1b4dfc7a" target="_blank" rel="noopener" aria-label="Duran Duran — Rio · 팝·록 SALE 보기"><img src="/assets/jackets/12826399283.jpg" alt="Duran Duran — Rio" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/bf10cb32b9344e58aa9c3e2e1b4dfc7a" target="_blank" rel="noopener" aria-label="Tom Waits — Small Change · 팝·록 SALE 보기"><img src="/assets/jackets/12044112082.jpg" alt="Tom Waits — Small Change" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/bf10cb32b9344e58aa9c3e2e1b4dfc7a" target="_blank" rel="noopener" aria-label="The Beatles — Beatles VI · 팝·록 SALE 보기"><img src="/assets/jackets/12429417135.jpg" alt="The Beatles — Beatles VI" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/bf10cb32b9344e58aa9c3e2e1b4dfc7a" target="_blank" rel="noopener" aria-label="Genesis — Three Sides Live · 팝·록 SALE 보기"><img src="/assets/jackets/12780211228.jpg" alt="Genesis — Three Sides Live" loading="lazy"></a>
+    <section class="now-band" aria-label="현재 SALE 카테고리">
+      <div class="wrap">
+        <span class="section-kicker">NOW IN SALE</span>
+        <h2>팝·록 · 재즈 · 클래식 · 소울, 각 200장</h2>
+        <p>클래식과 소울 카테고리를 업데이트했습니다.</p>
       </div>
-    </section>
-
-    <section class="movement" aria-label="재즈 SALE">
-      <a class="mv-head" href="https://smartstore.naver.com/codedvinyls/category/ed4b3a1ae6024f729df73b84cada0078" target="_blank" rel="noopener">
-        <span class="mv-en">JAZZ</span>
-        <span class="mv-kr">재즈</span>
-        <span class="mv-go">SALE 전체 보기 →</span>
-      </a>
-      <div class="gallery">
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/ed4b3a1ae6024f729df73b84cada0078" target="_blank" rel="noopener" aria-label="Keith Jarrett — Expectations · 재즈 SALE 보기"><img src="/assets/jackets/11793148203.jpg" alt="Keith Jarrett — Expectations" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/ed4b3a1ae6024f729df73b84cada0078" target="_blank" rel="noopener" aria-label="The Dave Brubeck Quartet — Jazz Goes To College · 재즈 SALE 보기"><img src="/assets/jackets/11928577100.jpg" alt="The Dave Brubeck Quartet — Jazz Goes To College" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/ed4b3a1ae6024f729df73b84cada0078" target="_blank" rel="noopener" aria-label="Cal Tjader — Hip Vibrations · 재즈 SALE 보기"><img src="/assets/jackets/12492050179.jpg" alt="Cal Tjader — Hip Vibrations" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/ed4b3a1ae6024f729df73b84cada0078" target="_blank" rel="noopener" aria-label="Clifford Brown — Memorial · 재즈 SALE 보기"><img src="/assets/jackets/11928627354.jpg" alt="Clifford Brown — Memorial" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/ed4b3a1ae6024f729df73b84cada0078" target="_blank" rel="noopener" aria-label="Ella Fitzgerald — Ella In Hollywood · 재즈 SALE 보기"><img src="/assets/jackets/12349733451.jpg" alt="Ella Fitzgerald — Ella In Hollywood" loading="lazy"></a>
-      </div>
-    </section>
-
-    <section class="movement" aria-label="클래식 SALE">
-      <a class="mv-head" href="https://smartstore.naver.com/codedvinyls/category/83c24297cb44411aa539dec6bb5c3732" target="_blank" rel="noopener">
-        <span class="mv-en">CLASSICAL</span>
-        <span class="mv-kr">클래식</span>
-        <span class="mv-go">SALE 전체 보기 →</span>
-      </a>
-      <div class="gallery">
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/83c24297cb44411aa539dec6bb5c3732" target="_blank" rel="noopener" aria-label="Isaac Stern — Prokofiev Violin Concertos · 클래식 SALE 보기"><img src="/assets/jackets/11755568352.jpg" alt="Isaac Stern — Prokofiev Violin Concertos" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/83c24297cb44411aa539dec6bb5c3732" target="_blank" rel="noopener" aria-label="George Szell — Tchaikovsky · 클래식 SALE 보기"><img src="/assets/jackets/11678129213.jpg" alt="George Szell — Tchaikovsky" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/83c24297cb44411aa539dec6bb5c3732" target="_blank" rel="noopener" aria-label="Mstislav Rostropovich — Cello Concertos · 클래식 SALE 보기"><img src="/assets/jackets/11755336536.jpg" alt="Mstislav Rostropovich — Cello Concertos" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/83c24297cb44411aa539dec6bb5c3732" target="_blank" rel="noopener" aria-label="Clara Haskil — Schumann · 클래식 SALE 보기"><img src="/assets/jackets/11873808954.jpg" alt="Clara Haskil — Schumann" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/83c24297cb44411aa539dec6bb5c3732" target="_blank" rel="noopener" aria-label="Budapest String Quartet — Beethoven · 클래식 SALE 보기"><img src="/assets/jackets/11677953637.jpg" alt="Budapest String Quartet — Beethoven" loading="lazy"></a>
-      </div>
-    </section>
-
-    <section class="movement" aria-label="소울 SALE">
-      <a class="mv-head" href="https://smartstore.naver.com/codedvinyls/category/981de226cecd4749ac6041ab89898a87" target="_blank" rel="noopener">
-        <span class="mv-en">SOUL</span>
-        <span class="mv-kr">소울</span>
-        <span class="mv-go">SALE 전체 보기 →</span>
-      </a>
-      <div class="gallery">
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/981de226cecd4749ac6041ab89898a87" target="_blank" rel="noopener" aria-label="Aretha Franklin — The Electrifying Aretha Franklin · 소울 SALE 보기"><img src="/assets/jackets/11796947076.jpg" alt="Aretha Franklin — The Electrifying Aretha Franklin" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/981de226cecd4749ac6041ab89898a87" target="_blank" rel="noopener" aria-label="Otis Redding — Soul Ballads · 소울 SALE 보기"><img src="/assets/jackets/11935955807.jpg" alt="Otis Redding — Soul Ballads" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/981de226cecd4749ac6041ab89898a87" target="_blank" rel="noopener" aria-label="Sam Cooke — 16 Greatest Hits · 소울 SALE 보기"><img src="/assets/jackets/11640572775.jpg" alt="Sam Cooke — 16 Greatest Hits" loading="lazy"></a>
-        <a class="plate" href="https://smartstore.naver.com/codedvinyls/category/981de226cecd4749ac6041ab89898a87" target="_blank" rel="noopener" aria-label="The Temptations — Puzzle People · 소울 SALE 보기"><img src="/assets/jackets/11668744934.jpg" alt="The Temptations — Puzzle People" loading="lazy"></a>
-      </div>
-    </section>
-
-    <section class="standing" aria-label="상시 안내">
-      <p>기간을 정해 둔 이벤트가 아니라, 매주 화요일 새로 갱신되며 상시 이어지는 SALE입니다. 종종 다시 들러보세요.</p>
-      <p class="standing-fine">등록 6개월이 지난 재고부터 할인하며, 20만 원 이상 희소반은 대상에서 제외합니다.</p>
     </section>
 
     <section class="cta" aria-label="온라인 스토어 SALE 바로가기">
@@ -350,7 +197,6 @@ footer{background:var(--ink);color:var(--paper)}
   <footer>
     <div class="footer-base">
       <span>← <a href="/" style="border-bottom:1px solid var(--yellow)">CODEDVINYLS HOME</a></span>
-      <span>THE VINYL ARCHIVE</span>
     </div>
   </footer>
 </div>
