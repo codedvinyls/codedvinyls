@@ -24,7 +24,9 @@
     { kr: "보존 관리",    en: "ARCHIVAL",     href: "/guide/archival-standard/" },
     { kr: "CD 코너",     en: "CD",           href: "/cd/" },
     { kr: "매장 방문",    en: "VISIT",        href: "/#visit" },
-    { kr: "스토어",       en: "STORE",        href: "https://smartstore.naver.com/codedvinyls", ext: true }
+    { kr: "스토어",       en: "STORE",        href: "/store.html" },
+    { kr: "— 스마트스토어", en: "SMARTSTORE",  href: "https://smartstore.naver.com/codedvinyls", ext: true },
+    { kr: "— 자사몰",     en: "SHOP",         href: "/shop.html" }
   ];
 
   // 경로 정규화(디렉토리식 active 매칭 — 파일명 비교는 디렉토리 URL에서 전부 index.html로 축약돼 오탐)
