@@ -1,0 +1,835 @@
+<!doctype html><html lang='ko'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>프리뷰 — 온라인 업데이트 2026.07.24 (publish_hold)</title></head><body><style>
+:root{
+  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
+  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
+  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.mono{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:.02em}
+.tick{display:inline-block;width:26px;height:3px;background:var(--yellow);vertical-align:middle;flex:none}
+
+.top-grid{display:grid;grid-template-columns:260px repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
+.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.logo-cell img{width:188px;height:auto}
+.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
+.nav-cell:last-child{border-right:0}
+.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
+.nav-cell:hover .nav-dot{background:var(--yellow);border-color:var(--yellow)}
+.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
+.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
+.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
+
+.crumb{border-bottom:1px solid var(--line);background:var(--surface);padding:16px 26px;font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.05em;display:flex;gap:10px;align-items:center}
+.crumb a:hover{color:var(--ink)}
+
+.art-hero{padding:clamp(48px,6vw,92px) clamp(24px,4vw,56px) clamp(34px,4vw,52px);border-bottom:1px solid var(--line);background:var(--paper)}
+.art-hero .wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.art-hero .kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em;display:flex;align-items:center;gap:12px}
+.art-hero .kicker .on{background:var(--yellow);color:var(--ink);padding:3px 9px;font-weight:700;letter-spacing:.06em}
+.art-hero h1{margin:0;font-size:clamp(30px,4.6vw,52px);line-height:1.12;font-weight:800;letter-spacing:-.01em}
+.art-hero .dek{font-size:clamp(15px,1.7vw,18px);line-height:1.7;color:var(--muted);max-width:42em}
+.art-hero .byline{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.05em;border-top:1px solid var(--line);padding-top:16px;display:flex;gap:18px;flex-wrap:wrap}
+
+/* 플립 영상 2종 (9:16) */
+.flips{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+.flip{border-right:1px solid var(--line);padding:clamp(28px,3.5vw,48px);display:flex;flex-direction:column;gap:18px}
+.flip:last-child{border-right:0}
+.flip .vid{position:relative;border:1px solid var(--line);background:#000;aspect-ratio:9/16;overflow:hidden;max-width:380px;width:100%;margin:0 auto}
+.flip .vid video{width:100%;height:100%;object-fit:cover;display:block}
+.flip .cap{display:flex;flex-direction:column;gap:8px;max-width:380px;width:100%;margin:0 auto}
+.flip .cap .gk{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.08em}
+.flip .cap .gt{font-size:clamp(18px,2vw,22px);font-weight:800;line-height:1.25}
+.flip .cap p{margin:0;font-size:14.5px;line-height:1.8;color:#2c2a26}
+
+/* 장르 묶음 + 자켓 그리드 (new-arrivals .rec 결 차용 + 자켓·링크) */
+.rec-group{border-bottom:1px solid var(--line)}
+.group-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:30px clamp(24px,4vw,56px) 18px;background:var(--paper)}
+.group-head h2{margin:0;font-size:clamp(16px,2vw,20px);display:flex;align-items:baseline;gap:12px}
+.group-head .display{letter-spacing:.04em}
+.group-head .group-kr{font-size:13px;color:var(--muted);font-weight:400}
+.group-lead{padding:0 clamp(24px,4vw,56px) 26px;max-width:62em;font-size:15px;line-height:1.8;color:#3a3833;border-bottom:1px solid var(--line)}
+.rec-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.rec{border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;color:inherit;transition:background .15s}
+.rec:nth-child(3n){border-right:0}
+.rec:hover{background:var(--surface)}
+/* 자켓 슬롯 — 크림 매트 + 다층 드롭섀도로 자켓을 입체적으로 띄움, 스트록 없음 (S9·대표 260607) */
+.rec-cover{aspect-ratio:1/1;background:var(--surface);display:flex;align-items:center;justify-content:center;padding:clamp(24px,2.8vw,36px);overflow:hidden}
+.rec-cover img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 10px 20px rgba(31,30,27,.22)) drop-shadow(0 3px 6px rgba(31,30,27,.15))}
+.rec:hover .rec-cover img{transform:translateY(-2px);transition:transform .2s}
+.rec-body{padding:clamp(20px,2.3vw,28px);display:flex;flex-direction:column;gap:11px;flex:1}
+.rec-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.rec-kicker{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.06em}
+/* V4a 등급 — 본문 헤어라인 행(코너 칩 폐기). 값 고정폭 좌측정렬로 +/− 정렬 일치 */
+.rec-grade{display:grid;border-top:1px solid var(--line);padding-top:13px;margin-top:2px}
+.rec-grade>div{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:0 0 7px}
+.rec-grade>div+div{padding-top:7px;border-top:1px solid var(--line)}
+.rec-grade .gk{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink)}
+.rec-grade .gv{font-family:var(--mono);font-size:15px;font-weight:600;color:var(--ink);min-width:3.6em;text-align:left;font-variant-numeric:tabular-nums}
+.rec-title{font-size:clamp(16px,1.8vw,20px);font-weight:800;line-height:1.25}
+.rec-artist{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.03em;margin-top:-4px}
+.rec-meta{display:grid;gap:6px;border-top:1px solid var(--line);padding-top:13px;margin-top:2px}
+.rec-meta div{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.rec-meta b{color:var(--ink);font-weight:400;text-align:right}
+.rec-press{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.02em;line-height:1.6;border-top:1px dashed var(--line);padding-top:12px}
+.rec-shop{margin-top:auto;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink);padding-top:13px;display:flex;align-items:center;gap:6px}
+.rec:hover .rec-shop{color:#000}
+.rec-shop::before{content:"";width:9px;height:9px;background:var(--yellow);flex:none}
+
+/* CTA 띠 */
+.cta-band{background:var(--ink);color:var(--paper);padding:clamp(36px,5vw,60px) clamp(24px,4vw,56px);display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;border-bottom:1px solid var(--line)}
+.cta-band .lead{font-size:clamp(17px,2vw,21px);font-weight:800;line-height:1.4}
+.cta-band .sub{font-family:var(--mono);font-size:12.5px;color:rgba(247,244,236,.72);letter-spacing:.04em;max-width:40em}
+.cta-band .btn{display:inline-flex;align-items:center;gap:12px;padding:17px 34px;font-family:var(--mono);font-size:13.5px;letter-spacing:.05em;background:var(--yellow);color:var(--ink);border:1px solid var(--yellow);margin-top:6px}
+.cta-band .btn:hover{background:var(--paper);border-color:var(--paper)}
+/* ── 회차 pager: 이전/다음 입고 (260618) ── */
+.update-pager{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.pg-cell{display:flex;align-items:center;gap:16px;padding:clamp(20px,2.5vw,30px) clamp(20px,3vw,40px);background:var(--paper);min-height:104px}
+.pg-cell.pg-next{flex-direction:row-reverse;text-align:right}
+.pg-cell.pg-empty{background:var(--surface)}
+a.pg-cell:hover{background:var(--surface)}
+.pg-cover{flex:0 0 auto;width:64px;aspect-ratio:1/1;border:1px solid var(--line);overflow:hidden;background:var(--surface)}
+.pg-cover img{width:100%;height:100%;object-fit:cover}
+.pg-text{display:flex;flex-direction:column;gap:5px;min-width:0}
+.pg-label{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);display:flex;align-items:center;gap:7px}
+.pg-next .pg-label{flex-direction:row-reverse}
+.pg-arrow{color:var(--ink)}
+.pg-date{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.pg-title{font-size:14px;line-height:1.4;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:680px){.update-pager{grid-template-columns:1fr}.pg-cell.pg-empty{display:none}}
+
+footer{background:var(--ink);color:var(--paper)}
+.footer-docs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(247,244,236,.18)}
+.footer-docs a{padding:22px 26px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;display:flex;justify-content:space-between;border-right:1px solid rgba(247,244,236,.18)}
+.footer-docs a:last-child{border-right:0}
+.footer-docs a:hover{color:var(--yellow)}
+.footer-base{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 26px;font-family:var(--mono);font-size:12px;flex-wrap:wrap}
+.footer-base .footer-logo{width:170px;height:auto;opacity:.92}
+
+@media(max-width:1080px){
+  .top-grid{grid-template-columns:1fr 1fr}
+  .logo-cell{grid-column:1/3;border-right:0;border-bottom:1px solid var(--line)}
+  .nav-cell:nth-child(even){border-right:0}
+  .rec-grid{grid-template-columns:repeat(2,1fr)}
+  .rec:nth-child(3n){border-right:1px solid var(--line)}
+  .rec:nth-child(2n){border-right:0}
+}
+@media(max-width:680px){
+  .page{border-left:0;border-right:0}
+  .nav-cell{min-height:60px;padding:16px 14px;font-size:11.5px}
+  .flips{grid-template-columns:1fr}
+  .flip{border-right:0;border-bottom:1px solid var(--line)}
+  .flip:last-child{border-bottom:0}
+  .rec-grid{grid-template-columns:1fr}
+  .rec,.rec:nth-child(3n),.rec:nth-child(2n){border-right:0}
+  .footer-docs{grid-template-columns:1fr}
+  .footer-docs a{border-right:0;border-bottom:1px solid rgba(247,244,236,.18)}
+  .footer-base{flex-direction:column;gap:10px;align-items:flex-start}
+}
+</style>
+<div class="page">
+  <div class="crumb">
+    <a href="/">CODEDVINYLS</a><span>/</span><a href="/update/">ONLINE UPDATES</a><span>/</span><span>2026.07.24</span>
+  </div>
+
+  <article>
+    <div class="art-hero">
+      <div class="wrap">
+        <div class="kicker"><span class="on">ONLINE UPDATE</span><span>2026.07.24 · 스마트스토어</span></div>
+        <h1>1950년대 모노 보컬 재즈에서<br>레드 바이닐 록 초반까지</h1>
+        <p class="dek">1950년대 모노 보컬 재즈부터 1970년대 미국 록과 포크까지, 재즈와 록 스무 장씩 들어왔습니다. 미국 초반이 주를 이루고, 가격 부담은 낮춘 회차입니다. 상태는 미디어 VG+에서 NM-, 커버 VG에서 EX가 중심이라, 소장 1군보다 곁에 두고 듣는 판에 맞습니다. 신시아 구딩(Cynthia Gooding)의 1958년 리버사이드(Riverside) 오리지널과 레드 바이닐로 찍힌 제이 가일스 밴드(The J. Geils Band)의 1973년 〈Bloodshot〉 초반이 여기 듭니다. 각 판본과 상태는 상품 페이지에서 확인하실 수 있습니다.</p>
+      </div>
+    </div>
+
+    
+    <section class="rec-group" id="g-jazz">
+      <div class="group-head">
+        <h2><span class="display">JAZZ</span> <span class="group-kr">재즈</span></h2>
+      </div>
+      <p class="group-lead">이번 회차는 1950년대 모노 보컬 재즈로 문을 엽니다. 1957년 캐피톨(Capitol)의 에설 에니스(Ethel Ennis) 〈Change Of Scenery〉는 닐 헤프티(Neal Hefti)가 편곡을 맡은 모노 초반이고, 미요시 우메키(Miyoshi Umeki)의 1956년 머큐리(Mercury) 모노 오리지널은 &#x27;Teach Me Tonight&#x27; 같은 미국 스탠더드를 일본어로 옮겼습니다.</p>
+      <p class="group-lead">1970년대로 내려오면 반 겔더(Van Gelder) 스튜디오에서 녹음된 밥 제임스(Bob James)의 1976년 CTI 오리지널 〈Three〉가 있습니다. 수록곡 &#x27;Westchester Lady&#x27;는 힙합과 일렉트로닉에서 50회 넘게 샘플링된 곡입니다. 컬럼비아(Columbia)가 엮은 레스터 영(Lester Young)의 2LP 〈Evening Of A Basie-ite〉에는 1940년 카운트 베이시(Count Basie)·빌리 홀리데이(Billie Holiday) 세션이 담겨 있습니다.</p>
+      <p class="group-lead">록 쪽은 1968년 바닐라 퍼지(Vanilla Fudge)의 〈The Beat Goes On〉에서 1974년 텐 이어스 애프터(Ten Years After)의 고별 앨범 〈Positive Vibrations〉까지 이어집니다.</p>
+      <p class="group-lead">샌디 데니(Sandy Denny)가 목소리를 보탠 페어포트 컨벤션(Fairport Convention)의 〈&quot;Babbacombe&quot; Lee〉는 미국 초반 게이트폴드입니다. 록 쪽에서 가장 이른 판은 리버사이드(Riverside)가 1958년에 낸 신시아 구딩(Cynthia Gooding)의 〈Languages Of Love〉 오리지널로, 라벨이 양면 모두 딥그루브 프레싱입니다. 그리고 제이 가일스 밴드(The J. Geils Band)의 1973년 애틀랜틱(Atlantic) 초반 〈Bloodshot〉은 레드 바이닐입니다.</p>
+      <div class="rec-grid">
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680490432" target="_blank" rel="noopener" aria-label="Ethel Ennis — Change Of Scenery, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-01.jpg" alt="Ethel Ennis 〈Change Of Scenery〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Vocal</span></div>
+          <div class="rec-title">Change Of Scenery</div>
+          <div class="rec-artist">Ethel Ennis</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG</span></div><div><span class="gk">MEDIA</span><span class="gv">VG</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Capitol Records</b></div>
+            <div><span>CAT NO</span><b>T 941</b></div>
+            <div><span>YEAR</span><b>1957</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1957년 미국 모노 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680490468" target="_blank" rel="noopener" aria-label="Miyoshi Umeki With The Hugo Peretti Orchestra — Miyoshi Sings For Arthur Godfrey (Sings American Songs In Japanese), 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-02.jpg" alt="Miyoshi Umeki With The Hugo Peretti Orchestra 〈Miyoshi Sings For Arthur Godfrey (Sings American Songs In Japanese)〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Jazz Vocal</span></div>
+          <div class="rec-title">Miyoshi Sings For Arthur Godfrey (Sings American Songs In Japanese)</div>
+          <div class="rec-artist">Miyoshi Umeki With The Hugo Peretti Orchestra</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">G+</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Mercury</b></div>
+            <div><span>CAT NO</span><b>MG 20165</b></div>
+            <div><span>YEAR</span><b>1956</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1956년 미국 모노 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680490645" target="_blank" rel="noopener" aria-label="Jeri Southern — You Better Go Now, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-03.jpg" alt="Jeri Southern 〈You Better Go Now〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Vocal</span></div>
+          <div class="rec-title">You Better Go Now</div>
+          <div class="rec-artist">Jeri Southern</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG</span></div><div><span class="gk">MEDIA</span><span class="gv">VG</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Decca</b></div>
+            <div><span>CAT NO</span><b>DL 8214</b></div>
+            <div><span>YEAR</span><b>1956</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1956년 미국 모노 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680490713" target="_blank" rel="noopener" aria-label="Bob James — Three, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-04.jpg" alt="Bob James 〈Three〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Fusion Jazz</span></div>
+          <div class="rec-title">Three</div>
+          <div class="rec-artist">Bob James</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">VG</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>CTI Records</b></div>
+            <div><span>CAT NO</span><b>CTI 6063</b></div>
+            <div><span>YEAR</span><b>1976</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1976년 미국 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680490745" target="_blank" rel="noopener" aria-label="The Dave Brubeck Quartet — Dave Brubeck At Storyville: 1954, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-05.jpg" alt="The Dave Brubeck Quartet 〈Dave Brubeck At Storyville: 1954〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Cool Jazz</span></div>
+          <div class="rec-title">Dave Brubeck At Storyville: 1954</div>
+          <div class="rec-artist">The Dave Brubeck Quartet</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG</span></div><div><span class="gk">MEDIA</span><span class="gv">VG</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Columbia</b></div>
+            <div><span>CAT NO</span><b>CL 590</b></div>
+            <div><span>YEAR</span><b>Unknown</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">미국 모노 리이슈</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491003" target="_blank" rel="noopener" aria-label="The Greig McRitchie Band — Fighting Back, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-06.jpg" alt="The Greig McRitchie Band 〈Fighting Back〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Cool Jazz</span></div>
+          <div class="rec-title">Fighting Back</div>
+          <div class="rec-artist">The Greig McRitchie Band</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Cadet</b></div>
+            <div><span>CAT NO</span><b>LPS 4058</b></div>
+            <div><span>YEAR</span><b>1967</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1967년 미국 스테레오 1960년대 후기 리이슈</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491049" target="_blank" rel="noopener" aria-label="Various — 2nd Jazz Variations, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-07.jpg" alt="Various 〈2nd Jazz Variations〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Mainstream</span></div>
+          <div class="rec-title">2nd Jazz Variations</div>
+          <div class="rec-artist">Various</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">NM-</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Stinson Records</b></div>
+            <div><span>CAT NO</span><b>SLP 29</b></div>
+            <div><span>YEAR</span><b>1962</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1962년 미국 컴필레이션 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491107" target="_blank" rel="noopener" aria-label="Ella And Basie — A Perfect Match, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-08.jpg" alt="Ella And Basie 〈A Perfect Match〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Vocal</span></div>
+          <div class="rec-title">A Perfect Match</div>
+          <div class="rec-artist">Ella And Basie</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG+</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Pablo Today</b></div>
+            <div><span>CAT NO</span><b>D2312110</b></div>
+            <div><span>YEAR</span><b>1980</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1980년 미국 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491130" target="_blank" rel="noopener" aria-label="Charlie Byrd — The Look Of Love, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-09.jpg" alt="Charlie Byrd 〈The Look Of Love〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Easy Listening</span></div>
+          <div class="rec-title">The Look Of Love</div>
+          <div class="rec-artist">Charlie Byrd</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG</span></div><div><span class="gk">MEDIA</span><span class="gv">VG</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Harmony</b></div>
+            <div><span>CAT NO</span><b>HS 11410</b></div>
+            <div><span>YEAR</span><b>1970</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1970년 미국 스테레오 컴필레이션 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491172" target="_blank" rel="noopener" aria-label="Joe Sample — Spellbound, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-10.jpg" alt="Joe Sample 〈Spellbound〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Fusion Jazz</span></div>
+          <div class="rec-title">Spellbound</div>
+          <div class="rec-artist">Joe Sample</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG+</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Warner Bros. Records</b></div>
+            <div><span>CAT NO</span><b>1-25781</b></div>
+            <div><span>YEAR</span><b>1989</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1989년 미국 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491321" target="_blank" rel="noopener" aria-label="Bobbi Rogers — Tommy Wolf Can Really Hang You Up The Most, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-11.jpg" alt="Bobbi Rogers 〈Tommy Wolf Can Really Hang You Up The Most〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Pop</span></div>
+          <div class="rec-title">Tommy Wolf Can Really Hang You Up The Most</div>
+          <div class="rec-artist">Bobbi Rogers</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG</span></div><div><span class="gk">MEDIA</span><span class="gv">EX</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Focus</b></div>
+            <div><span>CAT NO</span><b>FS337</b></div>
+            <div><span>YEAR</span><b>1980</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1980년 미국 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491351" target="_blank" rel="noopener" aria-label="David Sanborn — Hideaway, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-12.jpg" alt="David Sanborn 〈Hideaway〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Smooth Jazz</span></div>
+          <div class="rec-title">Hideaway</div>
+          <div class="rec-artist">David Sanborn</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG+</span></div><div><span class="gk">MEDIA</span><span class="gv">EX</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Warner Bros. Records</b></div>
+            <div><span>CAT NO</span><b>BSK 3379</b></div>
+            <div><span>YEAR</span><b>1980</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1980년 미국 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491470" target="_blank" rel="noopener" aria-label="Lester Young — Volume 5 - Evening Of A Basie-ite, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-13.jpg" alt="Lester Young 〈Volume 5 - Evening Of A Basie-ite〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Mainstream Jazz</span></div>
+          <div class="rec-title">Volume 5 - Evening Of A Basie-ite</div>
+          <div class="rec-artist">Lester Young</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">NM-</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Columbia</b></div>
+            <div><span>CAT NO</span><b>C2 34849</b></div>
+            <div><span>YEAR</span><b>1980</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1980년 미국 모노 컴필레이션 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491530" target="_blank" rel="noopener" aria-label="Kai Winding &amp; J.J. Johnson — The Finest Of K &amp; JJ, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-14.jpg" alt="Kai Winding &amp; J.J. Johnson 〈The Finest Of K &amp; JJ〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Be Bop</span></div>
+          <div class="rec-title">The Finest Of K &amp; JJ</div>
+          <div class="rec-artist">Kai Winding &amp; J.J. Johnson</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG</span></div><div><span class="gk">MEDIA</span><span class="gv">EX</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Bethlehem Records</b></div>
+            <div><span>CAT NO</span><b>BCP-6001</b></div>
+            <div><span>YEAR</span><b>1976</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1976년 미국 1970년대 후기 리이슈</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491794" target="_blank" rel="noopener" aria-label="Roy Budd — Kidnapped (Original Motion Picture Soundtrack), 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-15.jpg" alt="Roy Budd 〈Kidnapped (Original Motion Picture Soundtrack)〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Soundtrack</span></div>
+          <div class="rec-title">Kidnapped (Original Motion Picture Soundtrack)</div>
+          <div class="rec-artist">Roy Budd</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG+</span></div><div><span class="gk">MEDIA</span><span class="gv">NM-</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>American International Records</b></div>
+            <div><span>CAT NO</span><b>A-1042</b></div>
+            <div><span>YEAR</span><b>1972</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1972년 미국 스테레오 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491939" target="_blank" rel="noopener" aria-label="David Sanborn — Straight To The Heart, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-16.jpg" alt="David Sanborn 〈Straight To The Heart〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Jazz Funk</span></div>
+          <div class="rec-title">Straight To The Heart</div>
+          <div class="rec-artist">David Sanborn</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">NM</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Warner Bros. Records</b></div>
+            <div><span>CAT NO</span><b>9 25150-1</b></div>
+            <div><span>YEAR</span><b>1985</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1985년 미국 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680491997" target="_blank" rel="noopener" aria-label="Hampton Hawes And Freddie Redd — Move!, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-17.jpg" alt="Hampton Hawes And Freddie Redd 〈Move!〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Hard Bop</span></div>
+          <div class="rec-title">Move!</div>
+          <div class="rec-artist">Hampton Hawes And Freddie Redd</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG+</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Status Records</b></div>
+            <div><span>CAT NO</span><b>ST 8307</b></div>
+            <div><span>YEAR</span><b>1965</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1965년 미국 컴필레이션 리이슈</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680492059" target="_blank" rel="noopener" aria-label="Helen Forrest — Now And Forever, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-18.jpg" alt="Helen Forrest 〈Now And Forever〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Jazz Vocal</span></div>
+          <div class="rec-title">Now And Forever</div>
+          <div class="rec-artist">Helen Forrest</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">NM-</span></div><div><span class="gk">MEDIA</span><span class="gv">EX</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Stash Records</b></div>
+            <div><span>CAT NO</span><b>ST 225</b></div>
+            <div><span>YEAR</span><b>1987</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1987년 미국 스테레오 1980년대 후기 리이슈</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680492109" target="_blank" rel="noopener" aria-label="Ken Werner — Beyond The Forest Of Mirkwood, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-jazz-19.jpg" alt="Ken Werner 〈Beyond The Forest Of Mirkwood〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Contemporary Jazz</span></div>
+          <div class="rec-title">Beyond The Forest Of Mirkwood</div>
+          <div class="rec-artist">Ken Werner</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG+</span></div><div><span class="gk">MEDIA</span><span class="gv">NM-</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Inner City Records</b></div>
+            <div><span>CAT NO</span><b>IC 3036</b></div>
+            <div><span>YEAR</span><b>1981</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1981년 미국 발매 · 캐나다 프레싱 스테레오 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      </div>
+    </section>
+    <section class="rec-group" id="g-poprock">
+      <div class="group-head">
+        <h2><span class="display">POP/ROCK</span> <span class="group-kr">팝·록</span></h2>
+      </div>
+      <div class="rec-grid">
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680492249" target="_blank" rel="noopener" aria-label="Eric Burdon — The Animals Greatest Hits, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-01.jpg" alt="Eric Burdon 〈The Animals Greatest Hits〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Blues Rock</span></div>
+          <div class="rec-title">The Animals Greatest Hits</div>
+          <div class="rec-artist">Eric Burdon</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Platinum Music</b></div>
+            <div><span>CAT NO</span><b>PLAT 006</b></div>
+            <div><span>YEAR</span><b>1984</b></div>
+            <div><span>COUNTRY</span><b>Germany</b></div>
+          </div>
+          <div class="rec-press">1984년 독일 스테레오 컴필레이션 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680492318" target="_blank" rel="noopener" aria-label="The Selves — Cocktails... And Plenty Of &#x27;Em!, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-02.jpg" alt="The Selves 〈Cocktails... And Plenty Of &#x27;Em!〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Indie Rock</span></div>
+          <div class="rec-title">Cocktails... And Plenty Of &#x27;Em!</div>
+          <div class="rec-artist">The Selves</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">VG</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Susstones</b></div>
+            <div><span>CAT NO</span><b>IMLP522</b></div>
+            <div><span>YEAR</span><b>1988</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1988년 미국 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680492417" target="_blank" rel="noopener" aria-label="The Alan Parsons Project — The Turn Of A Friendly Card, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-03.jpg" alt="The Alan Parsons Project 〈The Turn Of A Friendly Card〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Prog Rock</span></div>
+          <div class="rec-title">The Turn Of A Friendly Card</div>
+          <div class="rec-artist">The Alan Parsons Project</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Arista</b></div>
+            <div><span>CAT NO</span><b>AL 9518</b></div>
+            <div><span>YEAR</span><b>1980</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1980년 미국 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680492479" target="_blank" rel="noopener" aria-label="Michael Quatro — In Collaboration With The Gods, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-04.jpg" alt="Michael Quatro 〈In Collaboration With The Gods〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Modern Classical</span></div>
+          <div class="rec-title">In Collaboration With The Gods</div>
+          <div class="rec-artist">Michael Quatro</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG+</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>United Artists Records</b></div>
+            <div><span>CAT NO</span><b>UA-LA420-G</b></div>
+            <div><span>YEAR</span><b>1975</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1975년 미국 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680492615" target="_blank" rel="noopener" aria-label="Fever Tree — Fever Tree, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-05.jpg" alt="Fever Tree 〈Fever Tree〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Psychedelic Rock</span></div>
+          <div class="rec-title">Fever Tree</div>
+          <div class="rec-artist">Fever Tree</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG+</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>MCA Records</b></div>
+            <div><span>CAT NO</span><b>MCA-551</b></div>
+            <div><span>YEAR</span><b>1973</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1973년 미국 초기 리이슈</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680492666" target="_blank" rel="noopener" aria-label="The J. Geils Band — Bloodshot, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-06.jpg" alt="The J. Geils Band 〈Bloodshot〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Blues Rock</span></div>
+          <div class="rec-title">Bloodshot</div>
+          <div class="rec-artist">The J. Geils Band</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Atlantic</b></div>
+            <div><span>CAT NO</span><b>SD 7260</b></div>
+            <div><span>YEAR</span><b>1973</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1973년 미국 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680492811" target="_blank" rel="noopener" aria-label="Danny Rivera, Los Cantores De San Juan, Alpha IV, Vicente Carattini — Controversia, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-07.jpg" alt="Danny Rivera, Los Cantores De San Juan, Alpha IV, Vicente Carattini 〈Controversia〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Plena</span></div>
+          <div class="rec-title">Controversia</div>
+          <div class="rec-artist">Danny Rivera, Los Cantores De San Juan, Alpha IV, Vicente Carattini</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">NM-</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Alpha Records</b></div>
+            <div><span>CAT NO</span><b>LP - 3.142</b></div>
+            <div><span>YEAR</span><b>1985</b></div>
+            <div><span>COUNTRY</span><b>Puerto Rico</b></div>
+          </div>
+          <div class="rec-press">1985년 Puerto Rico 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680492862" target="_blank" rel="noopener" aria-label="The Monkees — The Monkees, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-08.jpg" alt="The Monkees 〈The Monkees〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Pop Rock</span></div>
+          <div class="rec-title">The Monkees</div>
+          <div class="rec-artist">The Monkees</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">VG</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Colgems</b></div>
+            <div><span>CAT NO</span><b>COM-101</b></div>
+            <div><span>YEAR</span><b>1966</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1966년 미국 모노 초기 리이슈</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680493013" target="_blank" rel="noopener" aria-label="Vanilla Fudge — The Beat Goes On, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-09.jpg" alt="Vanilla Fudge 〈The Beat Goes On〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Psychedelic Rock</span></div>
+          <div class="rec-title">The Beat Goes On</div>
+          <div class="rec-artist">Vanilla Fudge</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>ATCO Records</b></div>
+            <div><span>CAT NO</span><b>SD 33-237</b></div>
+            <div><span>YEAR</span><b>1968</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1968년 미국 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680533505" target="_blank" rel="noopener" aria-label="Genesis — Live, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-10.jpg" alt="Genesis 〈Live〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Prog Rock</span></div>
+          <div class="rec-title">Live</div>
+          <div class="rec-artist">Genesis</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG+</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Charisma</b></div>
+            <div><span>CAT NO</span><b>CAS-1666</b></div>
+            <div><span>YEAR</span><b>1974</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1974년 미국 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680533714" target="_blank" rel="noopener" aria-label="Steeleye Span — Commoners Crown, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-11.jpg" alt="Steeleye Span 〈Commoners Crown〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Folk Rock</span></div>
+          <div class="rec-title">Commoners Crown</div>
+          <div class="rec-artist">Steeleye Span</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">EX</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Chrysalis</b></div>
+            <div><span>CAT NO</span><b>L 35406</b></div>
+            <div><span>YEAR</span><b>1975</b></div>
+            <div><span>COUNTRY</span><b>New Zealand</b></div>
+          </div>
+          <div class="rec-press">1975년 New Zealand 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680533853" target="_blank" rel="noopener" aria-label="Joan Baez — Farewell, Angelina, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-12.jpg" alt="Joan Baez 〈Farewell, Angelina〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Acoustic</span></div>
+          <div class="rec-title">Farewell, Angelina</div>
+          <div class="rec-artist">Joan Baez</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG+</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Vanguard</b></div>
+            <div><span>CAT NO</span><b>VSD-79200</b></div>
+            <div><span>YEAR</span><b>1971</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1971년 미국 스테레오 초기 리이슈</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680533882" target="_blank" rel="noopener" aria-label="Elaine Curzio — Bubble Joy, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-13.jpg" alt="Elaine Curzio 〈Bubble Joy〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Religious</span></div>
+          <div class="rec-title">Bubble Joy</div>
+          <div class="rec-artist">Elaine Curzio</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Avant Garde Records</b></div>
+            <div><span>CAT NO</span><b>AVS-125</b></div>
+            <div><span>YEAR</span><b>1970</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1970년 미국 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680533941" target="_blank" rel="noopener" aria-label="David Buskin — David Buskin, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-14.jpg" alt="David Buskin 〈David Buskin〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Folk Rock</span></div>
+          <div class="rec-title">David Buskin</div>
+          <div class="rec-artist">David Buskin</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Epic</b></div>
+            <div><span>CAT NO</span><b>KE 31233</b></div>
+            <div><span>YEAR</span><b>1972</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1972년 미국 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680533976" target="_blank" rel="noopener" aria-label="Fairport Convention — &quot;Babbacombe&quot; Lee, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-15.jpg" alt="Fairport Convention 〈&quot;Babbacombe&quot; Lee〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Folk Rock</span></div>
+          <div class="rec-title">&quot;Babbacombe&quot; Lee</div>
+          <div class="rec-artist">Fairport Convention</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>A&amp;M Records</b></div>
+            <div><span>CAT NO</span><b>SP-4333</b></div>
+            <div><span>YEAR</span><b>1971</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1971년 미국 스테레오 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680534038" target="_blank" rel="noopener" aria-label="Stoneground — Stoneground, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-16.jpg" alt="Stoneground 〈Stoneground〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Psychedelic Rock</span></div>
+          <div class="rec-title">Stoneground</div>
+          <div class="rec-artist">Stoneground</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">G+</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Warner Bros. Records</b></div>
+            <div><span>CAT NO</span><b>WS 1895</b></div>
+            <div><span>YEAR</span><b>1971</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1971년 미국 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680534148" target="_blank" rel="noopener" aria-label="Cynthia Gooding — Languages Of Love, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-17.jpg" alt="Cynthia Gooding 〈Languages Of Love〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Folk</span></div>
+          <div class="rec-title">Languages Of Love</div>
+          <div class="rec-artist">Cynthia Gooding</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">EX</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Riverside Records</b></div>
+            <div><span>CAT NO</span><b>RLP 12-827</b></div>
+            <div><span>YEAR</span><b>1958</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1958년 미국 모노 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680534203" target="_blank" rel="noopener" aria-label="Melanie — Leftover Wine, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-18.jpg" alt="Melanie 〈Leftover Wine〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Pop</span></div>
+          <div class="rec-title">Leftover Wine</div>
+          <div class="rec-artist">Melanie</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">NM-</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Buddah Records</b></div>
+            <div><span>CAT NO</span><b>BDS 5066</b></div>
+            <div><span>YEAR</span><b>1970</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1970년 미국 스테레오 오리지널 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680534322" target="_blank" rel="noopener" aria-label="Ten Years After — Positive Vibrations, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-19.jpg" alt="Ten Years After 〈Positive Vibrations〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Psychedelic Rock</span></div>
+          <div class="rec-title">Positive Vibrations</div>
+          <div class="rec-artist">Ten Years After</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG+</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Columbia</b></div>
+            <div><span>CAT NO</span><b>PC 32851</b></div>
+            <div><span>YEAR</span><b>Apr 1974</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1974년 미국 스테레오 초반</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      <a class="rec" href="https://smartstore.naver.com/codedvinyls/products/13680534394" target="_blank" rel="noopener" aria-label="It&#x27;s A Beautiful Day — It&#x27;s A Beautiful Day, 스마트스토어에서 보기">
+        <div class="rec-cover"><img src="assets/online/op-260724-poprock-20.jpg" alt="It&#x27;s A Beautiful Day 〈It&#x27;s A Beautiful Day〉 자켓" loading="lazy" width="1040" height="1040"></div>
+        <div class="rec-body">
+          <div class="rec-head"><span class="rec-kicker">Psychedelic Rock</span></div>
+          <div class="rec-title">It&#x27;s A Beautiful Day</div>
+          <div class="rec-artist">It&#x27;s A Beautiful Day</div>
+          <div class="rec-grade"><div><span class="gk">COVER</span><span class="gv">VG</span></div><div><span class="gk">MEDIA</span><span class="gv">VG+</span></div></div>
+          <div class="rec-meta">
+            <div><span>LABEL</span><b>Columbia</b></div>
+            <div><span>CAT NO</span><b>CS 9768</b></div>
+            <div><span>YEAR</span><b>1972</b></div>
+            <div><span>COUNTRY</span><b>US</b></div>
+          </div>
+          <div class="rec-press">1972년 미국 스테레오 초기 리이슈</div>
+          <div class="rec-shop">스마트스토어에서 보기 →</div>
+        </div>
+      </a>
+      </div>
+    </section>
+    
+  </article>
+</div>
+</body></html>
