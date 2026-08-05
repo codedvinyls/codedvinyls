@@ -303,6 +303,60 @@ footer{background:var(--ink);color:var(--paper)}
 .arch-all:hover{color:var(--muted)}
 @media(max-width:1080px){.arch-grid{grid-template-columns:1fr}.arch-col{border-right:0;border-bottom:1px solid var(--line)}.arch-col:last-child{border-bottom:0}}
 @media(max-width:680px){.arch-links a{flex-direction:column;align-items:flex-start;gap:3px}.arch-links a span{text-align:left}}
+
+/* ── cv:home-card:editorial — 홈 에디토리얼 스프레드 R3 시안 (dg-0073 명세 ⑦ · 카피 R2 dg-0071 승계 · 렌더 dg-0074) ──
+   배너 = 렌더된 한 장의 매거진 지면(단일 이미지·타이포 소부) — 구 웹 카드(.ed-*) 폐기, 신설 .ed-spread만.
+   판형: 와이드 2880×1200(>760px 표시 1440×600) / 톨 1620×2025(≤760px) — width:100%·height:auto,
+   object-fit cover·크롭 절대 금지(조판 보존이 비율 고정의 존재 이유, ⑦-1). 배경·보더·패딩 0 — 판이 곧 배너. */
+.ed-spread{display:block;overflow:hidden}
+.ed-spread img{width:100%;height:auto;display:block;transition:transform .6s cubic-bezier(.2,.6,.2,1)}
+.ed-spread:hover img{transform:scale(1.01)}
+/* dg-0074 시안 전용 토글 chrome — 발행본 미포함 */
+.ed-preview-toggle{position:fixed;right:160px;bottom:14px;z-index:99;/* dg-0074: 메뉴 FAB(우하단)와 무겹침 오프셋 */display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);padding:8px 10px;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em}
+.ed-preview-toggle button{font-family:var(--mono);font-size:11px;letter-spacing:.04em;border:1px solid var(--line);background:transparent;color:var(--muted);padding:5px 9px;cursor:pointer}
+.ed-preview-toggle button.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+
+
+figure.fig{margin:0}
+figure.fig img{width:100%;height:auto;display:block;border:1px solid var(--line);background:var(--surface)}
+figure.fig.specimen{max-width:460px}
+figure.fig.specimen.narrow{max-width:250px}
+figure.fig figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:10px;letter-spacing:.03em;line-height:1.65} /* ⑧-1 재량 밴드 960~1200의 하단 — 현행 648 대비 1.48배 판독 유지 + F11(1500×1067) 높이 853→683 절감 */
+
+.callout{padding:22px 24px;background:var(--ink);color:var(--paper);border-left:3px solid var(--yellow)}
+.callout p{margin:0;font-size:15.5px;line-height:1.8;color:rgba(247,244,236,.9)}
+.callout a{color:var(--yellow);border-bottom:1px solid var(--yellow);padding-bottom:1px}
+
+.idx{margin:0;padding:0 clamp(24px,3vw,44px)}
+.idx-h{border-bottom:2px solid var(--ink);padding-bottom:12px}
+.idx-h h2{margin:0;font-size:clamp(18px,2.2vw,23px);font-weight:800}
+.idx-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(7,auto);grid-auto-flow:column;border:1px solid var(--line);border-top:0}
+.idx-grid>div{padding:clamp(12px,1.2vw,16px) clamp(16px,1.8vw,26px);border-bottom:1px solid var(--line)}
+.idx-grid>div:nth-child(-n+14){border-right:1px solid var(--line)}
+.idx-grid>div:nth-child(7n){border-bottom:0}
+.ig-t{font-size:15px;font-weight:800;line-height:1.4}
+.ig-v span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:#3a372f}
+.ig-v b{display:block;margin-top:3px;font-family:var(--mono);font-size:12px;font-weight:400;color:var(--ink);line-height:1.55}
+.ig-v a{border-bottom:1px solid var(--yellow);padding-bottom:1px}
+.idx-cards{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-top:0}
+.idx-card{padding:18px 16px 16px;border-right:1px solid var(--line)}
+.idx-card:last-child{border-right:0}
+.nc-k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:#3a372f}
+.nc-t{margin-top:8px;font-size:14.5px;font-weight:700;line-height:1.45;color:#3a372f}
+.nc-r{margin:8px 0 0;font-size:13.5px;line-height:1.75;color:#3a372f}
+.nc-s{margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:#3a372f}
+@media(max-width:760px){
+  .idx-grid{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
+  .idx-grid>div:nth-child(-n+14){border-right:0}
+  .idx-grid>div:nth-child(7n){border-bottom:1px solid var(--line)}
+  .idx-grid>div:last-child{border-bottom:0}
+  .idx-grid .ig-t{border-top:1px solid var(--line);margin-top:-1px}
+  .idx-grid .ig-t:first-child{border-top:0;margin-top:0}
+  .idx-cards{grid-template-columns:1fr}
+  .idx-card{border-right:0;border-bottom:1px solid var(--line)}
+  .idx-card:last-child{border-bottom:0}
+}
 </style>
 </head>
 <body>
@@ -341,6 +395,19 @@ footer{background:var(--ink);color:var(--paper)}
   </div>
 
   <main>
+
+    
+    <a class="ed-spread reveal" href="/journal/john-coltrane-time/">
+      <picture>
+        <source media="(max-width:760px)" srcset="/assets/coltrane-time-spread-tall-a.jpg" width="1620" height="2025">
+        <img src="/assets/coltrane-time-spread-wide-a.jpg" width="2880" height="1200" fetchpriority="high"
+             alt="JOURNAL — 콜트레인의 시간. 녹음이 끝나고 판이 나오기까지 — 길게는 열세 해. 콜트레인의 임펄스 세 장. 라벨과 슬리브, 자켓이 저마다 다른 시간을 가리킵니다. 왼쪽부터 발매순 — Ballads, Meditations, The Africa Brass Sessions Vol. 2 센터 라벨.">
+      </picture>
+    </a>
+    
+
+    
+
     
     <section class="hero">
       <div class="hero-copy">
@@ -417,18 +484,18 @@ footer{background:var(--ink);color:var(--paper)}
       </div>
 
       <div class="feature feature--gallery">
-        <a class="feature-card reveal" href="/arrivals/2026-08-04/">
-          <img class="thumb" src="assets/newin/newin-offline-260804.webp" alt="8월 4일 회현동 매장 입고 재즈 LP 서른한 장 — 전부 미국 프레싱, 열여덟 장에 반 겔더 각인" loading="lazy" width="900" height="1200">
+        <a class="feature-card reveal" href="/arrivals/2026-08-01/">
+          <img class="thumb" src="assets/newin/newin-offline-260801.webp" alt="8월 1일 회현 매장 입고 LP 39장 — 록·소울·재즈, 초반 스물아홉 장" loading="lazy" width="900" height="1200">
           <span class="kicker"><span class="tick"></span>매장 신보 · 8월 1주차</span>
-          <div class="ft">8월 4일<br>매장 입고 31장</div>
-          <div class="fd">서른한 장이 전부 재즈이고 전부 미국 프레싱입니다. 잭 윌슨 〈Easterly Winds〉와 리 모건 〈The Gigolo〉의 블루노트 오리지널 초반을 앞에 세웠고, 열여덟 장에 반 겔더 각인이 남아 있습니다.</div>
+          <div class="ft">8월 1일<br>매장 입고 39장</div>
+          <div class="fd">1960년 데카의 브렌다 리 스테레오 초반과 캣 스티븐스 〈Teaser And The Firecat〉을 비롯해 록·소울·재즈로 들어온 초반 스물아홉 장.</div>
           <span class="link">입고 기록 보기 →</span>
         </a>
-        <a class="feature-card reveal" href="/update/2026-08-05/">
-          <img class="thumb" src="assets/online/op-260805-poprock-01.jpg" alt="8월 5일 온라인 업데이트 — 록 자켓 그리드" loading="lazy" width="900" height="1200">
-          <span class="kicker">온라인 신보 · 8월 1주차</span>
-          <div class="ft">미국 록 초반 스물여덟 장에<br>유럽 초반 넉 장을 더했습니다</div>
-          <div class="fd">비틀즈(The Beatles)의 트렁크 커버 초반과 오지 오스본(Ozzy Osbourne)의 솔로 데뷔작이 함께 왔습니다. 마흔 장 중 서른두 장이 초반입니다.</div>
+        <a class="feature-card reveal" href="/update/2026-07-31/">
+          <img class="thumb" src="assets/online/op-260731-jazz-06.jpg" alt="7월 31일 온라인 업데이트 — 재즈·팝록 자켓 그리드" loading="lazy" width="900" height="1200">
+          <span class="kicker">온라인 신보 · 7월 5주차</span>
+          <div class="ft">임펄스(Impulse!) 오리지널 재즈에서<br>영국 초반 록까지</div>
+          <div class="fd">재즈 스무 장, 팝·록 열아홉 장이 들어왔습니다. 소니 롤린스(Sonny Rollins)의 스튜디오 고별 레코딩과 러시(Rush)의 〈Moving Pictures〉가 함께 왔습니다.</div>
           <span class="link">온라인 업데이트 보기 →</span>
         </a>
       </div>
@@ -437,11 +504,6 @@ footer{background:var(--ink);color:var(--paper)}
       <div class="home-updates">
         <div class="hu-head"><span class="hu-label">지난 입고</span><a class="hu-all" href="/update/">전체 보기 →</a></div>
         <div class="hu-rail">
-        <a class="hu-chip" href="/update/2026-07-31/">
-          <div class="hu-cover"><img src="/assets/online/op-260731-jazz-06.jpg" alt="온라인 업데이트 2026.07.31 — 임펄스(Impulse!) 오리지널 재즈에서 영국 초반 록까지" loading="lazy"></div>
-          <span class="hu-date">2026.07.31</span>
-          <span class="hu-title">온라인 업데이트 2026.07.31 — 임펄스(Impulse!) 오리지널 재즈에서 영국 초반 록까지</span>
-        </a>
         <a class="hu-chip" href="/update/2026-07-29/">
           <div class="hu-cover"><img src="/assets/online/op-260729-classical-03.jpg" alt="온라인 업데이트 2026.07.29 — 클래식 40장" loading="lazy"></div>
           <span class="hu-date">2026.07.29</span>
@@ -456,6 +518,11 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="hu-cover"><img src="/assets/online/op-260722-jazz-05.jpg" alt="온라인 업데이트 2026.07.22 — 재즈 마흔한 장" loading="lazy"></div>
           <span class="hu-date">2026.07.22</span>
           <span class="hu-title">온라인 업데이트 2026.07.22 — 재즈 마흔한 장</span>
+        </a>
+        <a class="hu-chip" href="/update/2026-07-17/">
+          <div class="hu-cover"><img src="/assets/online/op-260717-poprock-34.jpg" alt="온라인 업데이트 2026.07.17 — 팝·록 마흔 장" loading="lazy"></div>
+          <span class="hu-date">2026.07.17</span>
+          <span class="hu-title">온라인 업데이트 2026.07.17 — 팝·록 마흔 장</span>
         </a>
         </div>
       </div>
@@ -738,5 +805,24 @@ footer{background:var(--ink);color:var(--paper)}
 </script>
 <script src="/assets/cv-nav.js" defer></script>
 <script src="/assets/cv-video.js" defer></script>
+
+<div class="ed-preview-toggle" role="group" aria-label="시안 판 토글">
+  <span>dg-0074 R3 시안 · 스프레드</span>
+  <button type="button" data-v="a" class="on">판A 잉크</button>
+  <button type="button" data-v="b">판B 크림</button>
+</div>
+<script>
+(function(){
+  var sp=document.querySelector('.ed-spread');if(!sp)return;
+  var img=sp.querySelector('img'),src=sp.querySelector('source');
+  var btns=document.querySelectorAll('.ed-preview-toggle button');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+    var v=b.dataset.v;
+    img.src='/assets/coltrane-time-spread-wide-'+v+'.jpg';
+    src.srcset='/assets/coltrane-time-spread-tall-'+v+'.jpg';
+  })});
+})();
+</script>
 </body>
 </html>
