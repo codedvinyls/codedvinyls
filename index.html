@@ -90,6 +90,12 @@ img{display:block;max-width:100%}
 .hero-copy h1{margin:0;font-size:clamp(34px,6vw,60px);line-height:1.08;font-weight:800;letter-spacing:-.01em}
 .hero-copy .lede{font-size:clamp(15px,1.6vw,17px);line-height:1.7;color:var(--muted);max-width:34em}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px}
+.hero-event{display:flex;flex-direction:column;gap:9px;margin-top:4px;padding:22px 26px;background:var(--ink);color:var(--paper);border-left:3px solid var(--yellow);max-width:600px}
+.hero-event .he-kick{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;color:#b8b3a8;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.hero-event strong{font-size:clamp(17px,2vw,21px);font-weight:800;line-height:1.35;color:var(--paper)}
+.hero-event .he-sub{font-family:var(--mono);font-size:12px;color:#b8b3a8}
+.hero-event .he-link{font-family:var(--mono);font-size:12.5px;color:var(--yellow);border-bottom:1px solid var(--yellow);align-self:flex-start;padding-bottom:2px}
+.hero-event:hover strong{color:var(--yellow)}
 .cta{display:inline-flex;align-items:center;gap:12px;padding:17px 30px;font-family:var(--mono);font-size:13.5px;letter-spacing:.05em;border:1px solid var(--ink)}
 .cta-primary{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
 .cta-primary:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
@@ -353,6 +359,13 @@ footer{background:var(--ink);color:var(--paper)}
         </div>
         <h1>빈티지 바이닐<br>갤러리</h1>
         <p class="lede">음악이 기록된 순간을 탐구합니다. 미국·유럽 오리지널 초판·초반 프레싱을 한 장씩 식별하고 소개합니다.</p>
+        
+        <a class="hero-event" href="/journal/shinsegae-academy-miles-davis-2609/">
+          <span class="he-kick"><span class="tick"></span>EVENT · 2026.09.16 · 신세계 아카데미 × KEF 코리아 × 코디드바이닐즈</span>
+          <strong>마일스 데이비스, 네 장의 초판으로 듣는 40분</strong>
+          <span class="he-sub">정원 20석 · 모집 9월 1일(화) – 14일(월)</span>
+          <span class="he-link">세션 안내 보기 →</span>
+        </a>
         
         <div class="hero-actions">
           <a class="cta cta-primary" href="#archive">아카이브 둘러보기 →</a>
