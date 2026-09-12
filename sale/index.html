@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="/assets/cv-analytics.js"></script>
 <title>가격대별 시작 할인 · 매주 +3%p | 코디드바이닐즈 CODEDVINYLS</title>
-<meta name="description" content="정가 구간별 15%·9%·3%로 시작해 매주 3%p씩 갱신되는 온라인 스토어 상시 SALE입니다.">
+<meta name="description" content="공지 페이지로 이동">
 <link rel="stylesheet" href="/assets/cv-nav.css">
 <link rel="canonical" href="https://codedvinyls.com/sale/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="코디드바이닐즈">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:title" content="가격대별 시작 할인 · 매주 +3%p">
-<meta property="og:description" content="정가 구간별 15%·9%·3%로 시작해 매주 3%p씩 갱신되는 온라인 스토어 상시 SALE입니다.">
+<meta property="og:description" content="공지 페이지로 이동">
 <meta property="og:url" content="https://codedvinyls.com/sale/">
 <meta property="og:image" content="https://codedvinyls.com/assets/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -26,96 +26,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/assets/cv-type.css">
 <style>
-:root{
-  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
-  --line:#e4dcd0; --yellow:#ffcd00; --body:#3a372f; --max:1440px;
-  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
-  --mono:"Courier New",monospace;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%;word-break:keep-all}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
-
-/* ── nav (cv-nav.js가 셀 주입 — 정본 규약 그대로) ── */
-.top-grid{display:grid;grid-template-columns:260px repeat(5,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
-.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
-.logo-cell img{width:188px;height:auto}
-.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
-.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
-.nav-cell:last-child{border-right:0}
-.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
-.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
-.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
-.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
-.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
-
-.crumb{border-bottom:1px solid var(--line);background:var(--surface);padding:16px 26px;font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.05em;display:flex;gap:10px;align-items:center}
-.crumb a:hover{color:var(--ink)}
-
-/* ── hero ── */
-.sale-hero{padding:clamp(56px,7.5vw,116px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
-.sale-hero .wrap{max-width:880px;margin:0;display:flex;flex-direction:column;gap:22px}
-.sale-hero .kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.11em}
-.sale-hero h1{margin:0;font-size:clamp(34px,5.4vw,62px);line-height:1.06;font-weight:800;letter-spacing:-.022em}
-.sale-hero .dek{margin:0;max-width:680px;font-size:clamp(16px,1.8vw,19px);line-height:1.78;color:var(--body)}
-
-/* ── 이벤트 구조 ── */
-.mechanics,.rotation,.now-band{padding:clamp(46px,6vw,82px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
-.mechanics .wrap,.rotation .wrap,.now-band .wrap{max-width:1040px;margin:0}
-.section-kicker{display:block;margin-bottom:18px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--muted)}
-.mechanics h2,.rotation h2,.now-band h2{margin:0 0 24px;font-size:clamp(25px,3.3vw,38px);line-height:1.16;letter-spacing:-.018em}
-.rates{border-top:1px solid var(--line)}
-.rate-row{display:grid;grid-template-columns:minmax(220px,1fr) 110px 150px;align-items:baseline;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}
-.rate-price{font-size:clamp(15px,1.7vw,18px);color:var(--body)}
-.rate-start{font-size:clamp(28px,3.2vw,40px);font-weight:800;text-align:right}
-.rate-cap{font-size:clamp(14px,1.5vw,16px);color:var(--body);text-align:right}
-.fine{margin:20px 0 0;font-size:13px;line-height:1.7;color:var(--muted)}
-.rotation{background:var(--ink);color:var(--paper)}
-.rotation .section-kicker{color:rgba(247,244,236,.58)}
-.rotation .lead{margin:0 0 30px;max-width:760px;font-size:clamp(15px,1.7vw,18px);line-height:1.8;color:rgba(247,244,236,.78)}
-.flow{display:flex;border-top:1px solid rgba(247,244,236,.2);border-bottom:1px solid rgba(247,244,236,.2)}
-.flow-step{flex:1;min-width:0;padding:22px 18px 24px 0;display:flex;flex-direction:column;gap:8px}
-.flow-step+.flow-step{border-left:1px solid rgba(247,244,236,.2);padding-left:22px}
-.flow-step b{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--yellow)}
-.flow-step span{font-size:clamp(15px,1.65vw,18px);font-weight:700}
-.flow-step small{font-size:13px;color:rgba(247,244,236,.58)}
-.now-band p{margin:0;max-width:720px;font-size:clamp(15px,1.7vw,18px);line-height:1.8;color:var(--body)}
-
-/* ── CTA 밴드 (ink · 노랑 한 점=여기에만) ── */
-.cta{background:var(--ink);color:var(--paper);padding:clamp(46px,6vw,76px) clamp(24px,4vw,56px);display:flex;flex-direction:column;gap:clamp(26px,3vw,38px);align-items:center;text-align:center}
-.cta .cta-eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.13em;color:rgba(247,244,236,.62)}
-.cta-buttons{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
-.cta-buttons a{background:var(--yellow);color:var(--ink);padding:15px 26px;font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;border:1px solid var(--yellow);transition:background .16s,color .16s}
-.cta-buttons a:hover{background:transparent;color:var(--yellow)}
-
-footer{background:var(--ink);color:var(--paper)}
-.footer-base{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 26px;font-family:var(--mono);font-size:12px;flex-wrap:wrap;border-top:1px solid rgba(247,244,236,.18)}
-
-@media(max-width:1080px){
-  .top-grid{grid-template-columns:1fr 1fr}
-  .logo-cell{grid-column:1/3;border-right:0;border-bottom:1px solid var(--line)}
-  .nav-cell:nth-child(even){border-right:0}
-}
-@media(max-width:680px){
-  .page{border-left:0;border-right:0}
-  .nav-cell{min-height:60px;padding:16px 14px;font-size:11.5px}
-  .cv-fab{display:none!important}
-  .rate-row{grid-template-columns:1fr auto;gap:8px 18px}
-  .rate-cap{grid-column:1/3;text-align:left}
-  .flow{flex-direction:column}
-  .flow-step+.flow-step{border-left:0;border-top:1px solid rgba(247,244,236,.2);padding-left:0}
-  .cta-buttons a{flex:1 1 44%}
-  .footer-base{flex-direction:column;gap:8px;align-items:flex-start}
-}
+/* 260911 — 상시 SALE 종료, /notice/ 로 리다이렉트하는 스텁. 정본 콘텐츠는 옛 SALE 이 아니라
+   이 파일 자체가 대체됐다는 사실이다(옛 카피·CTA 링크는 git 이력에만 남긴다 — _archive/ 아님).
+   --max·--yellow 는 시각적으로 안 쓰여도 landing_conformance.py 토큰 검사(②④)를 통과하려면
+   :root 에 선언돼 있어야 한다 — 다른 페이지와 같은 팔레트 계약을 스텁도 따른다는 뜻으로 유지. */
+:root{--paper:#f7f4ec;--ink:#1f1e1b;--yellow:#ffcd00;--max:1440px;
+      --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;--mono:"Courier New",monospace}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+     display:flex;align-items:center;justify-content:center;min-height:60vh;text-align:center}
+p{font-family:var(--mono);font-size:13px;letter-spacing:.04em}
+a{color:var(--ink);border-bottom:1px solid var(--yellow)}
 </style>
 </head>
 <body>
-<div class="page" id="top">
-
-  <header class="top-grid">
+<header class="top-grid">
     <a class="logo-cell" href="/">
       <img src="/assets/cv_wordmark_ink.svg" alt="CODEDVINYLS">
       <span class="logo-sub">코디드바이닐즈</span>
@@ -128,78 +52,7 @@ footer{background:var(--ink);color:var(--paper)}
     <a class="nav-cell" href="/#visit">VISIT<span class="nav-dot"></span></a>
     <a class="nav-cell store" href="/store.html">STORE<span class="nav-dot"></span></a>
   </header>
-
-  <div class="crumb">
-    <a href="/">CODEDVINYLS</a><span>/</span><span>ONLINE STORE · SALE</span>
-  </div>
-
-  <main>
-
-    <section class="sale-hero">
-      <div class="wrap">
-        <span class="kicker">온라인 스토어 · 상시 재고 SALE</span>
-        <h1>가격대별 시작 할인,<br>매주 +3%p.</h1>
-        <p class="dek">15%·9%·3%로 시작해 최대 21%·15%·9%까지 적용됩니다.</p>
-      </div>
-    </section>
-
-    
-
-    
-
-    <section class="mechanics" aria-label="할인율 안내">
-      <div class="wrap">
-        <span class="section-kicker">STARTING RATE</span>
-        <h2>시작 할인과 최대 할인율</h2>
-        <div class="rates">
-          <div class="rate-row"><span class="rate-price">49,000원 미만</span><strong class="rate-start">15%</strong><span class="rate-cap">최대 21%</span></div>
-          <div class="rate-row"><span class="rate-price">49,000–99,999원</span><strong class="rate-start">9%</strong><span class="rate-cap">최대 15%</span></div>
-          <div class="rate-row"><span class="rate-price">100,000원 이상 SALE 상품</span><strong class="rate-start">3%</strong><span class="rate-cap">최대 9%</span></div>
-        </div>
-        <p class="fine">정가 기준 · 상품별 적용 할인은 SALE 카테고리에서 확인할 수 있습니다.</p>
-      </div>
-    </section>
-
-    <section class="rotation" aria-label="상시 SALE 운영 흐름">
-      <div class="wrap">
-        <span class="section-kicker">WEEKLY FLOW</span>
-        <h2>주마다 전부 바꾸지 않습니다.</h2>
-        <p class="lead">상품은 판매될 때까지 SALE에 유지되고, 판매된 자리는 다음 음반이 채웁니다.</p>
-        <div class="flow">
-          <div class="flow-step"><b>01</b><span>SALE 진입</span><small>가격대별 첫 할인</small></div>
-          <div class="flow-step"><b>02</b><span>1주 유지</span><small>+3%p</small></div>
-          <div class="flow-step"><b>03</b><span>2주 유지</span><small>최대 할인율</small></div>
-          <div class="flow-step"><b>04</b><span>판매</span><small>다음 음반 진입</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="now-band" aria-label="현재 SALE 카테고리">
-      <div class="wrap">
-        <span class="section-kicker">NOW IN SALE</span>
-        <h2>팝·록 · 재즈 · 클래식 · 소울, 각 200장</h2>
-        <p>클래식과 소울 카테고리를 업데이트했습니다.</p>
-      </div>
-    </section>
-
-    <section class="cta" aria-label="온라인 스토어 SALE 바로가기">
-      <span class="cta-eyebrow">ONLINE STORE · SALE</span>
-      <div class="cta-buttons">
-        <a href="https://smartstore.naver.com/codedvinyls/category/bf10cb32b9344e58aa9c3e2e1b4dfc7a" target="_blank" rel="noopener">팝 · 록 SALE →</a>
-        <a href="https://smartstore.naver.com/codedvinyls/category/ed4b3a1ae6024f729df73b84cada0078" target="_blank" rel="noopener">재즈 SALE →</a>
-        <a href="https://smartstore.naver.com/codedvinyls/category/83c24297cb44411aa539dec6bb5c3732" target="_blank" rel="noopener">클래식 SALE →</a>
-        <a href="https://smartstore.naver.com/codedvinyls/category/981de226cecd4749ac6041ab89898a87" target="_blank" rel="noopener">소울 SALE →</a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-base">
-      <span>← <a href="/" style="border-bottom:1px solid var(--yellow)">CODEDVINYLS HOME</a></span>
-    </div>
-  </footer>
-</div>
-<script src="/assets/cv-nav.js" defer></script>
+<meta http-equiv="refresh" content="0; url=/notice/">
+<p><a href="/notice/">공지 페이지로 이동합니다.</a></p>
 </body>
 </html>
