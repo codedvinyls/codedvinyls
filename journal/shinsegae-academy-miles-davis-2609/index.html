@@ -287,14 +287,7 @@ footer{background:var(--ink);color:var(--paper)}
         <div><div class="date">09.16<small>WED · 16:00 – 17:20 · 신세계백화점 본점 신세계 아카데미</small></div></div>
         <div>
           <div class="rows"><span>WITH</span><b>신세계 아카데미 · KEF 코리아 · 코디드바이닐즈</b><span>FEE</span><b>35,000원</b><span class="hl">SEATS</span><span class="hl"><b>정원 20석 · 조기 마감 가능</b></span><span>OPEN</span><b>9월 1일(화) – 9월 14일(월)</b><span>SERVED</span><b>하우스오브신세계 디저트살롱 케이터링 · 더치랩 커피 · 무알콜 와인 · 로얄 브라클라 위스키</b></div>
-          <a class="btn" id="apply-cta" href="https://www.shinsegae.com/culture/academy/lecture.do?yearCode=2026&smstCode=S3&storeCode=01&lectCode=V12697587" target="_blank" rel="noopener">신세계 아카데미 수강신청 →</a>
-          <div class="how-t">HOW TO APPLY — 신청 방법</div>
-          <ol class="how">
-            <li>위 버튼을 누르면 신세계 아카데미 강좌 페이지가 열립니다.</li>
-            <li>페이지에서 <b>수강신청</b>을 누르면 로그인 안내창이 뜹니다. 오른쪽 상단에서 <b>신세계 회원으로 로그인</b>해 주세요.</li>
-            <li>로그인 후 <b>수강신청</b>을 다시 누르면 결제 화면으로 이어집니다.</li>
-          </ol>
-          <p class="note">신청이 몰리면 조기 마감됩니다. <b>취소는 행사일로부터 7일 전까지 가능합니다.</b></p>
+          <span class="btn" aria-disabled="true" style="background:transparent;border:1px solid currentColor;color:inherit;cursor:default">모집 종료</span>
         </div>
       </div>
     </section>
@@ -317,23 +310,5 @@ footer{background:var(--ink);color:var(--paper)}
   </footer>
 </div>
 <script src="/assets/cv-nav.js" defer></script>
-<script>
-/* EVENT 2609 퍼널 계측 — page_view(GA4 자동) → apply_view(신청 섹션 도달) → apply_click(신청 버튼).
-   유입원 구분은 GA4 세션 소스/매체 기준. gtag = cv-analytics.js(head 동기 로드)가 정의. */
-(function(){
-  function ev(name){ if (typeof window.gtag === 'function') window.gtag('event', name); }
-  var btn = document.getElementById('apply-cta');
-  if (btn) btn.addEventListener('click', function(){ ev('apply_click'); });
-  var sec = document.querySelector('.ev-apply');
-  if (sec && 'IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(entries){
-      for (var i = 0; i < entries.length; i++) {
-        if (entries[i].isIntersecting) { ev('apply_view'); io.disconnect(); break; }
-      }
-    }, {threshold: 0.4});
-    io.observe(sec);
-  }
-})();
-</script>
 </body>
 </html>
