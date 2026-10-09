@@ -71,6 +71,7 @@ img{display:block;max-width:100%}
 .buy{display:flex;flex-direction:column;gap:12px;margin-top:4px}
 .cv-pay-btn{appearance:none;border:0;background:var(--ink);color:var(--paper);font-family:var(--sans);font-size:16px;font-weight:700;letter-spacing:.02em;padding:18px 24px;cursor:pointer;transition:background .15s;width:100%}
 .cv-pay-btn:hover{background:#000}
+.cv-pay-btn:disabled,.cv-pay-btn:disabled:hover{background:var(--muted);cursor:not-allowed}
 .cv-pay-msg{min-height:18px;font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.6}
 .fulfil{border-top:1px solid var(--line);padding-top:16px;font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.9}
 .fulfil a{border-bottom:1px solid var(--yellow);color:var(--ink)}
@@ -162,7 +163,7 @@ footer{background:var(--ink);color:var(--paper)}
 
         <div class="cv-notice"><strong>온라인 결제 준비 중입니다.</strong> 실제 구매는 <a href="https://smartstore.naver.com/codedvinyls/products/11873808954" target="_blank" rel="noopener">스마트스토어</a>에서 이용해 주세요. 이 페이지의 결제 기능은 정식 오픈을 준비 중입니다.</div>
         <div class="buy">
-          <button class="cv-pay-btn" onclick="cvPay({orderName:'Clara Haskil — Schumann: Waldscenen · Kinderscenen', totalAmount:29000})">일반결제하기</button>
+          <button class="cv-pay-btn" type="button" disabled aria-disabled="true" data-order-name="Clara Haskil — Schumann: Waldscenen · Kinderscenen" data-amount="29000">결제 준비 중</button>
           <div class="cv-pay-msg" id="cv-pay-msg"></div>
         </div>
 
@@ -196,7 +197,10 @@ footer{background:var(--ink);color:var(--paper)}
 
 <script src="https://cdn.portone.io/v2/browser-sdk.js"></script>
 <script>
+// 결제 스위치 — false = 결제 준비 중(버튼 비활성 · 결제창 안 열림). true = 일반결제 열림.
+var CV_PAY_ENABLED = false;
 async function cvPay(opts) {
+  if (!CV_PAY_ENABLED) return;
   // storeId·channelKey = 빌드 후 Keychain 주입(placeholder). payMethod:"CARD" = 일반결제(신용카드 결제창).
   const paymentId = "payment-" + (crypto.randomUUID ? crypto.randomUUID() : Date.now());
   const res = await PortOne.requestPayment({
@@ -215,6 +219,10 @@ async function cvPay(opts) {
   }
   msg.textContent = "결제가 접수되었습니다.";
 }
+if (CV_PAY_ENABLED) document.querySelectorAll(".cv-pay-btn").forEach(function (b) {
+  b.disabled = false; b.removeAttribute("aria-disabled"); b.textContent = "일반결제하기";
+  b.addEventListener("click", function () { cvPay({orderName: b.dataset.orderName, totalAmount: Number(b.dataset.amount)}); });
+});
 </script>
 <script src="assets/cv-nav.js" defer></script>
 </body>
