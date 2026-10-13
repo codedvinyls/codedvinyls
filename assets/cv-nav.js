@@ -11,6 +11,7 @@
   var SITE = [
     { kr: "홈",          en: "HOME",         href: "/" },
     { kr: "신보 입고",    en: "NEW ARRIVALS", href: "/#latest" },
+    { kr: "공지",        en: "NOTICE",       href: "/notice/" },   // ★261013 공지 허브
     { kr: "큐레이션",     en: "CURATION",     href: "/#curation" },
     { kr: "청음 세션",    en: "LISTENING",    href: "/#listening" },
     { kr: "장르",        en: "GENRES",       href: "/genre/" },
@@ -19,7 +20,7 @@
     { kr: "— 클래식",    en: "CLASSICAL",    href: "/genre/classical/" },
     { kr: "— 소울",      en: "SOUL",         href: "/genre/soul/" },
     { kr: "레이블",       en: "LABELS",       href: "/label/" },
-    { kr: "저널",        en: "JOURNAL",      href: "/#curation" },
+    { kr: "저널",        en: "JOURNAL",      href: "/journal/" },   // ★261013 저널 허브(장르·레이블·딥다이브 흡수)
     { kr: "그레이딩",     en: "GRADING",      href: "/guide/grading/" },
     { kr: "보존 관리",    en: "ARCHIVAL",     href: "/guide/archival-standard/" },
     { kr: "CD 코너",     en: "CD",           href: "/cd/" },
