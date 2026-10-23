@@ -407,85 +407,155 @@ footer{background:var(--ink);color:var(--paper)}
     
 
     
-    <section class="latest" id="latest">
+    <section class="latest ni" id="latest">
+      <style>
+.latest .section-head .more a{color:var(--ink)}
+.ni{--gx:clamp(16px,4.375vw,63px)}
+.ni-store{padding:44px var(--gx) 0}
+.ni-mo{display:grid;gap:12px;grid-template-columns:repeat(10,minmax(0,1fr));grid-auto-flow:row}
+.ni-mo>a{display:block;min-width:0;aspect-ratio:1/1}
+.ni-mo>a.b1,.ni-mo>a.b2,.ni-mo>a.b3{aspect-ratio:auto}
+.ni-mo img{width:100%;height:100%;object-fit:cover;filter:drop-shadow(0 9.3px 18.5px rgba(31,30,27,.22)) drop-shadow(0 2.8px 5.6px rgba(31,30,27,.15))}
+.ni-mo>a.b1 img,.ni-mo>a.b2 img,.ni-mo>a.b3 img{filter:drop-shadow(0 10px 20px rgba(31,30,27,.22)) drop-shadow(0 3px 6px rgba(31,30,27,.15))}
+.ni-mo--pc .b1{grid-area:1/1/3/3}.ni-mo--pc .b2{grid-area:2/5/4/7}.ni-mo--pc .b3{grid-area:1/9/3/11}
+.ni-mo--ph{display:none}
+.ni-cap{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));column-gap:12px;padding:40px 0 0;align-items:start}
+.ni-date{grid-column:1/3;font-family:var(--display);font-weight:800;font-size:72px;line-height:.78;letter-spacing:-.02em;color:var(--ink);margin:0}
+.ni-txt{grid-column:3/10;min-width:0}
+.ni-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0}
+.ni-name{display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:700;letter-spacing:.01em;color:var(--ink)}
+.ni-comp{font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;color:#655f54}
+.ni-head{margin:12px 0 0;font-family:var(--display);font-size:28px;line-height:1.25;font-weight:800;letter-spacing:-.01em;word-break:keep-all}
+.ni-dek{margin:10px 0 0;font-size:15.5px;line-height:1.75;color:var(--muted-strong,#46413a);word-break:keep-all;text-wrap:pretty;max-width:none}
+.ni-go{grid-column:10/11;justify-self:end;align-self:end;font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px;white-space:nowrap}
+.ni-past{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));column-gap:12px;margin:34px 0 0;border-top:1px solid var(--line);padding:18px 0 38px}
+.ni-past-k{grid-column:1/3;font-size:13px;font-weight:600;color:#655f54;padding-top:4px}
+.ni-past ul{grid-column:3/11;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px}
+.ni-past a{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:baseline;column-gap:14px;color:var(--ink)}
+.ni-past .d{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.01em;line-height:1.2}
+.ni-past .c{font-size:14px;line-height:1.5;word-break:keep-all}
+.ni-past .r{font-family:var(--mono);font-size:12.5px;color:var(--ink)}
+.ni-online{border-top:1px solid var(--line);padding:30px var(--gx) 42px}
+.ni-on-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:0 0 20px}
+.ni-on-k{font-size:14px;font-weight:700;color:#655f54;letter-spacing:.01em}
+.ni-on-all{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px;white-space:nowrap}
+.ni-on-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:24px}
+.ni-on-row a{display:flex;flex-direction:column;gap:12px;min-width:0}
+.ni-on-row img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;filter:drop-shadow(0 10px 20px rgba(31,30,27,.22)) drop-shadow(0 3px 6px rgba(31,30,27,.15))}
+.ni-on-row span{font-family:var(--mono);font-size:12px;letter-spacing:.03em;color:#655f54;white-space:nowrap}
+@media(max-width:1279px){
+ .ni-mo--pc{grid-template-columns:repeat(8,minmax(0,1fr))}
+ .ni-mo--pc .b2{grid-area:2/4/4/6}.ni-mo--pc .b3{grid-area:1/7/3/9}
+ .ni-mo--pc>a.s:nth-child(n+16){display:none}
+ .ni-cap,.ni-past{grid-template-columns:repeat(8,minmax(0,1fr))}
+ .ni-txt{grid-column:3/8}.ni-go{grid-column:8/9}.ni-past ul{grid-column:3/9}
+}
+@media(max-width:767px){
+ .ni-store{padding:24px 16px 0}
+ .ni-mo--pc{display:none}
+ .ni-mo--ph{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-width:480px}
+ .ni-mo--ph img{filter:drop-shadow(0 6.4px 12.8px rgba(31,30,27,.22)) drop-shadow(0 1.9px 3.9px rgba(31,30,27,.15))}
+ .ni-mo--ph>a.b1 img,.ni-mo--ph>a.b2 img{filter:drop-shadow(0 10px 20px rgba(31,30,27,.22)) drop-shadow(0 3px 6px rgba(31,30,27,.15))}
+ .ni-mo--ph .b1{grid-area:1/1/3/3}.ni-mo--ph .b2{grid-area:3/3/5/5}
+ .ni-cap{grid-template-columns:auto minmax(0,1fr);column-gap:14px;padding-top:30px;align-items:end}
+ .ni-txt{display:contents}
+ .ni-date{grid-column:1/2;grid-row:1;font-size:52px;line-height:.78}
+ .ni-meta{grid-column:2/3;grid-row:1;flex-direction:column;align-items:flex-start;gap:3px}
+ .ni-head{grid-column:1/-1;grid-row:2;font-size:23px;margin-top:14px}
+ .ni-dek{grid-column:1/-1;grid-row:3;font-size:15px;line-height:1.72}
+ .ni-go{grid-column:1/-1;grid-row:4;justify-self:start;margin-top:12px}
+ .ni-past{display:block;margin-top:22px;padding:12px 0 20px}
+ .ni-past-k{display:block;padding:0 0 4px}
+ .ni-past ul{display:block}
+ .ni-past li{border-top:1px solid var(--line)}
+ .ni-past li:first-child{border-top:0}
+ .ni-past a{padding:8px 0;column-gap:12px}
+ .ni-past .d{font-size:18px}
+ .ni-online{padding:22px 0 26px}
+ .ni-on-h{padding:0 16px;margin-bottom:16px}
+ .ni-on-row{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:150px;column-gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;padding:0 16px 8px;scrollbar-width:none}
+ .ni-on-row::-webkit-scrollbar{display:none}
+ .ni-on-row li{scroll-snap-align:start}
+}
+</style>
       <div class="section-head">
         <h2 class="display">New In</h2>
-        <span class="more">최신 입고 · 온라인 업데이트</span>
+        <span class="more"><a href="#ni-store">매장 입고</a> · <a href="#ni-online">온라인 업데이트</a></span>
       </div>
 
-      <div class="feature feature--gallery">
-        <a class="feature-card reveal" href="/arrivals/2026-10-22-classical-2/">
-          <img class="thumb" src="assets/newin/newin-offline-261022-classical-2.webp" alt="사진 위쪽 절반에는 결이 드러난 갈색 나무 벽이 보인다. 그 아래 나무 수납함 안에 투명 비닐에 싸인 레코드들이 세워져 있고, 비닐 윗단 너머로 크림색과 분홍빛, 하늘빛 자켓 윗부분이 겹쳐 보인다. 사진 아래쪽 절반은 앞쪽 자켓 한 장이 차지한다. 자켓 위쪽 검은 띠 가운데에는 흰 글자 &#x27;STEREO&#x27;가 있고, 오른쪽 금색 상자 안에는 &#x27;RCA VICTOR&#x27;와 &#x27;RED SEAL&#x27;이, 그 옆에는 축음기 앞에 앉은 개 그림이 인쇄되어 있다. 금빛 테두리 안 흰 바탕 위쪽에는 &#x27;CONCERTO No.1&#x27;, &#x27;VAN CLIBURN&#x27;, &#x27;KIRIL KONDRASHIN, Conductor&#x27;가 검은 글자로 적혀 있고, 그 아래에는 피아노 앞에 고개를 숙이고 앉은 사람의 흑백 사진이 실려 있다. 자켓 오른쪽 위에는 금색 원형 마크가, 왼쪽 위에는 바코드가 찍힌 흰 스티커가 붙어 있다. 왼쪽 가장자리에는 자켓을 받친 손가락이 보이고, 자켓 밑으로 밝은 나무 바닥이 드러난다." loading="lazy" width="900" height="1200">
-          <span class="kicker"><span class="tick"></span>매장 신보 · 10월 4주차</span>
-          <div class="ft">2026년 10월 22일 - 클래식 26장 신보 입고 · 협주곡 일곱 장</div>
-          <div class="fd">1958년 밴 클라이번(Van Cliburn)의 차이콥스키 협주곡 1번, 피아노 앞에 고개를 숙인 사람의 흑백 사진을 금빛 테두리 안에 담은 자켓.</div>
-          <span class="link">입고 기록 보기 →</span>
-        </a>
-        <a class="feature-card reveal" href="/update/2026-10-21-classical/">
-          <img class="thumb" src="assets/online/op-261021-classical-19.jpg" alt="10월 21일 온라인 업데이트 — 클래식 자켓" loading="lazy" width="900" height="1200">
-          <span class="kicker">온라인 신보 · 10월 3주차</span>
-          <div class="ft">10월 21일 온라인 업데이트<br>클래식</div>
-          <div class="fd">2026년 10월 21일 스마트스토어 온라인 업데이트 — 클래식 20장. 글렌 굴드(Glenn Gould)의 1981년 바흐(Bach) 〈골트베르크 변주곡〉은 그가 새뮤얼 H. 카터(Samuel H. Carter)와 함께 프로듀서를 맡았습니다. 사중주는 피츠윌리엄 현악 사중주단(Fitzwilliam String Quartet)의 쇼스타코비치(Shostakovich) 1·2번과 5·6번, 8·15번으로, 세 장 모두 1970년대 영국 초판입니다. 자켓을 누르면 판본과 상태를 확인할 수 있습니다.</div>
-          <span class="link">온라인 업데이트 보기 →</span>
-        </a>
+      <div class="ni-store" id="ni-store">
+      <div class="ni-mo ni-mo--pc">
+        <a class="b1" href="/arrivals/2026-10-22/#07-002"><img src="/assets/arrivals/mo-261022-07-002-512.webp" alt="Mozart - Carlo Maria Giulini, Philharmonia Orchestra And Chorus 〈The Marriage Of Figaro〉 자켓" width="512" height="512" loading="lazy"></a>
+        <a class="b2" href="/arrivals/2026-10-22/#08-022"><img src="/assets/arrivals/mo-261022-08-022-512.webp" alt="Ludwig van Beethoven, Gewandhausorchester Leipzig , Dirigent: Franz Konwitschny 〈Ouvertüren〉 자켓" width="512" height="512" loading="lazy"></a>
+        <a class="b3" href="/arrivals/2026-10-22/#04-019"><img src="/assets/arrivals/mo-261022-04-019-512.webp" alt="Tchaikovsky, Van Cliburn, Kiril Kondrashin 〈Concerto No. 1〉 자켓" width="512" height="512" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#07-003"><img src="/assets/arrivals/mo-261022-07-003-256.webp" alt="Ansermet, Suisse Romande 〈The Sleeping Beauty (Complete Ballet)〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#08-005"><img src="/assets/arrivals/mo-261022-08-005-256.webp" alt="Dvořák - Swjatoslaw Richter, Borodin-Quartett 〈Klavierquintett A-dur, Op 81〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#04-013"><img src="/assets/arrivals/mo-261022-04-013-256.webp" alt="Brahms, Katchen 〈Variations And Fugue On A Theme By Handel / Variations On A Theme By Paganini〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#07-005"><img src="/assets/arrivals/mo-261022-07-005-256.webp" alt="Samson François - Debussy 〈Les Derniers Enregistrements De Samson François〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#08-031"><img src="/assets/arrivals/mo-261022-08-031-256.webp" alt="Schubert / Bridge, Mstislav Rostropovich, Benjamin Britten 〈Sonata For Arpeggione And Piano / Sonata For Cello And Piano〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#04-015"><img src="/assets/arrivals/mo-261022-04-015-256.webp" alt="Brahms, Beethoven, Victor Babin, Joseph Eger, Henryk Szeryng 〈Trio In E-Flat / Sonata For Horn And Piano〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#07-006"><img src="/assets/arrivals/mo-261022-07-006-256.webp" alt="J.S. Bach, Sigiswald Kuijken 〈Drei Sonaten Und Drei Partiten Für Violine Solo BWV 1001-1006〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#08-035"><img src="/assets/arrivals/mo-261022-08-035-256.webp" alt="Ludwig van Beethoven, Dieter Zechlin, Gewandhausorchester Leipzig, Kurt Sanderling 〈Konzert Für Klavier Und Orchester Nr. 5 Es-dur Op. 73〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#04-016"><img src="/assets/arrivals/mo-261022-04-016-256.webp" alt="Brahms, Van Cliburn / Fritz Reiner, Chicago Symphony Orchestra 〈Concerto No. 2〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#07-007"><img src="/assets/arrivals/mo-261022-07-007-256.webp" alt="Richard Wagner 〈Tristan Und Isolde〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#08-023"><img src="/assets/arrivals/mo-261022-08-023-256.webp" alt="Daniil Schafran, Anton Ginsburg 〈César Franck / Claude Debussy – Cellosonate A-Dur / Cellosonate D-Moll - Menuett - Minstrels〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#04-025"><img src="/assets/arrivals/mo-261022-04-025-256.webp" alt="Mozart - Magda Laszlo, Hilde Roessel-Majdan, Petre Munteanu, Richard Standen, The Akademie Kammerchor, Hermann Scherchen Conducting The Orchestra Of The Vienna State Opera 〈Requiem K. 626〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#07-001"><img src="/assets/arrivals/mo-261022-07-001-256.webp" alt="Claudio Monteverdi - Helen Donath • Elisabeth Söderström • Cathy Berberian • Paul Esswood, Concentus Musicus Wien, Nikolaus Harnoncourt 〈Die Krönung Der Poppea〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#08-024"><img src="/assets/arrivals/mo-261022-08-024-256.webp" alt="Wolfgang Amadeus Mozart, Staatskapelle Dresden, Otmar Suitner 〈Eine Kleine Nachtmusik G-dur KV 525 / Serenata Notturna D-dur KV 239 / Sinfonie A-dur KV 201〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#04-011"><img src="/assets/arrivals/mo-261022-04-011-256.webp" alt="Borodin, Rimsky-Korsakov, Antal Dorati 〈Polovetsian Dances With Chorus · Le Coq D&#x27;Or Suite〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#03-002"><img src="/assets/arrivals/mo-261022-03-002-256.webp" alt="Wagner - Vienna Philharmonic Orchestra Conducted By Georg Solti 〈Das Rheingold〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#08-034"><img src="/assets/arrivals/mo-261022-08-034-256.webp" alt="Yehudi Menuhin, Johann Sebastian Bach 〈Konzert Für Violine Und Orchester A-Moll BWV 1041 / Konzert Für Violine Und Orchester E-Dur BWV 1042〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#04-004"><img src="/assets/arrivals/mo-261022-04-004-256.webp" alt="Bach / Glenn Gould 〈The Well-Tempered Clavier, Book I, Preludes And Fugues 1-8〉 자켓" width="256" height="256" loading="lazy"></a>
       </div>
-
-      
-      <div class="home-updates">
-        <div class="hu-head"><span class="hu-label">지난 입고</span><a class="hu-all" href="/update/">전체 보기 →</a></div>
-        <div class="hu-rail">
-        <a class="hu-chip" href="/update/2026-10-21-jazz/">
-          <div class="hu-cover"><img src="/assets/online/op-261021-jazz-07.jpg" alt="2026.10.21 온라인 업데이트" loading="lazy"></div>
-          <span class="hu-date">2026.10.21</span>
-          <span class="hu-title">2026.10.21 온라인 업데이트</span>
-        </a>
-        <a class="hu-chip" href="/update/2026-10-16-classical/">
-          <div class="hu-cover"><img src="/assets/online/op-261016-classical-36.jpg" alt="2026.10.16 온라인 업데이트" loading="lazy"></div>
-          <span class="hu-date">2026.10.16</span>
-          <span class="hu-title">2026.10.16 온라인 업데이트</span>
-        </a>
-        <a class="hu-chip" href="/update/2026-10-14-poprock/">
-          <div class="hu-cover"><img src="/assets/online/op-261014-poprock-12.jpg" alt="2026.10.14 온라인 업데이트" loading="lazy"></div>
-          <span class="hu-date">2026.10.14</span>
-          <span class="hu-title">2026.10.14 온라인 업데이트</span>
-        </a>
-        <a class="hu-chip" href="/update/2026-10-14-classical/">
-          <div class="hu-cover"><img src="/assets/online/op-261014-classical-10.jpg" alt="2026.10.14 온라인 업데이트" loading="lazy"></div>
-          <span class="hu-date">2026.10.14</span>
-          <span class="hu-title">2026.10.14 온라인 업데이트</span>
-        </a>
+      <div class="ni-mo ni-mo--ph">
+        <a class="b1" href="/arrivals/2026-10-22/#07-002"><img src="/assets/arrivals/mo-261022-07-002-512.webp" alt="Mozart - Carlo Maria Giulini, Philharmonia Orchestra And Chorus 〈The Marriage Of Figaro〉 자켓" width="512" height="512" loading="lazy"></a>
+        <a class="b2" href="/arrivals/2026-10-22/#08-022"><img src="/assets/arrivals/mo-261022-08-022-512.webp" alt="Ludwig van Beethoven, Gewandhausorchester Leipzig , Dirigent: Franz Konwitschny 〈Ouvertüren〉 자켓" width="512" height="512" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#07-003"><img src="/assets/arrivals/mo-261022-07-003-256.webp" alt="Ansermet, Suisse Romande 〈The Sleeping Beauty (Complete Ballet)〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#08-005"><img src="/assets/arrivals/mo-261022-08-005-256.webp" alt="Dvořák - Swjatoslaw Richter, Borodin-Quartett 〈Klavierquintett A-dur, Op 81〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#04-019"><img src="/assets/arrivals/mo-261022-04-019-512.webp" alt="Tchaikovsky, Van Cliburn, Kiril Kondrashin 〈Concerto No. 1〉 자켓" width="512" height="512" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#07-005"><img src="/assets/arrivals/mo-261022-07-005-256.webp" alt="Samson François - Debussy 〈Les Derniers Enregistrements De Samson François〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#08-031"><img src="/assets/arrivals/mo-261022-08-031-256.webp" alt="Schubert / Bridge, Mstislav Rostropovich, Benjamin Britten 〈Sonata For Arpeggione And Piano / Sonata For Cello And Piano〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#04-013"><img src="/assets/arrivals/mo-261022-04-013-256.webp" alt="Brahms, Katchen 〈Variations And Fugue On A Theme By Handel / Variations On A Theme By Paganini〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#07-006"><img src="/assets/arrivals/mo-261022-07-006-256.webp" alt="J.S. Bach, Sigiswald Kuijken 〈Drei Sonaten Und Drei Partiten Für Violine Solo BWV 1001-1006〉 자켓" width="256" height="256" loading="lazy"></a>
+        <a class="s" href="/arrivals/2026-10-22/#08-035"><img src="/assets/arrivals/mo-261022-08-035-256.webp" alt="Ludwig van Beethoven, Dieter Zechlin, Gewandhausorchester Leipzig, Kurt Sanderling 〈Konzert Für Klavier Und Orchester Nr. 5 Es-dur Op. 73〉 자켓" width="256" height="256" loading="lazy"></a>
+      </div>
+        <div class="ni-cap">
+          <p class="ni-date">10.22</p>
+          <div class="ni-txt">
+            <p class="ni-meta"><span class="ni-name"><span class="tick"></span>회현동 매장 입고</span><span class="ni-comp">클래식 71장 · 록 29장</span></p>
+            <h3 class="ni-head">〈피가로의 결혼〉, LP 네 장</h3>
+            <p class="ni-dek">카를로 마리아 줄리니(Carlo Maria Giulini)의 1961년 영국 스테레오 초판이에요. 프란츠 콘비치니(Franz Konwitschny)가 지휘한 베토벤 서곡집은 1966년 동독 에테르나(ETERNA) 판입니다.</p>
+          </div>
+          <a class="ni-go" href="/arrivals/2026-10-22/">전체 보기 →</a>
+        </div>
+        <div class="ni-past">
+          <span class="ni-past-k">지난 매장 입고</span>
+          <ul>
+          <li><a href="/arrivals/2026-10-20-jazz/"><span class="d">10.20</span><span class="c">재즈 30장</span><span class="r">→</span></a></li>
+          <li><a href="/arrivals/2026-10-17-mix/"><span class="d">10.17</span><span class="c">록 34장 · 소울 23장 · 재즈 17장</span><span class="r">→</span></a></li>
+          <li><a href="/arrivals/2026-10-15-classical/"><span class="d">10.15</span><span class="c">클래식 39장 · 소울 26장</span><span class="r">→</span></a></li>
+          </ul>
         </div>
       </div>
-      
 
-      
-      <div class="home-updates home-arrivals">
-        <div class="hu-head"><span class="hu-label">매장 신보 입고</span><a class="hu-all" href="/arrivals/">전체 보기 →</a></div>
-        <div class="hu-rail">
-        <a class="hu-chip" href="/arrivals/2026-10-22-mix/">
-          <div class="hu-cover"><img src="/assets/na-261022-arrivals92-reel-poster.jpg" alt="2026년 10월 22일 신보 입고 록 29장 — 잉베이 말름스틴·마이클 프랭크스 미국 초판 중고LP" loading="lazy"></div>
-          <span class="hu-date">2026.10.22</span>
-          <span class="hu-title">2026년 10월 22일 신보 입고 록 29장 — 잉베이 말름스틴·마이클 프랭크스 미국 초판 중고LP</span>
-        </a>
-        <a class="hu-chip" href="/arrivals/2026-10-22-classical-3/">
-          <div class="hu-cover"><img src="/assets/na-261022-arrivals95-reel-poster.jpg" alt="2026년 10월 22일 신보 입고 클래식 35장 — 쿠르트 잔덜링·오트마어 주이트너 1960년대 스테레오 초판 중고LP" loading="lazy"></div>
-          <span class="hu-date">2026.10.22</span>
-          <span class="hu-title">2026년 10월 22일 신보 입고 클래식 35장 — 쿠르트 잔덜링·오트마어 주이트너 1960년대 스테레오 초판 중고LP</span>
-        </a>
-        <a class="hu-chip" href="/arrivals/2026-10-22-classical/">
-          <div class="hu-cover"><img src="/assets/na-261022-arrivals93-reel-poster.jpg" alt="2026년 10월 22일 신보 입고 클래식 10장 — 카를로스 클라이버·게오르크 숄티 바그너 동독·미국 초판 중고LP" loading="lazy"></div>
-          <span class="hu-date">2026.10.22</span>
-          <span class="hu-title">2026년 10월 22일 신보 입고 클래식 10장 — 카를로스 클라이버·게오르크 숄티 바그너 동독·미국 초판 중고LP</span>
-        </a>
-        </div>
+      <div class="ni-online" id="ni-online">
+        <div class="ni-on-h"><span class="ni-on-k">온라인 업데이트</span><a class="ni-on-all" href="/update/">전체 보기 →</a></div>
+        <ul class="ni-on-row">
+          <li><a href="/update/2026-10-21-classical/"><img src="/assets/online/op-261021-classical-19.jpg" alt="10.21 온라인 업데이트 — 클래식 20장" width="398" height="398" loading="lazy"><span>10.21 · 클래식 20장</span></a></li>
+          <li><a href="/update/2026-10-21-jazz/"><img src="/assets/online/op-261021-jazz-07.jpg" alt="10.21 온라인 업데이트 — 재즈 40장" width="398" height="398" loading="lazy"><span>10.21 · 재즈 40장</span></a></li>
+          <li><a href="/update/2026-10-16-classical/"><img src="/assets/online/op-261016-classical-36.jpg" alt="10.16 온라인 업데이트 — 클래식 40장" width="398" height="398" loading="lazy"><span>10.16 · 클래식 40장</span></a></li>
+          <li><a href="/update/2026-10-14-classical/"><img src="/assets/online/op-261014-classical-10.jpg" alt="10.14 온라인 업데이트 — 클래식 20장" width="398" height="398" loading="lazy"><span>10.14 · 클래식 20장</span></a></li>
+          <li><a href="/update/2026-10-14-poprock/"><img src="/assets/online/op-261014-poprock-12.jpg" alt="10.14 온라인 업데이트 — 팝·록 40장" width="398" height="398" loading="lazy"><span>10.14 · 팝·록 40장</span></a></li>
+          <li><a href="/update/2026-10-11-jazz/"><img src="/assets/online/op-261011-jazz-07.jpg" alt="10.11 온라인 업데이트 — 재즈 20장" width="398" height="398" loading="lazy"><span>10.11 · 재즈 20장</span></a></li>
+        </ul>
       </div>
-      
 
       <a class="journal-row reveal" href="/guide/original-pressing/">
         <span class="kicker">EDITORIAL · 식별 노트</span>
         <span class="jt">오리지널 초반 프레싱을 찾는 이유</span>
         <span class="link">JOURNAL — READ →</span>
       </a>
+
     </section>
 
     
@@ -495,7 +565,7 @@ footer{background:var(--ink);color:var(--paper)}
       <div class="cd-band-copy">
         <span class="kicker"><span class="tick"></span>NEW · CD CORNER</span>
         <div class="ft">CD 코너를 열었습니다</div>
-        <div class="fd">클래식 7,000원, 재즈와 팝록 9,000원. 별도 그레이딩 없이 매장에서 직접 보고 고르는 자리입니다.</div>
+        <div class="fd">클래식·라틴·팝록·재즈 모두 9,000원. 별도 그레이딩 없이 매장에서 직접 보고 고르는 자리입니다.</div>
         <span class="link">CD 코너 안내 보기 →</span>
       </div>
     </a>
