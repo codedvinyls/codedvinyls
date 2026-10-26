@@ -1,0 +1,66 @@
+/* CODEDVINYLS 본문 결 정리 (2026-10-26) — 지난 페이지 본문을 「아트북 페이지」 결로.
+   틀(cv-frame.css)이 씌운 쪽 중 옛 본문(회차·온라인·레이블·저널·가이드·장르·공지·CD·링크·법적 4쪽)에만 붙는다(body.cvb-on).
+   원칙 = 시안 v2: 두 목소리(제목·첫 글 = Noto Serif KR 400 · 나머지 Pretendard 400) · 굵은 글자·영문 대문자 머리·mono 0 ·
+   상자·검정 띠·흰 면 대신 헤어라인 · 노랑 = 틱 1점(본문 틱 내림). 원본 페이지 CSS 를 지우지 않고 위에서 덮는다(!important).
+   틀 머리·시트·꼬리·경로 줄은 제외 — 단계 1 몫. 마크업 = site_body.py. */
+body.cvb-on{--surface:var(--paper,#f7f4ec);--cvb-serif:"Noto Serif KR","Apple SD Gothic Neo",serif;--cvb-ink2:#3a372f}
+
+/* ── 1. 두 목소리 ── 본문 모든 글자 = Pretendard 400 · 자간 0 · 대문자 변환 0 */
+body.cvb-on :not(.cvf-hd,.cvf-hd *,.cvf-sheet,.cvf-sheet *,.cvf-ft,.cvf-ft *,.crumb,.crumb *){
+  font-family:var(--cvf-sans,"Pretendard Variable","Pretendard",sans-serif) !important;
+  font-weight:400 !important;letter-spacing:normal !important;text-transform:none !important}
+/* 제목·첫 글 = 세리프(안의 링크·강조까지) */
+body.cvb-on :is(h1,h2,.dek,.lede,p.lead,.hero-copy .lede,.art-hero .dek,.doc-hero p,.dp-dek,.group-kr,.dp-kr),
+body.cvb-on :is(h1,h2,.dek,.lede,p.lead,.hero-copy .lede,.art-hero .dek,.doc-hero p,.dp-dek,.group-kr,.dp-kr) *{
+  font-family:var(--cvb-serif) !important}
+body.cvb-on :is(h1,h2){word-break:keep-all;text-wrap:balance}
+body.cvb-on h1{letter-spacing:-.01em !important;line-height:1.24}
+body.cvb-on :is(.dek,.lede,p.lead,.dp-dek):not(.ev-hero *){color:var(--cvb-ink2) !important}
+
+/* ── 2. 노랑 = 한 점 ── 본문 틱 내림 · 노란 면 내림 · 노란 글자 = 잉크 · 노란 밑줄 = 헤어라인 */
+body.cvb-on :not(.cvf-hd *,.cvf-sheet *,.cvf-ft *) > span.tick:not(.dp-name > .tick){display:none !important}
+body.cvb-on :is(span.on,a.gw-cta,a.btn){background:transparent !important;color:var(--ink,#1f1e1b) !important;padding-left:0 !important;padding-right:0 !important}
+body.cvb-on span.on{color:var(--muted,#655f54) !important}
+body.cvb-on a:not(.cvf-hd a,.cvf-sheet a,.cvf-ft a,.crumb a){color:inherit !important;border-bottom-color:var(--cvf-line,#d8d2c6) !important;text-decoration-color:var(--cvf-line,#d8d2c6) !important}
+body.cvb-on a:not(.cvf-hd a,.cvf-sheet a,.cvf-ft a,.crumb a):hover{border-bottom-color:var(--ink,#1f1e1b) !important}
+/* 행동 링크(→) = 잉크 밑줄 1줄(버튼 상자·노란 면 = 0) */
+body.cvb-on :is(.links a,a.btn,a.gw-cta,.cta-buttons a,span.go,span.cgo,span.update-go,span.notice-go,.callout a){
+  border:0 !important;border-bottom:1px solid var(--ink,#1f1e1b) !important;padding:0 0 2px !important;background:transparent !important;
+  color:var(--ink,#1f1e1b) !important;height:auto !important;min-height:0 !important}
+/* 본문 강조 밑줄(노랑) = 헤어라인 */
+body.cvb-on :is(b,strong,em,mark):not(.cvf-hd *,.cvf-sheet *,.cvf-ft *){border-color:var(--cvf-line,#d8d2c6) !important;background:transparent !important}
+body.cvb-on :is(.important .mono){color:var(--muted,#655f54) !important}
+/* 큐레이션 노트 왼쪽 노란 줄 → 헤어라인 */
+body.cvb-on p.rec-curation{border-color:var(--cvf-line,#d8d2c6) !important}
+body.cvb-on div.callout{border-color:var(--cvf-line,#d8d2c6) !important;border-left:0 !important;border-right:0 !important;padding-left:0 !important;padding-right:0 !important}
+
+/* ── 3. 검정 띠 0 ── 콜아웃·게이트웨이·안내 띠 = 바탕색 + 위아래 헤어라인 · 글자 잉크 */
+body.cvb-on :is(div.callout,aside.genre-gateway,div.important,section.cta,div.cta-band,section.ev-apply,span.chip){
+  background:transparent !important;color:var(--ink,#1f1e1b) !important;
+  border-top:1px solid var(--cvf-line,#d8d2c6) !important;border-bottom:1px solid var(--cvf-line,#d8d2c6) !important}
+body.cvb-on :is(div.callout,aside.genre-gateway,div.important,section.cta,div.cta-band,section.ev-apply) :is(p,h2,h3,span,div,b,strong,li){
+  color:var(--ink,#1f1e1b) !important}
+body.cvb-on :is(div.callout,aside.genre-gateway,div.important,section.cta,div.cta-band,section.ev-apply) :is(.gw-meta,.mono,small){color:var(--muted,#655f54) !important}
+body.cvb-on span.chip{border:1px solid var(--cvf-line,#d8d2c6) !important;color:var(--muted,#655f54) !important}
+
+/* ── 4. 상자 0 ── 흰 면 = 바탕 · 둥근 모서리·그림자 0 */
+body.cvb-on :is(th,div.signal-row,section.curation-wrap,div.c,section.dp-tail,div.grade-scale,div.scale-note,blockquote,span.pg-cell){
+  background:transparent !important}
+body.cvb-on :not(.cvf-hd *,.cvf-sheet *,.cvf-ft *){border-radius:0 !important;box-shadow:none !important}
+
+/* ── 5. 묶음 머리 — 영문(span.display)은 site_body.py 가 한국어 짝이 있을 때만 내린다 · 한국어 짝 = 세리프 머리 ── */
+body.cvb-on .group-kr{color:var(--ink,#1f1e1b) !important}
+
+/* ── 5b. 큰 날짜 숫자 내림(합의 ②) — 하루·회차 머리 「10.22」 = 명패 줄 크기 ── */
+body.cvb-on .dp-num{font-size:14px !important;line-height:1.6 !important;color:var(--muted,#655f54) !important;letter-spacing:0 !important}
+body.cvb-on .dp-date{display:flex !important;align-items:baseline !important;gap:12px !important;flex-wrap:wrap}
+body.cvb-on .dp-name{font-size:14px !important}
+
+/* ── 6. 메타 줄(킥커·바이라인·카드 칸 이름) = 작은 회색 Pretendard ── */
+body.cvb-on :is(.kicker,.byline span,.meta span,.rec-kicker,.rec-artist,.rec-press,.rec-grade span,.gal-artist,.gal-price,.group-count,figcaption,.gk,.gw-meta,.section-kicker,.cta-eyebrow,.update-date,.mono,.vcap){
+  color:var(--muted,#655f54)}
+body.cvb-on :is(.rec-title,.gal-title,.ct){color:var(--ink,#1f1e1b) !important}
+
+/* ── 7. 명패 줄(편집장 dg-0427 A-04) — 「{날짜} · 회현동 매장 입고」 + 노랑 틱 1점(입고 목록 칸과 같은 자리) ── */
+body.cvb-on .cvb-tick{display:inline-block;width:13px;height:2px;background:var(--yellow,#ffcd00);vertical-align:middle;margin-right:9px;position:relative;top:-1px}
+body.cvb-on .kicker.cvb-plaque{font-size:13px !important;color:var(--muted,#655f54) !important}
