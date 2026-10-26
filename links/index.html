@@ -7,6 +7,7 @@
 <title>바로가기 — 코디드바이닐즈 회현</title>
 <meta name="description" content="매장 입고와 온라인 입고, 공지와 이벤트, 회현 지하쇼핑센터 매장 정보 링크를 모았습니다.">
 <link rel="stylesheet" href="/assets/cv-nav.css">
+<link rel="stylesheet" href="/assets/cv-frame.css">
 <link rel="canonical" href="https://codedvinyls.com/links/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="코디드바이닐즈">
@@ -22,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@400&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/assets/cv-type.css">
 <style>
@@ -62,23 +63,20 @@ footer{background:var(--ink);color:var(--paper)}
 .footer-base a{border-bottom:1px solid var(--yellow)}
 </style>
 </head>
-<body>
+<body class="cvf-on">
 <div class="page" id="top">
 
-  <header class="top-grid">
-    <a class="logo-cell" href="/">
-      <img src="/assets/cv_wordmark_ink.svg" alt="CODEDVINYLS">
-      <span class="logo-sub">코디드바이닐즈</span>
-    </a>
-    <a class="nav-cell" href="/#latest">NEW<span class="nav-dot"></span></a>
-    <a class="nav-cell" href="/journal/">JOURNAL<span class="nav-dot"></span></a>
-    <a class="nav-cell" href="/notice/">NOTICE<span class="nav-dot"></span></a>
-    <a class="nav-cell" href="/guide/grading/">GRADING<span class="nav-dot"></span></a>
-    <a class="nav-cell" href="/#visit">VISIT<span class="nav-dot"></span></a>
-    <a class="nav-cell store" href="/store.html">STORE<span class="nav-dot"></span></a>
+  <header class="cvf-hd" data-cvf-hd>
+    <a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="168" height="13"></a>
+    <nav class="cvf-nav" aria-label="메뉴"><a href="/arrivals/">입고</a><a href="/label/">레이블</a><a href="/journal/">저널</a><a href="/store.html">매장·온라인</a></nav>
+    <a class="cvf-menu" href="#cvf-sheet" aria-controls="cvf-sheet" aria-expanded="false">메뉴</a>
   </header>
-
-  <main>
+  <div class="cvf-sheet" id="cvf-sheet" role="dialog" aria-modal="true" aria-label="메뉴">
+    <div class="cvf-sheet-hd"><a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="118" height="9"></a><a class="cvf-close" href="#">닫기</a></div>
+    <nav class="cvf-sheet-nav"><a href="/arrivals/">입고</a><a href="/label/">레이블</a><a href="/journal/">저널</a><a href="/store.html">매장·온라인</a></nav>
+    <p class="cvf-sheet-notice"><a href="/notice/"><span class="cvf-k">공지</span><span>클래식 음반 40% 할인 · 10월 운영 안내</span><span aria-hidden="true">→</span></a></p>
+    <p class="cvf-sheet-nap">코디드바이닐즈 회현 · 회현 지하쇼핑센터 마열 3호</p>
+  </div><main>
     <div class="lk-wrap">
       <p class="lk-where">회현 지하쇼핑센터 마열 3호</p>
       <nav class="lk-list" aria-label="바로가기">
@@ -92,9 +90,16 @@ footer{background:var(--ink);color:var(--paper)}
     </div>
   </main>
 
-  <footer>
-    <div class="footer-base"><a href="/" aria-label="홈페이지">codedvinyls.com</a></div>
+  <footer class="cvf-ft">
+    <div class="cvf-ft-grid">
+      <div class="cvf-ft-col cvf-ft-store"><a class="cvf-ft-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="140" height="11"></a><span>코디드바이닐즈 회현</span><span>회현 지하쇼핑센터 마열 3호</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">인스타그램 @codedvinyls</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">둘러보기</b><a href="/arrivals/">입고</a><a href="/label/">레이블</a><a href="/journal/">저널</a></div>
+      <div class="cvf-ft-col"><a class="cvf-ft-h" href="/store.html">매장·온라인</a><a href="/store.html#visit">회현동 매장</a><a href="/notice/">공지</a><a href="/cd/">매장 CD 코너</a><a href="/store.html#online">온라인 구매</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">안내</b><a href="/guide/grading/">등급 기준</a><a href="/guide/glossary/">용어 사전</a><a href="/shipping-returns.html">배송·교환·환불</a><a href="/terms.html">이용약관</a><a href="/privacy.html">개인정보처리방침</a><a href="/about.html">사업자 정보</a></div>
+    </div>
+    <div class="cvf-ft-base"><span class="cvf-ft-plate">THE VINYL ARCHIVE</span><div class="cvf-ft-biz"><span>상호 코디드바이닐즈 · 대표자 최준홍 · 사업자등록번호 286-51-00775</span><span>통신판매업 신고번호 제2026-서울강남-00575호</span><span>서울시 강남구 논현로 38길 20 · 전화 <a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span></div></div>
   </footer>
 </div>
+<script src="/assets/cv-frame.js" defer></script>
 </body>
 </html>
