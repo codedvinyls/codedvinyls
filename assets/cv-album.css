@@ -1,0 +1,98 @@
+/* CODEDVINYLS 앨범 페이지 (2026-10-26 · 단계 3a) — 도록 한 장.
+   판은 도판(그림자·액자·테두리 0) · 제목과 첫 글만 세리프 · 상자 대신 가는 선 · 노랑은 들어온 기록 틱 한 점.
+   거래 행 = 페이지에 1회 · 돌빛 띠 · 떠 있는 구매 막대 0. 마크업 = site_album.py · 공통 머리·꼬리 = cv-frame.css.
+   상세 창 안 「이 판의 페이지」 링크(.gal-lb-album)도 여기 — 회차 페이지가 이 파일을 함께 읽는다. */
+.cva{display:block;word-break:keep-all;overflow-wrap:break-word;font-family:var(--cvf-sans,"Pretendard Variable","Pretendard",sans-serif);font-weight:400;color:var(--ink,#1f1e1b);
+  --g:var(--cvf-gutter,clamp(24px,4vw,56px));--ln:var(--cvf-line,#d8d2c6);--mu:var(--cvf-muted,#6b655a);--ink2:#3a372f;--stone:#e6e3dc;padding-bottom:clamp(96px,10vw,140px)}
+.cva *{box-sizing:border-box}
+.cva a{color:inherit;text-decoration:none}
+.cva img{display:block;width:100%;height:auto;max-width:100%}
+.cva figure{margin:0;min-width:0}
+.cva p,.cva h1,.cva h2,.cva dl,.cva dd{margin:0}
+.cva-tick{display:inline-block;width:13px;height:2px;background:var(--yellow,#ffcd00);vertical-align:middle;margin-right:9px;position:relative;top:-1px}
+
+/* 판 + 명패 · 제목 · 판본 · 등급 · 거래 */
+.cva-alb{display:grid;grid-template-columns:minmax(0,720px) minmax(0,1fr);gap:clamp(40px,4.4vw,64px);padding:28px var(--g) 0;align-items:start}
+.cva-info{padding-top:6px;min-width:0}
+.cva-g{font-size:13px;color:var(--mu);margin-bottom:22px !important}
+.cva-info h1{font-weight:400}
+.cva-artist{display:block;font-size:19px;line-height:1.45}
+.cva-title{display:block;font-size:clamp(36px,3.6vw,52px);line-height:1.2;margin-top:8px;text-wrap:balance}
+.cva-press{font-size:14px;color:var(--mu);line-height:1.7;margin-top:18px !important}
+.cva-dek{font-size:18px;line-height:1.9;color:var(--ink2);margin-top:32px !important}
+.cva-grade{margin-top:36px;border-top:1px solid var(--ln)}
+.cva-grade div{display:grid;grid-template-columns:120px 1fr;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--ln);font-size:14px}
+.cva-grade span:first-child{color:var(--mu)}
+.cva-cond{font-size:14px;line-height:1.7;color:var(--ink2);padding:12px 0 0}
+.cva-glink{font-size:14px;padding-top:14px}
+.cva-glink a{border-bottom:1px solid var(--ln);padding-bottom:1px;color:var(--mu)}
+.cva-glink a:hover{color:var(--ink,#1f1e1b);border-bottom-color:var(--ink,#1f1e1b)}
+.cva-deal{margin-top:36px;background:var(--stone);padding:22px 24px;display:grid;grid-template-columns:auto 1fr;gap:6px 24px;align-items:baseline}
+.cva-deal .p{font-size:22px;font-feature-settings:'tnum' 1}
+.cva-deal .w{font-size:14px}
+.cva-deal .nap{grid-column:2;font-size:13px;color:var(--mu)}
+.cva-deal.is-sold{grid-template-columns:1fr}
+.cva-deal.is-sold .w{font-size:15px}
+.cva-go{justify-self:start;font-size:14px;border-bottom:1px solid var(--ink,#1f1e1b);padding-bottom:2px}
+.cva-came{margin-top:22px !important;font-size:14px}
+.cva-came a{border-bottom:1px solid var(--ink,#1f1e1b);padding-bottom:2px}
+
+/* 이 판(사양표) */
+.cva-spec{display:grid;grid-template-columns:3fr 9fr;gap:24px;padding:clamp(80px,7.6vw,110px) var(--g) 0}
+.cva-lab{font-size:14px;font-weight:400;color:var(--mu);padding-top:16px;border-top:1px solid var(--ln)}
+.cva-spec dl{border-top:1px solid var(--ln)}
+.cva-spec dl div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--ln);font-size:15px;line-height:1.6}
+.cva-spec dt{color:var(--mu)}
+
+/* 같이 들어온 판 */
+.cva-rel{padding:clamp(80px,7.6vw,110px) var(--g) 0}
+.cva-sec{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:16px;margin-bottom:22px !important;
+  border-top:1px solid var(--ln);font-size:14px;font-weight:400;color:var(--mu)}
+.cva-sec a{color:var(--ink,#1f1e1b)}
+.cva-pn{display:flex;gap:28px;font-size:14px;margin-bottom:28px}
+.cva-pn a{border-bottom:1px solid var(--ink,#1f1e1b);padding-bottom:2px}
+.cva-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.cva-grid img{aspect-ratio:1/1;object-fit:cover}
+.cva figcaption{font-size:14px;line-height:1.55;padding-top:14px}
+.cva figcaption span{display:block}
+.cva figcaption .t,.cva figcaption .l{color:var(--mu)}
+
+/* 이어서 */
+.cva-next{display:flex;flex-wrap:wrap;gap:14px 40px;padding:72px var(--g) 0;font-size:15px}
+.cva-next a{border-bottom:1px solid var(--ink,#1f1e1b);padding-bottom:2px}
+
+@media(max-width:860px){
+  .cva-alb{display:block;padding:14px 0 0}
+  .cva-info{padding:26px var(--g) 0}
+  .cva-g{font-size:12px}
+  .cva-g{margin-bottom:16px !important}
+  .cva-artist{font-size:16px}
+  .cva-title{font-size:34px;line-height:1.22;margin-top:6px}
+  .cva-press{font-size:13px;margin-top:12px !important}
+  .cva-dek{font-size:16px;line-height:1.88;margin-top:22px !important}
+  .cva-grade{margin-top:26px}
+  .cva-grade div{grid-template-columns:72px 1fr;padding:11px 0;font-size:13px}
+  .cva-cond,.cva-glink{font-size:13px}
+  .cva-deal{margin-top:26px;padding:18px;display:block}
+  .cva-deal span{display:block}
+  .cva-deal .p{font-size:20px}
+  .cva-deal .w{margin-top:4px}
+  .cva-deal .nap{font-size:12px;margin-top:4px}
+  .cva-deal .cva-go{display:inline-block;margin-top:12px}
+  .cva-came{margin-top:18px !important;font-size:13px}
+  .cva-spec{display:block;padding:72px var(--g) 0}
+  .cva-lab{font-size:13px;padding-top:12px;margin-bottom:10px}
+  .cva-spec dl div{display:block;padding:12px 0;font-size:14px}
+  .cva-spec dt{font-size:12px}
+  .cva-rel{padding:72px var(--g) 0}
+  .cva-sec{font-size:13px;margin-bottom:18px !important}
+  .cva-pn{font-size:13px;margin-bottom:22px}
+  .cva-grid{grid-template-columns:1fr 1fr;gap:26px 14px}
+  .cva figcaption{font-size:13px;padding-top:10px}
+  .cva-grid .l{display:none}
+  .cva-next{padding:52px var(--g) 0;gap:14px 24px;font-size:14px}
+}
+
+/* 회차·하루 페이지 상세 창 안 링크 */
+.gal-lb-album{margin:22px 0 0;font-size:14px;line-height:1.5}
+.gal-lb-album a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
