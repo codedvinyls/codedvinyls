@@ -96,3 +96,43 @@
 /* 회차·하루 페이지 상세 창 안 링크 */
 .gal-lb-album{margin:22px 0 0;font-size:14px;line-height:1.5}
 .gal-lb-album a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+/* ── 3b 온라인 판 거래 행 — 가격 · 스토어 한 곳 · 배송·교환·환불(매장 안내 0) ── */
+.cva-deal.is-online{grid-template-columns:1fr;gap:12px;justify-items:start}   /* 안내 문장 · 스토어 링크 · 배송 링크(dg-0429 §A-2) */
+.cva-deal .cva-buy{justify-self:start;font-size:14px;border-bottom:1px solid var(--ink,#1f1e1b);padding-bottom:2px}
+.cva-deal.is-online .nap{grid-column:1/-1;font-size:13px;color:var(--mu);border-bottom:1px solid var(--ln);justify-self:start;padding-bottom:1px}
+.cva-came.is-online a{border-bottom:1px solid var(--ink,#1f1e1b);padding-bottom:2px}
+
+/* ── 3b 앨범 목록 /album/ ── */
+.cval-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:56px var(--g) 0;flex-wrap:wrap}
+.cval-head h1{font-size:clamp(34px,3.2vw,46px);line-height:1.2;font-weight:400;margin:0}
+.cval-dek{flex-basis:100%;font-size:17px;line-height:1.8;color:var(--ink2);margin-top:4px !important;max-width:36em}
+.cval-chips{display:flex;gap:28px;font-size:15px;color:var(--mu)}
+.cval-chips a{padding-bottom:3px;border-bottom:1px solid transparent}
+.cval-chips a[aria-current="page"]{color:var(--ink,#1f1e1b);border-bottom-color:var(--ink,#1f1e1b)}
+.cval-grid{list-style:none;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:56px 24px;padding:48px var(--g) 0}
+.cval-cell{min-width:0}
+.cval-img{display:block;aspect-ratio:1/1;background:#ebe7de;overflow:hidden}
+.cval-img img{width:100%;height:100%;object-fit:cover}
+.cval-js .cval-cell.is-off,.cval-js .cval-cell.is-later{display:none}
+.cval-morebox{padding:64px var(--g) 0;text-align:center}
+.cval-morebtn{font:inherit;font-size:15px;color:var(--ink,#1f1e1b);background:none;border:0;border-bottom:1px solid var(--ink,#1f1e1b);padding:0 0 3px;cursor:pointer}
+@media(max-width:1100px){.cval-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:860px){
+  .cva-deal.is-online .cva-buy,.cva-deal.is-online .nap{display:table;margin-top:12px}   /* 휴대폰 = 세 줄 세로(링크 둘이 한 줄에 붙지 않게) */
+  .cval-head{display:block;padding:36px var(--g) 0}
+  .cval-head h1{font-size:34px}
+  .cval-chips{gap:22px;font-size:14px;margin-top:18px}
+  .cval-grid{grid-template-columns:1fr 1fr;gap:32px 14px;padding:28px var(--g) 0}
+  .cval-grid .l{display:none}
+}
+
+/* 3b 목록 상태 줄 · 끝 「장르」 칸(홈 「장르」 칸과 같은 부품 · 편집장 dg-0428 §1-3·§1-6) */
+.cval .s{display:block;color:var(--mu);margin-top:2px}
+.cval-genres{padding:clamp(80px,8vw,120px) var(--g) 0}
+.cval-sec{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:16px;margin:0 0 28px;
+  border-top:1px solid var(--ln);font-size:14px;font-weight:400;color:var(--mu)}
+.cval-names{display:flex;flex-wrap:wrap;gap:12px 36px;font-size:18px;line-height:1.5;margin:0}
+.cval-names a{border-bottom:1px solid transparent}
+.cval-names a:hover{border-bottom-color:var(--ink,#1f1e1b)}
+@media(max-width:860px){.cval-genres{padding:80px var(--g) 0}.cval-sec{font-size:13px;margin-bottom:20px}.cval-names{font-size:16px;gap:10px 24px}}
