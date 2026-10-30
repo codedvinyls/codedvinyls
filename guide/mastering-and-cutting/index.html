@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/assets/cv-analytics.js"></script>
+<title>마스터링과 커팅 | 코디드바이닐즈 CODEDVINYLS</title>
+<meta name="description" content="커팅 선반이 래커에 홈을 새기기까지. 커팅 때 정하는 홈 간격과 레벨, RIAA 재생 곡선, 런아웃의 매트릭스 번호까지 짚습니다.">
+<link rel="stylesheet" href="/assets/cv-nav.css">
+<link rel="stylesheet" href="/assets/cv-frame.css">
+<link rel="canonical" href="https://codedvinyls.com/guide/mastering-and-cutting/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="코디드바이닐즈">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="마스터링과 커팅 | 코디드바이닐즈">
+<meta property="og:description" content="커팅 선반이 래커에 홈을 새기기까지. 커팅 때 정하는 홈 간격과 레벨, RIAA 재생 곡선, 런아웃의 매트릭스 번호까지 짚습니다.">
+<meta property="og:url" content="https://codedvinyls.com/guide/mastering-and-cutting/">
+<meta property="og:image" content="https://codedvinyls.com/assets/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "마스터링과 커팅", "description": "커팅 선반이 래커에 홈을 새기기까지. 커팅 때 정하는 홈 간격과 레벨, RIAA 재생 곡선, 런아웃의 매트릭스 번호까지 짚습니다.", "inLanguage": "ko", "about": ["마스터링", "커팅", "래커", "커팅 선반", "커팅 바늘", "피치", "가변 피치", "RIAA 곡선", "매트릭스 번호", "런아웃", "LP 마스터링"], "author": {"@type": "Organization", "name": "코디드바이닐즈"}, "publisher": {"@type": "Organization", "name": "코디드바이닐즈", "logo": {"@type": "ImageObject", "url": "https://codedvinyls.com/assets/og-default.jpg"}}, "mainEntityOfPage": "https://codedvinyls.com/guide/mastering-and-cutting/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "코디드바이닐즈", "item": "https://codedvinyls.com/"}, {"@type": "ListItem", "position": 2, "name": "마스터링과 커팅"}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@400&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/assets/cv-type.css">
+<style>
+:root{
+  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
+  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
+  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.mono{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:.02em}
+.tick{display:inline-block;width:26px;height:3px;background:var(--yellow);vertical-align:middle;flex:none}
+
+.top-grid{display:grid;grid-template-columns:260px repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
+.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.logo-cell img{width:188px;height:auto}
+.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
+.nav-cell:last-child{border-right:0}
+.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
+.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
+.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
+.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
+.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
+
+.crumb{border-bottom:1px solid var(--line);background:var(--surface);padding:16px 26px;font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.05em;display:flex;gap:10px;align-items:center}
+.crumb a:hover{color:var(--ink)}
+
+
+.sw{--ink:#1f1e1b;--line:#d8d2c6;--muted:#6b655a;--g:clamp(24px,4vw,56px);color:var(--ink);padding-bottom:64px}
+.sw *{box-sizing:border-box}
+.sw figure{margin:0}
+.sw figcaption{font-size:12.5px;line-height:1.6;color:var(--muted);padding:10px 0 0;border-top:1px solid var(--line);margin-top:10px}
+.sw figcaption .src{display:block;color:#8d867a}
+.sw figcaption a{color:inherit;text-underline-offset:3px}
+.sw-step-hero{max-width:820px;margin:0 auto;padding:52px var(--g) 0;text-align:center}
+.sw-step-hero h1{font-weight:400;font-size:clamp(36px,4.6vw,60px);line-height:1.18;margin:0;word-break:keep-all}
+.sw-step-hero .dek{font-size:clamp(18px,1.8vw,22px);margin:16px 0 0}
+.sw .sw-chain{max-width:1100px;margin:36px auto 10px;padding:0 var(--g)}
+.sw-chain svg{width:100%;height:auto;display:block}
+.sw-body{max-width:700px;margin:0 auto;padding:44px var(--g) 0}
+.sw-body h2{font-weight:400;font-size:clamp(22px,2.2vw,28px);line-height:1.35;margin:0 0 14px;word-break:keep-all}
+.sw-body p{font-size:17px;line-height:1.85;margin:0 0 22px;word-break:keep-all}
+.sw-body p+h2{margin-top:44px}
+.sw-body p a:not(sup a){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.sw sup{line-height:0;font-size:.68em;vertical-align:super}
+.sw sup a{padding:0 1px;text-decoration:none;color:var(--muted)}
+.sw-two{max-width:1100px;margin:22px auto 24px;padding:0 var(--g);display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,24px)}
+.sw-two.one{grid-template-columns:1fr;max-width:700px}
+.sw-two img,.sw-bleed img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+.sw .sw-bleed{max-width:1100px;margin:22px auto 24px;padding:0 var(--g)}
+.sw .refs{max-width:700px;margin:56px auto 0;padding:16px var(--g) 0;border-top:1px solid var(--line);font-size:14px}
+.sw .refs summary{cursor:pointer;font-size:18px;margin-bottom:12px}
+.sw .refs ol{padding-left:20px;margin:0}
+.sw .refs li{margin:12px 0;line-height:1.65;scroll-margin-top:100px;overflow-wrap:anywhere}
+.sw .refs a{color:inherit;text-underline-offset:3px}
+.sw .refs-access{color:var(--muted);margin:16px 0 0}
+.sw figcaption a,.sw .refs li a:not([href^="#"]){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+@media (max-width:760px){
+ .sw-chain{overflow-x:auto}.sw-chain svg{min-width:760px}
+ .sw-two{grid-template-columns:1fr}
+ .sw-body p{font-size:16px}
+}
+
+.sw .sw-more,.sw .sw-next{max-width:700px;margin:40px auto 0;padding:14px var(--g) 0;border-top:1px solid var(--line)}
+.sw .sw-more p,.sw .sw-next p{margin:0 0 8px;font-size:14px;color:var(--muted)}
+.sw .sw-more ul{list-style:none;margin:0;padding:0}
+.sw .sw-more li{font-size:17px;line-height:1.9}
+.sw .sw-more a,.sw .sw-next a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.sw .sw-next{display:flex;justify-content:flex-end;font-size:17px}
+</style>
+<link rel="stylesheet" href="/assets/cv-body.css">
+</head>
+<body class="cvf-on cvb-on cvb-gde">
+<div class="page" id="top">
+
+  <header class="cvf-hd" data-cvf-hd>
+    <a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="168" height="13"></a>
+    <nav class="cvf-nav" aria-label="메뉴"><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/" aria-current="page">아카이브</a><a href="/journal/">저널</a><a href="/store.html">매장·온라인</a></nav>
+    <a class="cvf-menu" href="#cvf-sheet" aria-controls="cvf-sheet" aria-expanded="false">메뉴</a>
+  </header>
+  <div class="cvf-sheet" id="cvf-sheet" role="dialog" aria-modal="true" aria-label="메뉴">
+    <div class="cvf-sheet-hd"><a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="118" height="9"></a><a class="cvf-close" href="#">닫기</a></div>
+    <nav class="cvf-sheet-nav"><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/" aria-current="page">아카이브</a><a href="/journal/">저널</a><a href="/store.html">매장·온라인</a></nav>
+    <p class="cvf-sheet-notice"><a href="/notice/"><span class="cvf-k">공지</span><span>이용약관·개인정보처리방침 변경 외 2건</span><span aria-hidden="true">→</span></a></p>
+    <p class="cvf-sheet-nap">코디드바이닐즈 회현 · 회현 지하쇼핑센터 마열 3호</p>
+  </div>
+
+  <nav class="crumb" aria-label="경로"><a href="/archive/">아카이브</a></nav>
+
+  <article class="sw">
+<section class="sw-step-hero"><h1>마스터링과 커팅</h1><p class="dek">판의 마스터링은 무엇을 하나</p></section>
+<figure class="sw-chain"><svg viewBox="0 0 1100 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="테이프에서 래커까지: 테이프 재생 → 커팅 앰프 → 커팅 헤드와 바늘 → 래커" fill="none" stroke="#1f1e1b" stroke-width="1.25" stroke-linecap="round"><line x1="202" y1="80" x2="351" y2="80"/><path d="M343 75 L351 80 L343 85"/><circle cx="118" cy="80" r="20" fill="#f7f4ec"/><circle cx="162" cy="80" r="20" fill="#f7f4ec"/><circle cx="118" cy="80" r="5"/><circle cx="162" cy="80" r="5"/><line x1="118" y1="100" x2="162" y2="100"/><text x="140" y="142" text-anchor="middle" font-size="15" fill="#1f1e1b" stroke="none">테이프 재생</text><text x="140" y="162" text-anchor="middle" font-size="11" fill="#6b655a" stroke="none">마스터링 재생용 녹음기</text><line x1="475" y1="80" x2="624" y2="80"/><path d="M616 75 L624 80 L616 85"/><rect x="369" y="58" width="88" height="44" rx="2" fill="#f7f4ec"/><path d="M383 80 q7 -9 14 0 t14 0 t14 0 t14 0" stroke="#8d867a"/><text x="413" y="142" text-anchor="middle" font-size="15" fill="#1f1e1b" stroke="none">커팅 앰프</text><text x="413" y="162" text-anchor="middle" font-size="11" fill="#6b655a" stroke="none">커팅 헤드와 짝을 이루는 구동부</text><line x1="748" y1="80" x2="897" y2="80"/><path d="M889 75 L897 80 L889 85"/><rect x="660" y="46" width="52" height="40" rx="2" fill="#f7f4ec"/><path d="M680 86 L686 106 L692 86"/><text x="686" y="142" text-anchor="middle" font-size="15" fill="#1f1e1b" stroke="none">커팅 헤드와 바늘</text><text x="686" y="162" text-anchor="middle" font-size="11" fill="#6b655a" stroke="none">가열한 바늘이 홈을 새긴다</text><ellipse cx="959" cy="84" rx="56" ry="12" fill="#f7f4ec"/><ellipse cx="959" cy="84" rx="10" ry="3"/><path d="M903 84 v8 a56 12 0 0 0 112 0 v-8"/><text x="959" y="142" text-anchor="middle" font-size="15" fill="#1f1e1b" stroke="none">래커</text><text x="959" y="162" text-anchor="middle" font-size="11" fill="#6b655a" stroke="none">회전판 위에서 도는 원반</text></svg><figcaption>테이프에서 래커까지 · 코디드바이닐즈 정리 · 출처 <sup><a id="refcall-1-1" href="#ref-1" aria-label="참고문헌 1">1</a>,<a id="refcall-2-1" href="#ref-2" aria-label="참고문헌 2">2</a>,<a id="refcall-3-1" href="#ref-3" aria-label="참고문헌 3">3</a></sup></figcaption></figure>
+<div class="sw-body">
+<h2>래커를 깎는 일</h2>
+
+<p>영국 Decca에서 디스크 마스터링 엔지니어라 불린 사람은 마스터링 선반, 곧 커팅 기계로 래커를 깎았습니다.<sup><a id="refcall-4-1" href="#ref-4" aria-label="참고문헌 4">4</a>,<a id="refcall-5-1" href="#ref-5" aria-label="참고문헌 5">5</a></sup> 1956년에 Scully 선반을 취재한 잡지 기사에는 마스터링 때 테이프를 재생하는 녹음기가 나옵니다.<sup><a id="refcall-1-2" href="#ref-1" aria-label="참고문헌 1">1</a></sup></p>
+
+<p>커팅 선반에서는 돌아가는 회전판 위로 커팅 헤드가 움직이고, 헤드 끝의 커팅 바늘이 홈을 새깁니다.<sup><a id="refcall-1-3" href="#ref-1" aria-label="참고문헌 1">1</a>,<a id="refcall-3-2" href="#ref-3" aria-label="참고문헌 3">3</a>,<a id="refcall-6-1" href="#ref-6" aria-label="참고문헌 6">6</a></sup> 음반사 Speakers Corner는 래커를 회전판에 올려 아래에서 진공으로 붙잡은 뒤 커팅 헤드를 내립니다.<sup><a id="refcall-3-3" href="#ref-3" aria-label="참고문헌 3">3</a></sup></p>
+
+<p><a href="/guide/glossary/classical/#microgroove">마이크로그루브</a> 래커를 깎는 커팅 바늘은 가열해서 씁니다.<sup><a id="refcall-3-4" href="#ref-3" aria-label="참고문헌 3">3</a>,<a id="refcall-5-2" href="#ref-5" aria-label="참고문헌 5">5</a></sup> British Library가 펴낸 아날로그 음향 복원 안내서는 붉게 달군 전선 코일로 바늘을 데웠다고 적습니다.<sup><a id="refcall-5-3" href="#ref-5" aria-label="참고문헌 5">5</a></sup> Speakers Corner는 자기 커팅 바늘을 가열한 루비라고 설명합니다.<sup><a id="refcall-3-5" href="#ref-3" aria-label="참고문헌 3">3</a></sup></p>
+
+<h2>홈 간격과 레벨</h2>
+
+<p>피치라 부르는 홈 간격은 신호에 따라 바꿀 수 있습니다.<sup><a id="refcall-1-4" href="#ref-1" aria-label="참고문헌 1">1</a>,<a id="refcall-6-2" href="#ref-6" aria-label="참고문헌 6">6</a></sup></p>
+
+<p>1956년 기사에 따르면, 간격을 고정해 깎던 선반에서는 이송 나사가 커팅 헤드를 정해 둔 피치대로 꾸준히 앞으로 보냈습니다. 그래서 조용한 대목에서는 홈 간격이 필요 이상으로 넓었고, 음량이 크고 저음이 강한 대목에서는 간격이 모자라 엔지니어가 음량과 저음을 줄여야 했습니다.<sup><a id="refcall-1-5" href="#ref-1" aria-label="참고문헌 1">1</a></sup></p>
+
+<p>Neumann은 VMS 70 디스크 커팅 선반을 1970년에 내놓았습니다.<sup><a id="refcall-6-3" href="#ref-6" aria-label="참고문헌 6">6</a>,<a id="refcall-7-1" href="#ref-7" aria-label="참고문헌 7">7</a></sup> 이 회사는 VMS 70의 가변 피치 회로가 조용한 대목에서 래커 공간을 아끼고 홈 간격과 깊이를 알맞게 조절한다고 밝힙니다.<sup><a id="refcall-6-4" href="#ref-6" aria-label="참고문헌 6">6</a></sup></p>
+
+<p>Speakers Corner는 커팅에 앞서 홈의 너비와 홈 사이의 폭(land)을 맞춰 두고, 최대 레벨은 음악의 강약과 재생 시간에 따라 정합니다.<sup><a id="refcall-3-6" href="#ref-3" aria-label="참고문헌 3">3</a></sup></p>
+
+<h2>재생 곡선</h2>
+
+<p>미국음반산업협회(RIAA)의 규격에 따라 판에 새길 때는 저음을 줄이고 고음을 높입니다. 재생할 때는 포노 프리앰프가 정확히 반대 곡선을 걸어 소리를 평탄하게 되돌립니다. 두 곡선은 75, 318, 3180마이크로초의 세 시간 상수로 정의됩니다.<sup><a id="refcall-5-4" href="#ref-5" aria-label="참고문헌 5">5</a>,<a id="refcall-8-1" href="#ref-8" aria-label="참고문헌 8">8</a>,<a id="refcall-9-1" href="#ref-9" aria-label="참고문헌 9">9</a></sup></p>
+
+<p>RIAA 곡선이 표준이 되기 전에는 레이블과 방송사, 커팅 공장마다 자기 곡선을 썼습니다.<sup><a id="refcall-5-5" href="#ref-5" aria-label="참고문헌 5">5</a>,<a id="refcall-9-2" href="#ref-9" aria-label="참고문헌 9">9</a></sup> 포노 프리앰프에는 이 곡선들에 맞추는 조절 장치가 흔히 달려 있었습니다.<sup><a id="refcall-9-3" href="#ref-9" aria-label="참고문헌 9">9</a></sup></p>
+
+<p>미국 <a href="/label/columbia/">&#67;olumbia</a>가 1948년 <a href="/guide/glossary/classical/#long-playing-record">LP</a>와 함께 쓴 자기 곡선도 RIAA 곡선과 다릅니다.<sup><a id="refcall-5-6" href="#ref-5" aria-label="참고문헌 5">5</a>,<a id="refcall-9-4" href="#ref-9" aria-label="참고문헌 9">9</a></sup></p>
+
+<p>British Library의 안내서는 곡선이 음반의 상표와는 거의 상관없고, 누가 언제 원반을 깎았는지에 달렸다고 적습니다.<sup><a id="refcall-5-7" href="#ref-5" aria-label="참고문헌 5">5</a></sup></p>
+
+<h2>매트릭스 번호</h2>
+
+<p>Decca는 래커가 다음 공정으로 넘어가기 전에 늘 <a href="/guide/glossary/">런아웃</a>에 <a href="/guide/original-pressing/">매트릭스 번호</a>를 새겼습니다. 래커 바깥 가장자리에는 Decca의 마스터링 엔지니어가 매트릭스 번호와 자기 식별 문자를 써 넣었습니다.<sup><a id="refcall-4-2" href="#ref-4" aria-label="참고문헌 4">4</a></sup></p>
+
+<p>British Library의 안내서에 따르면 Decca LP의 매트릭스 표기는 12인치 판이면 ARL, 10인치 판이면 DRL로 시작합니다. 그 뒤로 매트릭스 번호와 테이크 번호가 오고, 커팅 엔지니어를 나타내는 글자가 붙습니다.<sup><a id="refcall-5-8" href="#ref-5" aria-label="참고문헌 5">5</a></sup></p>
+
+<p>이런 표기의 짜임은 레이블과 시대마다 다르게 기록되어 있습니다.<sup><a id="refcall-10-1" href="#ref-10" aria-label="참고문헌 10">10</a>,<a id="refcall-11-1" href="#ref-11" aria-label="참고문헌 11">11</a></sup></p>
+</div>
+<nav class="sw-more" aria-label="런아웃 각인을 다룬 아카이브"><p>런아웃 각인을 다룬 아카이브</p><ul><li><a href="/studio/sterling-sound/">&#83;terling Sound</a></li><li><a href="/person/rudy-van-gelder/">&#82;udy &#86;an Gelder</a></li></ul></nav>
+<nav class="sw-next" aria-label="다음 단"><a href="/guide/original-pressing/">5 → 도금과 프레싱</a></nav>
+<details class="refs" open><summary>참고문헌</summary><ol><li id="ref-1" tabindex="-1">Fritz A. Kuttner, 「Adventurers in Sound: Lawrence J. Scully (He Who Lathes Best)」, High Fidelity Magazine, 1956. <a href="http://www.preservationsound.com/wp-content/uploads/2012/11/High_Fidelity-5612-Scully_Sm.pdf">preservationsound.com</a> <a href="#refcall-1-1" aria-label="본문 호출 1-1로 돌아가기">↩1</a> <a href="#refcall-1-2" aria-label="본문 호출 1-2로 돌아가기">↩2</a> <a href="#refcall-1-3" aria-label="본문 호출 1-3로 돌아가기">↩3</a> <a href="#refcall-1-4" aria-label="본문 호출 1-4로 돌아가기">↩4</a> <a href="#refcall-1-5" aria-label="본문 호출 1-5로 돌아가기">↩5</a></li><li id="ref-2" tabindex="-1">Gotham Audio Corp., 「Gotham Audio 1979-1980 catalog」, 1979. <a href="https://www.preservationsound.com/wp-content/uploads/2013/09/Gotham_Audio_1979.pdf">preservationsound.com</a> <a href="#refcall-2-1" aria-label="본문 호출 2-1로 돌아가기">↩</a></li><li id="ref-3" tabindex="-1">Speakers Corner HiFi GmbH, 「The Cutting Machine」, 2021. <a href="https://pure-analogue.com/the-cutting-lathe/">pure-analogue.com</a> <a href="#refcall-3-1" aria-label="본문 호출 3-1로 돌아가기">↩1</a> <a href="#refcall-3-2" aria-label="본문 호출 3-2로 돌아가기">↩2</a> <a href="#refcall-3-3" aria-label="본문 호출 3-3로 돌아가기">↩3</a> <a href="#refcall-3-4" aria-label="본문 호출 3-4로 돌아가기">↩4</a> <a href="#refcall-3-5" aria-label="본문 호출 3-5로 돌아가기">↩5</a> <a href="#refcall-3-6" aria-label="본문 호출 3-6로 돌아가기">↩6</a></li><li id="ref-4" tabindex="-1">Jan Richardsson, 「The Manufacturing Process」, Stones on DECCA. <a href="https://stonesondecca.com/basic-lp-info/the-manufacturing-process">stonesondecca.com</a> <a href="#refcall-4-1" aria-label="본문 호출 4-1로 돌아가기">↩1</a> <a href="#refcall-4-2" aria-label="본문 호출 4-2로 돌아가기">↩2</a></li><li id="ref-5" tabindex="-1">Peter Copeland, 『Manual of Analogue Sound Restoration Techniques』, British Library, 2008. <a href="https://www.collinsaudio.com/Prosound_Workshop/Analogue%20Sound%20Restoration.pdf">collinsaudio.com</a> <a href="#refcall-5-1" aria-label="본문 호출 5-1로 돌아가기">↩1</a> <a href="#refcall-5-2" aria-label="본문 호출 5-2로 돌아가기">↩2</a> <a href="#refcall-5-3" aria-label="본문 호출 5-3로 돌아가기">↩3</a> <a href="#refcall-5-4" aria-label="본문 호출 5-4로 돌아가기">↩4</a> <a href="#refcall-5-5" aria-label="본문 호출 5-5로 돌아가기">↩5</a> <a href="#refcall-5-6" aria-label="본문 호출 5-6로 돌아가기">↩6</a> <a href="#refcall-5-7" aria-label="본문 호출 5-7로 돌아가기">↩7</a> <a href="#refcall-5-8" aria-label="본문 호출 5-8로 돌아가기">↩8</a></li><li id="ref-6" tabindex="-1">Georg Neumann GmbH, 「Well Made Music Vinyl Mastering」. <a href="https://newsroom.neumann.com/well-made-music-vinyl-mastering">newsroom.neumann.com</a> <a href="#refcall-6-1" aria-label="본문 호출 6-1로 돌아가기">↩1</a> <a href="#refcall-6-2" aria-label="본문 호출 6-2로 돌아가기">↩2</a> <a href="#refcall-6-3" aria-label="본문 호출 6-3로 돌아가기">↩3</a> <a href="#refcall-6-4" aria-label="본문 호출 6-4로 돌아가기">↩4</a></li><li id="ref-7" tabindex="-1">J.I. Agnew, 「Around the World In 80 Lathes, Part Eight」, Copper Magazine 158호, PS Audio, 2022. <a href="https://www.psaudio.com/blogs/copper/around-the-world-in-80-lathes-part-eight">psaudio.com</a> <a href="#refcall-7-1" aria-label="본문 호출 7-1로 돌아가기">↩</a></li><li id="ref-8" tabindex="-1">Recording Industry Association of America, 「Standard Recording and Reproducing Characteristic」, Bulletin No. E 1, 1978. <a href="https://www.bostonaudiosociety.org/pdf/RIAA%20Bulletins%20E1%20&amp;%20E4_1978%20LP%20dimensional%20standards.pdf">bostonaudiosociety.org</a> <a href="#refcall-8-1" aria-label="본문 호출 8-1로 돌아가기">↩</a></li><li id="ref-9" tabindex="-1">Gary A. Galo, 「The &#67;olumbia Lp Equalization Curve」, ARSC Journal 41권 1호, 2009. <a href="https://linearaudio.net/sites/linearaudio.net/files/galocollpcurvefinal.pdf">linearaudio.net</a> <a href="#refcall-9-1" aria-label="본문 호출 9-1로 돌아가기">↩1</a> <a href="#refcall-9-2" aria-label="본문 호출 9-2로 돌아가기">↩2</a> <a href="#refcall-9-3" aria-label="본문 호출 9-3로 돌아가기">↩3</a> <a href="#refcall-9-4" aria-label="본문 호출 9-4로 돌아가기">↩4</a></li><li id="ref-10" tabindex="-1">「&#67;olumbia History: Matrix and Take Numbering」, Tim Brooks 엮음 『&#67;olumbia Master Book』 1권, Discography of American Historical Recordings. <a href="https://adp.library.ucsb.edu/index.php/resources/detail/126">adp.library.ucsb.edu</a> <a href="#refcall-10-1" aria-label="본문 호출 10-1로 돌아가기">↩</a></li><li id="ref-11" tabindex="-1">Howard S. Friedman, 「Gramophone Company Matrix and Catalog Numbers」, Gilbert &amp; Sullivan Discography. <a href="https://oakapplepress.net/gasdisc/matrix2.htm">oakapplepress.net</a> <a href="#refcall-11-1" aria-label="본문 호출 11-1로 돌아가기">↩</a></li></ol><p class="refs-access">2026. 10. 29. 열람</p></details>
+</article>
+
+  <footer class="cvf-ft">
+    <div class="cvf-ft-grid">
+      <div class="cvf-ft-col cvf-ft-store"><a class="cvf-ft-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="140" height="11"></a><span>코디드바이닐즈 회현</span><span>회현 지하쇼핑센터 마열 3호</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">인스타그램 @codedvinyls</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">둘러보기</b><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/">아카이브</a><a href="/journal/">저널</a></div>
+      <div class="cvf-ft-col"><a class="cvf-ft-h" href="/store.html">매장·온라인</a><a href="/store.html#visit">회현동 매장</a><a href="/notice/">공지</a><a href="/cd/">매장 CD 코너</a><a href="/store.html#online">온라인 구매</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">안내</b><a href="/guide/grading/">등급 기준</a><a href="/guide/glossary/">용어 사전</a><a href="/shipping-returns.html">배송·교환·환불</a><a href="/terms.html">이용약관</a><a href="/privacy.html">개인정보처리방침</a><a href="/about.html">사업자 정보</a></div>
+    </div>
+    <div class="cvf-ft-base"><span class="cvf-ft-plate">THE VINYL ARCHIVE</span><div class="cvf-ft-biz"><span>상호 코디드바이닐즈 · 대표자 최준홍 · 사업자등록번호 286-51-00775</span><span>통신판매업 신고번호 제2026-서울강남-00575호 · <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2865100775" target="_blank" rel="noopener">공정거래위원회 사업자 정보 확인</a></span><span>서울시 강남구 논현로 38길 20 · 전화 <a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span><span>호스팅서비스 제공자 GitHub, Inc.</span></div></div>
+  </footer>
+</div>
+
+<script>
+(()=>{const refs=document.querySelector('.sw .refs');if(!refs)return;
+ function reveal(){let id;try{id=decodeURIComponent(location.hash.slice(1));}catch(e){return;}
+  const el=document.getElementById(id);if(!el)return;const p=el.closest('details');if(p)p.open=true;
+  requestAnimationFrame(()=>{el.scrollIntoView({block:'start'});if(el.hasAttribute('tabindex'))el.focus({preventScroll:true});});}
+ refs.open=false;window.addEventListener('hashchange',reveal);
+ document.querySelectorAll('.sw a[href^="#ref"]').forEach(a=>a.addEventListener('click',()=>{const el=document.getElementById(a.hash.slice(1));if(el){const p=el.closest('details');if(p)p.open=true;}setTimeout(reveal,0);}));
+ reveal();})();
+</script>
+<script src="/assets/cv-frame.js" defer></script>
+</body>
+</html>
