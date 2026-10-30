@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/assets/cv-analytics.js"></script>
+<title>디지털로 넘어간 과정 | 코디드바이닐즈 CODEDVINYLS</title>
+<meta name="description" content="소리를 숫자로 적는 녹음기에서 커팅 앞의 지연 장치, CD의 규격까지. 리마스터라는 말과 Blue Note가 밝힌 원본까지 짚습니다.">
+<link rel="stylesheet" href="/assets/cv-nav.css">
+<link rel="stylesheet" href="/assets/cv-frame.css">
+<link rel="canonical" href="https://codedvinyls.com/guide/analog-to-digital/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="코디드바이닐즈">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="디지털로 넘어간 과정 | 코디드바이닐즈">
+<meta property="og:description" content="소리를 숫자로 적는 녹음기에서 커팅 앞의 지연 장치, CD의 규격까지. 리마스터라는 말과 Blue Note가 밝힌 원본까지 짚습니다.">
+<meta property="og:url" content="https://codedvinyls.com/guide/analog-to-digital/">
+<meta property="og:image" content="https://codedvinyls.com/assets/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "디지털로 넘어간 과정", "description": "소리를 숫자로 적는 녹음기에서 커팅 앞의 지연 장치, CD의 규격까지. 리마스터라는 말과 Blue Note가 밝힌 원본까지 짚습니다.", "inLanguage": "ko", "about": ["디지털 녹음", "PCM", "표본화", "양자화", "DN-023R", "Telarc", "Soundstream", "프리뷰 신호", "디지털 지연", "CD 규격", "44.1kHz", "리마스터", "리마스터 LP", "Tone Poet", "원본 마스터 테이프"], "author": {"@type": "Organization", "name": "코디드바이닐즈"}, "publisher": {"@type": "Organization", "name": "코디드바이닐즈", "logo": {"@type": "ImageObject", "url": "https://codedvinyls.com/assets/og-default.jpg"}}, "mainEntityOfPage": "https://codedvinyls.com/guide/analog-to-digital/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "코디드바이닐즈", "item": "https://codedvinyls.com/"}, {"@type": "ListItem", "position": 2, "name": "디지털로 넘어간 과정"}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@400&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/assets/cv-type.css">
+<style>
+:root{
+  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
+  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
+  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.mono{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:.02em}
+.tick{display:inline-block;width:26px;height:3px;background:var(--yellow);vertical-align:middle;flex:none}
+
+.top-grid{display:grid;grid-template-columns:260px repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
+.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.logo-cell img{width:188px;height:auto}
+.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
+.nav-cell:last-child{border-right:0}
+.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
+.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
+.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
+.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
+.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
+
+.crumb{border-bottom:1px solid var(--line);background:var(--surface);padding:16px 26px;font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.05em;display:flex;gap:10px;align-items:center}
+.crumb a:hover{color:var(--ink)}
+
+
+.sw{--ink:#1f1e1b;--line:#d8d2c6;--muted:#6b655a;--g:clamp(24px,4vw,56px);color:var(--ink);padding-bottom:64px}
+.sw *{box-sizing:border-box}
+.sw figure{margin:0}
+.sw figcaption{font-size:12.5px;line-height:1.6;color:var(--muted);padding:10px 0 0;border-top:1px solid var(--line);margin-top:10px}
+.sw figcaption .src{display:block;color:#8d867a}
+.sw figcaption a{color:inherit;text-underline-offset:3px}
+.sw-step-hero{max-width:820px;margin:0 auto;padding:52px var(--g) 0;text-align:center}
+.sw-step-hero h1{font-weight:400;font-size:clamp(36px,4.6vw,60px);line-height:1.18;margin:0;word-break:keep-all}
+.sw-step-hero .dek{font-size:clamp(18px,1.8vw,22px);margin:16px 0 0}
+.sw .sw-chain{max-width:1100px;margin:36px auto 10px;padding:0 var(--g)}
+.sw-chain svg{width:100%;height:auto;display:block}
+.sw-body{max-width:700px;margin:0 auto;padding:44px var(--g) 0}
+.sw-body h2{font-weight:400;font-size:clamp(22px,2.2vw,28px);line-height:1.35;margin:0 0 14px;word-break:keep-all}
+.sw-body p{font-size:17px;line-height:1.85;margin:0 0 22px;word-break:keep-all}
+.sw-body p+h2{margin-top:44px}
+.sw-body p a:not(sup a){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.sw sup{line-height:0;font-size:.68em;vertical-align:super}
+.sw sup a{padding:0 1px;text-decoration:none;color:var(--muted)}
+.sw-two{max-width:1100px;margin:22px auto 24px;padding:0 var(--g);display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,24px)}
+.sw-two.one{grid-template-columns:1fr;max-width:700px}
+.sw-two img,.sw-bleed img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+.sw .sw-bleed{max-width:1100px;margin:22px auto 24px;padding:0 var(--g)}
+.sw .refs{max-width:700px;margin:56px auto 0;padding:16px var(--g) 0;border-top:1px solid var(--line);font-size:14px}
+.sw .refs summary{cursor:pointer;font-size:18px;margin-bottom:12px}
+.sw .refs ol{padding-left:20px;margin:0}
+.sw .refs li{margin:12px 0;line-height:1.65;scroll-margin-top:100px;overflow-wrap:anywhere}
+.sw .refs a{color:inherit;text-underline-offset:3px}
+.sw .refs-access{color:var(--muted);margin:16px 0 0}
+.sw figcaption a,.sw .refs li a:not([href^="#"]){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+@media (max-width:760px){
+ .sw-chain{overflow-x:auto}.sw-chain svg{min-width:760px}
+ .sw-two{grid-template-columns:1fr}
+ .sw-body p{font-size:16px}
+}
+
+.sw .sw-prev{max-width:700px;margin:40px auto 0;padding:14px var(--g) 0;border-top:1px solid var(--line);font-size:17px}
+.sw .sw-prev a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+</style>
+<link rel="stylesheet" href="/assets/cv-body.css">
+</head>
+<body class="cvf-on cvb-on cvb-gde">
+<div class="page" id="top">
+
+  <header class="cvf-hd" data-cvf-hd>
+    <a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="168" height="13"></a>
+    <nav class="cvf-nav" aria-label="메뉴"><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/" aria-current="page">아카이브</a><a href="/journal/">저널</a><a href="/store.html">매장·온라인</a></nav>
+    <a class="cvf-menu" href="#cvf-sheet" aria-controls="cvf-sheet" aria-expanded="false">메뉴</a>
+  </header>
+  <div class="cvf-sheet" id="cvf-sheet" role="dialog" aria-modal="true" aria-label="메뉴">
+    <div class="cvf-sheet-hd"><a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="118" height="9"></a><a class="cvf-close" href="#">닫기</a></div>
+    <nav class="cvf-sheet-nav"><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/" aria-current="page">아카이브</a><a href="/journal/">저널</a><a href="/store.html">매장·온라인</a></nav>
+    <p class="cvf-sheet-notice"><a href="/notice/"><span class="cvf-k">공지</span><span>이용약관·개인정보처리방침 변경 외 2건</span><span aria-hidden="true">→</span></a></p>
+    <p class="cvf-sheet-nap">코디드바이닐즈 회현 · 회현 지하쇼핑센터 마열 3호</p>
+  </div>
+
+  <nav class="crumb" aria-label="경로"><a href="/archive/">아카이브</a></nav>
+
+  <article class="sw">
+<section class="sw-step-hero"><h1>디지털로 넘어간 과정</h1><p class="dek">LP 공정의 어디가 숫자로 바뀌었나</p></section>
+<figure class="sw-chain"><svg viewBox="0 0 1100 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="녹음에서 판까지: 녹음 → 래커 커팅 → 도금 → 프레스 → 판 · 디지털 표시 둘: 디지털 녹음기 · 디지털 지연 장치" fill="none" stroke="#1f1e1b" stroke-width="1.25" stroke-linecap="round"><line x1="140" y1="132" x2="960" y2="132"/><circle cx="140" cy="132" r="6" fill="#1f1e1b"/><text x="140" y="166" text-anchor="middle" font-size="15" fill="#1f1e1b" stroke="none">녹음</text><circle cx="345" cy="132" r="6" fill="#1f1e1b"/><text x="345" y="166" text-anchor="middle" font-size="15" fill="#1f1e1b" stroke="none">래커 커팅</text><circle cx="550" cy="132" r="6" fill="#1f1e1b"/><text x="550" y="166" text-anchor="middle" font-size="15" fill="#1f1e1b" stroke="none">도금</text><circle cx="755" cy="132" r="6" fill="#1f1e1b"/><text x="755" y="166" text-anchor="middle" font-size="15" fill="#1f1e1b" stroke="none">프레스</text><circle cx="960" cy="132" r="6" fill="#1f1e1b"/><text x="960" y="166" text-anchor="middle" font-size="15" fill="#1f1e1b" stroke="none">판</text><line x1="140" y1="122" x2="140" y2="74" stroke="#8d867a"/><text x="140" y="48" text-anchor="middle" font-size="14" fill="#1f1e1b" stroke="none">디지털 녹음기</text><text x="140" y="66" text-anchor="middle" font-size="11" fill="#6b655a" stroke="none">표본화와 양자화를 거쳐 소리를 숫자로 적는다</text><line x1="290" y1="122" x2="290" y2="89" stroke="#8d867a"/><circle cx="290" cy="132" r="4" fill="#f7f4ec" stroke="#8d867a"/><text x="298" y="48" text-anchor="start" font-size="14" fill="#1f1e1b" stroke="none">디지털 지연 장치</text><text x="298" y="66" text-anchor="start" font-size="11" fill="#6b655a" stroke="none">프리뷰를 얻으려고 소리를 숫자로 바꿔 늦춘다</text><text x="298" y="81" text-anchor="start" font-size="11" fill="#6b655a" stroke="none">1980년 Ampex 특허</text></svg><figcaption>녹음에서 판까지 · 코디드바이닐즈 정리 · 출처 <sup><a id="refcall-1-1" href="#ref-1" aria-label="참고문헌 1">1</a>,<a id="refcall-2-1" href="#ref-2" aria-label="참고문헌 2">2</a>,<a id="refcall-3-1" href="#ref-3" aria-label="참고문헌 3">3</a></sup></figcaption></figure>
+<div class="sw-body"><h2>디지털 녹음</h2>
+
+<p>소리를 숫자로 바꾸는 일은 두 단계를 거칩니다. 표본화는 신호의 크기를 일정한 간격으로 읽고, 양자화는 읽어 낸 크기를 정해진 개수의 디지털 값 가운데 하나로 바꿉니다.<sup><a id="refcall-2-2" href="#ref-2" aria-label="참고문헌 2">2</a>,<a id="refcall-4-1" href="#ref-4" aria-label="참고문헌 4">4</a></sup></p>
+
+<p>일본콜롬비아(Denon)는 1972년, 아날로그 레코드의 마스터를 녹음할 디지털 녹음기 DN-023R을 만들었습니다. 이 녹음기의 표본화율은 47.25kHz, 곧 1초에 47,250번이었고, 양자화는 13비트였습니다.<sup><a id="refcall-1-2" href="#ref-1" aria-label="참고문헌 1">1</a>,<a id="refcall-5-1" href="#ref-5" aria-label="참고문헌 5">5</a></sup></p>
+
+<p>Telarc는 6년 뒤인 1978년 4월 4일과 5일, 클리블랜드 Severance Hall에서 Soundstream 디지털 녹음기로 녹음했습니다.<sup><a id="refcall-6-1" href="#ref-6" aria-label="참고문헌 6">6</a>,<a id="refcall-7-1" href="#ref-7" aria-label="참고문헌 7">7</a></sup></p>
+
+<h2>커팅 앞의 지연 장치</h2>
+
+<p><a href="/guide/mastering-and-cutting/">가변 피치</a>로 홈을 깎는 커팅 선반은 커팅 헤드가 새길 신호를 미리 알아야 합니다. 이렇게 앞서 받는 신호를 프리뷰 신호라 부릅니다.<sup><a id="refcall-3-2" href="#ref-3" aria-label="참고문헌 3">3</a>,<a id="refcall-8-1" href="#ref-8" aria-label="참고문헌 8">8</a></sup></p>
+
+<p>1980년에 출원된 Ampex의 특허에 따르면, 그전에는 아날로그 테이프 녹음기의 두 재생 헤드 사이에 테이프 고리를 두어 신호를 늦췄습니다. 이 특허는 프리뷰를 얻으려고 소리 신호를 디지털로 바꾼 뒤 정해진 시간만큼 늦추는 장치를 제시합니다.<sup><a id="refcall-3-3" href="#ref-3" aria-label="참고문헌 3">3</a></sup></p>
+
+<h2>CD의 규격</h2>
+
+<p>CD 오디오의 표본화율은 44.1kHz이고, 표본 하나는 16비트입니다.<sup><a id="refcall-2-3" href="#ref-2" aria-label="참고문헌 2">2</a></sup> CD 개발에 참여한 &#80;hilips 엔지니어의 글에 따르면, 1980년 3월 도쿄에서 열린 4차 회의에서 &#80;hilips는 Sony가 제안한 이 두 값을 받아들였습니다.<sup><a id="refcall-9-1" href="#ref-9" aria-label="참고문헌 9">9</a></sup> Library of Congress의 녹음 연표는 &#80;hilips와 Sony가 1983년에 CD와 CD 플레이어를 내놓았다고 적습니다.<sup><a id="refcall-10-1" href="#ref-10" aria-label="참고문헌 10">10</a></sup></p>
+
+<h2>리마스터와 원본</h2>
+
+<p>영어 사전 Cambridge와 Oxford Learner's, Dictionary.com은 리마스터(remaster)를 옛 마스터 테이프 같은 이전 녹음에서 새 마스터를 만드는 일로 풀이합니다.<sup><a id="refcall-11-1" href="#ref-11" aria-label="참고문헌 11">11</a>,<a id="refcall-12-1" href="#ref-12" aria-label="참고문헌 12">12</a>,<a id="refcall-13-1" href="#ref-13" aria-label="참고문헌 13">13</a></sup></p>
+
+<p><a href="/label/blue-note/">&#66;lue Note</a>는 Tone Poet 시리즈를 케빈 그레이(Kevin Gray)가 원본 마스터 테이프에서 아날로그로만 마스터링한 재발매라고 소개합니다.<sup><a id="refcall-14-1" href="#ref-14" aria-label="참고문헌 14">14</a></sup> 그레이도 한 인터뷰에서 Tone Poet과 &#66;lue Note Classics 모두 원본 마스터에서 커팅한다고 말했습니다.<sup><a id="refcall-15-1" href="#ref-15" aria-label="참고문헌 15">15</a></sup></p>
+
+<p>2021년 Tone Poet 일정표에는 그해 &#66;lue Note가 낸 Charles Lloyd & The Marvels의 〈Tone Poem〉이 원본 디지털 파일에서 직접 마스터링한 판으로 적혀 있습니다.<sup><a id="refcall-16-1" href="#ref-16" aria-label="참고문헌 16">16</a></sup> 그레이는 같은 인터뷰에서 디지털 시대에 녹음한 세션에 아날로그 원본이 없으면 디지털 마스터를 쓴다고 했습니다.<sup><a id="refcall-15-2" href="#ref-15" aria-label="참고문헌 15">15</a></sup></p></div>
+<nav class="sw-prev" aria-label="이전 단"><a href="/guide/original-pressing/">← 5 도금과 프레싱</a></nav>
+<details class="refs" open><summary>참고문헌</summary><ol><li id="ref-1" tabindex="-1">Simon Barber, 「Soundstream: The Introduction of Commercial Digital Recording in the United States」, Journal on the Art of Record Production, 2012. <a href="https://www.arpjournal.com/asarpwp/soundstream-the-introduction-of-commercial-digital-recording-in-the-united-states/">arpjournal.com</a> <a href="#refcall-1-1" aria-label="본문 호출 1-1로 돌아가기">↩1</a> <a href="#refcall-1-2" aria-label="본문 호출 1-2로 돌아가기">↩2</a></li><li id="ref-2" tabindex="-1">Library of Congress, 「Linear Pulse Code Modulated Audio (LPCM)」, Sustainability of Digital Formats, 2024. <a href="https://loc.gov/preservation/digital/formats/fdd/fdd000011.shtml">loc.gov</a> <a href="#refcall-2-1" aria-label="본문 호출 2-1로 돌아가기">↩1</a> <a href="#refcall-2-2" aria-label="본문 호출 2-2로 돌아가기">↩2</a> <a href="#refcall-2-3" aria-label="본문 호출 2-3로 돌아가기">↩3</a></li><li id="ref-3" tabindex="-1">David L. Haynes · John M. Brennan, 「Digital delay for high quality audio use」, 미국 특허 US 4,348,754, 1980. <a href="https://patents.google.com/patent/US4348754A/en">patents.google.com</a> <a href="#refcall-3-1" aria-label="본문 호출 3-1로 돌아가기">↩1</a> <a href="#refcall-3-2" aria-label="본문 호출 3-2로 돌아가기">↩2</a> <a href="#refcall-3-3" aria-label="본문 호출 3-3로 돌아가기">↩3</a></li><li id="ref-4" tabindex="-1">Steven W. Smith, 「ADC and DAC」, 『The Scientist and Engineer&#x27;s Guide to Digital Signal Processing』 3장. <a href="http://www.dspguide.com/CH3.PDF">dspguide.com</a> <a href="#refcall-4-1" aria-label="본문 호출 4-1로 돌아가기">↩</a></li><li id="ref-5" tabindex="-1">日本コロムビア株式会社, 「未来技術遺産に登録された 世界初の実用PCMデジタル録音機「DN-023R」の 実機デモンストレーションを50年ぶりに実施」, 보도자료, 2025. <a href="https://digitalpr.jp/r/111908">digitalpr.jp</a> <a href="#refcall-5-1" aria-label="본문 호출 5-1로 돌아가기">↩</a></li><li id="ref-6" tabindex="-1">Thomas Fine, 「Frederick Fennell, The Cleveland Symphonic Winds / Holst: Suite No. 1 in E-Flat, Suite No. 2 in F / Handel: Music for the Royal Fireworks / Bach: Fantasia in G (Special Edition Audiophile Pressing) (1978)」, Library of Congress National Recording Preservation Board, 2019. <a href="https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Frederick-Fennel-Cleveland-Symphonic-Winds_Fine.pdf">loc.gov</a> <a href="#refcall-6-1" aria-label="본문 호출 6-1로 돌아가기">↩</a></li><li id="ref-7" tabindex="-1">IEEE 기술 역사 위키(Engineering and Technology History Wiki) 「Telarc, Frederick Fennell, and an Overture to Digital Recording」 항목. <a href="https://ethw.org/Telarc,_Frederick_Fennell,_and_an_Overture_to_Digital_Recording">ethw.org</a> <a href="#refcall-7-1" aria-label="본문 호출 7-1로 돌아가기">↩</a></li><li id="ref-8" tabindex="-1">J.I. Agnew, 「Around the World in 80 Lathes, Part Three」, Copper Magazine 153호, PS Audio, 2021. <a href="https://www.psaudio.com/blogs/copper/around-the-world-in-80-lathes-part-three">psaudio.com</a> <a href="#refcall-8-1" aria-label="본문 호출 8-1로 돌아가기">↩</a></li><li id="ref-9" tabindex="-1">Kees A. Schouhamer Immink, 「Shannon, Beethoven, and the Compact Disc」, IEEE Information Theory Society Newsletter, 2007. <a href="http://www.turing-machines.com/pdf/beethoven.htm">turing-machines.com</a> <a href="#refcall-9-1" aria-label="본문 호출 9-1로 돌아가기">↩</a></li><li id="ref-10" tabindex="-1">Library of Congress, 「A Recorded Sound Timeline」. <a href="https://www.loc.gov/static/managed-content/uploads/sites/6/2017/02/recorded_sound_timeline-2013.pdf">loc.gov</a> <a href="#refcall-10-1" aria-label="본문 호출 10-1로 돌아가기">↩</a></li><li id="ref-11" tabindex="-1">Cambridge University Press, 「REMASTER」, Cambridge Dictionary. <a href="https://dictionary.cambridge.org/dictionary/english/remaster">dictionary.cambridge.org</a> <a href="#refcall-11-1" aria-label="본문 호출 11-1로 돌아가기">↩</a></li><li id="ref-12" tabindex="-1">Oxford University Press, 「remaster verb」, OxfordLearnersDictionaries.com. <a href="https://www.oxfordlearnersdictionaries.com/definition/english/remaster">oxfordlearnersdictionaries.com</a> <a href="#refcall-12-1" aria-label="본문 호출 12-1로 돌아가기">↩</a></li><li id="ref-13" tabindex="-1">Dictionary.com, 「REMASTER Definition &amp; Meaning」. <a href="https://www.dictionary.com/browse/remaster">dictionary.com</a> <a href="#refcall-13-1" aria-label="본문 호출 13-1로 돌아가기">↩</a></li><li id="ref-14" tabindex="-1">&#66;lue Note Records, 「ANNOUNCING THE 2026 LINE-UP OF THE TONE POET VINYL SERIES」, 2025. <a href="https://www.bluenote.com/tone-poet-vinyl-series-2026-line-up/">bluenote.com</a> <a href="#refcall-14-1" aria-label="본문 호출 14-1로 돌아가기">↩</a></li><li id="ref-15" tabindex="-1">JT, 「An Interview with Mastering Engineer Kevin Gray」, SoundStage! Xperience, 2023. <a href="https://www.soundstagexperience.com/index.php/features-menu/pulse-menu/1106-an-interview-with-mastering-engineer-kevin-gray">soundstagexperience.com</a> <a href="#refcall-15-1" aria-label="본문 호출 15-1로 돌아가기">↩1</a> <a href="#refcall-15-2" aria-label="본문 호출 15-2로 돌아가기">↩2</a></li><li id="ref-16" tabindex="-1">&#66;lue Note Records, 「TONE POET AUDIOPHILE VINYL REISSUE SERIES 2021-2022 LINE-UP」, 2021. <a href="https://www.bluenote.com/2021-2022-tone-poet-vinyl-series-line-up/">bluenote.com</a> <a href="#refcall-16-1" aria-label="본문 호출 16-1로 돌아가기">↩</a></li></ol><p class="refs-access">2026. 10. 30. 열람</p></details>
+</article>
+
+  <footer class="cvf-ft">
+    <div class="cvf-ft-grid">
+      <div class="cvf-ft-col cvf-ft-store"><a class="cvf-ft-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="140" height="11"></a><span>코디드바이닐즈 회현</span><span>회현 지하쇼핑센터 마열 3호</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">인스타그램 @codedvinyls</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">둘러보기</b><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/">아카이브</a><a href="/journal/">저널</a></div>
+      <div class="cvf-ft-col"><a class="cvf-ft-h" href="/store.html">매장·온라인</a><a href="/store.html#visit">회현동 매장</a><a href="/notice/">공지</a><a href="/cd/">매장 CD 코너</a><a href="/store.html#online">온라인 구매</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">안내</b><a href="/guide/grading/">등급 기준</a><a href="/guide/glossary/">용어 사전</a><a href="/shipping-returns.html">배송·교환·환불</a><a href="/terms.html">이용약관</a><a href="/privacy.html">개인정보처리방침</a><a href="/about.html">사업자 정보</a></div>
+    </div>
+    <div class="cvf-ft-base"><span class="cvf-ft-plate">THE VINYL ARCHIVE</span><div class="cvf-ft-biz"><span>상호 코디드바이닐즈 · 대표자 최준홍 · 사업자등록번호 286-51-00775</span><span>통신판매업 신고번호 제2026-서울강남-00575호 · <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2865100775" target="_blank" rel="noopener">공정거래위원회 사업자 정보 확인</a></span><span>서울시 강남구 논현로 38길 20 · 전화 <a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span><span>호스팅서비스 제공자 GitHub, Inc.</span></div></div>
+  </footer>
+</div>
+
+<script>
+(()=>{const refs=document.querySelector('.sw .refs');if(!refs)return;
+ function reveal(){let id;try{id=decodeURIComponent(location.hash.slice(1));}catch(e){return;}
+  const el=document.getElementById(id);if(!el)return;const p=el.closest('details');if(p)p.open=true;
+  requestAnimationFrame(()=>{el.scrollIntoView({block:'start'});if(el.hasAttribute('tabindex'))el.focus({preventScroll:true});});}
+ refs.open=false;window.addEventListener('hashchange',reveal);
+ document.querySelectorAll('.sw a[href^="#ref"]').forEach(a=>a.addEventListener('click',()=>{const el=document.getElementById(a.hash.slice(1));if(el){const p=el.closest('details');if(p)p.open=true;}setTimeout(reveal,0);}));
+ reveal();})();
+</script>
+<script src="/assets/cv-frame.js" defer></script>
+</body>
+</html>
