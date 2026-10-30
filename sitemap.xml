@@ -1459,4 +1459,6 @@
   <url><loc>https://codedvinyls.com/genre/classical/voice-and-opera/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://codedvinyls.com/guide/glossary/classical/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://codedvinyls.com/archive/</loc><lastmod>2026-10-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://codedvinyls.com/guide/analog-to-digital/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://codedvinyls.com/guide/lp-origins/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
