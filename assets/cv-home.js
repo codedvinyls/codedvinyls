@@ -49,3 +49,26 @@
   window.addEventListener("hashchange", function () { shown = STEP; render(); });
   render();
 })();
+
+/* 홈 「최근 7일 입고」 아래 자켓 칸 전환 (2026-11-05)
+   · 기본 = 온라인(자사몰 전까지 · 대표 261105) · 버튼은 보이기만 바꾼다 · 스크립트가 없으면 두 칸 다 보이고 버튼 = 목록 쪽 링크. */
+(function () {
+  "use strict";
+  var box = document.querySelector(".cvh-tabs");
+  if (!box) return;
+  var chips = Array.prototype.slice.call(box.querySelectorAll("a[data-tab]"));
+  var panes = Array.prototype.slice.call(box.querySelectorAll("[data-pane]"));
+  var more = box.querySelector(".cvh-tabmore");
+  box.classList.add("cvh-tabs-js");   // 전환 중엔 두 칸이 같은 자리(쌓임 간격 0)
+  function show(k) {
+    panes.forEach(function (p) { p.hidden = p.getAttribute("data-pane") !== k; });
+    chips.forEach(function (a) {
+      if (a.getAttribute("data-tab") === k) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+    });
+    if (more && more.getAttribute("data-" + k)) more.setAttribute("href", more.getAttribute("data-" + k));
+  }
+  chips.forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); show(a.getAttribute("data-tab")); });
+  });
+  show(box.getAttribute("data-tab") || "online");
+})();

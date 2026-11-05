@@ -128,3 +128,8 @@
   .cvl-cell h2{font-size:21px;margin-top:6px !important}
   .cvl-cell .n{font-size:13px;margin-top:6px !important}
 }
+/* ★261105 홈 최근 7일 아래 자켓 칸 전환(온라인 · 회현동 매장) — 버튼 = 입고 목록 칩 모양 · 스크립트 없으면 두 칸 다 보임 */
+.cvh-tabbar .cvl-chips{margin-top:0}
+.cvh-tabbar .cvl-chips a[aria-current="true"]{color:var(--ink,#1f1e1b);border-bottom-color:var(--ink,#1f1e1b)}
+.cvh-tabs [data-pane][hidden]{display:none}
+.cvh-tabs:not(.cvh-tabs-js) [data-pane]+[data-pane]{margin-top:48px}
