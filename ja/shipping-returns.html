@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/assets/cv-analytics.js"></script>
+<title>配送・交換・返金 | CODEDVINYLS</title>
+<meta name="description" content="CODEDVINYLS の発送基準、交換、返品・返金の手続き（申込みの撤回）と現金に準ずる決済の条件についてのご案内です。">
+<link rel="stylesheet" href="/assets/cv-nav.css">
+<link rel="stylesheet" href="/assets/cv-frame.css">
+<link rel="canonical" href="https://codedvinyls.com/ja/shipping-returns.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CODEDVINYLS">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="配送・交換・返金 | CODEDVINYLS">
+<meta property="og:description" content="CODEDVINYLS の配送・交換・返金（申込みの撤回）のご案内。">
+<meta property="og:url" content="https://codedvinyls.com/ja/shipping-returns.html">
+<meta property="og:image" content="https://codedvinyls.com/assets/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
+  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
+  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.mono{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:.02em}
+.tick{display:inline-block;width:26px;height:3px;background:var(--yellow);vertical-align:middle;flex:none}
+.top-grid{display:grid;grid-template-columns:260px repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
+.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.logo-cell img{width:188px;height:auto}
+.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
+.nav-cell:last-child{border-right:0}
+.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
+.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
+.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
+.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
+.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
+.signal-row{border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 300px;background:var(--surface)}
+.signal-row .left{display:flex;align-items:center;padding:18px 26px;gap:18px;flex-wrap:wrap}
+.signal-row .right{display:flex;align-items:center;justify-content:flex-end;border-left:1px solid var(--line);padding:18px 26px}
+.doc-hero{padding:clamp(48px,6vw,90px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;gap:18px}
+.doc-hero .kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+.doc-hero h1{margin:0;font-size:clamp(28px,4vw,44px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+.doc-hero .lede{font-size:clamp(15px,1.7vw,17px);line-height:1.8;color:var(--muted);max-width:42em}
+.doc-section{border-bottom:1px solid var(--line);padding:clamp(40px,5vw,68px) clamp(24px,4vw,56px)}
+.doc-section h2{margin:0 0 22px;font-size:clamp(20px,2.6vw,26px);font-weight:800}
+.doc-section h3{margin:26px 0 10px;font-size:15.5px;font-weight:700;color:var(--ink)}
+.doc-section p{margin:0 0 12px;font-size:14.5px;line-height:1.85;color:var(--muted);max-width:52em}
+.doc-section p.lead{color:var(--ink)}
+.clause{margin:0 0 34px}
+.doc-section ol.num{margin:0 0 12px;padding-left:1.5em;max-width:52em}
+.doc-section ol.num>li{display:list-item;font-size:14.5px;line-height:1.85;color:var(--muted);margin:0 0 8px;padding-left:4px}
+.doc-section ul.dash{margin:6px 0 14px;padding:0;list-style:none;max-width:52em;display:grid;gap:8px}
+.doc-section ul.dash>li{display:block;font-size:14px;line-height:1.75;color:var(--muted);padding-left:18px;position:relative}
+.doc-section ul.dash>li::before{content:"—";position:absolute;left:0;color:var(--muted)}
+.doc-section .note{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.75;border-left:2px solid var(--line);padding-left:14px;margin:14px 0;max-width:52em}
+.doc-section b{font-weight:700;color:var(--ink)}
+.table-wrap{overflow-x:auto;margin:8px 0 18px;max-width:100%}
+.doc-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.doc-table th,.doc-table td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top;line-height:1.7}
+.doc-table th{background:var(--surface);font-weight:700;font-family:var(--mono);font-size:12px;letter-spacing:.03em;color:var(--ink);white-space:nowrap}
+.doc-table td{color:var(--muted)}
+.doc-table td b{color:var(--ink)}
+.biz-table th{width:180px}
+footer{background:var(--ink);color:var(--paper)}
+.footer-docs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(247,244,236,.18)}
+.footer-docs a{padding:22px 26px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;display:flex;justify-content:space-between;border-right:1px solid rgba(247,244,236,.18)}
+.footer-docs a:nth-child(2n){border-right:0}
+.footer-docs a:last-child{border-right:0}
+.footer-docs a:hover{color:var(--yellow)}
+.footer-base{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 26px;font-family:var(--mono);font-size:12px;flex-wrap:wrap}
+.footer-base .biz{color:rgba(247,244,236,.6);font-size:11px;line-height:1.7;text-align:right}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+@media(max-width:1080px){
+  .top-grid{grid-template-columns:1fr 1fr}
+  .logo-cell{grid-column:1/3;border-right:0;border-bottom:1px solid var(--line)}
+  .nav-cell:nth-child(even){border-right:0}
+}
+@media(max-width:680px){
+  .page{border-left:0;border-right:0}
+  .nav-cell{min-height:60px;padding:16px 14px;font-size:11.5px}
+  .signal-row{grid-template-columns:1fr}
+  .signal-row .right{justify-content:flex-start;border-left:0;border-top:1px solid var(--line)}
+  .footer-docs{grid-template-columns:1fr}
+  .footer-docs a{border-right:0;border-bottom:1px solid rgba(247,244,236,.18)}
+  .footer-base{flex-direction:column;gap:8px;align-items:flex-start}
+  .footer-base .biz{text-align:left}
+}
+</style>
+<link rel="stylesheet" href="/assets/fonts/cv-fonts.css">
+<link rel="stylesheet" href="/assets/cv-type.css">
+<link rel="stylesheet" href="/assets/cv-body.css">
+<link rel="alternate" hreflang="ko" href="https://codedvinyls.com/shipping-returns.html">
+<link rel="alternate" hreflang="en" href="https://codedvinyls.com/en/shipping-returns.html">
+<link rel="alternate" hreflang="ja" href="https://codedvinyls.com/ja/shipping-returns.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://codedvinyls.com/zh-cn/shipping-returns.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://codedvinyls.com/zh-tw/shipping-returns.html">
+<link rel="alternate" hreflang="x-default" href="https://codedvinyls.com/en/shipping-returns.html">
+<link rel="stylesheet" href="/assets/i18n_frame.css">
+<link rel="preload" href="/assets/fonts/cv-sans-ja-400.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="cvf-on cvb-on cvb-legal">
+<div class="page" id="top">
+
+  <header class="cvf-hd" data-cvf-hd>
+    <a class="cvf-mark" href="/ja/"><img src="/assets/cv_wordmark_ink.svg" alt="CODEDVINYLS" width="168" height="13"></a>
+    <nav class="cvf-nav" aria-label="メニュー"><a href="/arrivals/">入荷</a><a href="/album/">アルバム</a><a href="/archive/">アーカイブ</a><a href="/journal/">ジャーナル</a><a href="/ja/store.html">店舗・オンライン</a></nav>
+    <a class="cvf-menu" href="#cvf-sheet" aria-controls="cvf-sheet" aria-expanded="false">メニュー</a>
+  </header>
+  <div class="cvf-sheet" id="cvf-sheet" role="dialog" aria-modal="true" aria-label="メニュー">
+    <div class="cvf-sheet-hd"><a class="cvf-mark" href="/ja/"><img src="/assets/cv_wordmark_ink.svg" alt="CODEDVINYLS" width="118" height="9"></a><a class="cvf-close" href="#">閉じる</a></div>
+    <nav class="cvf-sheet-nav"><a href="/arrivals/">入荷</a><a href="/album/">アルバム</a><a href="/archive/">アーカイブ</a><a href="/journal/">ジャーナル</a><a href="/ja/store.html">店舗・オンライン</a></nav>
+    <p class="cvf-sheet-notice"><a href="/notice/"><span class="cvf-k">お知らせ</span><span></span><span aria-hidden="true">→</span></a></p>
+    <nav class="cv-lang" aria-label="言語"><a href="/shipping-returns.html" hreflang="ko" lang="ko" translate="no">한국어</a><a href="/en/shipping-returns.html" hreflang="en" lang="en" translate="no">English</a><a href="/ja/shipping-returns.html" hreflang="ja" lang="ja" translate="no" aria-current="true">日本語</a><a href="/zh-cn/shipping-returns.html" hreflang="zh-Hans" lang="zh-Hans" translate="no">简体中文</a><a href="/zh-tw/shipping-returns.html" hreflang="zh-Hant" lang="zh-Hant" translate="no">繁體中文</a></nav><p class="cvf-sheet-nap">CODEDVINYLS Hoehyeon · Ma-yeol 3, Hoehyeon Underground Shopping Center</p>
+  </div><div class="signal-row">
+    <div class="left">
+      <span class="tick"></span> <span class="mono">配送・交換・返金</span>
+    </div>
+    <div class="right">
+      <span class="mono">codedvinyls.com</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="doc-hero">
+      <span class="kicker">法的表示 · 配送・交換・返金</span>
+      <h1>配送・交換・返金</h1>
+      <p class="lede">発送基準、交換、返金（申込みの撤回）および現金に準ずる決済の条件に関する事項をご案内します。</p><div class="cv-i18n-note"><p>配送は韓国国内のみです。海外配送はなく、韓国国外の購入者には販売していません。</p><p>このページは、韓国語の原文を読む助けとなる日本語訳です。契約では韓国語の原文が効力を持ち、両者が異なる場合は韓国語の原文に従います。<a href="/shipping-returns.html" hreflang="ko">韓国語の原文 →</a></p><p>翻訳の誤りは gm@codedvinyls.com までご連絡いただけます。</p></div>
+    </div>
+
+    <section class="doc-section">
+      <div class="clause">
+        <h2>配送</h2>
+        <ul class="dash">
+          <li>平日午前11時までに決済（銀行振込の場合は入金確認）が完了したご注文は当日発送、それ以降のご注文は2〜3営業日以内に発送します。週末・祝日の発送はありません。高額なレコードは安全梱包（専用の LP メーラー）で発送します。</li>
+          <li>送料は注文の決済画面に表示されます。店頭受け取りは行っていません — すべてのご注文を宅配便で発送します。</li>
+        </ul>
+      </div>
+
+      <div class="clause">
+        <h2>交換</h2>
+        <ul class="dash">
+          <li>全商品が一点ものの中古レコードのため、同一商品への交換はできません。不具合・相違がある場合は返金で対応します。</li>
+        </ul>
+      </div>
+
+      <div class="clause">
+        <h2>返金（申込みの撤回）</h2>
+        <ul class="dash">
+          <li>受け取った日から7日以内に申請できます。単純な心変わりによる返品費用はお客様負担、コンディション表記と現物が異なる場合は販売者負担です。</li>
+          <li>受け取り後、再生などの使用によって状態が変わった場合は、撤回が制限されることがあります。状態確認のための梱包の開封は差し支えありません。</li>
+          <li>返金は返品の回収確認日から3営業日以内に行います — カード・簡易決済=承認取消、銀行振込=指定口座へ入金。</li>
+          <li>返品先住所（発送元と同じ）：서울시 강남구 논현로 38길 20</li>
+        </ul>
+      </div>
+
+      <div class="clause">
+        <h2>現金に準ずる決済の条件</h2>
+        <ul class="dash">
+          <li>販売者は、韓国の「電子商取引等における消費者保護に関する法律」第24条に基づく購入安全サービス（決済代金預託または消費者被害補償保険契約等）を備えている場合に限り、銀行振込（バーチャル口座）などの現金に準ずる決済で代金を受け取ります。</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cvf-ft">
+    <div class="cvf-ft-grid">
+      <div class="cvf-ft-col cvf-ft-store"><a class="cvf-ft-mark" href="/ja/"><img src="/assets/cv_wordmark_ink.svg" alt="CODEDVINYLS" width="140" height="11"></a><span>CODEDVINYLS Hoehyeon</span><span>Ma-yeol 3, Hoehyeon Underground Shopping Center</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">Instagram @codedvinyls</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">見る</b><a href="/arrivals/">入荷</a><a href="/album/">アルバム</a><a href="/archive/">アーカイブ</a><a href="/journal/">ジャーナル</a></div>
+      <div class="cvf-ft-col"><a class="cvf-ft-h" href="/ja/store.html">店舗・オンライン</a><a href="/ja/store.html#visit">Hoehyeon店</a><a href="/notice/">お知らせ</a><a href="/cd/">店内CDコーナー</a><a href="/ja/store.html#online">オンライン購入</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">ご案内</b><a href="/ja/guide/grading/">グレード基準</a><a href="/guide/glossary/">用語集</a><a href="/ja/shipping-returns.html">配送・交換・返金</a><a href="/terms.html">利用規約</a><a href="/privacy.html">プライバシーポリシー</a><a href="/ja/about.html">事業者情報</a></div>
+    </div>
+    <div class="cvf-ft-base"><span class="cvf-ft-plate">THE VINYL ARCHIVE</span><nav class="cv-lang" aria-label="言語"><a href="/shipping-returns.html" hreflang="ko" lang="ko" translate="no">한국어</a><a href="/en/shipping-returns.html" hreflang="en" lang="en" translate="no">English</a><a href="/ja/shipping-returns.html" hreflang="ja" lang="ja" translate="no" aria-current="true">日本語</a><a href="/zh-cn/shipping-returns.html" hreflang="zh-Hans" lang="zh-Hans" translate="no">简体中文</a><a href="/zh-tw/shipping-returns.html" hreflang="zh-Hant" lang="zh-Hant" translate="no">繁體中文</a></nav><p class="cv-i18n-note">配送は韓国国内のみです。海外配送はなく、韓国国外の購入者には販売していません。</p><div class="cvf-ft-biz"><span>商号：코디드바이닐즈 (CODEDVINYLS) · 代表者：최준홍 · 事業者登録番号：286-51-00775</span><span>通信販売業届出番号：제2026-서울강남-00575호 · <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2865100775" target="_blank" rel="noopener">韓国公正取引委員会 事業者情報</a></span><span>事業所所在地：서울시 강남구 논현로 38길 20 · 電話：<a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span><span>ホスティングサービス提供者：GitHub, Inc.</span></div></div>
+  </footer>
+</div>
+
+<script src="/assets/cv-frame.js" defer></script>
+</body>
+</html>

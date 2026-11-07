@@ -1,0 +1,1242 @@
+{
+ "sources": [
+  {
+   "dir": "pretendard",
+   "pkg": "pretendard",
+   "ver": "1.3.9",
+   "note": "OFL 1.1 · RFN Pretendard · 원 배포 동적 부분 글꼴 그대로",
+   "files": {
+    "PretendardVariable.subset.0.woff2": {
+     "bytes": 34568,
+     "sha256": "8713e83342c3f5ed316bf22bf50a3d991a5b5dd16c0c45c54a6ad81f62be7df3",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.0.woff2"
+    },
+    "PretendardVariable.subset.1.woff2": {
+     "bytes": 32044,
+     "sha256": "b1c51b35964614cf67d44166752af0c6cf3a2a4a50daf304af2a7327611242ae",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.1.woff2"
+    },
+    "PretendardVariable.subset.2.woff2": {
+     "bytes": 43920,
+     "sha256": "ddc9557de55b6534fb6802da96e03ca334449474eae71ec1a1eefa9b3fa40fd3",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.2.woff2"
+    },
+    "PretendardVariable.subset.3.woff2": {
+     "bytes": 40648,
+     "sha256": "3af919db7b7432ae34a0ea725f5dbbe4b80f6b351a349437339a07760ae02a62",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.3.woff2"
+    },
+    "PretendardVariable.subset.4.woff2": {
+     "bytes": 35156,
+     "sha256": "993fcd2747f4d21f17b4a60bf5528d1c31825ca6a29ed942280bfba47825bedc",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.4.woff2"
+    },
+    "PretendardVariable.subset.5.woff2": {
+     "bytes": 33624,
+     "sha256": "a4ad435d7abd68580606a20397920be734d9d49f1c420829a6493084e855912f",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.5.woff2"
+    },
+    "PretendardVariable.subset.6.woff2": {
+     "bytes": 33968,
+     "sha256": "48b5ad9306b00b620b6d4acb3b8ba697cac7b271ee20da2f6351ba7c1406afa3",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.6.woff2"
+    },
+    "PretendardVariable.subset.7.woff2": {
+     "bytes": 31912,
+     "sha256": "0edd124bf5f5fee66118c25ce0f7257c701169603817b0ea385707043151bd9c",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.7.woff2"
+    },
+    "PretendardVariable.subset.8.woff2": {
+     "bytes": 36696,
+     "sha256": "0fcc3858ccf1bfae9d1a13852583f7273e8a9bcb32b6f42fa47fe19d3041905c",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.8.woff2"
+    },
+    "PretendardVariable.subset.9.woff2": {
+     "bytes": 34012,
+     "sha256": "523e91cb7665f4a87767e3b0b5099753decba1bd33e3ce7733b92f71001da9a5",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.9.woff2"
+    },
+    "PretendardVariable.subset.10.woff2": {
+     "bytes": 33032,
+     "sha256": "544f73152519f43c01aeda9489554a82e907019010795aab2fabc990a4e91f5a",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.10.woff2"
+    },
+    "PretendardVariable.subset.11.woff2": {
+     "bytes": 37400,
+     "sha256": "52f3cb7bf5d9feeadbe77902217113ea49b89a9bc0f135748e5ad599f322549f",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.11.woff2"
+    },
+    "PretendardVariable.subset.12.woff2": {
+     "bytes": 37940,
+     "sha256": "ba87086a06c38a8eba037034c54756415b5eee8bd386866adf79ccae5e63213d",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.12.woff2"
+    },
+    "PretendardVariable.subset.13.woff2": {
+     "bytes": 35708,
+     "sha256": "f9473c59d65080b75327d6b5f8ea53a3e2c417542d609fd1f12b0e084079e0b2",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.13.woff2"
+    },
+    "PretendardVariable.subset.14.woff2": {
+     "bytes": 36512,
+     "sha256": "dbf5fc513294d1942090faa226a53e882c8a72bebc1c701399b47cf7566c11ec",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.14.woff2"
+    },
+    "PretendardVariable.subset.15.woff2": {
+     "bytes": 35668,
+     "sha256": "d043fdd0fb1d707a57ddec602d3c9c5dd230fe1e8921ae1a6a3d0f6f5c504d6a",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.15.woff2"
+    },
+    "PretendardVariable.subset.16.woff2": {
+     "bytes": 37916,
+     "sha256": "f9da3e1e2f6ab97babdaaaf67f74308a3c4cb75a7c0e70efab295aaa62ecde67",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.16.woff2"
+    },
+    "PretendardVariable.subset.17.woff2": {
+     "bytes": 34940,
+     "sha256": "62a20965ab703ba906359c01e56ac49cb28651e5e23efc4777412ef775e949dd",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.17.woff2"
+    },
+    "PretendardVariable.subset.18.woff2": {
+     "bytes": 41600,
+     "sha256": "253726dfde6320f522bd7e7895df56e02312b677abb609c17ecbbb7952ce68cf",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.18.woff2"
+    },
+    "PretendardVariable.subset.19.woff2": {
+     "bytes": 42328,
+     "sha256": "0c005e3239d3f44ede30e7464171c93d8f4063b1279bb4805508c256ebe83929",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.19.woff2"
+    },
+    "PretendardVariable.subset.20.woff2": {
+     "bytes": 36128,
+     "sha256": "06a4d6ce1c3e1c277239f490df8f17002cd6524b33a2d1e105b0ed16b2e061a1",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.20.woff2"
+    },
+    "PretendardVariable.subset.21.woff2": {
+     "bytes": 37268,
+     "sha256": "30d4f324dc4e480890682086d9873e4e6ea53617d5cc1526509ac4322b0abcc7",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.21.woff2"
+    },
+    "PretendardVariable.subset.22.woff2": {
+     "bytes": 38680,
+     "sha256": "5712a4ee03e83532b8c3efeeefcbf2dd105beea873f735a6373dab370c9d38e2",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.22.woff2"
+    },
+    "PretendardVariable.subset.23.woff2": {
+     "bytes": 40284,
+     "sha256": "bf5e603a72bcbd65ef80522c722caca2df7399dbc6dbd14c3b428f2c4571abdb",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.23.woff2"
+    },
+    "PretendardVariable.subset.24.woff2": {
+     "bytes": 32300,
+     "sha256": "d0cecc926613d63ef9e82b990f5a7dc721f87360bb5047fb53623b9a24e4be01",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.24.woff2"
+    },
+    "PretendardVariable.subset.25.woff2": {
+     "bytes": 42032,
+     "sha256": "4b520857cb0e6272a3582a504f7706e530f0f9718a82fec1c7b9cd13fd57f261",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.25.woff2"
+    },
+    "PretendardVariable.subset.26.woff2": {
+     "bytes": 40324,
+     "sha256": "608a2c01bc4ebe327b68fadf6b78dd842a912582950d16d56c2696594bd4242d",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.26.woff2"
+    },
+    "PretendardVariable.subset.27.woff2": {
+     "bytes": 35424,
+     "sha256": "8dcc8a46af7069935ab1209094bb8e1c890f854bfce377711bdcc99516e228ef",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.27.woff2"
+    },
+    "PretendardVariable.subset.28.woff2": {
+     "bytes": 38468,
+     "sha256": "484aaea385bf22d20a06a50c74202275a7a245446451c80ea1da7a96111f494e",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.28.woff2"
+    },
+    "PretendardVariable.subset.29.woff2": {
+     "bytes": 39288,
+     "sha256": "5481a19ad6067630f96a54432fa76a77943c1234bbd37537fba9aeea54710c9f",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.29.woff2"
+    },
+    "PretendardVariable.subset.30.woff2": {
+     "bytes": 38448,
+     "sha256": "c1ed2a2f2927a3ccef124b6763147e12feb497157edc26752cba38646085d888",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.30.woff2"
+    },
+    "PretendardVariable.subset.31.woff2": {
+     "bytes": 41892,
+     "sha256": "95bd711a06b3a13b23b44d1b9aa49dc36e759a5ff1989a239fd6af3d750f8fef",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.31.woff2"
+    },
+    "PretendardVariable.subset.32.woff2": {
+     "bytes": 40216,
+     "sha256": "a2fb59661363e8f3ce21e344f6cd0c85fe7901b9e910d10a6f805a13c0c2d261",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.32.woff2"
+    },
+    "PretendardVariable.subset.33.woff2": {
+     "bytes": 34916,
+     "sha256": "ec28ff655691820931a57f7b6960922a0f3b7f655fe062c2fd11de86d6893269",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.33.woff2"
+    },
+    "PretendardVariable.subset.34.woff2": {
+     "bytes": 34720,
+     "sha256": "bdaffbd5c9fed912fb2d92866f2476953c6075a1c396817011b158fa146ef29f",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.34.woff2"
+    },
+    "PretendardVariable.subset.35.woff2": {
+     "bytes": 35352,
+     "sha256": "2f3c1deae8147772bf706b561701ee9a3ba7459436e9fad45c8102066e90f802",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.35.woff2"
+    },
+    "PretendardVariable.subset.36.woff2": {
+     "bytes": 34688,
+     "sha256": "d4e7580fb6bd8db8ac2daf2df3a41082b608476b9e4d8867756b28fb941bc6f8",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.36.woff2"
+    },
+    "PretendardVariable.subset.37.woff2": {
+     "bytes": 27916,
+     "sha256": "e5e19247f5eb141d5ee84994518a3f2fe7f2e4d2978e7451988b8fae73ac52a5",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.37.woff2"
+    },
+    "PretendardVariable.subset.38.woff2": {
+     "bytes": 34808,
+     "sha256": "17226de7caa3a041d9deb369db637a8480afa5ee9eeb8e5f8169a28ff54f57bd",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.38.woff2"
+    },
+    "PretendardVariable.subset.39.woff2": {
+     "bytes": 34256,
+     "sha256": "647e3532e8e5b2f5271c85eca2d909f32ae4791a17911cf66a635e8f6f4726c0",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.39.woff2"
+    },
+    "PretendardVariable.subset.40.woff2": {
+     "bytes": 29840,
+     "sha256": "12fb5a30e92ed1397b25125c9b75449f24b3b164ed28455968e8eefefd0cae0a",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.40.woff2"
+    },
+    "PretendardVariable.subset.41.woff2": {
+     "bytes": 33188,
+     "sha256": "41d390d3f3201a3714fb37f968f132ee78892d382655b64eb94688046fa97e35",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.41.woff2"
+    },
+    "PretendardVariable.subset.42.woff2": {
+     "bytes": 34608,
+     "sha256": "3e347fc722ea29c4c3347b204a139c4e76fe68884bde24159b25b8e0988bd8b5",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.42.woff2"
+    },
+    "PretendardVariable.subset.43.woff2": {
+     "bytes": 30384,
+     "sha256": "97a8be68deee3f724890b64cea61a4f59b2886a1d9f39604e24adec371c457a3",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.43.woff2"
+    },
+    "PretendardVariable.subset.44.woff2": {
+     "bytes": 32136,
+     "sha256": "8bd3bdcc7481b9a61bb570ab14ad1801b5f8a13df3f61d9bf2625bdad28e2a3b",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.44.woff2"
+    },
+    "PretendardVariable.subset.45.woff2": {
+     "bytes": 34664,
+     "sha256": "dff46d20074b8f3d9eeb05f7bea4ba0746d7d9887f8ec2dcb2280cadd2889ff7",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.45.woff2"
+    },
+    "PretendardVariable.subset.46.woff2": {
+     "bytes": 36540,
+     "sha256": "c443e627e1bc68e004d028eeeef57fad78e6b996ff03adfccc4ab05d551b82e4",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.46.woff2"
+    },
+    "PretendardVariable.subset.47.woff2": {
+     "bytes": 35720,
+     "sha256": "f242e40d23d0aac4583574da52d460b2a804f31d5f7aa435e5dc58ceaab35ac2",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.47.woff2"
+    },
+    "PretendardVariable.subset.48.woff2": {
+     "bytes": 37776,
+     "sha256": "e3dde5ed049d0a2a07050aca649ce4a1a1d7659b30b7871fa1d1bef1fec4da16",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.48.woff2"
+    },
+    "PretendardVariable.subset.49.woff2": {
+     "bytes": 36052,
+     "sha256": "5bbf61d013a4a9362841671cc56096a356377773d8b92dcb7ce71c89e3ce23da",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.49.woff2"
+    },
+    "PretendardVariable.subset.50.woff2": {
+     "bytes": 33228,
+     "sha256": "f3bb8007d522f3d67cf6930ed417b0b911189eaaff08a5ab41eed790d18b6bb0",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.50.woff2"
+    },
+    "PretendardVariable.subset.51.woff2": {
+     "bytes": 36024,
+     "sha256": "530c8e2d2a5e01cc5bfacc40a947f2b3162ee084a718f3f938e5f084b3458462",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.51.woff2"
+    },
+    "PretendardVariable.subset.52.woff2": {
+     "bytes": 34356,
+     "sha256": "93f30e304a97b867e21f8e8a6dbc86df6047e7d1f2d34818261c381e859e1ded",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.52.woff2"
+    },
+    "PretendardVariable.subset.53.woff2": {
+     "bytes": 34572,
+     "sha256": "d0fe78c3e77b3f2b9ad3ceae3cfcd539b5f39a948af850b7912942cfbf7feefc",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.53.woff2"
+    },
+    "PretendardVariable.subset.54.woff2": {
+     "bytes": 33344,
+     "sha256": "37ed0b796e61205cabe4e20590d8800106a9a646d8a6f9e1da38581e637c3b80",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.54.woff2"
+    },
+    "PretendardVariable.subset.55.woff2": {
+     "bytes": 34184,
+     "sha256": "4b170f37c7be9dfa2ca332ce97e35dc02da7cb43531d7e2907d733f291b09222",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.55.woff2"
+    },
+    "PretendardVariable.subset.56.woff2": {
+     "bytes": 35184,
+     "sha256": "0f3624847670e49b273c0d638d0c1385a7178c8e38c70f9cd4afc1971880d279",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.56.woff2"
+    },
+    "PretendardVariable.subset.57.woff2": {
+     "bytes": 35960,
+     "sha256": "7c6aa4751ceb44a9a4af9c0ed80a7e95bc89d334a89231996ed84634093e128b",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.57.woff2"
+    },
+    "PretendardVariable.subset.58.woff2": {
+     "bytes": 41564,
+     "sha256": "cff4a57ea5e9c11218c9a0ca1380a5d6fb8fa7e9d13499038a7b4df12d0e4331",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.58.woff2"
+    },
+    "PretendardVariable.subset.59.woff2": {
+     "bytes": 38972,
+     "sha256": "4ae337e8895ac35b02a749e19d2b49ccb46ecdfabd09c51433c5eed206221579",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.59.woff2"
+    },
+    "PretendardVariable.subset.60.woff2": {
+     "bytes": 37776,
+     "sha256": "4f6724848817f8a893c21686fd3c666492176cc453a82f2a1c7fad3170bbd13c",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.60.woff2"
+    },
+    "PretendardVariable.subset.61.woff2": {
+     "bytes": 35640,
+     "sha256": "0f36628cfb62fb7c6e4c26c0cac303d07578640c0328cd8cce9dbeaa2290af23",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.61.woff2"
+    },
+    "PretendardVariable.subset.62.woff2": {
+     "bytes": 34876,
+     "sha256": "1a2f8d760e6bfeb7f8611db8df550260145a7d48e8a4336016b21d699502c90f",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.62.woff2"
+    },
+    "PretendardVariable.subset.63.woff2": {
+     "bytes": 28816,
+     "sha256": "cced20f4434401b2088f1b6e414eaa193779e1575afb51ea43301066e9fec95a",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.63.woff2"
+    },
+    "PretendardVariable.subset.64.woff2": {
+     "bytes": 8264,
+     "sha256": "4d73796ddeaf1d1584f701f3d3761d091160cd78fd2ef05255f605c747e63ad7",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.64.woff2"
+    },
+    "PretendardVariable.subset.65.woff2": {
+     "bytes": 11108,
+     "sha256": "3bea94ae7ab0adfe697bcbf7a4366da48ae4518ff9ec9bc798ba2e0a271376fa",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.65.woff2"
+    },
+    "PretendardVariable.subset.66.woff2": {
+     "bytes": 8252,
+     "sha256": "73d60e9ad890a3b2674fe1fe7daf869708d7af6f4e93e364b19bb0a8bffde8d5",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.66.woff2"
+    },
+    "PretendardVariable.subset.67.woff2": {
+     "bytes": 21840,
+     "sha256": "24e38abacceaba8979f58c6b06bf0b56e915c32921b08be439befa016268abf5",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.67.woff2"
+    },
+    "PretendardVariable.subset.68.woff2": {
+     "bytes": 16340,
+     "sha256": "a0f33cbfd1a49928487778b69574191ea9f636581860aa8d299156c470a6d0f5",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.68.woff2"
+    },
+    "PretendardVariable.subset.69.woff2": {
+     "bytes": 34784,
+     "sha256": "c9aa76582f8ffb946f59639a265ca988a6a794e6d6e2582e9aedad18e6bc4adb",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.69.woff2"
+    },
+    "PretendardVariable.subset.70.woff2": {
+     "bytes": 27548,
+     "sha256": "8bccc361d2d7ad5c3891a7914505ffd0ed89cf0bd9a5f1f6c320f85af54cb041",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.70.woff2"
+    },
+    "PretendardVariable.subset.71.woff2": {
+     "bytes": 28324,
+     "sha256": "78ca0ca3a02fb86ff29c68e80c50555c29aa522f37f286e7ab5b3cd8fb0b2a51",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.71.woff2"
+    },
+    "PretendardVariable.subset.72.woff2": {
+     "bytes": 19508,
+     "sha256": "a2df48a0029fb84736c5570930e1e0f33af665bd1ec18b5930c7ee1077317e22",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.72.woff2"
+    },
+    "PretendardVariable.subset.73.woff2": {
+     "bytes": 18336,
+     "sha256": "fe4874885e6450739e9067af520b94cc5f60e56c36538b6db3df3aa7a37baf42",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.73.woff2"
+    },
+    "PretendardVariable.subset.74.woff2": {
+     "bytes": 22392,
+     "sha256": "b935b4839e30b68835341cb7c195ec2653d5df502281a14574af1593f03e63ff",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.74.woff2"
+    },
+    "PretendardVariable.subset.75.woff2": {
+     "bytes": 19996,
+     "sha256": "07f0ddae65c844dfe5d294087749e19b05e95cfd904b20df3501b040f1a5f61e",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.75.woff2"
+    },
+    "PretendardVariable.subset.76.woff2": {
+     "bytes": 24924,
+     "sha256": "20ccaae02a27753fe5f5b2cc0e6bb7ee3f4c5b61b6bf91cccc515334e97213ac",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.76.woff2"
+    },
+    "PretendardVariable.subset.77.woff2": {
+     "bytes": 26044,
+     "sha256": "9ab92ab7b4e3770a6f3a17ed34b0a26df5a0faf2c4f8e2d2685b36cf248ff751",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.77.woff2"
+    },
+    "PretendardVariable.subset.78.woff2": {
+     "bytes": 26548,
+     "sha256": "67f065415552e8c66da5e60fc67a891ec1ba74bfb9370078261bbf9a718a182f",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.78.woff2"
+    },
+    "PretendardVariable.subset.79.woff2": {
+     "bytes": 26224,
+     "sha256": "0bbdf492d859723843e118154b24573abdd62e781cb3827378e5dc65eeb8e0e9",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.79.woff2"
+    },
+    "PretendardVariable.subset.80.woff2": {
+     "bytes": 28796,
+     "sha256": "3802ad32c6c1bfa889c1019bd22d265c19392a6d52bbbd38e3a6fb99fdb0cf8f",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.80.woff2"
+    },
+    "PretendardVariable.subset.81.woff2": {
+     "bytes": 26300,
+     "sha256": "f0ae631ec332bbaf686a493d126ff56a8ac0c6284bdbb7542cef8fedd946fa66",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.81.woff2"
+    },
+    "PretendardVariable.subset.82.woff2": {
+     "bytes": 26500,
+     "sha256": "493e29967aa59d0f5326ae95fe163ca6e0ce9d95610838cc07a1f543a4a2e289",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.82.woff2"
+    },
+    "PretendardVariable.subset.83.woff2": {
+     "bytes": 26964,
+     "sha256": "f8f1fe652aaf3c759d78f37e48afe1c58c1d335e9261c5be2a2d90ff5bbfb9cc",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.83.woff2"
+    },
+    "PretendardVariable.subset.84.woff2": {
+     "bytes": 24492,
+     "sha256": "d28ace2d199ca5c6304a6191f4233e28ddb225d341d6e0b41db040e9447c2cc9",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.84.woff2"
+    },
+    "PretendardVariable.subset.85.woff2": {
+     "bytes": 25104,
+     "sha256": "757b9fc85ad85a1024fcacc04a9b688ace2db7af393e9ddc3b5dd2ba605b5a9b",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.85.woff2"
+    },
+    "PretendardVariable.subset.86.woff2": {
+     "bytes": 25716,
+     "sha256": "3e680901e55f16848b58d16d25870596495a6a073d9e3127fe481583ac4439b6",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.86.woff2"
+    },
+    "PretendardVariable.subset.87.woff2": {
+     "bytes": 24664,
+     "sha256": "04ca8277cfe3d27235573956255b0211575504cb695cdeab644c583df774e257",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.87.woff2"
+    },
+    "PretendardVariable.subset.88.woff2": {
+     "bytes": 25640,
+     "sha256": "192abc4c6ad933f53d809d8a46ee6237ae71e766bf66199fdce4678841fe12d7",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.88.woff2"
+    },
+    "PretendardVariable.subset.89.woff2": {
+     "bytes": 21864,
+     "sha256": "44634e793e0d50fcdf803a2ad513d8bf0482d9adccbbd4ef534325cae9b2ee01",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.89.woff2"
+    },
+    "PretendardVariable.subset.90.woff2": {
+     "bytes": 20852,
+     "sha256": "ed2d605d80cbe4f2c1df801852f7a1d8ad5e1a4972b26d8fee93427317f32f09",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.90.woff2"
+    },
+    "PretendardVariable.subset.91.woff2": {
+     "bytes": 37996,
+     "sha256": "fc9fcd1bea9c8f43f97136a1e89bfa6e34db85f820f86538288647b4c24c5b06",
+     "from": "/dist/web/variable/woff2-dynamic-subset/PretendardVariable.subset.91.woff2"
+    }
+   },
+   "bytes": 2957724
+  },
+  {
+   "dir": "archivo",
+   "pkg": "@fontsource/archivo",
+   "ver": "5.3.0",
+   "note": "OFL 1.1",
+   "files": {
+    "archivo-vietnamese-600-normal.woff2": {
+     "bytes": 5192,
+     "sha256": "082f80ae3fadb0d7e82f5356b47e95cc0196e5fc02c151774a072c17ec664c40",
+     "from": "/files/archivo-vietnamese-600-normal.woff2"
+    },
+    "archivo-latin-ext-600-normal.woff2": {
+     "bytes": 12380,
+     "sha256": "cd902f80bcf11cc6545648c156415deded5336611928c0fb6b02325ad3af13f0",
+     "from": "/files/archivo-latin-ext-600-normal.woff2"
+    },
+    "archivo-latin-600-normal.woff2": {
+     "bytes": 13820,
+     "sha256": "d9e8c29fdd348edde2a4f9aae438e569dd165bbbdebda78495824a2d9aaa67e8",
+     "from": "/files/archivo-latin-600-normal.woff2"
+    },
+    "archivo-vietnamese-700-normal.woff2": {
+     "bytes": 5688,
+     "sha256": "bfa65d40f59e5c2a8b038be3c739ab2715c854d97b4c51312e40b4cb9e27f656",
+     "from": "/files/archivo-vietnamese-700-normal.woff2"
+    },
+    "archivo-latin-ext-700-normal.woff2": {
+     "bytes": 13272,
+     "sha256": "8affe3b4758ec03c7c1a8b40c119209cbb1815fd836160570f94935ce9a683ec",
+     "from": "/files/archivo-latin-ext-700-normal.woff2"
+    },
+    "archivo-latin-700-normal.woff2": {
+     "bytes": 14508,
+     "sha256": "abada6cd4c92a9a706f6d7ed3189f322ff43dd78b9402c7d1137465b861d2a04",
+     "from": "/files/archivo-latin-700-normal.woff2"
+    },
+    "archivo-vietnamese-800-normal.woff2": {
+     "bytes": 5732,
+     "sha256": "9c7d1c33603b6ffee686a3af99815c7ec55d648a43e91cd0acfdd0e752f250b2",
+     "from": "/files/archivo-vietnamese-800-normal.woff2"
+    },
+    "archivo-latin-ext-800-normal.woff2": {
+     "bytes": 13276,
+     "sha256": "5aca026bdcb2d06623bcab485c8ed44ecaee07aa39c9b6fdbf855925a1e821b4",
+     "from": "/files/archivo-latin-ext-800-normal.woff2"
+    },
+    "archivo-latin-800-normal.woff2": {
+     "bytes": 14416,
+     "sha256": "c26cda2400b374eb1adb6e0973c86f455e2df17ca57c6755eb37d7bde47663fb",
+     "from": "/files/archivo-latin-800-normal.woff2"
+    }
+   },
+   "bytes": 98284
+  },
+  {
+   "dir": "plex-mono",
+   "pkg": "@ibm/plex-mono",
+   "ver": "2.5.0",
+   "note": "OFL 1.1 · RFN Plex · IBM 원 배포 split woff2 그대로",
+   "files": {
+    "IBMPlexMono-Regular-Cyrillic.woff2": {
+     "bytes": 15776,
+     "sha256": "44e877f4d7718832f438809250ec677f75b0bba9dcb3b0076aaf00f08d9385d4",
+     "from": "/fonts/split/woff2/IBMPlexMono-Regular-Cyrillic.woff2"
+    },
+    "IBMPlexMono-Regular-Latin1.woff2": {
+     "bytes": 17544,
+     "sha256": "e8993d946649b9d01abb1ed06d574b19d8ea3e66b5c3948602db335c44c18e56",
+     "from": "/fonts/split/woff2/IBMPlexMono-Regular-Latin1.woff2"
+    },
+    "IBMPlexMono-Regular-Latin2.woff2": {
+     "bytes": 13260,
+     "sha256": "8c5e48e4c6ee60346744db62fd8bbf530c21e531e1a1498c3a410ed8f7d3986e",
+     "from": "/fonts/split/woff2/IBMPlexMono-Regular-Latin2.woff2"
+    },
+    "IBMPlexMono-Regular-Latin3.woff2": {
+     "bytes": 7732,
+     "sha256": "1ff2d301f841079fa2ad3908cfb34a60edd80966e8c9dd3b82d8a8ec8e4df947",
+     "from": "/fonts/split/woff2/IBMPlexMono-Regular-Latin3.woff2"
+    },
+    "IBMPlexMono-Regular-Pi.woff2": {
+     "bytes": 13780,
+     "sha256": "b8002770aa636f544ba43e124da6a227301769754f295eae26e16475b469c767",
+     "from": "/fonts/split/woff2/IBMPlexMono-Regular-Pi.woff2"
+    },
+    "IBMPlexMono-Medium-Cyrillic.woff2": {
+     "bytes": 16076,
+     "sha256": "b7b352381265d31cc4845ca9d6321b869ae5913c4504bf61aed30baedab77a27",
+     "from": "/fonts/split/woff2/IBMPlexMono-Medium-Cyrillic.woff2"
+    },
+    "IBMPlexMono-Medium-Latin1.woff2": {
+     "bytes": 17868,
+     "sha256": "41201b658a328b9d00368215c2f1102770f80b15952ab82631e4006255e6365d",
+     "from": "/fonts/split/woff2/IBMPlexMono-Medium-Latin1.woff2"
+    },
+    "IBMPlexMono-Medium-Latin2.woff2": {
+     "bytes": 13424,
+     "sha256": "86208dbe8e00256a77bc3edd09aa6a584b0da393caa1fb200d44eac1d578512c",
+     "from": "/fonts/split/woff2/IBMPlexMono-Medium-Latin2.woff2"
+    },
+    "IBMPlexMono-Medium-Latin3.woff2": {
+     "bytes": 7892,
+     "sha256": "a90d0ca2314298c0bc32791af9996e2ea2a0c541fee8fbde9601d82556c87d45",
+     "from": "/fonts/split/woff2/IBMPlexMono-Medium-Latin3.woff2"
+    },
+    "IBMPlexMono-Medium-Pi.woff2": {
+     "bytes": 13968,
+     "sha256": "92bd18415e8c43a2569f615e4e84a94b1b1c4e0377ba9d8f4d894bbf6ffcc39d",
+     "from": "/fonts/split/woff2/IBMPlexMono-Medium-Pi.woff2"
+    },
+    "IBMPlexMono-SemiBold-Cyrillic.woff2": {
+     "bytes": 16260,
+     "sha256": "52159d6f3dd7f498f4d3574502d5ef821c0b4cec08c809822dfb2f424efd48e8",
+     "from": "/fonts/split/woff2/IBMPlexMono-SemiBold-Cyrillic.woff2"
+    },
+    "IBMPlexMono-SemiBold-Latin1.woff2": {
+     "bytes": 17872,
+     "sha256": "b7acd05041ab65f3b7039e218ddd893065e11a07e85ea85019473152a51b6b7d",
+     "from": "/fonts/split/woff2/IBMPlexMono-SemiBold-Latin1.woff2"
+    },
+    "IBMPlexMono-SemiBold-Latin2.woff2": {
+     "bytes": 13556,
+     "sha256": "68730f933dc5bbd8b011abaf59fdc151bd1eeb8461979aafa84c14c33f5869d2",
+     "from": "/fonts/split/woff2/IBMPlexMono-SemiBold-Latin2.woff2"
+    },
+    "IBMPlexMono-SemiBold-Latin3.woff2": {
+     "bytes": 8016,
+     "sha256": "96389e2f2e73a872859cd9b62e4fd1a86883af5a45a7ee44a81690f66ff7a1f5",
+     "from": "/fonts/split/woff2/IBMPlexMono-SemiBold-Latin3.woff2"
+    },
+    "IBMPlexMono-SemiBold-Pi.woff2": {
+     "bytes": 13872,
+     "sha256": "1637166246d386507b1351d59ddda93b732f781d06c0a6574e486104a00897b1",
+     "from": "/fonts/split/woff2/IBMPlexMono-SemiBold-Pi.woff2"
+    }
+   },
+   "bytes": 206896
+  },
+  {
+   "dir": "noto-serif-kr",
+   "pkg": "@fontsource/noto-serif-kr",
+   "ver": "5.3.1",
+   "note": "OFL 1.1",
+   "files": {
+    "noto-serif-kr-0-400-normal.woff2": {
+     "bytes": 24544,
+     "sha256": "d9e616cbc91b5eeda08563fad46eadf6f565440a6f484eaffeb594956d29b6cb",
+     "from": "/files/noto-serif-kr-0-400-normal.woff2"
+    },
+    "noto-serif-kr-1-400-normal.woff2": {
+     "bytes": 39332,
+     "sha256": "2f38cf77e74d253be772be87781ad40163c490d2f75346c2e63815e5fee688b5",
+     "from": "/files/noto-serif-kr-1-400-normal.woff2"
+    },
+    "noto-serif-kr-2-400-normal.woff2": {
+     "bytes": 31716,
+     "sha256": "12061ac2dfbdb05d5b9eb923d7141cf5da08d7ac4402b723b06e676a2be54192",
+     "from": "/files/noto-serif-kr-2-400-normal.woff2"
+    },
+    "noto-serif-kr-3-400-normal.woff2": {
+     "bytes": 27244,
+     "sha256": "be32a4ada0b259d12048ae7984ea11363abd129194d96c5f8892e8ba55f67280",
+     "from": "/files/noto-serif-kr-3-400-normal.woff2"
+    },
+    "noto-serif-kr-4-400-normal.woff2": {
+     "bytes": 28072,
+     "sha256": "76eba90d7ceee9e6c424116cb24e25ca5339e2c06c6818f1396bf2ac3adcaef9",
+     "from": "/files/noto-serif-kr-4-400-normal.woff2"
+    },
+    "noto-serif-kr-5-400-normal.woff2": {
+     "bytes": 25248,
+     "sha256": "19ec40ce6aa4d749bb73510c1dbb4c35009cd3126644f20886bbf7e256ac059a",
+     "from": "/files/noto-serif-kr-5-400-normal.woff2"
+    },
+    "noto-serif-kr-6-400-normal.woff2": {
+     "bytes": 26232,
+     "sha256": "000d9f18c8405a898fc0b9a452b7868df25764c3310d254f573e510d973448a0",
+     "from": "/files/noto-serif-kr-6-400-normal.woff2"
+    },
+    "noto-serif-kr-7-400-normal.woff2": {
+     "bytes": 27372,
+     "sha256": "f4913606a3e9eebb4da16213e9e4916024d8116e6d79a81d3e1ddbf15f32ce68",
+     "from": "/files/noto-serif-kr-7-400-normal.woff2"
+    },
+    "noto-serif-kr-8-400-normal.woff2": {
+     "bytes": 22836,
+     "sha256": "8bc3dc2f9ac15cdf36852ec39525a115ffa00ab6445e2ad85708d4631ded04b1",
+     "from": "/files/noto-serif-kr-8-400-normal.woff2"
+    },
+    "noto-serif-kr-9-400-normal.woff2": {
+     "bytes": 26592,
+     "sha256": "1727742249b37dfd09cdaf4a9f481141a9a73d2a39f390d23bb6d672e146220a",
+     "from": "/files/noto-serif-kr-9-400-normal.woff2"
+    },
+    "noto-serif-kr-10-400-normal.woff2": {
+     "bytes": 25252,
+     "sha256": "61ac78f1ec4263323228792a00122825242dcd51d84c6ce78e280d70fef7a60c",
+     "from": "/files/noto-serif-kr-10-400-normal.woff2"
+    },
+    "noto-serif-kr-11-400-normal.woff2": {
+     "bytes": 22812,
+     "sha256": "965833ea9e83790d0473d22d4f3fa924e00d1b2ce00b38beaa249848ce7983a4",
+     "from": "/files/noto-serif-kr-11-400-normal.woff2"
+    },
+    "noto-serif-kr-12-400-normal.woff2": {
+     "bytes": 24560,
+     "sha256": "2d1ea67b8c8bd1ac9c38573fb2edc83d9232d29c9f21661f20b8f4f469e76edb",
+     "from": "/files/noto-serif-kr-12-400-normal.woff2"
+    },
+    "noto-serif-kr-13-400-normal.woff2": {
+     "bytes": 25164,
+     "sha256": "031d441161426ae3a21a2b3d47f25c1d06324b3fbbd770b11a280532a3699bec",
+     "from": "/files/noto-serif-kr-13-400-normal.woff2"
+    },
+    "noto-serif-kr-14-400-normal.woff2": {
+     "bytes": 24656,
+     "sha256": "cb55b03962e036ea6e5c2434ac79eb9c29fdbf71db4ed6424c32ae4a17b36d86",
+     "from": "/files/noto-serif-kr-14-400-normal.woff2"
+    },
+    "noto-serif-kr-15-400-normal.woff2": {
+     "bytes": 23680,
+     "sha256": "a9c2319dbe173cc823c27dc01fee47e127fa138b33ad88f028aa000bd4dcb277",
+     "from": "/files/noto-serif-kr-15-400-normal.woff2"
+    },
+    "noto-serif-kr-16-400-normal.woff2": {
+     "bytes": 27400,
+     "sha256": "479e9f3126733d664c387e081c817c2c1c53f3fdbd7f1b09e1d4b7e0e3cecd24",
+     "from": "/files/noto-serif-kr-16-400-normal.woff2"
+    },
+    "noto-serif-kr-17-400-normal.woff2": {
+     "bytes": 28064,
+     "sha256": "ff78392108fba7d74a503842e676405faf90944e392bb3a908d4e21a55b977e7",
+     "from": "/files/noto-serif-kr-17-400-normal.woff2"
+    },
+    "noto-serif-kr-18-400-normal.woff2": {
+     "bytes": 23952,
+     "sha256": "64f0aded94f8a7574f9be50f6996b6268e9d683e59a5f77a4b4017124588bfa1",
+     "from": "/files/noto-serif-kr-18-400-normal.woff2"
+    },
+    "noto-serif-kr-19-400-normal.woff2": {
+     "bytes": 27356,
+     "sha256": "714edb801028c78e07b6f7adc4cb98b8a9da8faac52869251d9287fc0cec8892",
+     "from": "/files/noto-serif-kr-19-400-normal.woff2"
+    },
+    "noto-serif-kr-20-400-normal.woff2": {
+     "bytes": 28520,
+     "sha256": "cdfe6fc4ebe331b78ff9e9b601cb67a2c799825aac00fbc9b072fca14cb2d394",
+     "from": "/files/noto-serif-kr-20-400-normal.woff2"
+    },
+    "noto-serif-kr-21-400-normal.woff2": {
+     "bytes": 25564,
+     "sha256": "7e44cb13ad887da425092b1a08822a155d5e50525c9cf24a5bef161baafb116e",
+     "from": "/files/noto-serif-kr-21-400-normal.woff2"
+    },
+    "noto-serif-kr-22-400-normal.woff2": {
+     "bytes": 24624,
+     "sha256": "d8712ed75db3e9cfca7aee304366a38d71ce7a71e8dccd8a29b6d4ff844e6d6e",
+     "from": "/files/noto-serif-kr-22-400-normal.woff2"
+    },
+    "noto-serif-kr-23-400-normal.woff2": {
+     "bytes": 24996,
+     "sha256": "164bf73760e0ac48e3a6847db46da0dc9b60c48361cd951f21a84fde8b09049d",
+     "from": "/files/noto-serif-kr-23-400-normal.woff2"
+    },
+    "noto-serif-kr-24-400-normal.woff2": {
+     "bytes": 27892,
+     "sha256": "bd6e621ba463f33298324a6f675388835c69486a4b9b5c7eed824a28acb127a4",
+     "from": "/files/noto-serif-kr-24-400-normal.woff2"
+    },
+    "noto-serif-kr-25-400-normal.woff2": {
+     "bytes": 21508,
+     "sha256": "be4b9705e98af7c035c754d5ec5f4275517ffbac1d96358d23421e6511812732",
+     "from": "/files/noto-serif-kr-25-400-normal.woff2"
+    },
+    "noto-serif-kr-26-400-normal.woff2": {
+     "bytes": 23788,
+     "sha256": "dffbf452ff0e200b567749ca7466b3bdda7b601e266f87dff14f0c1e234dc72e",
+     "from": "/files/noto-serif-kr-26-400-normal.woff2"
+    },
+    "noto-serif-kr-27-400-normal.woff2": {
+     "bytes": 25980,
+     "sha256": "305eb1bb54ea2435778fc87b1ee5a4706e8ba01a8e9d0647e66de7004786e826",
+     "from": "/files/noto-serif-kr-27-400-normal.woff2"
+    },
+    "noto-serif-kr-28-400-normal.woff2": {
+     "bytes": 22820,
+     "sha256": "c4e461d124633078526705c64796ad99d7b095e60390dced599f6044bec49a49",
+     "from": "/files/noto-serif-kr-28-400-normal.woff2"
+    },
+    "noto-serif-kr-29-400-normal.woff2": {
+     "bytes": 25332,
+     "sha256": "fe0578de67592262c840f34029e9ac227797ed750eb2903508479fa322ce5ec2",
+     "from": "/files/noto-serif-kr-29-400-normal.woff2"
+    },
+    "noto-serif-kr-30-400-normal.woff2": {
+     "bytes": 26032,
+     "sha256": "4202a71af46ba279bdbda9cf93fc4493fbe0f7fda9156145603f62aa985345e4",
+     "from": "/files/noto-serif-kr-30-400-normal.woff2"
+    },
+    "noto-serif-kr-31-400-normal.woff2": {
+     "bytes": 23612,
+     "sha256": "4a4fcd9375bc67f42c49c5d4ee3b21fb8f72ea11d8bd56ada65b26976ead000b",
+     "from": "/files/noto-serif-kr-31-400-normal.woff2"
+    },
+    "noto-serif-kr-32-400-normal.woff2": {
+     "bytes": 26772,
+     "sha256": "fa284993aab79d4473761df8204854ac44b9ad45d45594ab0e7a5d1884789fb1",
+     "from": "/files/noto-serif-kr-32-400-normal.woff2"
+    },
+    "noto-serif-kr-33-400-normal.woff2": {
+     "bytes": 25948,
+     "sha256": "4f14b7532f2092fe186ae85d4b4e0494542bf3d0753a26f8ed0415bc69abab4b",
+     "from": "/files/noto-serif-kr-33-400-normal.woff2"
+    },
+    "noto-serif-kr-34-400-normal.woff2": {
+     "bytes": 23520,
+     "sha256": "c39463a4965bfd3be5bd8a099477ba3c67b3bb9e01ac912d75a50b50f1daa39a",
+     "from": "/files/noto-serif-kr-34-400-normal.woff2"
+    },
+    "noto-serif-kr-35-400-normal.woff2": {
+     "bytes": 26316,
+     "sha256": "461adaba5b7def97edf362c54d1e3e32f53f98913049ebb7eddd9ddc9af39413",
+     "from": "/files/noto-serif-kr-35-400-normal.woff2"
+    },
+    "noto-serif-kr-36-400-normal.woff2": {
+     "bytes": 27064,
+     "sha256": "9a972aaab26ba1e6569c43cd7ed93536373ed9e05e12f3874be9e09773f4f40b",
+     "from": "/files/noto-serif-kr-36-400-normal.woff2"
+    },
+    "noto-serif-kr-37-400-normal.woff2": {
+     "bytes": 28204,
+     "sha256": "1422789fda9b71ae82624195a45fda292bf99f910af6c7982660d5285f2fba62",
+     "from": "/files/noto-serif-kr-37-400-normal.woff2"
+    },
+    "noto-serif-kr-38-400-normal.woff2": {
+     "bytes": 21688,
+     "sha256": "886430d1c42fd86ceff55f292ce305fa5a6a3f8071b6bd88f1bd0f957d75d889",
+     "from": "/files/noto-serif-kr-38-400-normal.woff2"
+    },
+    "noto-serif-kr-39-400-normal.woff2": {
+     "bytes": 27012,
+     "sha256": "98da1d4a9178bb12b897dd79f4a5bcc52acbb96856173fcee7c430d41800042b",
+     "from": "/files/noto-serif-kr-39-400-normal.woff2"
+    },
+    "noto-serif-kr-40-400-normal.woff2": {
+     "bytes": 26920,
+     "sha256": "41b76124cfe6eb08d5edb754473c33e93a58da44c0cc0133ce3c8444741dfb8f",
+     "from": "/files/noto-serif-kr-40-400-normal.woff2"
+    },
+    "noto-serif-kr-41-400-normal.woff2": {
+     "bytes": 20968,
+     "sha256": "ff34edad46fefbafcb2e7160391ebeeff3eb9e80e5b97cf6527e2cac7ef81593",
+     "from": "/files/noto-serif-kr-41-400-normal.woff2"
+    },
+    "noto-serif-kr-42-400-normal.woff2": {
+     "bytes": 26884,
+     "sha256": "8269da1df735ff5283df1f370190397f07b676e200a3c206b9e1a1ab14b36832",
+     "from": "/files/noto-serif-kr-42-400-normal.woff2"
+    },
+    "noto-serif-kr-43-400-normal.woff2": {
+     "bytes": 28116,
+     "sha256": "e978746588f870b072f77bd742b3a45b3c3b219e0565c80eff07353da03d1f01",
+     "from": "/files/noto-serif-kr-43-400-normal.woff2"
+    },
+    "noto-serif-kr-44-400-normal.woff2": {
+     "bytes": 24396,
+     "sha256": "b644c141d79289b10a4408885973f2347f34ec33d024b504d0495b7f4ba6ff6f",
+     "from": "/files/noto-serif-kr-44-400-normal.woff2"
+    },
+    "noto-serif-kr-45-400-normal.woff2": {
+     "bytes": 24836,
+     "sha256": "9c666a81fec599237e8ae826c7d8422463cf95a45b451425d5df6980568008da",
+     "from": "/files/noto-serif-kr-45-400-normal.woff2"
+    },
+    "noto-serif-kr-46-400-normal.woff2": {
+     "bytes": 27772,
+     "sha256": "e523f68477be4cf6501ea9e79263ee84c663e7d5058829382c40190c6b17c4ff",
+     "from": "/files/noto-serif-kr-46-400-normal.woff2"
+    },
+    "noto-serif-kr-47-400-normal.woff2": {
+     "bytes": 27384,
+     "sha256": "9cc6a350d3c5b9c8ec30f1beb4dbe79378376e4c2a842b38db886d2d0597ea99",
+     "from": "/files/noto-serif-kr-47-400-normal.woff2"
+    },
+    "noto-serif-kr-48-400-normal.woff2": {
+     "bytes": 23548,
+     "sha256": "05ce40699c22e77c6ede2f16ee4238c63615645ffe56c5df78f04f3be616a305",
+     "from": "/files/noto-serif-kr-48-400-normal.woff2"
+    },
+    "noto-serif-kr-49-400-normal.woff2": {
+     "bytes": 25948,
+     "sha256": "45d881a3f94625b77b82fb501b7da622c2c097d284d56d0e4a1a6c15b87f16b7",
+     "from": "/files/noto-serif-kr-49-400-normal.woff2"
+    },
+    "noto-serif-kr-50-400-normal.woff2": {
+     "bytes": 25868,
+     "sha256": "6b133cb8b7cc113b1b05674a749487512a9f90529a938c6ccf81cc17444411ce",
+     "from": "/files/noto-serif-kr-50-400-normal.woff2"
+    },
+    "noto-serif-kr-51-400-normal.woff2": {
+     "bytes": 22020,
+     "sha256": "202dca4432ad97e99e6b4f5431bc36b0419ca5540ea3b9db88c827194d15c21f",
+     "from": "/files/noto-serif-kr-51-400-normal.woff2"
+    },
+    "noto-serif-kr-52-400-normal.woff2": {
+     "bytes": 25328,
+     "sha256": "e78182f79023bdc8a5f45630e1bf03a09e8ff4d5e374a3ca1b6a9428e5fc3cc6",
+     "from": "/files/noto-serif-kr-52-400-normal.woff2"
+    },
+    "noto-serif-kr-53-400-normal.woff2": {
+     "bytes": 25740,
+     "sha256": "c2bf60317f64e7b9677b33fb70dbd209a914c61ee3010b572ea3768793e382a5",
+     "from": "/files/noto-serif-kr-53-400-normal.woff2"
+    },
+    "noto-serif-kr-54-400-normal.woff2": {
+     "bytes": 24348,
+     "sha256": "1c6e880617c2be03d2bf297c96c0e29e033e6764076469cf7381de49624083ef",
+     "from": "/files/noto-serif-kr-54-400-normal.woff2"
+    },
+    "noto-serif-kr-55-400-normal.woff2": {
+     "bytes": 24008,
+     "sha256": "5764ff6a2c7bd6420e2270ef4c8f9fb7d0487035dff426baeb6139f8cab65727",
+     "from": "/files/noto-serif-kr-55-400-normal.woff2"
+    },
+    "noto-serif-kr-56-400-normal.woff2": {
+     "bytes": 23796,
+     "sha256": "9955528e06286056264f4f5e007e6bc547b1bf4e36b68b6b8e9cc928bfd41eab",
+     "from": "/files/noto-serif-kr-56-400-normal.woff2"
+    },
+    "noto-serif-kr-57-400-normal.woff2": {
+     "bytes": 23768,
+     "sha256": "7c0c92b9a74ff614de9b49ed01ef2288b4c8d37103c27c68fc30df5d8b619e09",
+     "from": "/files/noto-serif-kr-57-400-normal.woff2"
+    },
+    "noto-serif-kr-58-400-normal.woff2": {
+     "bytes": 23176,
+     "sha256": "2919033035d590fb20500d077500cd914e3c9b68b1f8ba1f9b6f7a5af4284ae2",
+     "from": "/files/noto-serif-kr-58-400-normal.woff2"
+    },
+    "noto-serif-kr-59-400-normal.woff2": {
+     "bytes": 26424,
+     "sha256": "33e29c90c33802260ae25db813963bb63e4ccabfd944755c37dd6210c9a363e5",
+     "from": "/files/noto-serif-kr-59-400-normal.woff2"
+    },
+    "noto-serif-kr-60-400-normal.woff2": {
+     "bytes": 27424,
+     "sha256": "e8bed47f4184c13bfc865c411c53314da245d86612e84308d2096c6a52ebb33e",
+     "from": "/files/noto-serif-kr-60-400-normal.woff2"
+    },
+    "noto-serif-kr-61-400-normal.woff2": {
+     "bytes": 22540,
+     "sha256": "bd3aa0984573b16d6a25564a4552e410dda6ecac996c68e23020093d34158f8a",
+     "from": "/files/noto-serif-kr-61-400-normal.woff2"
+    },
+    "noto-serif-kr-62-400-normal.woff2": {
+     "bytes": 25620,
+     "sha256": "616a5bcdb0fec0c30ae6f9df5e98ca48cf7b4f1232502fc703e34b44c3c69fc9",
+     "from": "/files/noto-serif-kr-62-400-normal.woff2"
+    },
+    "noto-serif-kr-63-400-normal.woff2": {
+     "bytes": 25032,
+     "sha256": "7cfbdb5ad4ccf87eb213856681564abbd8d211d65ecc82e2813ff629a9214890",
+     "from": "/files/noto-serif-kr-63-400-normal.woff2"
+    },
+    "noto-serif-kr-64-400-normal.woff2": {
+     "bytes": 19868,
+     "sha256": "5cacca5ead216f293369ba359d01e0129a31235651d9f9a625bfca61d6b3c7e3",
+     "from": "/files/noto-serif-kr-64-400-normal.woff2"
+    },
+    "noto-serif-kr-65-400-normal.woff2": {
+     "bytes": 48628,
+     "sha256": "4c1815c3eb0f1837e21fa581f7240d9a2d2db3fc49b080a7725cdfeb63e37331",
+     "from": "/files/noto-serif-kr-65-400-normal.woff2"
+    },
+    "noto-serif-kr-66-400-normal.woff2": {
+     "bytes": 40744,
+     "sha256": "2536173e73d577c9894715690a3f83db4014ee5c3b903f951a8fb7c8a00342cc",
+     "from": "/files/noto-serif-kr-66-400-normal.woff2"
+    },
+    "noto-serif-kr-67-400-normal.woff2": {
+     "bytes": 35752,
+     "sha256": "e8691e44015bf2e86f11d915ff780b826271d2bf27822e8cc1f9a67ec83f868f",
+     "from": "/files/noto-serif-kr-67-400-normal.woff2"
+    },
+    "noto-serif-kr-68-400-normal.woff2": {
+     "bytes": 35768,
+     "sha256": "c2f8dcd130b1db52452489cd2c5961aa4b53f1af994aeb5925f2f32610c9cf19",
+     "from": "/files/noto-serif-kr-68-400-normal.woff2"
+    },
+    "noto-serif-kr-69-400-normal.woff2": {
+     "bytes": 36776,
+     "sha256": "bdab15a414b1efe49170b9e8ab69226ac204d250adca67f9a491b4cdc0f03148",
+     "from": "/files/noto-serif-kr-69-400-normal.woff2"
+    },
+    "noto-serif-kr-70-400-normal.woff2": {
+     "bytes": 37816,
+     "sha256": "10a1bcea967231a1fae43016bfe6dcc9c2a01d5c7ed0493b2271a9ec2468e2fe",
+     "from": "/files/noto-serif-kr-70-400-normal.woff2"
+    },
+    "noto-serif-kr-71-400-normal.woff2": {
+     "bytes": 40832,
+     "sha256": "032fcad66780faf9c6012626565c7ca5e278ecc48c7f4bee88ad629602cd5540",
+     "from": "/files/noto-serif-kr-71-400-normal.woff2"
+    },
+    "noto-serif-kr-72-400-normal.woff2": {
+     "bytes": 33084,
+     "sha256": "06efbe748c5fa19b8d8bb845acdff4f3ba9500eb9b0dc7f5963fec3d46275539",
+     "from": "/files/noto-serif-kr-72-400-normal.woff2"
+    },
+    "noto-serif-kr-73-400-normal.woff2": {
+     "bytes": 35240,
+     "sha256": "8708be7a88f4371c06baa339a0f9935b700427b32f0f1273882dda1daeefc39c",
+     "from": "/files/noto-serif-kr-73-400-normal.woff2"
+    },
+    "noto-serif-kr-74-400-normal.woff2": {
+     "bytes": 41768,
+     "sha256": "41de5b86d3969b0c4c2c13c893f724d8d0720eacc48463cbf45947cc2cd150df",
+     "from": "/files/noto-serif-kr-74-400-normal.woff2"
+    },
+    "noto-serif-kr-75-400-normal.woff2": {
+     "bytes": 38952,
+     "sha256": "166b4d26a93354e8a681bd8c43b139d4b8d397d10d691bf86ac53f311a61e16c",
+     "from": "/files/noto-serif-kr-75-400-normal.woff2"
+    },
+    "noto-serif-kr-76-400-normal.woff2": {
+     "bytes": 35360,
+     "sha256": "7942f8e797c04a69edc1bf8d447e1da04411bb286ef726fa2788b02af23a9efa",
+     "from": "/files/noto-serif-kr-76-400-normal.woff2"
+    },
+    "noto-serif-kr-77-400-normal.woff2": {
+     "bytes": 36472,
+     "sha256": "f6ad892538f16bd49a7a258f770ddace775c41903064c2431b5d4322122be088",
+     "from": "/files/noto-serif-kr-77-400-normal.woff2"
+    },
+    "noto-serif-kr-78-400-normal.woff2": {
+     "bytes": 34100,
+     "sha256": "33defcf6616488cfb981c3220a3ac69867a4fdace693a10f700fa0fcd34d64f5",
+     "from": "/files/noto-serif-kr-78-400-normal.woff2"
+    },
+    "noto-serif-kr-79-400-normal.woff2": {
+     "bytes": 45064,
+     "sha256": "de2f45c335fcbee66035fef48053ed8ed7d75d407368241f058d9ef678edc22b",
+     "from": "/files/noto-serif-kr-79-400-normal.woff2"
+    },
+    "noto-serif-kr-80-400-normal.woff2": {
+     "bytes": 40020,
+     "sha256": "132807b0b958e731fa4b705da776093d8953e69fe2a9d6590e4f8452a550cd0c",
+     "from": "/files/noto-serif-kr-80-400-normal.woff2"
+    },
+    "noto-serif-kr-81-400-normal.woff2": {
+     "bytes": 34316,
+     "sha256": "913ac344b5758e746caeb7335956be94aa2072fe0c811adfc57a1c0d694fc2e3",
+     "from": "/files/noto-serif-kr-81-400-normal.woff2"
+    },
+    "noto-serif-kr-82-400-normal.woff2": {
+     "bytes": 36128,
+     "sha256": "c4e1810f885a7a939a50c6220b6c1768f3ccc053e99a561f2fb46d53e8381025",
+     "from": "/files/noto-serif-kr-82-400-normal.woff2"
+    },
+    "noto-serif-kr-83-400-normal.woff2": {
+     "bytes": 29264,
+     "sha256": "7cbf3409b4eb4720af7e04df79b5007d0a167bab0bd26f21d273f4b3d844806d",
+     "from": "/files/noto-serif-kr-83-400-normal.woff2"
+    },
+    "noto-serif-kr-84-400-normal.woff2": {
+     "bytes": 38024,
+     "sha256": "c33ee93c68437bc4548277524be0be4cc08497777045b36ac622285c187a14cc",
+     "from": "/files/noto-serif-kr-84-400-normal.woff2"
+    },
+    "noto-serif-kr-85-400-normal.woff2": {
+     "bytes": 35460,
+     "sha256": "e38c9a162768263cfd71dc298fda96921320da24d9270fff8451f1e555ad707c",
+     "from": "/files/noto-serif-kr-85-400-normal.woff2"
+    },
+    "noto-serif-kr-86-400-normal.woff2": {
+     "bytes": 34204,
+     "sha256": "d384f3a2f51b17a5298222fbe31d7428ab567f5fd16e2662ce66bad97961134e",
+     "from": "/files/noto-serif-kr-86-400-normal.woff2"
+    },
+    "noto-serif-kr-87-400-normal.woff2": {
+     "bytes": 32608,
+     "sha256": "ae2b3ef73e797d1f152b503bf71fb68071ba4dacac28f0fb550be49a79af79ca",
+     "from": "/files/noto-serif-kr-87-400-normal.woff2"
+    },
+    "noto-serif-kr-88-400-normal.woff2": {
+     "bytes": 33804,
+     "sha256": "10e4538b4337884f043dbd1861a21f59ffad3de67584d83860ed59707e6128d8",
+     "from": "/files/noto-serif-kr-88-400-normal.woff2"
+    },
+    "noto-serif-kr-89-400-normal.woff2": {
+     "bytes": 32992,
+     "sha256": "73cab47aad0fc567130ced9190e95741db240caaede95c5f8c8308fbeaa83647",
+     "from": "/files/noto-serif-kr-89-400-normal.woff2"
+    },
+    "noto-serif-kr-90-400-normal.woff2": {
+     "bytes": 30768,
+     "sha256": "dfc52b68c2c2fd84f111eb40bdbcc666025fd3663fe63fda2065cca89f1be039",
+     "from": "/files/noto-serif-kr-90-400-normal.woff2"
+    },
+    "noto-serif-kr-91-400-normal.woff2": {
+     "bytes": 30844,
+     "sha256": "904dcc07cb144b9a3e4ee39344b40e7254c17aa28549c998e888623c68acf7cc",
+     "from": "/files/noto-serif-kr-91-400-normal.woff2"
+    },
+    "noto-serif-kr-92-400-normal.woff2": {
+     "bytes": 30380,
+     "sha256": "f29ac88df178c99fa9a885396619677c580482ed994ca6b650004a06b7480216",
+     "from": "/files/noto-serif-kr-92-400-normal.woff2"
+    },
+    "noto-serif-kr-93-400-normal.woff2": {
+     "bytes": 22144,
+     "sha256": "58274f4cc1d94d7410c76b7ed9786fed0aac28d8af27427c6cca59dbbf9b55e8",
+     "from": "/files/noto-serif-kr-93-400-normal.woff2"
+    },
+    "noto-serif-kr-94-400-normal.woff2": {
+     "bytes": 17716,
+     "sha256": "47274d0b9e3701edaface367af2f417014f866e62e2107911efc81429794a2f5",
+     "from": "/files/noto-serif-kr-94-400-normal.woff2"
+    },
+    "noto-serif-kr-95-400-normal.woff2": {
+     "bytes": 38536,
+     "sha256": "e26d43d2ac2834e6b5858b94019f57d54557950eb9cb9eda619be49bf5ebf179",
+     "from": "/files/noto-serif-kr-95-400-normal.woff2"
+    },
+    "noto-serif-kr-96-400-normal.woff2": {
+     "bytes": 13836,
+     "sha256": "4ac720dadb4663e23bbdbb8516cc256a1970fa7430b4dad6ea1fde91f52a80d4",
+     "from": "/files/noto-serif-kr-96-400-normal.woff2"
+    },
+    "noto-serif-kr-97-400-normal.woff2": {
+     "bytes": 9796,
+     "sha256": "e0178acb85713ab8d975e0f0f852bec39457b865ab86dd5c40db2c038f0d6591",
+     "from": "/files/noto-serif-kr-97-400-normal.woff2"
+    },
+    "noto-serif-kr-98-400-normal.woff2": {
+     "bytes": 7768,
+     "sha256": "e7ec0a5f4e09a5f738845925cfd15b9c74a209cef9a42d638c9ce0979c5d939c",
+     "from": "/files/noto-serif-kr-98-400-normal.woff2"
+    },
+    "noto-serif-kr-99-400-normal.woff2": {
+     "bytes": 12396,
+     "sha256": "98e05f8445f78cd46d6c61713b0beb33a25e004f15770495d5d1cce50ded5942",
+     "from": "/files/noto-serif-kr-99-400-normal.woff2"
+    },
+    "noto-serif-kr-100-400-normal.woff2": {
+     "bytes": 24180,
+     "sha256": "cc35debc1ee546bcae56475f6e41982e1a81faff35af7fa180048efbc199ca91",
+     "from": "/files/noto-serif-kr-100-400-normal.woff2"
+    },
+    "noto-serif-kr-101-400-normal.woff2": {
+     "bytes": 23180,
+     "sha256": "913b08c2931b15a46ddbc2687ac06470e292ec72e2b877ad8ff5cc0e255dfab4",
+     "from": "/files/noto-serif-kr-101-400-normal.woff2"
+    },
+    "noto-serif-kr-102-400-normal.woff2": {
+     "bytes": 24912,
+     "sha256": "6f292736893308d25a9a83f77a640017b23d86b0f8cfb234a4e04591988c4733",
+     "from": "/files/noto-serif-kr-102-400-normal.woff2"
+    },
+    "noto-serif-kr-103-400-normal.woff2": {
+     "bytes": 24220,
+     "sha256": "7b0eda2a076a04b16853c624491db694ae9bf7ced1fa5e3e393416db7ade7abd",
+     "from": "/files/noto-serif-kr-103-400-normal.woff2"
+    },
+    "noto-serif-kr-104-400-normal.woff2": {
+     "bytes": 27044,
+     "sha256": "6f201e90a2f331a2e81621d10bfc483921a2ffc81156fa203b16f247e65e99cf",
+     "from": "/files/noto-serif-kr-104-400-normal.woff2"
+    },
+    "noto-serif-kr-105-400-normal.woff2": {
+     "bytes": 24940,
+     "sha256": "a96c6e8dbf64f11ac3a050e575250f9a4459ff2f4ad30e38e9ea7b97486a4882",
+     "from": "/files/noto-serif-kr-105-400-normal.woff2"
+    },
+    "noto-serif-kr-106-400-normal.woff2": {
+     "bytes": 25240,
+     "sha256": "86199c3180842eb960901bc98886152f654e3e8d15a532c50647873659103bd8",
+     "from": "/files/noto-serif-kr-106-400-normal.woff2"
+    },
+    "noto-serif-kr-107-400-normal.woff2": {
+     "bytes": 22836,
+     "sha256": "558ed327ec041d6e690622f29668f83b03a0a901b93e9a6e14ff54eebda87f80",
+     "from": "/files/noto-serif-kr-107-400-normal.woff2"
+    },
+    "noto-serif-kr-108-400-normal.woff2": {
+     "bytes": 24272,
+     "sha256": "4fe78c346a6ce6a1f9c21941ef287c39784f951521cfc24fac77e2cf223e327c",
+     "from": "/files/noto-serif-kr-108-400-normal.woff2"
+    },
+    "noto-serif-kr-109-400-normal.woff2": {
+     "bytes": 22216,
+     "sha256": "1e3a7429cf32a37dc958332466bded5361e1967d87c76af72c0b79e857d7b9b9",
+     "from": "/files/noto-serif-kr-109-400-normal.woff2"
+    },
+    "noto-serif-kr-110-400-normal.woff2": {
+     "bytes": 22896,
+     "sha256": "6bc92e19582dbc32fd129dfbc56e4420fdd9d4088185a0c50a73d95215e08243",
+     "from": "/files/noto-serif-kr-110-400-normal.woff2"
+    },
+    "noto-serif-kr-111-400-normal.woff2": {
+     "bytes": 22540,
+     "sha256": "70e8551ff1c47eb589792c198b857a9dc9e63572ee0e4ef9eace1cf4cec9aba1",
+     "from": "/files/noto-serif-kr-111-400-normal.woff2"
+    },
+    "noto-serif-kr-112-400-normal.woff2": {
+     "bytes": 21836,
+     "sha256": "66fd33f284b382b7a8bf20cbecc71443ded0daf1c06c5cadfd841ee9d2a344c2",
+     "from": "/files/noto-serif-kr-112-400-normal.woff2"
+    },
+    "noto-serif-kr-113-400-normal.woff2": {
+     "bytes": 21976,
+     "sha256": "7ac6e516fe9a54e7ff518d437570719c76335b36663b67202cfe8a8bc7e1e5d6",
+     "from": "/files/noto-serif-kr-113-400-normal.woff2"
+    },
+    "noto-serif-kr-114-400-normal.woff2": {
+     "bytes": 21356,
+     "sha256": "e0212a681527fa8b4e81bf85ba0692ce41cff6fb4c4ea0e44c8eb3b2b9f745d5",
+     "from": "/files/noto-serif-kr-114-400-normal.woff2"
+    },
+    "noto-serif-kr-115-400-normal.woff2": {
+     "bytes": 20416,
+     "sha256": "38b8657a8969bae67d53974da25ac2cf396ed9a5411e0ee557f82ad3b6cf55e4",
+     "from": "/files/noto-serif-kr-115-400-normal.woff2"
+    },
+    "noto-serif-kr-116-400-normal.woff2": {
+     "bytes": 20664,
+     "sha256": "993b74e084825cf773f600237a8ad60dc6958c28688d94d71da6f46f37b271eb",
+     "from": "/files/noto-serif-kr-116-400-normal.woff2"
+    },
+    "noto-serif-kr-117-400-normal.woff2": {
+     "bytes": 19076,
+     "sha256": "17137eb6b1962c238ea8fad0f32f298ed0184c704678973b2b70f4edd88d29da",
+     "from": "/files/noto-serif-kr-117-400-normal.woff2"
+    },
+    "noto-serif-kr-118-400-normal.woff2": {
+     "bytes": 16284,
+     "sha256": "985fedf66aebdd285cfb321a2edf2b728c8a1f7ffb2f987269108140de120d02",
+     "from": "/files/noto-serif-kr-118-400-normal.woff2"
+    },
+    "noto-serif-kr-119-400-normal.woff2": {
+     "bytes": 13296,
+     "sha256": "4bf769a89c6900dad9b2a16178e824a2a6169fe391567fae99a7abaccb79d8fc",
+     "from": "/files/noto-serif-kr-119-400-normal.woff2"
+    },
+    "noto-serif-kr-cyrillic-400-normal.woff2": {
+     "bytes": 8052,
+     "sha256": "93d3f1fa75849430b5d3d5798516658d5160886c65a30d75c7e7c3ca7d5e3966",
+     "from": "/files/noto-serif-kr-cyrillic-400-normal.woff2"
+    },
+    "noto-serif-kr-vietnamese-400-normal.woff2": {
+     "bytes": 6000,
+     "sha256": "8510a51d0f08800b31894730448c2e86eac3a13e70669a18ddb62b943a25026c",
+     "from": "/files/noto-serif-kr-vietnamese-400-normal.woff2"
+    },
+    "noto-serif-kr-latin-ext-400-normal.woff2": {
+     "bytes": 5772,
+     "sha256": "106b1991df8ae8af2b2e7bba616eb395722f9e56e7b704d74feb88f28966d4ca",
+     "from": "/files/noto-serif-kr-latin-ext-400-normal.woff2"
+    },
+    "noto-serif-kr-latin-400-normal.woff2": {
+     "bytes": 19356,
+     "sha256": "b02203d9be35c7fa0457605f78cc0ff861b8330429beffdffa170c68ca702447",
+     "from": "/files/noto-serif-kr-latin-400-normal.woff2"
+    }
+   },
+   "bytes": 3280928
+  }
+ ],
+ "total_bytes": 6543832,
+ "files": 240
+}

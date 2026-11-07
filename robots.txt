@@ -17,3 +17,4 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://codedvinyls.com/sitemap.xml
+Sitemap: https://codedvinyls.com/sitemap-i18n.xml

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/assets/cv-analytics.js"></script>
+<title>グレード基準 | CODEDVINYLS</title>
+<meta name="description" content="CODEDVINYLS のレコード・コンディションのグレード基準。国際標準 Goldmine と欧州標準 Record Collector を組み合わせたグレード基準と評価方法のご案内。">
+<link rel="stylesheet" href="/assets/cv-nav.css">
+<link rel="stylesheet" href="/assets/cv-frame.css">
+<link rel="canonical" href="https://codedvinyls.com/ja/guide/grading/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CODEDVINYLS">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="グレード基準 | CODEDVINYLS">
+<meta property="og:description" content="国際標準 Goldmine と欧州標準 Record Collector を組み合わせた、CODEDVINYLS のレコード・コンディションのグレーディング基準と評価方法。">
+<meta property="og:url" content="https://codedvinyls.com/ja/guide/grading/">
+<meta property="og:image" content="https://codedvinyls.com/assets/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "グレーディングガイド — レコード・コンディションのグレード基準", "description": "CODEDVINYLS のレコード・コンディションのグレード基準。国際標準 Goldmine と欧州標準 Record Collector を組み合わせたグレード基準と評価方法のご案内。", "image": "https://codedvinyls.com/assets/og-default.jpg", "inLanguage": "ko", "about": [], "author": {"@type": "Organization", "name": "CODEDVINYLS"}, "publisher": {"@type": "Organization", "name": "CODEDVINYLS", "logo": {"@type": "ImageObject", "url": "https://codedvinyls.com/assets/og-default.jpg"}}, "mainEntityOfPage": "https://codedvinyls.com/guide/grading/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CODEDVINYLS", "item": "https://codedvinyls.com/ja/"}, {"@type": "ListItem", "position": 2, "name": "グレード基準"}]}</script>
+<link rel="stylesheet" href="/assets/fonts/cv-fonts.css">
+<link rel="stylesheet" href="/assets/cv-type.css">
+<style>
+:root{
+  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
+  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
+  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.mono{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:.02em}
+.tick{display:inline-block;width:26px;height:3px;background:var(--yellow);vertical-align:middle;flex:none}
+.display{font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+
+/* 헤더 (홈 상속) */
+.top-grid{display:grid;grid-template-columns:260px repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
+.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.logo-cell img{width:188px;height:auto}
+.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
+.nav-cell:last-child{border-right:0}
+.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
+.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
+.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
+.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
+.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
+
+.signal-row{border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 300px;background:var(--surface)}
+.signal-row .left{display:flex;align-items:center;padding:18px 26px;gap:18px;flex-wrap:wrap}
+.signal-row .right{display:flex;align-items:center;justify-content:flex-end;border-left:1px solid var(--line);padding:18px 26px}
+
+/* 문서 본문 */
+.doc-hero{padding:clamp(48px,6vw,90px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;gap:18px}
+.doc-hero .kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+.doc-hero h1{margin:0;font-size:clamp(28px,4vw,44px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+.doc-hero .lede{font-size:clamp(15px,1.7vw,17px);line-height:1.8;color:var(--muted);max-width:42em}
+
+.grade-scale{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:24px clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--surface)}
+.grade-scale .chip{font-family:var(--mono);font-size:12px;border:1px solid var(--line);padding:6px 12px;letter-spacing:.04em;color:var(--ink)}
+.grade-scale .chip.top{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.grade-scale .sep{color:var(--muted);font-family:var(--mono);font-size:11px}
+.scale-note{padding:18px clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--surface)}
+.scale-note div{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.9}
+
+.doc-section{border-bottom:1px solid var(--line);padding:clamp(40px,5vw,68px) clamp(24px,4vw,56px)}
+.doc-section h2{margin:0 0 22px;font-size:clamp(20px,2.6vw,26px);font-weight:800}
+.doc-section h3{margin:30px 0 12px;font-size:15.5px;font-weight:700}
+.doc-section p{margin:0 0 14px;font-size:15px;line-height:1.85;color:var(--muted);max-width:48em}
+.doc-section ul{margin:0 0 14px;padding:0;list-style:none;display:grid;gap:11px;max-width:48em}
+.doc-section li{font-size:14.5px;line-height:1.7;color:var(--ink);display:flex;gap:12px;align-items:baseline}
+.doc-section li .tick{flex:none;margin-top:8px}
+.doc-section li b{font-weight:700}
+.doc-section .note{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.75;border-left:2px solid var(--line);padding-left:14px;margin:16px 0;max-width:48em}
+.gear{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);max-width:720px;margin:10px 0 16px}
+.gear .col{padding:22px;font-family:var(--mono);font-size:12.5px;line-height:1.9;color:var(--muted)}
+.gear .col:first-child{border-right:1px solid var(--line)}
+.gear .col b{display:block;color:var(--ink);font-weight:700;margin-bottom:10px;letter-spacing:.04em}
+
+.important{background:var(--ink);color:var(--paper);padding:clamp(28px,3vw,40px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
+.important .mono{color:var(--yellow)}
+.important p{margin:10px 0 0;font-size:15px;line-height:1.8;color:rgba(247,244,236,.85);max-width:50em}
+
+.grade-table{display:grid}
+.grade-row{display:grid;grid-template-columns:130px 150px 1fr;gap:20px;padding:24px clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
+.grade-row:last-child{border-bottom:0}
+.grade-row:hover{background:var(--surface)}
+.grade-row .code{font-family:var(--mono);font-weight:800;letter-spacing:.04em;font-size:14px}
+.grade-row .ko{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.grade-row .desc{font-size:14px;line-height:1.75;color:var(--ink);max-width:56em}
+
+footer{background:var(--ink);color:var(--paper)}
+.footer-docs{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid rgba(247,244,236,.18)}
+.footer-docs a{padding:22px 26px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;display:flex;justify-content:space-between;border-right:1px solid rgba(247,244,236,.18)}
+.footer-docs a:last-child{border-right:0}
+.footer-docs a:hover{color:var(--yellow)}
+.footer-base{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 26px;font-family:var(--mono);font-size:12px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+@media(max-width:1080px){
+  .top-grid{grid-template-columns:1fr 1fr}
+  .logo-cell{grid-column:1/3;border-right:0;border-bottom:1px solid var(--line)}
+  .nav-cell:nth-child(even){border-right:0}
+}
+@media(max-width:680px){
+  .page{border-left:0;border-right:0}
+  .nav-cell{min-height:60px;padding:16px 14px;font-size:11.5px}
+  .signal-row{grid-template-columns:1fr}
+  .signal-row .right{justify-content:flex-start;border-left:0;border-top:1px solid var(--line)}
+  .gear{grid-template-columns:1fr}
+  .gear .col:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .grade-row{grid-template-columns:1fr;gap:6px}
+  .footer-docs{grid-template-columns:1fr}
+  .footer-docs a{border-right:0;border-bottom:1px solid rgba(247,244,236,.18)}
+  .footer-base{flex-direction:column;gap:8px;align-items:flex-start}
+}
+</style>
+<link rel="stylesheet" href="/assets/cv-body.css">
+<link rel="alternate" hreflang="ko" href="https://codedvinyls.com/guide/grading/">
+<link rel="alternate" hreflang="en" href="https://codedvinyls.com/en/guide/grading/">
+<link rel="alternate" hreflang="ja" href="https://codedvinyls.com/ja/guide/grading/">
+<link rel="alternate" hreflang="zh-Hans" href="https://codedvinyls.com/zh-cn/guide/grading/">
+<link rel="alternate" hreflang="zh-Hant" href="https://codedvinyls.com/zh-tw/guide/grading/">
+<link rel="alternate" hreflang="x-default" href="https://codedvinyls.com/en/guide/grading/">
+<link rel="stylesheet" href="/assets/i18n_frame.css">
+<link rel="preload" href="/assets/fonts/cv-sans-ja-400.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="cvf-on cvb-on cvb-gde">
+<div class="page" id="top">
+
+  <header class="cvf-hd" data-cvf-hd>
+    <a class="cvf-mark" href="/ja/"><img src="/assets/cv_wordmark_ink.svg" alt="CODEDVINYLS" width="168" height="13"></a>
+    <nav class="cvf-nav" aria-label="メニュー"><a href="/arrivals/">入荷</a><a href="/album/">アルバム</a><a href="/archive/" aria-current="page">アーカイブ</a><a href="/journal/">ジャーナル</a><a href="/ja/store.html">店舗・オンライン</a></nav>
+    <a class="cvf-menu" href="#cvf-sheet" aria-controls="cvf-sheet" aria-expanded="false">メニュー</a>
+  </header>
+  <div class="cvf-sheet" id="cvf-sheet" role="dialog" aria-modal="true" aria-label="メニュー">
+    <div class="cvf-sheet-hd"><a class="cvf-mark" href="/ja/"><img src="/assets/cv_wordmark_ink.svg" alt="CODEDVINYLS" width="118" height="9"></a><a class="cvf-close" href="#">閉じる</a></div>
+    <nav class="cvf-sheet-nav"><a href="/arrivals/">入荷</a><a href="/album/">アルバム</a><a href="/archive/" aria-current="page">アーカイブ</a><a href="/journal/">ジャーナル</a><a href="/ja/store.html">店舗・オンライン</a></nav>
+    <p class="cvf-sheet-notice"><a href="/notice/"><span class="cvf-k">お知らせ</span><span></span><span aria-hidden="true">→</span></a></p>
+    <nav class="cv-lang" aria-label="言語"><a href="/guide/grading/" hreflang="ko" lang="ko" translate="no">한국어</a><a href="/en/guide/grading/" hreflang="en" lang="en" translate="no">English</a><a href="/ja/guide/grading/" hreflang="ja" lang="ja" translate="no" aria-current="true">日本語</a><a href="/zh-cn/guide/grading/" hreflang="zh-Hans" lang="zh-Hans" translate="no">简体中文</a><a href="/zh-tw/guide/grading/" hreflang="zh-Hant" lang="zh-Hant" translate="no">繁體中文</a></nav><p class="cvf-sheet-nap">CODEDVINYLS Hoehyeon · Ma-yeol 3, Hoehyeon Underground Shopping Center</p>
+  </div>
+  <nav class="crumb" aria-label="パンくずリスト"><a href="/archive/">アーカイブ</a></nav>
+
+  <main>
+    <div class="doc-hero">
+      <h1>グレード基準</h1>
+      <p class="lede">CODEDVINYLS は、国際標準の Goldmine Grading をベースに、欧州標準 Record Collector のグレーディングにおける Excellent（EX）グレードを併用して評価しています。どのような基準でレコードを評価し、グレードを付与しているのかをご案内します。</p><div class="cv-i18n-note"><p>このページは、韓国語の原文を読む助けとなる日本語訳です。契約では韓国語の原文が効力を持ち、両者が異なる場合は韓国語の原文に従います。<a href="/guide/grading/" hreflang="ko">韓国語の原文 →</a></p><p>翻訳の誤りは gm@codedvinyls.com までご連絡いただけます。</p></div>
+    </div>
+
+    
+    <div class="grade-scale">
+      <span class="chip top">SS</span>
+      <span class="chip top">NM</span>
+      <span class="chip top">NM-</span>
+      <span class="chip top">EX</span>
+      <span class="chip top">VG+</span>
+      <span class="sep">·</span>
+      <span class="chip">VG</span>
+      <span class="chip">G+</span>
+      <span class="chip">G</span>
+      <span class="chip">P</span>
+    </div>
+    <div class="scale-note">
+      <div>· すべてのグレードは、外観（目視）と再生品質を総合して付与します。</div>
+      <div>· CODEDVINYLS では独自の基準により、EX を NM- と VG+ の間のエクセレントのグレードとして運用しています。</div>
+      <div>· Mint（M）は付与しません。未開封は Still Sealed（SS）と表記します。</div>
+    </div>
+
+    
+    <section class="doc-section">
+      <h2>評価の基準と方法</h2>
+      <p>すべての盤は、DIY の洗浄液（3次精製水 95%、イソプロピルアルコール 5%）を縫い目のない（seamless）マイクロファイバーに吹き付けて軽く洗浄したあと、基本は目視で検品し、必要に応じてサウンドチェックを行います。</p>
+      <div class="note">※ この洗浄方法は当店の検品目的に限って適用するもので、お客様の洗浄のためのガイドとして提供するものではありません。</div>
+
+      <h3>1-1. 目視による評価（Eye-Grading）</h3>
+      <p>レコードの物理的な欠陥を識別し、音質への影響を予測します。</p>
+      <p><b>A. 傷・破損の識別</b></p>
+      <ul>
+        <li><span class="tick"></span><span><b>表面の跡（Surface Marks）</b> — 深くない表面の跡。爪による傷がこれにあたり、再生に大きな影響はありません。</span></li>
+        <li><span class="tick"></span><span><b>ヘアライン</b> — ごく細い線。レコードを出し入れする際に生じることがあり、再生への影響はわずかです。</span></li>
+        <li><span class="tick"></span><span><b>傷（Scratch）</b> — ナチュラルホワイト（約3500–4000K）の光で斜めから観察すると光を正しく反射せず、たいてい指先で触れてわかります。「チッ」という音や、ひどい場合は針飛び（Skip）を引き起こします。</span></li>
+        <li><span class="tick"></span><span><b>カートリッジによる傷</b> — アンチスケーティング（anti-skating）の制御に異常が生じ、溝に沿ってできた傷です。トラックを横切る一般的な傷より深刻で、100%針飛びを引き起こします。</span></li>
+        <li><span class="tick"></span><span><b>えぐれ・破損による溝の変形</b> — えぐれや破損で音溝が変形すると、針が溝を越えられず、再生できません。</span></li>
+      </ul>
+      <div class="note">検品時の照明 — ナチュラルホワイト（約3500–4000K）のほうがデイライト（5000–6500K）より有利です。青すぎる光は表面で強く跳ね返り、細かな傷を埋もれさせますが、ナチュラルホワイトは適度なコントラストで、傷の深さと「白い線」をより鮮明に浮かび上がらせます。</div>
+
+      <p><b>B. プレス不良の区別（Defect）</b></p>
+      <ul>
+        <li><span class="tick"></span><span><b>反り（Warping）</b> — レコードが反った状態。トーンアームが激しく上下し、ひどい場合は針飛びを引き起こします。</span></li>
+        <li><span class="tick"></span><span><b>センターホールのずれ（Off-centre）</b> — スピンドルホールが中心からずれ、ワウ・フラッターなどの音程の不安定さを引き起こします。</span></li>
+        <li><span class="tick"></span><span><b>ノンフィル（Non-fill / Stitch）</b> — 音溝が完全に満たされていない欠陥。銀色の点や線として現れ、「シャー」というノイズを生じます。</span></li>
+        <li><span class="tick"></span><span><b>表面の気泡・突起（Bubbles / Pimples）</b> — 表面の小さな突起・気泡。針が通るときにパチッ・プチッというノイズを引き起こします。</span></li>
+      </ul>
+
+      <h3>1-2. サウンドチェックの基準と環境</h3>
+      <p>目視での状態が良くない盤、光沢を失った盤、表面のマイグレーション（シミ・波状の跡）が確認される盤は、必ずサウンドチェックを行います。</p>
+      <div class="gear">
+        <div class="col"><b>Hoehyeon店</b>ターンテーブル · Pro-Ject Debut Evo Carbon<br>カートリッジ · Ortofon 2M Black（針圧1.5g）<br>アンプ・スピーカー · Pro-Ject MaiA S3 / Speaker Box 3E</div>
+        <div class="col"><b>オンラインスタジオ</b>ターンテーブル · Technics SL-1200G<br>カートリッジ · Nagaoka MP-500<br>アンプ・スピーカー · Rega Elicit MK5 / KEF Q15.2</div>
+      </div>
+      <div class="note">※ 本環境は基準環境（reference setup）であり、試聴結果は同じ環境でも、カートリッジの状態・トーンアームの調整・個々のプレスのばらつきによって異なる場合があります。</div>
+
+      <h3>超音波洗浄（Ultrasonic Cleaning） — 限定的に実施</h3>
+      <p>PVC素材の物理的特性を考慮し、超音波洗浄はごく限られた場合にのみ行います。長期保管によってインナースリーブの帯電防止剤や汚染物質が表面に固着し、一般的な乾式・湿式の洗浄だけでは再生できないと判断される場合に限ります。過度な超音波振動は表面のマイクロプラスチックの剥離を招き、特有の音色と質感を損なうおそれがあるためです。</p>
+    </section>
+
+    
+    <div class="important">
+      <span class="mono">※ 重要なご案内</span>
+      <p>レコードのグレーディングでは、外観 + 再生品質を総合的に評価します。外観がきれいに見えても、プレスの欠陥や溝の摩耗によって低いグレードになることがあり、反対に外観に使用感があっても、再生品質が優れていれば上位のグレードと評価されることがあります。</p>
+    </div>
+
+    
+    <section class="doc-section" style="padding-left:0;padding-right:0;padding-bottom:0">
+      <h2 style="padding:0 clamp(24px,4vw,56px)">グレード別の詳細ガイド</h2>
+      <div class="grade-table">
+        <div class="grade-row"><div class="code">SS</div><div class="ko">未開封</div><div class="desc">工場シールド（Factory Sealed）の未開封状態です。未開封という性質上、試聴・再生による評価は行わず、外観（シール・ジャケット）のみを基準にご案内します。</div></div>
+        <div class="grade-row"><div class="code">NM</div><div class="ko">ニアミント</div><div class="desc">盤には、レコードの出し入れによるごく細かなヘアラインとインナースリーブの跡だけが見られることがあります。再生歴がほとんどなく、ランアウトが未再生（unplayed）の水準で、再生時のバックグラウンドは非常に静かです。ジャケットはリングウェア・カットアウト・エッジの損傷・変色のない、新品に準ずる状態です。</div></div>
+        <div class="grade-row"><div class="code">NM-</div><div class="ko">ニアミントマイナス</div><div class="desc">盤は NM に比べてインナースリーブのシミが少し多いことがありますが、実質的な再生歴が感じられない水準を保っています。ジャケットはリングウェア・エッジの損傷・変色のうち、ただ一つの要素だけが軽微に見られることがあります。</div></div>
+        <div class="grade-row"><div class="code">EX</div><div class="ko">エクセレント</div><div class="desc">盤の外観にヘアライン・爪による傷・洗浄時の細かな摩擦の跡（Handling Marks）などがありますが、音溝の損傷がないため、静かなバックグラウンドで優れた音質を保っています。ジャケットは NM〜NM- のグレードに準じますが、ジャケットにカット（cut-out）がある場合は EX のグレードに分類します。</div></div>
+        <div class="grade-row"><div class="code">VG+</div><div class="ko">ベリーグッドプラス</div><div class="desc">おおむねクリーンな再生音を聴かせます。静かな箇所で軽いサーフェスノイズが聞こえることがありますが、音楽鑑賞の妨げにはならず、むしろ温かなヴィンテージの質感として伝わってきます（コレクターの間で通用する「Strong VG」にあたります）。浅いスレのあるトラックに限り、局所的に軽いノイズが出ることがあります。ジャケットには識別できる範囲内の変色・摩耗・損傷があります。</div></div>
+        <div class="grade-row"><div class="code">VG</div><div class="ko">ベリーグッド</div><div class="desc">サーフェスノイズがはっきりと聞こえ、静かな箇所では時折チッ・パチッというノイズが出ることがあります。ただし深い音溝の損傷はないため、針飛びなく十分に鑑賞できます。表面に浅いスレや薄い傷が部分的に見られ、光沢を失っていたり、長期保管の跡があったりすることがあります。ジャケットは継ぎ目・背の損傷と破れ（torn）、変色・摩耗が、VG+（日常使用で生じた軽い損傷）に比べてはっきりと多く見られます。</div></div>
+        <div class="grade-row"><div class="code">G+</div><div class="ko">グッドプラス</div><div class="desc">盤には、はっきりと触れてわかるスレがあり、チッというノイズが繰り返される箇所があります。ジャケットは継ぎ目・背の損傷・変色・リングウェアなど複合的な損傷がありますが、形を保っており、レコードをジャケットに収納できる状態です。</div></div>
+        <div class="grade-row"><div class="code">G</div><div class="ko">グッド</div><div class="desc">目立つ傷・破損が確認され、バックグラウンドノイズや、チッ・ゴトゴトといったノイズが試聴の際に耳障りな状態です。音溝の変形や傷によってバックグラウンドノイズがあり、一般的な針圧（1.5〜4.0g）で時折針が跳ねる（Jump）ことがあります。ジャケットは変色・摩耗・損傷が同時多発的に見られます。</div></div>
+        <div class="grade-row"><div class="code">P</div><div class="ko">プア</div><div class="desc">盤は、激しい傷による針飛びや針の跳ね、深い溝の損傷によるノイズがひどい状態です。ジャケットは状態が非常に悪く、機能面でも損傷がひどい状態です。</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cvf-ft">
+    <div class="cvf-ft-grid">
+      <div class="cvf-ft-col cvf-ft-store"><a class="cvf-ft-mark" href="/ja/"><img src="/assets/cv_wordmark_ink.svg" alt="CODEDVINYLS" width="140" height="11"></a><span>CODEDVINYLS Hoehyeon</span><span>Ma-yeol 3, Hoehyeon Underground Shopping Center</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">Instagram @codedvinyls</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">見る</b><a href="/arrivals/">入荷</a><a href="/album/">アルバム</a><a href="/archive/">アーカイブ</a><a href="/journal/">ジャーナル</a></div>
+      <div class="cvf-ft-col"><a class="cvf-ft-h" href="/ja/store.html">店舗・オンライン</a><a href="/ja/store.html#visit">Hoehyeon店</a><a href="/notice/">お知らせ</a><a href="/cd/">店内CDコーナー</a><a href="/ja/store.html#online">オンライン購入</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">ご案内</b><a href="/ja/guide/grading/">グレード基準</a><a href="/guide/glossary/">用語集</a><a href="/ja/shipping-returns.html">配送・交換・返金</a><a href="/terms.html">利用規約</a><a href="/privacy.html">プライバシーポリシー</a><a href="/ja/about.html">事業者情報</a></div>
+    </div>
+    <div class="cvf-ft-base"><span class="cvf-ft-plate">THE VINYL ARCHIVE</span><nav class="cv-lang" aria-label="言語"><a href="/guide/grading/" hreflang="ko" lang="ko" translate="no">한국어</a><a href="/en/guide/grading/" hreflang="en" lang="en" translate="no">English</a><a href="/ja/guide/grading/" hreflang="ja" lang="ja" translate="no" aria-current="true">日本語</a><a href="/zh-cn/guide/grading/" hreflang="zh-Hans" lang="zh-Hans" translate="no">简体中文</a><a href="/zh-tw/guide/grading/" hreflang="zh-Hant" lang="zh-Hant" translate="no">繁體中文</a></nav><p class="cv-i18n-note">配送は韓国国内のみです。海外配送はなく、韓国国外の購入者には販売していません。</p><div class="cvf-ft-biz"><span>商号：코디드바이닐즈 (CODEDVINYLS) · 代表者：최준홍 · 事業者登録番号：286-51-00775</span><span>通信販売業届出番号：제2026-서울강남-00575호 · <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2865100775" target="_blank" rel="noopener">韓国公正取引委員会 事業者情報</a></span><span>事業所所在地：서울시 강남구 논현로 38길 20 · 電話：<a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span><span>ホスティングサービス提供者：GitHub, Inc.</span></div></div>
+  </footer>
+</div>
+
+<script src="/assets/cv-frame.js" defer></script>
+</body>
+</html>

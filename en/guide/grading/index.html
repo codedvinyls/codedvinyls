@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/assets/cv-analytics.js"></script>
+<title>Grading standard | CODEDVINYLS</title>
+<meta name="description" content="The CODEDVINYLS grading standard for vinyl condition. A guide to the grading standard and assessment methods, combining the international Goldmine standard and the European Record Collector standard.">
+<link rel="stylesheet" href="/assets/cv-nav.css">
+<link rel="stylesheet" href="/assets/cv-frame.css">
+<link rel="canonical" href="https://codedvinyls.com/en/guide/grading/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CODEDVINYLS">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Grading standard | CODEDVINYLS">
+<meta property="og:description" content="The CODEDVINYLS grading standard for vinyl condition and its assessment methods, combining the international Goldmine standard and the European Record Collector standard.">
+<meta property="og:url" content="https://codedvinyls.com/en/guide/grading/">
+<meta property="og:image" content="https://codedvinyls.com/assets/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Grading guide — vinyl condition grading standard", "description": "The CODEDVINYLS grading standard for vinyl condition. A guide to the grading standard and assessment methods, combining the international Goldmine standard and the European Record Collector standard.", "image": "https://codedvinyls.com/assets/og-default.jpg", "inLanguage": "ko", "about": [], "author": {"@type": "Organization", "name": "CODEDVINYLS"}, "publisher": {"@type": "Organization", "name": "CODEDVINYLS", "logo": {"@type": "ImageObject", "url": "https://codedvinyls.com/assets/og-default.jpg"}}, "mainEntityOfPage": "https://codedvinyls.com/guide/grading/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CODEDVINYLS", "item": "https://codedvinyls.com/en/"}, {"@type": "ListItem", "position": 2, "name": "Grading standard"}]}</script>
+<link rel="stylesheet" href="/assets/fonts/cv-fonts.css">
+<link rel="stylesheet" href="/assets/cv-type.css">
+<style>
+:root{
+  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
+  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
+  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.mono{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:.02em}
+.tick{display:inline-block;width:26px;height:3px;background:var(--yellow);vertical-align:middle;flex:none}
+.display{font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+
+/* 헤더 (홈 상속) */
+.top-grid{display:grid;grid-template-columns:260px repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
+.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.logo-cell img{width:188px;height:auto}
+.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
+.nav-cell:last-child{border-right:0}
+.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
+.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
+.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
+.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
+.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
+
+.signal-row{border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 300px;background:var(--surface)}
+.signal-row .left{display:flex;align-items:center;padding:18px 26px;gap:18px;flex-wrap:wrap}
+.signal-row .right{display:flex;align-items:center;justify-content:flex-end;border-left:1px solid var(--line);padding:18px 26px}
+
+/* 문서 본문 */
+.doc-hero{padding:clamp(48px,6vw,90px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;gap:18px}
+.doc-hero .kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+.doc-hero h1{margin:0;font-size:clamp(28px,4vw,44px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+.doc-hero .lede{font-size:clamp(15px,1.7vw,17px);line-height:1.8;color:var(--muted);max-width:42em}
+
+.grade-scale{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:24px clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--surface)}
+.grade-scale .chip{font-family:var(--mono);font-size:12px;border:1px solid var(--line);padding:6px 12px;letter-spacing:.04em;color:var(--ink)}
+.grade-scale .chip.top{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.grade-scale .sep{color:var(--muted);font-family:var(--mono);font-size:11px}
+.scale-note{padding:18px clamp(24px,4vw,56px);border-bottom:1px solid var(--line);background:var(--surface)}
+.scale-note div{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.9}
+
+.doc-section{border-bottom:1px solid var(--line);padding:clamp(40px,5vw,68px) clamp(24px,4vw,56px)}
+.doc-section h2{margin:0 0 22px;font-size:clamp(20px,2.6vw,26px);font-weight:800}
+.doc-section h3{margin:30px 0 12px;font-size:15.5px;font-weight:700}
+.doc-section p{margin:0 0 14px;font-size:15px;line-height:1.85;color:var(--muted);max-width:48em}
+.doc-section ul{margin:0 0 14px;padding:0;list-style:none;display:grid;gap:11px;max-width:48em}
+.doc-section li{font-size:14.5px;line-height:1.7;color:var(--ink);display:flex;gap:12px;align-items:baseline}
+.doc-section li .tick{flex:none;margin-top:8px}
+.doc-section li b{font-weight:700}
+.doc-section .note{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.75;border-left:2px solid var(--line);padding-left:14px;margin:16px 0;max-width:48em}
+.gear{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);max-width:720px;margin:10px 0 16px}
+.gear .col{padding:22px;font-family:var(--mono);font-size:12.5px;line-height:1.9;color:var(--muted)}
+.gear .col:first-child{border-right:1px solid var(--line)}
+.gear .col b{display:block;color:var(--ink);font-weight:700;margin-bottom:10px;letter-spacing:.04em}
+
+.important{background:var(--ink);color:var(--paper);padding:clamp(28px,3vw,40px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
+.important .mono{color:var(--yellow)}
+.important p{margin:10px 0 0;font-size:15px;line-height:1.8;color:rgba(247,244,236,.85);max-width:50em}
+
+.grade-table{display:grid}
+.grade-row{display:grid;grid-template-columns:130px 150px 1fr;gap:20px;padding:24px clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
+.grade-row:last-child{border-bottom:0}
+.grade-row:hover{background:var(--surface)}
+.grade-row .code{font-family:var(--mono);font-weight:800;letter-spacing:.04em;font-size:14px}
+.grade-row .ko{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.grade-row .desc{font-size:14px;line-height:1.75;color:var(--ink);max-width:56em}
+
+footer{background:var(--ink);color:var(--paper)}
+.footer-docs{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid rgba(247,244,236,.18)}
+.footer-docs a{padding:22px 26px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;display:flex;justify-content:space-between;border-right:1px solid rgba(247,244,236,.18)}
+.footer-docs a:last-child{border-right:0}
+.footer-docs a:hover{color:var(--yellow)}
+.footer-base{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 26px;font-family:var(--mono);font-size:12px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+@media(max-width:1080px){
+  .top-grid{grid-template-columns:1fr 1fr}
+  .logo-cell{grid-column:1/3;border-right:0;border-bottom:1px solid var(--line)}
+  .nav-cell:nth-child(even){border-right:0}
+}
+@media(max-width:680px){
+  .page{border-left:0;border-right:0}
+  .nav-cell{min-height:60px;padding:16px 14px;font-size:11.5px}
+  .signal-row{grid-template-columns:1fr}
+  .signal-row .right{justify-content:flex-start;border-left:0;border-top:1px solid var(--line)}
+  .gear{grid-template-columns:1fr}
+  .gear .col:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .grade-row{grid-template-columns:1fr;gap:6px}
+  .footer-docs{grid-template-columns:1fr}
+  .footer-docs a{border-right:0;border-bottom:1px solid rgba(247,244,236,.18)}
+  .footer-base{flex-direction:column;gap:8px;align-items:flex-start}
+}
+</style>
+<link rel="stylesheet" href="/assets/cv-body.css">
+<link rel="alternate" hreflang="ko" href="https://codedvinyls.com/guide/grading/">
+<link rel="alternate" hreflang="en" href="https://codedvinyls.com/en/guide/grading/">
+<link rel="alternate" hreflang="ja" href="https://codedvinyls.com/ja/guide/grading/">
+<link rel="alternate" hreflang="zh-Hans" href="https://codedvinyls.com/zh-cn/guide/grading/">
+<link rel="alternate" hreflang="zh-Hant" href="https://codedvinyls.com/zh-tw/guide/grading/">
+<link rel="alternate" hreflang="x-default" href="https://codedvinyls.com/en/guide/grading/">
+<link rel="stylesheet" href="/assets/i18n_frame.css">
+</head>
+<body class="cvf-on cvb-on cvb-gde">
+<div class="page" id="top">
+
+  <header class="cvf-hd" data-cvf-hd>
+    <a class="cvf-mark" href="/en/"><img src="/assets/cv_wordmark_ink.svg" alt="CODEDVINYLS" width="168" height="13"></a>
+    <nav class="cvf-nav" aria-label="Menu"><a href="/arrivals/">Arrivals</a><a href="/album/">Albums</a><a href="/archive/" aria-current="page">Archive</a><a href="/journal/">Journal</a><a href="/en/store.html">Store &amp; online</a></nav>
+    <a class="cvf-menu" href="#cvf-sheet" aria-controls="cvf-sheet" aria-expanded="false">Menu</a>
+  </header>
+  <div class="cvf-sheet" id="cvf-sheet" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="cvf-sheet-hd"><a class="cvf-mark" href="/en/"><img src="/assets/cv_wordmark_ink.svg" alt="CODEDVINYLS" width="118" height="9"></a><a class="cvf-close" href="#">Close</a></div>
+    <nav class="cvf-sheet-nav"><a href="/arrivals/">Arrivals</a><a href="/album/">Albums</a><a href="/archive/" aria-current="page">Archive</a><a href="/journal/">Journal</a><a href="/en/store.html">Store &amp; online</a></nav>
+    <p class="cvf-sheet-notice"><a href="/notice/"><span class="cvf-k">Notices</span><span></span><span aria-hidden="true">→</span></a></p>
+    <nav class="cv-lang" aria-label="Language"><a href="/guide/grading/" hreflang="ko" lang="ko" translate="no">한국어</a><a href="/en/guide/grading/" hreflang="en" lang="en" translate="no" aria-current="true">English</a><a href="/ja/guide/grading/" hreflang="ja" lang="ja" translate="no">日本語</a><a href="/zh-cn/guide/grading/" hreflang="zh-Hans" lang="zh-Hans" translate="no">简体中文</a><a href="/zh-tw/guide/grading/" hreflang="zh-Hant" lang="zh-Hant" translate="no">繁體中文</a></nav><p class="cvf-sheet-nap">CODEDVINYLS Hoehyeon · Ma-yeol 3, Hoehyeon Underground Shopping Center</p>
+  </div>
+  <nav class="crumb" aria-label="Breadcrumb"><a href="/archive/">Archive</a></nav>
+
+  <main>
+    <div class="doc-hero">
+      <h1>Grading standard</h1>
+      <p class="lede">CODEDVINYLS assesses records on the basis of the international Goldmine Grading standard, also using the Excellent (EX) grade from the European Record Collector grading standard. This page explains the standards by which we assess records and assign grades.</p><div class="cv-i18n-note"><p>This page is an English translation to help you read the Korean original. For any contract, the Korean original is binding and prevails where the two differ. <a href="/guide/grading/" hreflang="ko">Korean original →</a></p><p>Translation errors can be reported to gm@codedvinyls.com.</p></div>
+    </div>
+
+    
+    <div class="grade-scale">
+      <span class="chip top">SS</span>
+      <span class="chip top">NM</span>
+      <span class="chip top">NM-</span>
+      <span class="chip top">EX</span>
+      <span class="chip top">VG+</span>
+      <span class="sep">·</span>
+      <span class="chip">VG</span>
+      <span class="chip">G+</span>
+      <span class="chip">G</span>
+      <span class="chip">P</span>
+    </div>
+    <div class="scale-note">
+      <div>· Every grade is assigned by combining appearance (visual) and playback quality.</div>
+      <div>· Under its own standard, CODEDVINYLS uses EX as the Excellent grade between NM- and VG+.</div>
+      <div>· Mint (M) is not assigned. Unopened records are listed as Still Sealed (SS).</div>
+    </div>
+
+    
+    <section class="doc-section">
+      <h2>Assessment standards and methods</h2>
+      <p>Every disc is lightly cleaned with a DIY cleaning solution (95% 3x-purified water, 5% isopropyl alcohol) sprayed onto a seamless microfiber cloth. It then goes through a visual inspection by default, and a sound check when needed.</p>
+      <div class="note">※ This cleaning method is used only for our own inspection and is not provided as a guide for customers' cleaning.</div>
+
+      <h3>1-1. Visual assessment (eye-grading)</h3>
+      <p>We identify a record's physical defects to predict their effect on sound quality.</p>
+      <p><b>A. Identifying scratches and breakage</b></p>
+      <ul>
+        <li><span class="tick"></span><span><b>Surface marks</b> — shallow marks on the surface. Fingernail scratches fall into this group, and they do not greatly affect playback.</span></li>
+        <li><span class="tick"></span><span><b>Hairlines</b> — very thin fine lines. They can occur from sliding the record in and out, and their effect on playback is minimal.</span></li>
+        <li><span class="tick"></span><span><b>Scratch</b> — viewed at an angle under natural white light (approx. 3500–4000K), it does not reflect light properly, and it can usually be felt with a fingertip. It causes a 'tick' sound or, in severe cases, a skip.</span></li>
+        <li><span class="tick"></span><span><b>Cartridge scratch</b> — a scratch formed along the groove when anti-skating control has gone wrong. It is more serious than an ordinary scratch across the tracks and causes skips 100% of the time.</span></li>
+        <li><span class="tick"></span><span><b>Groove deformation from gouges or breakage</b> — when gouges or breakage deform the groove, the stylus cannot get past it and the record cannot be played.</span></li>
+      </ul>
+      <div class="note">Inspection lighting — natural white (approx. 3500–4000K) works better than daylight (5000–6500K). Light that is too blue glares off the surface and hides fine scratches, while natural white gives enough contrast to show the depth of a scratch and its 'white line' more clearly.</div>
+
+      <p><b>B. Distinguishing pressing defects</b></p>
+      <ul>
+        <li><span class="tick"></span><span><b>Warping</b> — the record is bent out of flat. The tonearm moves up and down heavily, and in severe cases it causes skips.</span></li>
+        <li><span class="tick"></span><span><b>Off-center</b> — the spindle hole is out of line with the center, causing pitch instability such as wow and flutter.</span></li>
+        <li><span class="tick"></span><span><b>Non-fill / stitch</b> — a defect in which the groove is not completely filled. It shows as silver dots or lines and produces a hissing noise.</span></li>
+        <li><span class="tick"></span><span><b>Bubbles / pimples</b> — small bumps and bubbles on the surface. They cause pop and click noises as the stylus passes over them.</span></li>
+      </ul>
+
+      <h3>1-2. Sound check standards and setup</h3>
+      <p>A sound check is always carried out on discs in poor visual condition, discs that have lost their gloss, and discs with visible surface migration (stains, ripple marks).</p>
+      <div class="gear">
+        <div class="col"><b>Hoehyeon store</b>Turntable · Pro-Ject Debut Evo Carbon<br>Cartridge · Ortofon 2M Black (tracking force 1.5g)<br>Amplifier &amp; speakers · Pro-Ject MaiA S3 / Speaker Box 3E</div>
+        <div class="col"><b>Online studio</b>Turntable · Technics SL-1200G<br>Cartridge · Nagaoka MP-500<br>Amplifier &amp; speakers · Rega Elicit MK5 / KEF Q15.2</div>
+      </div>
+      <div class="note">※ These are reference setups. Listening results can vary even with the same setup, depending on cartridge condition, tonearm adjustment and variation between individual pressings.</div>
+
+      <h3>Ultrasonic cleaning — limited use</h3>
+      <p>Given the physical properties of PVC, ultrasonic cleaning is carried out only in very limited cases. It is limited to cases where, after long storage, antistatic agents and contaminants from the inner sleeve have become fixed to the surface and we judge that ordinary dry and wet cleaning alone cannot make the record playable. This is because excessive ultrasonic vibration can cause microplastics to come away from the surface, with the risk of damaging the record's distinctive tone and texture.</p>
+    </section>
+
+    
+    <div class="important">
+      <span class="mono">※ Important</span>
+      <p>Vinyl grading assesses appearance + playback quality together. A record can receive a low grade for pressing defects or groove wear even if its appearance looks clean; conversely, a record whose appearance shows signs of use can be assessed at a higher grade if its playback quality is excellent.</p>
+    </div>
+
+    
+    <section class="doc-section" style="padding-left:0;padding-right:0;padding-bottom:0">
+      <h2 style="padding:0 clamp(24px,4vw,56px)">Detailed guide by grade</h2>
+      <div class="grade-table">
+        <div class="grade-row"><div class="code">SS</div><div class="ko">Still Sealed</div><div class="desc">Factory sealed and in unopened condition. Because the record is unopened, no listening or playback assessment is carried out; it is described on the basis of its appearance (seal and cover) only.</div></div>
+        <div class="grade-row"><div class="code">NM</div><div class="ko">Near Mint</div><div class="desc">The disc may have only very fine hairlines from sliding the record in and out, and inner sleeve marks. With almost no play history, it is at the level of an unplayed runout, and the background is very quiet on playback. The cover is in condition comparable to new, with no ring wear, cut-out, edge damage or discoloration.</div></div>
+        <div class="grade-row"><div class="code">NM-</div><div class="ko">Near Mint Minus</div><div class="desc">Compared with NM, the disc may have slightly more inner sleeve stains, but it holds to a level where no real play history can be felt. The cover may have only one of ring wear, edge damage or discoloration, and only slightly.</div></div>
+        <div class="grade-row"><div class="code">EX</div><div class="ko">Excellent</div><div class="desc">The disc's appearance shows hairlines, fingernail scratches, fine friction traces from cleaning (handling marks) and the like, but with no groove damage it keeps great sound quality against a quiet background. The cover is comparable to the NM to NM- grades, but if there is a cover cut-out, it is classified as EX.</div></div>
+        <div class="grade-row"><div class="code">VG+</div><div class="ko">Very Good Plus</div><div class="desc">Playback is mostly clean. Light surface noise may be noticeable in quiet passages, but it does not interfere with listening and comes across instead as a warm vintage texture (what collectors commonly call 'Strong VG'). Light, localized noise may occur only on tracks with shallow scuffs. The cover has discoloration, wear and damage within an identifiable range.</div></div>
+        <div class="grade-row"><div class="code">VG</div><div class="ko">Very Good</div><div class="desc">Surface noise is clearly audible, and there may be occasional ticks and pops in quiet passages. With no deep groove damage, though, it plays without skips and is fully listenable. Shallow scuffs and light scratches are visible in parts of the surface, and the disc may have lost its gloss or show traces of long storage. The cover has clearly more seam and spine damage and tears, discoloration and wear than VG+ (light damage from everyday use).</div></div>
+        <div class="grade-row"><div class="code">G+</div><div class="ko">Good Plus</div><div class="desc">The disc has scuffs that can clearly be felt, and passages of repeated tick noise. The cover has combined damage such as seam and spine damage, discoloration and ring wear, but it keeps its shape and is still in a condition to hold the record.</div></div>
+        <div class="grade-row"><div class="code">G</div><div class="ko">Good</div><div class="desc">Noticeable scratches and breakage are present, and the record is in a condition where background noise, ticks and clunking noises intrude on listening. Groove deformation and scratches cause background noise, and occasional jumps may occur at typical tracking force (1.5–4.0g). The cover has discoloration, wear and damage occurring together in many places.</div></div>
+        <div class="grade-row"><div class="code">P</div><div class="ko">Poor</div><div class="desc">The disc has severe skips and jumps from heavy scratching, and severe noise from deep groove damage. The cover is in very poor condition and is badly damaged in function as well.</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cvf-ft">
+    <div class="cvf-ft-grid">
+      <div class="cvf-ft-col cvf-ft-store"><a class="cvf-ft-mark" href="/en/"><img src="/assets/cv_wordmark_ink.svg" alt="CODEDVINYLS" width="140" height="11"></a><span>CODEDVINYLS Hoehyeon</span><span>Ma-yeol 3, Hoehyeon Underground Shopping Center</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">Instagram @codedvinyls</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">Browse</b><a href="/arrivals/">Arrivals</a><a href="/album/">Albums</a><a href="/archive/">Archive</a><a href="/journal/">Journal</a></div>
+      <div class="cvf-ft-col"><a class="cvf-ft-h" href="/en/store.html">Store &amp; online</a><a href="/en/store.html#visit">Hoehyeon store</a><a href="/notice/">Notices</a><a href="/cd/">In-store CD section</a><a href="/en/store.html#online">Buying online</a></div>
+      <div class="cvf-ft-col"><b class="cvf-ft-h">Guide</b><a href="/en/guide/grading/">Grading standard</a><a href="/guide/glossary/">Glossary</a><a href="/en/shipping-returns.html">Shipping, exchanges &amp; refunds</a><a href="/terms.html">Terms of use</a><a href="/privacy.html">Privacy policy</a><a href="/en/about.html">Business information</a></div>
+    </div>
+    <div class="cvf-ft-base"><span class="cvf-ft-plate">THE VINYL ARCHIVE</span><nav class="cv-lang" aria-label="Language"><a href="/guide/grading/" hreflang="ko" lang="ko" translate="no">한국어</a><a href="/en/guide/grading/" hreflang="en" lang="en" translate="no" aria-current="true">English</a><a href="/ja/guide/grading/" hreflang="ja" lang="ja" translate="no">日本語</a><a href="/zh-cn/guide/grading/" hreflang="zh-Hans" lang="zh-Hans" translate="no">简体中文</a><a href="/zh-tw/guide/grading/" hreflang="zh-Hant" lang="zh-Hant" translate="no">繁體中文</a></nav><p class="cv-i18n-note">We ship within Korea only. There is no international shipping, and we do not sell to buyers outside Korea.</p><div class="cvf-ft-biz"><span>Trade name: 코디드바이닐즈 (CODEDVINYLS) · Representative: 최준홍 · Business registration number: 286-51-00775</span><span>Mail-order business report number: 제2026-서울강남-00575호 · <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2865100775" target="_blank" rel="noopener">Korea Fair Trade Commission business information</a></span><span>Place of business: 서울시 강남구 논현로 38길 20 · Phone: <a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span><span>Hosting provider: GitHub, Inc.</span></div></div>
+  </footer>
+</div>
+
+<script src="/assets/cv-frame.js" defer></script>
+</body>
+</html>

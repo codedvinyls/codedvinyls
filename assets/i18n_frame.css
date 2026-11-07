@@ -1,0 +1,129 @@
+/* CODEDVINYLS 다국어 틀 덧붙임 v1 — 언어 전환 칸 · 안내 칸 · 언어별 서체 (2026-11-05 · 아트디렉터 dg-0611)
+   근거 = online/261103_I18N/_design/lang_switch_v1.md (내부 기록 · 고객 노출 0)
+   · 공용 CSS(cv-frame · cv-type · cv-body · 쪽 안 style) 뒤에 붙는다 — 그 파일들은 고치지 않는다. 한국어 쪽에도 같은 파일을 붙인다.
+   · 글꼴 경로 /assets/fonts/ = 자체 호스팅 자리(대표 D3) · 파일은 P3 글꼴 빌드가 만든다(lang_switch_v1.md §4).
+   · 서체 결 = 두 목소리 그대로(S55-1) — 세리프 = Noto Serif CJK 한 가족(KR · JP · SC · TC 는 같은 설계의 지역판) ·
+     고딕 = Pretendard(라틴 · 한글 · 가나) + 한자만 Noto Sans 지역판 93.8%(Pretendard JP 가 쓴 배율 실측).
+   · 줄 간격 = 모든 언어에서 같은 line-height 수치(줄 높이는 첫 글꼴과 상관없이 같다 · 시안 실측). 기준선 = 일본어 · 한국어 · 영어는
+     Pretendard 가 맨 앞이라 같은 자리. 중국어는 문장부호를 중국어 자리(번체 = 가운데)에 그려야 해서 지역판이 맨 앞 —
+     WebKit 은 맨 앞 글꼴의 높이로 기준선을 잡으므로(unicode-range · ascent-override 무시 · 261105 실측) 한국어 쪽보다 16px 글에서 약 1px 아래.
+     한 쪽 안에서는 모든 글자가 한 기준선 · 같은 줄 간격이다. */
+
+/* ── 0. 글꼴 정의 ── 한자(와 중국어 문장부호)만 지역판으로. 라틴 · 한글 · 가나(· 일본어 문장부호)는 지금 Pretendard 파일 그대로. */
+@font-face{font-family:"CV Sans JP";font-style:normal;font-weight:400;font-display:swap;size-adjust:93.8%;
+  src:url(/assets/fonts/cv-sans-ja-400.woff2) format("woff2");
+  unicode-range:U+3005-3007,U+3012-3013,U+3020-303F,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF}
+@font-face{font-family:"CV Sans SC";font-style:normal;font-weight:400;font-display:swap;size-adjust:93.8%;
+  src:url(/assets/fonts/cv-sans-zh-cn-400.woff2) format("woff2");
+  unicode-range:U+3000-303F,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FF00-FFEF}
+@font-face{font-family:"CV Sans TC";font-style:normal;font-weight:400;font-display:swap;size-adjust:93.8%;
+  src:url(/assets/fonts/cv-sans-zh-tw-400.woff2) format("woff2");
+  unicode-range:U+3000-303F,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FF00-FFEF}
+@font-face{font-family:"CV Serif JP";font-style:normal;font-weight:400;font-display:swap;
+  src:url(/assets/fonts/cv-serif-ja-400.woff2) format("woff2");
+  unicode-range:U+3005-3007,U+3012-3013,U+3020-303F,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF}
+@font-face{font-family:"CV Serif SC";font-style:normal;font-weight:400;font-display:swap;
+  src:url(/assets/fonts/cv-serif-zh-cn-400.woff2) format("woff2");
+  unicode-range:U+3000-303F,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FF00-FFEF}
+@font-face{font-family:"CV Serif TC";font-style:normal;font-weight:400;font-display:swap;
+  src:url(/assets/fonts/cv-serif-zh-tw-400.woff2) format("woff2");
+  unicode-range:U+3000-303F,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FF00-FFEF}
+/* 전환 칸 언어 이름 전용(모든 쪽 · 세 파일 합 5.6KB) — 이름마다 그 언어 자형: 日本語 = JP · 简体中文 = SC · 繁體 = TC(中文 은 SC = TC 같은 자형) */
+@font-face{font-family:"CV Lang Names";font-weight:400;font-display:swap;size-adjust:93.8%;
+  src:url(/assets/fonts/cv-langnames-ja.woff2) format("woff2");unicode-range:U+65E5,U+672C,U+8A9E}
+@font-face{font-family:"CV Lang Names";font-weight:400;font-display:swap;size-adjust:93.8%;
+  src:url(/assets/fonts/cv-langnames-sc.woff2) format("woff2");unicode-range:U+7B80,U+4F53,U+4E2D,U+6587}
+@font-face{font-family:"CV Lang Names";font-weight:400;font-display:swap;size-adjust:93.8%;
+  src:url(/assets/fonts/cv-langnames-tc.woff2) format("woff2");unicode-range:U+7E41,U+9AD4}
+
+/* ── 1. 언어별 서체 스택 ── 쪽 언어 = <html lang> (ja · zh-Hans · zh-Hant). 한국어 · 영어 쪽 = 바꾸지 않는다.
+   일본어 = Pretendard 맨 앞(가나 · 문장부호 = Pretendard, 한자만 CV Sans JP = Pretendard JP 와 같은 짜임) ·
+   중국어 = 지역판 맨 앞(문장부호 ，。、：； = 간체 · 번체 자리) → 라틴 · 한글은 Pretendard 로 내려간다(unicode-range). */
+:root{
+  --cv-sans-ja:"Pretendard Variable","Pretendard","CV Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo","Apple SD Gothic Neo",sans-serif;
+  --cv-serif-ja:"CV Serif JP","Noto Serif KR","Hiragino Mincho ProN","Yu Mincho",serif;
+  --cv-sans-sc:"CV Sans SC","Pretendard Variable","Pretendard","PingFang SC","Microsoft YaHei","Apple SD Gothic Neo",sans-serif;
+  --cv-serif-sc:"CV Serif SC","Noto Serif KR","Songti SC","SimSun",serif;
+  --cv-sans-tc:"CV Sans TC","Pretendard Variable","Pretendard","PingFang TC","Microsoft JhengHei","Apple SD Gothic Neo",sans-serif;
+  --cv-serif-tc:"CV Serif TC","Noto Serif KR","Songti TC","PMingLiU",serif;
+}
+/* 변수를 쓰는 곳(cv-frame --cvf-sans · cv-type --sans · 쪽 안 :root --sans · --serif · --cvf-serif · cv-body --cvb-serif) —
+   html:lang() 이 :root(0,1,0) 보다 세서 쪽 안 style 순서와 상관없이 이긴다. */
+html:lang(ja){--cvf-sans:var(--cv-sans-ja);--sans:var(--cv-sans-ja);--serif:var(--cv-serif-ja);--cvf-serif:var(--cv-serif-ja);
+  --display:"Archivo",var(--cv-sans-ja);--mono:"IBM Plex Mono",ui-monospace,Menlo,"CV Sans JP","Hiragino Sans",monospace}
+html:lang(zh-Hans),html:lang(zh-CN){--cvf-sans:var(--cv-sans-sc);--sans:var(--cv-sans-sc);--serif:var(--cv-serif-sc);--cvf-serif:var(--cv-serif-sc);
+  --display:"Archivo",var(--cv-sans-sc);--mono:"IBM Plex Mono",ui-monospace,Menlo,"CV Sans SC","PingFang SC",monospace}
+html:lang(zh-Hant),html:lang(zh-TW),html:lang(zh-HK){--cvf-sans:var(--cv-sans-tc);--sans:var(--cv-sans-tc);--serif:var(--cv-serif-tc);--cvf-serif:var(--cv-serif-tc);
+  --display:"Archivo",var(--cv-sans-tc);--mono:"IBM Plex Mono",ui-monospace,Menlo,"CV Sans TC","PingFang TC",monospace}
+html:lang(ja) body.cvb-on{--cvb-serif:var(--cv-serif-ja)}
+html:lang(zh-Hans) body.cvb-on,html:lang(zh-CN) body.cvb-on{--cvb-serif:var(--cv-serif-sc)}
+html:lang(zh-Hant) body.cvb-on,html:lang(zh-TW) body.cvb-on,html:lang(zh-HK) body.cvb-on{--cvb-serif:var(--cv-serif-tc)}
+/* 서체 이름을 직접 적은 곳(cv-frame .cvf-serif · .cvf-info-lead · 쪽 안 .kw h1 · .kw-lead 16쪽) */
+html:lang(ja) :is(.cvf-serif,.cvf-info-lead,.kw h1,.kw-lead){font-family:var(--cv-serif-ja)}
+html:is(:lang(zh-Hans),:lang(zh-CN)) :is(.cvf-serif,.cvf-info-lead,.kw h1,.kw-lead){font-family:var(--cv-serif-sc)}
+html:is(:lang(zh-Hant),:lang(zh-TW),:lang(zh-HK)) :is(.cvf-serif,.cvf-info-lead,.kw h1,.kw-lead){font-family:var(--cv-serif-tc)}
+
+/* ── 2. 일 · 중 줄바꿈 ── keep-all(한국어 띄어쓰기 단위)은 일 · 중 문장을 한 낱말로 묶어 넘친다 → 글자 단위 + 금칙.
+   제목 세리프의 전각 가운뎃점 · 괄호 = palt(비례 폭) — 한국어 제목의 「·」 와 같은 간격. */
+html:is(:lang(ja),:lang(zh)) body *{word-break:normal;line-break:strict;overflow-wrap:break-word}
+html:is(:lang(ja),:lang(zh)) :is(h1,.cvf-serif){font-feature-settings:"palt" 1}
+/* 글자 단위 줄바꿈은 끝줄에 한두 글자(「す。」)를 남긴다 → 문단 · 칸 = pretty(끝줄 외톨이 막음 · balance 는 뜻 단위를 끊어 기각 = C40 ③) */
+html:is(:lang(ja),:lang(zh)) :is(p,li,dd,dt,h2,h3){text-wrap:pretty}
+/* 일본어 제목 · 첫 글 = 낱말(구) 단위 줄바꿈 — Chrome 119+ 만(Safari 는 이 값을 버리고 위 normal 로 남는다 · 본문은 글자 단위가 일본어 관행) */
+html:lang(ja) :is(h1,h2,h3,.cvf-serif,.cvf-info-lead,p.lede,.dek){word-break:auto-phrase}
+
+/* ── 3. 언어 전환 칸 nav.cv-lang ── 자리 = 꼬리 판권 줄(넓은 화면 = 4번째 칸 「안내」 열) · 휴대폰 메뉴 시트 바닥(NAP 위).
+   머리 0 · 국기 0 · 이름 사이 가운뎃점 0(S56-5) · 지금 언어 = 잉크 + 잉크 밑줄(메뉴 현재 위치와 같은 표지 · 노랑 0) ·
+   그 쪽이 없는 언어 = 칸에서 뺀다 · 다른 언어가 하나도 없으면 칸 전체 0(S59-4). */
+.cv-lang{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:20px;row-gap:0;margin:0;padding:0;
+  font-family:"Pretendard Variable","Pretendard","CV Lang Names",var(--cvf-sans);font-weight:400;font-size:13px;line-height:18px;letter-spacing:0}
+.cv-lang a{display:inline-block;padding:3px 0 2px;color:var(--cvf-muted,#6b655a);text-decoration:none;
+  border-bottom:1px solid transparent;white-space:nowrap}
+.cv-lang a:hover{color:var(--ink,#1f1e1b)}
+.cv-lang a[aria-current]{color:var(--ink,#1f1e1b);border-bottom-color:var(--ink,#1f1e1b)}
+.cv-lang a:focus-visible{outline:1px solid var(--ink,#1f1e1b);outline-offset:3px}
+
+/* 꼬리 — 판권 줄을 꼬리 칸 격자(4열 · 24px)에 맞춘다: 판권 · 안내 줄 · 신원 줄 = 1~3열 / 언어 = 4열 세로 목록.
+   언어 칸이 없는 쪽(한국어만 있는 쪽)은 지금 꼴 그대로(:has 가 안 걸린다). */
+.cvf-ft-base:has(> .cv-lang){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px;row-gap:10px;align-items:start}
+.cvf-ft-base:has(> .cv-lang) > :not(.cv-lang){grid-column:1 / span 3}
+.cvf-ft-base > .cv-lang{grid-column:4;grid-row:1 / span 2;flex-direction:column;align-items:flex-start;row-gap:0}
+.cvf-ft-base:has(> .cv-i18n-note) > .cv-lang{grid-row:1 / span 3}
+.cvf-ft-base:has(> .cv-lang) > :is(.cvf-ft-plate,.cv-lang){align-self:baseline}
+
+/* 휴대폰 메뉴 시트 — NAP 바로 위 한 줄(시트 바닥 = 판권 자리) · 밑줄 = 글자 아래 약 0.55em(꼬리 · 메뉴와 같은 거리) ·
+   누르는 칸 = 보이는 칸 27px + 위아래 8 · 9px 투명 연장 = 44px(이웃 칸과 겹침 0 · 간격 16 = 좌우 연장 8 + 8) */
+.cvf-sheet .cv-lang{margin-top:auto;padding-top:48px;font-size:15px;line-height:20px;column-gap:16px}
+.cvf-sheet .cv-lang a{position:relative;padding:3px 0 3px}
+.cvf-sheet .cv-lang a::after{content:"";position:absolute;left:-8px;right:-8px;top:-8px;bottom:-9px}
+.cvf-sheet .cv-lang + .cvf-sheet-nap{margin-top:16px;padding-top:0}
+
+/* ── 4. 안내 칸 .cv-i18n-note ── 법정 고지에 가까운 안내: 상자 · 색 면 · 노랑 · 아이콘 0 → 집 「안내 띠」 꼴(위아래 헤어라인 + 잉크 글자).
+   첫 줄(국내 배송만) = 잉크 · 나머지 = 본문 회색(#3a372f) · 「원문 →」 = 집 행동 링크 꼴(잉크 밑줄 1px).
+   헤어라인 길이 = 본문 칸(760 · 아래 「배송 · 등급」 줄 헤어라인과 같은 끝) · 글줄 길이 = 40em(일 · 중 40자 · 영 약 75자).
+   여는 선 = 잉크 1px · 닫는 선 = 옅은 헤어라인 — 쪽 구획선 · 링크 줄과 같은 옅은 선만 쌓이면 칸이 묻힌다(적대 비평 261105 · 시안 A~D 대조). */
+div.cv-i18n-note{box-sizing:border-box;max-width:760px;margin:24px 0;padding:16px 0 17px;
+  border-top:1px solid var(--ink,#1f1e1b);border-bottom:1px solid var(--cvf-line,#d8d2c6);
+  font-size:15px;line-height:1.75;color:#3a372f}
+div.cv-i18n-note p{margin:0;max-width:40em}
+div.cv-i18n-note p + p{margin-top:6px}
+div.cv-i18n-note > p:first-child{color:var(--ink,#1f1e1b)}
+/* cv-body(body.cvb-on a … !important · 특정도 0,2,3)를 넘어야 해서 :root 를 한 번 더 적는다(0,3,3) */
+html:root body div.cv-i18n-note a[href]{color:var(--ink,#1f1e1b) !important;text-decoration:none;white-space:nowrap;
+  border-bottom:1px solid var(--ink,#1f1e1b) !important;padding-bottom:1px}
+html:root body div.cv-i18n-note a[href]:hover{border-bottom-width:2px !important;padding-bottom:0}
+/* 본문 결 쪽(body.cvb-on)은 번역 층이 칸을 .doc-hero 안(p.lede 뒤)에 넣는다 — cv-body 가 .doc-hero p 를 세리프로 묶으므로
+   (!important · :is() 안 최대 .hero-copy .lede 라 특정도 0,3,1) 칸은 어느 쪽에서나 고딕 한 꼴로 되돌린다(클래스 두 번 = 0,3,4) ·
+   .doc-hero 는 세로 flex(gap 18) → 칸 위 여백 6 */
+html:root body div.cv-i18n-note.cv-i18n-note,html:root body div.cv-i18n-note.cv-i18n-note :is(p,a){font-family:var(--cvf-sans) !important;font-weight:400 !important;letter-spacing:normal !important}
+.doc-hero > div.cv-i18n-note{margin:6px 0 0}
+/* 꼬리 판권 줄 안 한 줄 — 둘레 회색 글자 사이에서 잉크로만 선다(크기 · 굵기 그대로) */
+.cvf-ft-base p.cv-i18n-note{margin:0;max-width:52em;color:var(--ink,#1f1e1b)}
+
+@media(max-width:860px){
+  .cvf-ft-base:has(> .cv-lang){display:flex;flex-direction:column;gap:10px}
+  .cvf-ft-base > .cv-lang{flex-direction:row;align-items:baseline;column-gap:16px;row-gap:0;font-size:13px}
+  .cvf-ft-base > .cv-lang a{padding:4px 0 3px}
+  div.cv-i18n-note{margin:20px 0;padding:14px 0 15px;font-size:14px;line-height:1.7}
+}
+@media print{.cv-lang{display:none !important}}
