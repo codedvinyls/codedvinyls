@@ -27,3 +27,22 @@
   };
   document.head.appendChild(w);
 })();
+
+/* ★261105 [261105-3차] 전환 측정 — 스마트스토어로 넘어가는 클릭 = GA4 이벤트 smartstore_click.
+   GA4 향상된 측정(외부 링크 click) 설정과 상관없이 잡는다 · 개인정보 0(주소·상품번호만).
+   수집 = GA4 → 일간·주간 리포트. */
+(function () {
+  var HOST_RE = /(^|\.)smartstore\.naver\.com$/i;
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || !window.gtag) return;
+    var host = a.hostname || '';
+    if (!HOST_RE.test(host)) return;
+    var m = (a.pathname || '').match(/\/products\/(\d+)/);
+    window.gtag('event', 'smartstore_click', {
+      link_url: a.href,
+      product_no: m ? m[1] : '',
+      page_path: location.pathname
+    });
+  }, true);
+})();
