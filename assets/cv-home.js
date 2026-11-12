@@ -1,6 +1,7 @@
 /* CODEDVINYLS 입고 목록 동작 (2026-10-26)
    · 「회현동 매장」 보기 = 같은 목록에서 매장 칸만(#store) · 스크립트가 없으면 전부 보인다.
-   · 처음엔 24칸 · 「더 보기」로 24칸씩. */
+   · 처음엔 24칸 · 「더 보기」로 24칸씩.
+   홈 둘러보기 자리 레이블 고르는 칸 — 맨 아래 절. */
 (function () {
   "use strict";
   var main = document.querySelector(".cvl");
@@ -50,25 +51,17 @@
   render();
 })();
 
-/* 홈 「최근 7일 입고」 아래 자켓 칸 전환 (2026-11-05)
-   · 기본 = 온라인(자사몰 전까지 · 대표 261105) · 버튼은 보이기만 바꾼다 · 스크립트가 없으면 두 칸 다 보이고 버튼 = 목록 쪽 링크. */
+/* 홈 둘러보기 자리 레이블 고르는 칸(HTML 은 hidden = 자리만 · 여기서 연다 · /album/ 필터 줄과 같은 규칙)
+   고르면 /album/?label=<값>(cv-album.js 가 읽는 꼴) · 뒤로 돌아오면 첫 칸으로(pageshow)
+   첫 칸 = 빈 값 · 골라도 이동 0 */
 (function () {
   "use strict";
-  var box = document.querySelector(".cvh-tabs");
-  if (!box) return;
-  var chips = Array.prototype.slice.call(box.querySelectorAll("a[data-tab]"));
-  var panes = Array.prototype.slice.call(box.querySelectorAll("[data-pane]"));
-  var more = box.querySelector(".cvh-tabmore");
-  box.classList.add("cvh-tabs-js");   // 전환 중엔 두 칸이 같은 자리(쌓임 간격 0)
-  function show(k) {
-    panes.forEach(function (p) { p.hidden = p.getAttribute("data-pane") !== k; });
-    chips.forEach(function (a) {
-      if (a.getAttribute("data-tab") === k) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
-    });
-    if (more && more.getAttribute("data-" + k)) more.setAttribute("href", more.getAttribute("data-" + k));
-  }
-  chips.forEach(function (a) {
-    a.addEventListener("click", function (e) { e.preventDefault(); show(a.getAttribute("data-tab")); });
+  var box = document.querySelector(".cvh-sel"), sel = box && box.querySelector("select");
+  if (!sel) return;
+  box.hidden = false;
+  sel.addEventListener("change", function () {
+    if (!sel.value) return;
+    location.href = sel.getAttribute("data-go") + encodeURIComponent(sel.value);
   });
-  show(box.getAttribute("data-tab") || "online");
+  window.addEventListener("pageshow", function () { sel.value = ""; });
 })();

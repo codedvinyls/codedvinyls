@@ -128,8 +128,84 @@
   .cvl-cell h2{font-size:21px;margin-top:6px !important}
   .cvl-cell .n{font-size:13px;margin-top:6px !important}
 }
-/* ★261105 홈 최근 7일 아래 자켓 칸 전환(온라인 · 회현동 매장) — 버튼 = 입고 목록 칩 모양 · 스크립트 없으면 두 칸 다 보임 */
-.cvh-tabbar .cvl-chips{margin-top:0}
-.cvh-tabbar .cvl-chips a[aria-current="true"]{color:var(--ink,#1f1e1b);border-bottom-color:var(--ink,#1f1e1b)}
-.cvh-tabs [data-pane][hidden]{display:none}
-.cvh-tabs:not(.cvh-tabs-js) [data-pane]+[data-pane]{margin-top:48px}
+/* 홈 「최근 7일 입고」 = 회차마다 자켓 줄 · 줄 목록 + 전환 격자를 한 영역으로.
+   이름표(고딕) + 회차 제목(세리프) · 날짜는 하루 한 번 · 헤어라인 · 굵은 글자 0 · 노랑 = 매장 틱만(온라인 = 회색 틱) · 자켓 아래 이름 0(alt 만) */
+.cvh-week{display:block;padding-top:44px}
+.cvh-week-top{display:grid;grid-template-columns:5fr 7fr;column-gap:24px;align-items:start}
+.cvh-week-ttl .cvh-show-meta{margin-top:14px}
+.cvh-week .cvh-go{justify-self:start;align-self:auto;display:inline-flex;align-items:center;min-height:44px;margin-top:20px;border-bottom:0;padding:0;
+  text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.cvh-days{margin-top:44px;border-top:1px solid var(--ln)}
+.cvh-day{display:grid;grid-template-columns:120px minmax(0,1fr);border-bottom:1px solid var(--ln)}
+.cvh-d{font-size:15px;line-height:1.65;color:var(--mu);padding-top:24px}
+.cvh-shelf{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:40px;align-items:center;padding:24px 0}
+.cvh-shelf+.cvh-shelf{border-top:1px solid var(--ln)}
+.cvh-sh{display:block;align-self:stretch;padding:4px 0}
+.cvh-k{display:block;font-size:14px;line-height:1.6;color:var(--ink,#1f1e1b)}
+.cvh-h{display:block;font-size:19px;line-height:1.5;margin-top:4px;text-wrap:pretty}
+.cvh-ar{font-family:var(--cvf-sans);font-size:15px;margin-left:12px;white-space:nowrap}
+.cvh-tick-g{background:transparent}   /* 온라인 틱 색 0 · 13px 자리는 남김(이름표 시작선) · 새 색 0 */
+.cvh-k-g{color:var(--mu)}             /* 온라인 줄 이름표 = 회색 글자(입고 목록 .cvl-cell .k 와 같은 꼴) · 매장 줄 = 잉크 그대로 */
+.cvh-k-g .cvh-ar{color:var(--ink,#1f1e1b)}   /* 제목 줄 0 인 줄의 → = 제목 줄 → 와 같은 잉크(이름표 글자만 회색) */
+.cvh-strip{display:grid;grid-template-columns:repeat(5,128px);gap:8px}
+.cvh-strip a{display:block}
+.cvh-strip img{aspect-ratio:1/1;object-fit:cover;height:auto}
+@media(max-width:860px){
+  .cvh-week{padding-top:28px}
+  .cvh-week-top{display:block}
+  .cvh-week-ttl h1{margin-top:0 !important}
+  .cvh-days{margin-top:28px}
+  .cvh-day{display:block}
+  .cvh-d{font-size:13px;padding-top:14px}
+  .cvh-k{font-size:13px}
+  .cvh-h{font-size:17px;margin-top:3px}
+  .cvh-shelf{display:block;padding:12px 0 20px}
+  .cvh-sh{padding:0 0 12px}
+  .cvh-strip{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+  .cvh-strip a:nth-child(n+5){display:none}
+}
+/* 홈 첫 화면 = 자켓 벽 · 펼침 두 장 대체.
+   PC 6열(큰 칸 2×2 + 작은 칸 8) · 휴대폰 3열(큰 칸 + 작은 칸 5) · 매트 · 그림자 · 글자 0 · 벽 아래 글 = 펼침 글 1번 */
+.cvh-wall{display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+.cvh-wall a{display:block;position:relative;min-width:0}
+.cvh-wall img{aspect-ratio:1/1;object-fit:cover;height:auto}
+.cvh-wall .cvh-wall-sm{aspect-ratio:1/1}
+.cvh-wall .cvh-wall-big{grid-column:span 2;grid-row:span 2}
+.cvh-wall .cvh-wall-big img{position:absolute;inset:0;width:100%;height:100%}
+.cvh-wallcap{grid-template-columns:1fr}
+@media(max-width:860px){
+  .cvh-wall{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cvh-wall .cvh-wall-sm:nth-child(n+7){display:none}
+  .cvh-wallcap{display:none}   /* 3열 벽에선 글이 바로 위 작은 칸 이름으로 읽힘 → 휴대폰 꼴 0 · PC 그대로 */
+}
+/* 홈 둘러보기 자리(검색 칸 0) · 줄 높이 고정 격자:
+   앨범 / 장르 / 레이블 · 헤어라인 · 굵은 글자 0 · 노랑 0 · 상자 0 · 이름이 한 줄을 넘치면 가림(줄 높이 고정) ·
+   검색 칸 = 기능이 생길 때 「앨범」 줄 오른쪽 끝(줄 높이 · 아래 칸 이동 0) */
+.cvh-browse{border-top:1px solid var(--ln)}
+.cvh-brow{position:relative;display:grid;grid-template-columns:96px minmax(0,1fr) auto;column-gap:0;align-items:center;height:48px;box-sizing:content-box;border-bottom:1px solid var(--ln)}
+.cvh-brow .cvh-pk{font-size:14px;color:var(--mu)}
+.cvh-bn{display:flex;flex-wrap:wrap;gap:0 32px;height:48px;overflow:hidden;font-size:18px;line-height:1.5;margin:0}
+.cvh-bn a,.cvh-pick{display:inline-flex;align-items:center;height:48px;min-width:44px;white-space:nowrap}
+.cvh-be{display:flex;align-items:center;margin-left:24px}
+.cvh-pick{font-size:18px;margin-right:32px}
+.cvh-sel{position:relative;display:inline-block;width:120px}
+.cvh-sel[hidden]{visibility:hidden}   /* JS 없으면 자리만(안 보이고 누를 수 없음 · /album/ 필터 줄과 같은 규칙) · 열려도 칸 이동 0 */
+.cvh-sel select{display:block;width:100%;height:48px;font:inherit;font-size:16px;color:var(--ink,#1f1e1b);-webkit-appearance:none;appearance:none;background:none;border:0;
+  border-bottom:1px solid var(--mu);border-radius:0;padding:0 24px 0 0;margin:0;cursor:pointer}
+.cvh-sel::after{content:"";position:absolute;right:6px;top:50%;margin-top:-2px;border:4px solid transparent;border-top:5px solid var(--mu);pointer-events:none}
+.cvh-sel select:focus-visible,.cvh-bn a:focus-visible{outline:2px solid var(--ink,#1f1e1b)}
+@media(max-width:860px){
+  .cvh-browse{margin-top:20px}
+  .cvh-brow{grid-template-columns:56px minmax(0,1fr) auto;height:44px}
+  .cvh-brow .cvh-pk{font-size:13px}
+  .cvh-bn{gap:0 20px;height:44px;font-size:16px}
+  .cvh-bn a,.cvh-pick{height:44px}
+  .cvh-pick{font-size:16px;margin-right:0}
+  .cvh-b-label{grid-template-rows:44px 44px;height:88px}      /* 휴대폰 = 이름 한 줄 + 고르는 칸 한 줄(늘 88) */
+  .cvh-b-label .cvh-pk{grid-row:1;grid-column:1}
+  .cvh-b-label .cvh-bl{grid-row:1;grid-column:2}
+  .cvh-be{display:contents}
+  .cvh-b-label .cvh-pick{grid-row:1;grid-column:3;margin-left:20px}
+  .cvh-sel{grid-row:2;grid-column:2/4;width:auto}
+  .cvh-sel select{height:44px}
+}
