@@ -188,6 +188,10 @@ footer{background:var(--ink);color:var(--paper)}
 .gal-close:focus-visible{outline:2px solid var(--yellow)}
 @media(max-width:1080px){.gal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:680px){.gal-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;row-gap:32px}.gal-title{font-size:13.5px}.gal-lb-inner{grid-template-columns:1fr;padding:44px 18px 24px}}
+
+.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-family:var(--cvf-sans,"Pretendard Variable","Pretendard",sans-serif);font-size:13px;font-weight:400;letter-spacing:0;color:var(--cvf-muted,#6b655a)}
+.rec-deal.cv-sold-row{display:flex;align-items:baseline;gap:12px;border-top:1px solid var(--line);padding-top:12px;line-height:1.3}
+@media(max-width:860px){.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-size:12px}}
 </style>
 <link rel="stylesheet" href="/assets/cv-album.css">
 <link rel="stylesheet" href="/assets/cv-body.css">
@@ -245,7 +249,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Ludwig van Beethoven, Gewandhausorchester Leipzig , Dirigent: Franz Konwitschny</span>
             <span class="gal-title">Ouvertüren</span>
-            <span class="gal-price" data-krw="329000">₩329,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식</dd></div>
@@ -264,7 +268,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Antonin Dvořák</span>
             <span class="gal-title">Aus Der Neuen Welt (Sinfonie Nr.9 E-moll Op.95)</span>
-            <span class="gal-price" data-krw="189000">₩189,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식 · 낭만</dd></div>
@@ -283,7 +287,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Chaoten-Orchester</span>
             <span class="gal-title">Chaotenorchester</span>
-            <span class="gal-price" data-krw="109000">₩109,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식 · 재즈</dd></div>
@@ -378,7 +382,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Wolfgang Amadeus Mozart, Columbia Symphonie-Orchester Dirigent: Bruno Walter</span>
             <span class="gal-title">Sinfonie C-Dur KV 551 (Jupiter-Sinfonie) / Sinfonie D-Dur KV 385 (Haffner-Sinfonie)</span>
-            <span class="gal-price" data-krw="15000">₩15,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식</dd></div>
@@ -459,7 +463,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Leonid Kogan, Nina Kogan, Pavel Kogan, Gennadi Rozhdestvensky</span>
             <span class="gal-title">Leonid/Nina/Pawel Kogan</span>
-            <span class="gal-price" data-krw="49000">₩49,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식 · 낭만</dd></div>
@@ -497,7 +501,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Bach - Karl Suske, Giorgio Kröhner, Gewandhausorchester Leipzig, Kurt Masur</span>
             <span class="gal-title">Violinkonzerte A-moll BWV 1041 / E-moll BWV 1042 / Doppelkonzert D-moll BWV 1043</span>
-            <span class="gal-price" data-krw="159000">₩159,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식 · 바로크</dd></div>
@@ -573,7 +577,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Mstislaw Rostropowitsch, Peter I. Tschaikowski, Robert Schumann, Leningrader Philharmonie, Gennadi Roshdestwenski</span>
             <span class="gal-title">Variationen Über Ein Rokoko-Thema Für Violoncello Und Orchester Op.33 / Konzert Für Violoncello Und Orchester A-Moll Op.129</span>
-            <span class="gal-price" data-krw="35000">₩35,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식 · 낭만</dd></div>
@@ -597,7 +601,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Daniil Schafran, Anton Ginsburg</span>
             <span class="gal-title">César Franck / Claude Debussy – Cellosonate A-Dur / Cellosonate D-Moll - Menuett - Minstrels</span>
-            <span class="gal-price" data-krw="219000">₩219,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식 · 낭만</dd></div>
@@ -673,7 +677,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Ludwig van Beethoven, Tast · Suske · Olbertz, Casper · Hähnchen, Wolffram · Pfaender</span>
             <span class="gal-title">Flötensonate B-dur Anh. 4 / Violinrondo G-dur WoO 41 / Klaviertrios G-dur WoO 37 / Es-dur Hess 48</span>
-            <span class="gal-price" data-krw="25000">₩25,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식 · 챔버</dd></div>
@@ -754,7 +758,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Starker Plays Kodaly</span>
             <span class="gal-title">Sonata For Unaccompanied &#x27;Cello, Op. 8 / Duo For Violin And &#x27;Cello, Op. 7</span>
-            <span class="gal-price" data-krw="85000">₩85,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식 · 모던</dd></div>
@@ -936,7 +940,7 @@ footer{background:var(--ink);color:var(--paper)}
     </dialog>
     <div class="callout">
       <p>서른다섯 장 모두 회현동 매장에 진열 완료했습니다.<br><span style="opacity:.72;font-size:13.5px">코디드바이닐즈 회현 · 회현 지하쇼핑센터 마열 3호</span></p>
-      <div class="links"><a href="/store.html#visit">회현동 매장 →</a> · <a href="/arrivals/2026-10-22-classical/">같은 날 들어온 클래식 10장 →</a> · <a href="/arrivals/2026-10-22-classical-2/">같은 날 들어온 클래식 26장 →</a> · <a href="/arrivals/2026-10-22-mix/">같은 날 들어온 록 29장 →</a></div>
+      <div class="links"><a href="/store.html#visit">회현동 매장 →</a> · <a href="/arrivals/2026-10-22-classical/">같은 날 들어온 클래식 10장 →</a> · <a href="/arrivals/2026-10-22-classical-2/">같은 날 들어온 클래식 25장 →</a> · <a href="/arrivals/2026-10-22-mix/">같은 날 들어온 록 29장 →</a></div>
     </div>
   </article>
   <footer class="cvf-ft">
