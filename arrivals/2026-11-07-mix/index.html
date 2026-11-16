@@ -224,6 +224,10 @@ html:has(.gal-lb[open]){overflow:hidden}
  .gal-lb-cur{margin-top:22px;line-height:1.78}
  .gal-lb-spec{margin-top:24px}
 }
+
+.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-family:var(--cvf-sans,"Pretendard Variable","Pretendard",sans-serif);font-size:13px;font-weight:400;letter-spacing:0;color:var(--cvf-muted,#6b655a)}
+.rec-deal.cv-sold-row{display:flex;align-items:baseline;gap:12px;border-top:1px solid var(--line);padding-top:12px;line-height:1.3}
+@media(max-width:860px){.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-size:12px}}
 </style>
 <link rel="stylesheet" href="/assets/cv-album.css">
 <link rel="stylesheet" href="/assets/cv-body.css">
@@ -496,7 +500,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">The Beatles</span>
             <span class="gal-title">Live At The BBC</span>
-            <span class="gal-price" data-krw="59000">₩59,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>비틀스(The Beatles)가 BBC 라디오에 출연해 남긴 연주를 공식 음반으로는 처음 모아 낸 앨범이에요. 제작 총괄은 조지 마틴(George Martin)이 맡았습니다.</p>
           <dl class="gal-spec" hidden>
@@ -763,7 +767,7 @@ html:has(.gal-lb[open]){overflow:hidden}
     </dialog>
     <div class="callout">
       <p>스무 장 모두 회현동 매장에 진열 완료했습니다.<br><span style="opacity:.72;font-size:13.5px">코디드바이닐즈 회현 · 회현 지하쇼핑센터 마열 3호</span></p>
-      <div class="links"><a href="/store.html#visit">회현동 매장 →</a> · <a href="/arrivals/2026-11-07-soul/">같은 날 들어온 소울 20장 →</a> · <a href="/arrivals/2026-11-07-jazz/">같은 날 들어온 재즈 24장 →</a></div>
+      <div class="links"><a href="/store.html#visit">회현동 매장 →</a> · <a href="/arrivals/2026-11-07-soul/">같은 날 들어온 소울 20장 →</a> · <a href="/arrivals/2026-11-07-jazz/">같은 날 들어온 재즈 22장 →</a></div>
     </div>
   </article>
   <footer class="cvf-ft">
