@@ -224,6 +224,10 @@ html:has(.gal-lb[open]){overflow:hidden}
  .gal-lb-cur{margin-top:22px;line-height:1.78}
  .gal-lb-spec{margin-top:24px}
 }
+
+.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-family:var(--cvf-sans,"Pretendard Variable","Pretendard",sans-serif);font-size:13px;font-weight:400;letter-spacing:0;color:var(--cvf-muted,#6b655a)}
+.rec-deal.cv-sold-row{display:flex;align-items:baseline;gap:12px;border-top:1px solid var(--line);padding-top:12px;line-height:1.3}
+@media(max-width:860px){.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-size:12px}}
 </style>
 <link rel="stylesheet" href="/assets/cv-album.css">
 <link rel="stylesheet" href="/assets/cv-body.css">
@@ -297,7 +301,7 @@ html:has(.gal-lb[open]){overflow:hidden}
             <div class="gal-press"><dt>판본</dt><dd>Original First Press, Gatefold</dd></div>
             <div class="gal-press"><dt>공장·마스터링</dt><dd>피트먼(Pitman) 공장 프레싱 · 아티즌 사운드 레코더스(Artisan Sound Recorders) 마스터링</dd></div>
             <div class="gal-press"><dt>런아웃</dt><dd>P — 피트먼 공장 식별 기호 · 아티즌 사운드 로고(Artisan Sound Logo) — 아티즌 마스터링 표시</dd></div>
-            <div class="gal-press"><dt>상태</dt><dd>자켓에 코너 컷(cut corner)이 있고, 음반 라벨에는 갈색 반점과 변색이 있어요. 재생 상태는 겉보기 등급보다 한 단계 높게 판정했습니다.</dd></div>
+            <div class="gal-press"><dt>상태</dt><dd>자켓에 코너 컷(cut corner)이 있고, 음반 라벨에는 갈색 반점과 변색이 있어요. 반 상태 대비 재생 상태가 우수합니다.</dd></div>
           </dl>
           <a class="gal-album is-direct" href="/album/luis-gasca-for-those-who-chant-1807/" hidden>자세히 보기 →</a>
         </li>
@@ -828,7 +832,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">Art Farmer-Benny Golson Jazztet</span>
             <span class="gal-title">Here And Now</span>
-            <span class="gal-price" data-krw="89000">₩89,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>아트 파머(Art Farmer)와 베니 골슨(Benny Golson)이 함께 이끈 재즈텟(Jazztet)의 앨범입니다. 뉴욕 놀라 스튜디오(Nola Studios)에서 녹음했고, 엔지니어는 토미 놀라(Tommy Nola)였어요.</p>
           <dl class="gal-spec" hidden>
