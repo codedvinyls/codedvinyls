@@ -164,7 +164,7 @@
 {"l":"buddah-records","lc":"Buddah Records BDS 5720","n":1850,"on":1,"pr":15000,"t":1,"v":"Canada 1st Press · 1979","y":1979},
 {"g":"soul","l":"mca-records","lc":"MCA Records MCA-42029","n":1851,"on":1,"pr":12000,"t":1,"v":"US 1st Press · 1987","y":1987},
 {"g":"soul","l":"a-m-records","lc":"A&M Records SP-4626","n":1852,"on":1,"pr":15000,"t":1,"v":"US 1st Press · 1977","y":1977},
-{"g":"soul","l":"warner-bros-records","lc":"Warner Bros. Records BSK 3668","n":1853,"on":1,"pr":12000,"t":1,"v":"US 1st Press · 1982","y":1982},
+{"g":"soul","l":"warner-bros-records","lc":"Warner Bros. Records BSK 3668","n":1853,"on":0,"s":1,"t":1,"v":"US 1st Press · 1982","y":1982},
 {"g":"soul","l":"united-artists-records","lc":"United Artists Records UA-LA729-G","n":1854,"on":0,"s":1,"t":1,"v":"US 1st Press · 1977","y":1977},
 {"g":"soul","l":"private-stock","lc":"Private Stock PS 2031","n":1855,"on":1,"pr":13000,"t":1,"v":"US 1st Press · 1977","y":1977},
 {"g":"soul","l":"qwest-records","lc":"Qwest Records 25510-1","n":1856,"on":1,"pr":12000,"t":1,"v":"US 1st Press · 1987","y":1987},
