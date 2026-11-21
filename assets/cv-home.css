@@ -209,3 +209,103 @@
   .cvh-sel{grid-row:2;grid-column:2/4;width:auto}
   .cvh-sel select{height:44px}
 }
+
+/* ── ★261119 디깅 시안 B(아트디렉터 dg-1056) → ★261120 구현 — 홈 첫 화면 검색 줄(공지 줄 바로 아래 · 가는 선 하나 · 노랑 0) ── */
+.cvh-vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.cvh-dig{display:flex;align-items:center;gap:20px;margin:0 var(--g);min-height:60px;border-bottom:1px solid var(--ln)}
+.cvh-dig-q{flex:1;min-width:0;margin:0;display:flex;align-items:center;gap:20px}
+.cvh-dig-k{flex:none;font-size:13px;color:var(--mu)}   /* 공지 줄 「공지」와 같은 크기 · 같은 시작선 → 입력 글 시작선 = 공지 글 시작선 */
+.cvh-dig-q input{display:block;width:100%;box-sizing:border-box;height:44px;font:inherit;font-size:17px;color:var(--ink,#1f1e1b);background:none;border:0;border-radius:0;
+  padding:0;margin:0;-webkit-appearance:none;appearance:none}
+.cvh-dig-q input::placeholder{color:var(--mu);opacity:1}
+.cvh-dig-q input:focus{outline:none}
+.cvh-dig:focus-within{border-bottom-color:var(--ink,#1f1e1b)}
+.cvh-dig-go{flex:none;width:44px;height:44px;font:inherit;font-size:17px;color:var(--ink,#1f1e1b);background:none;border:0;padding:0;margin:0;cursor:pointer}
+.cvh-dig-go:focus-visible,.cvh-dig-all:focus-visible{outline:2px solid var(--ink,#1f1e1b)}
+.cvh-dig-all{flex:none;font-size:14px;padding-left:20px;border-left:1px solid var(--ln);line-height:44px}   /* 누르는 칸 높이 44 */
+@media(max-width:860px){
+  .cvh-dig{min-height:52px;gap:12px}
+  .cvh-dig-q{gap:12px}   /* 휴대폰 공지 줄 「공지」↔글 간격 12 와 같게 → 입력 글 시작선 = 공지 글 시작선 */
+  .cvh-dig-q input{font-size:16px}
+  .cvh-dig-all{font-size:13px;padding-left:14px}
+}
+/* ── ★261120 홈 3단(대표 261119~20 · 원장 [261117 집행 1차] 108) — 새 칸 = section.cvh-block(외국어 홈 = 번역 층이 통째로 내림) ── */
+.cvh-block.cvh-q{padding:0}   /* 검색 줄 = 공지 띠 바로 아래(위 여백 0) */
+.cvh-block.cvh-gx{padding-top:28px}
+.cvh-gx .cvh-sec{margin-bottom:8px !important;border-top:0;padding-top:0}   /* 검색 줄 아래 겹선 0 */
+.cvh-gx{--cg:16px}
+.cvh-gx-row{padding-top:20px}
+.cvh-gx-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:0 0 12px}
+.cvh-gx-h h3{font-size:17px;font-weight:400;margin:0}
+.cvh-gx-c{display:flex;align-items:baseline;gap:4px;font-size:14px}
+.cvh-gx-c a{margin-left:12px;padding:12px 0;color:var(--ink,#1f1e1b)}   /* 누르는 칸 높이 ≥44 */
+.cvh-gx-b{font:inherit;font-size:15px;width:36px;height:36px;color:var(--ink,#1f1e1b);background:none;border:1px solid var(--ln);border-radius:50%;padding:0;cursor:pointer}
+.cvh-gx-b:disabled{color:var(--ln);cursor:default}
+.cvh-gx-s{list-style:none;margin:0;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 5 * var(--cg)) / 6);gap:0 var(--cg);
+  overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding:0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cvh-gx-s::-webkit-scrollbar{display:none}
+.cvh-gc{min-width:0;scroll-snap-align:start}
+.cvh-gc a,.cvh-sets-l a{display:block;color:inherit}
+.cvh-dimg{display:block;aspect-ratio:1/1;background:#ebe7de;overflow:hidden}
+.cvh-dimg img{display:block;width:100%;height:100%;object-fit:cover}
+.cvh-gc figcaption{font-size:13px;line-height:1.45;padding-top:8px}
+.cvh-gc figcaption span{display:block;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cvh-gc figcaption .t{color:var(--mu)}
+.cvh-gc figcaption .v,.cvh-gc figcaption .p{font-size:12px;line-height:1.5;min-height:18px;font-feature-settings:'tnum' 1}
+.cvh-gc figcaption .v{color:var(--mu);margin-top:3px}
+.cvh-gc figcaption .p.s{color:var(--mu)}
+.cvh-block.cvh-sets{padding-top:clamp(56px,6vw,88px)}
+.cvh-sets-l{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px var(--cg,16px)}
+.cvh-sets-l li{min-width:0;border-top:1px solid var(--ln);padding-top:14px}
+.cvh-sets-i{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+.cvh-sets-t{display:block;font-size:17px;line-height:1.4;margin-top:12px}
+.cvh-sets-n{display:block;font-size:13px;color:var(--mu);margin-top:2px;font-feature-settings:'tnum' 1}
+@media(min-width:1600px){.cvh-gx-s{grid-auto-columns:calc((100% - 6 * var(--cg)) / 7)}}
+@media(max-width:1100px){.cvh-gx-s{grid-auto-columns:calc((100% - 3 * var(--cg)) / 4)}}
+@media(max-width:860px){
+  .cvh-gx{--cg:8px}
+  .cvh-block.cvh-gx{padding-top:20px}
+  .cvh-gx-b{display:none}   /* 휴대폰 = 손가락 넘김 */
+  .cvh-sets-l{grid-template-columns:1fr;gap:20px}
+}
+@media(max-width:600px){
+  .cvh-gx-s{grid-auto-columns:calc((100% - 3 * var(--cg)) / 3.3)}   /* 3.3장 = 다음 칸 끝이 보여 넘김을 알린다 */
+  .cvh-gc figcaption{font-size:12px;line-height:1.42;padding-top:7px}
+  .cvh-gc figcaption .v{margin-top:2px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:36px}   /* 연도까지 보이게 = /album/ 휴대폰 칸과 같음 */
+}
+
+/* ── ★261121 차분 손질 v1(아트디렉터 dg-1096 · 원장 [261121 집행 2차]) ── */
+/* f. 회색 글자 = #5a554b (바탕 #f7f4ec 대비 6.74:1 · 홈 안만) */
+.cvh{--mu:#5a554b}
+/* 카드 글 13px 이상 */
+.cvh-gc figcaption .v,.cvh-gc figcaption .p{font-size:13px}
+/* e. 저널 칸 사진 751 → 360 · 글이 주인공 */
+.cvh-jfeat{grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:clamp(32px,4vw,56px);align-items:center}
+/* c. 최근 7일 입고 = 글자 목록(사진 줄 0) — 줄 낮게 · 가는 선 · 제목 17px */
+.cvh-week-text .cvh-days{margin-top:32px}
+.cvh-week-text .cvh-shelf{padding:14px 0;column-gap:24px}
+.cvh-week-text .cvh-sh{padding:2px 0}
+.cvh-week-text .cvh-d{font-size:14px;padding-top:16px}
+.cvh-week-text .cvh-k{font-size:13px;line-height:1.5}
+.cvh-week-text .cvh-h{font-size:17px;line-height:1.5;margin-top:2px}
+.cvh-week-text .cvh-ar{font-size:14px;margin-left:10px}
+.cvh-week-text .cvh-shelf+.cvh-shelf{border-top:1px solid var(--ln)}
+.cvh-week-text .cvh-day{border-bottom:1px solid var(--ln)}
+@media(max-width:860px){
+  .cvh-jfeat figure{max-width:260px}
+  .cvh-week-text .cvh-d{padding-top:12px;font-size:13px}
+  .cvh-week-text .cvh-shelf{padding:10px 0 14px}
+  .cvh-week-text .cvh-sh{padding:0}
+  .cvh-week-text .cvh-h{font-size:16px}
+}
+/* b. 휴대폰 장르 줄 카드 = 목록 2열과 같은 결(2장 + 다음 카드 끝이 보임) */
+@media(max-width:600px){
+  .cvh-gx{--cg:12px}
+  .cvh-gx-s{grid-auto-columns:calc((100% - 2 * var(--cg)) / 2.3)}
+  .cvh-gc figcaption{font-size:13px;line-height:1.4;padding-top:9px}
+  .cvh-gc figcaption .t{color:var(--ink2);white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .cvh-gc figcaption .v{font-size:13px;line-height:1.4;margin-top:4px}
+  .cvh-gc figcaption .p{font-size:13px;line-height:1.4;min-height:1.4em;margin-top:2px}
+}
+/* ★261121 메인 고침 — 홈 장르 줄 휴대폰 카드도 목록 2열과 같이 판본 줄 두 줄 자리 비움 해제(빈 줄 0) */
+@media(max-width:600px){.cvh-gc figcaption .v{min-height:0}}

@@ -65,3 +65,23 @@
   });
   window.addEventListener("pageshow", function () { sel.value = ""; });
 })();
+
+/* ★261120 홈 ① 장르별 최근 입고 가로 넘김 — ← → 단추(PC · 휴대폰 = 손가락 넘김 · css 가 단추를 숨김) · 자동 넘김 0 · 끝에 닿으면 그쪽 단추 꺼짐 */
+(function () {
+  [].forEach.call(document.querySelectorAll(".cvh-gx-row"), function (row) {
+    var s = row.querySelector(".cvh-gx-s"), bs = [].slice.call(row.querySelectorAll(".cvh-gx-b"));
+    if (!s || bs.length !== 2) return;
+    function upd() {
+      bs[0].disabled = s.scrollLeft <= 2;
+      bs[1].disabled = s.scrollLeft + s.clientWidth >= s.scrollWidth - 2;
+    }
+    bs.forEach(function (b) {
+      b.hidden = false;
+      b.addEventListener("click", function () {
+        s.scrollBy({ left: (+b.getAttribute("data-d")) * s.clientWidth, behavior: "smooth" });
+      });
+    });
+    s.addEventListener("scroll", upd, { passive: true });
+    upd();
+  });
+})();

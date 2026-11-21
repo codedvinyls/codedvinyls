@@ -61,6 +61,60 @@
 .cva-next{display:flex;flex-wrap:wrap;gap:14px 40px;padding:72px var(--g) 0;font-size:15px}
 .cva-next a{border-bottom:1px solid var(--ink,#1f1e1b);padding-bottom:2px}
 
+/* ★261120 들어 보기(청음 · 정보 칸 거래 행 아래) — 썸네일 한 장 + 누르면 그때 영상(facade) · 목록 = 가는 선 줄 · 영상 없는 판 = 검색 링크 한 줄.
+   「사람과 음악으로 이어지는 판」 = 같이 들어온 판 아래 · 디깅 칸 결(시안 B · 자켓 1:1 매트 · 아티스트 · 앨범 한 줄씩 · PC 6열 · 1100 이하 3열).
+   새 색 0 · 노랑 0 · 상자 0(영상 칸 바탕 = 거래 행과 같은 돌빛) · 마크업 = album_detail.py */
+.cva-listen{margin-top:36px}
+.cva-lh{font-size:14px;font-weight:400;color:var(--mu);padding-top:16px;border-top:1px solid var(--ln);margin:0 0 16px}
+.cva-yt{position:relative;aspect-ratio:16/9;max-width:480px;background:var(--stone);overflow:hidden}
+.cva-yt-face{position:absolute;inset:0;display:block}
+.cva .cva-yt img{width:100%;height:100%;object-fit:cover}
+.cva-yt-btn{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(31,30,27,.78)}
+.cva-yt-btn::after{content:"";position:absolute;left:22px;top:18px;border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #f7f4ec}
+.cva-yt-face:hover .cva-yt-btn{background:var(--ink,#1f1e1b)}
+.cva-yt-face:focus-visible,.cva-yt-list a:focus-visible,.cva-yt-q:focus-visible{outline:2px solid var(--ink,#1f1e1b);outline-offset:3px}
+.cva-yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cva-yt-list{list-style:none;margin:14px 0 0;padding:0;max-width:480px;border-top:1px solid var(--ln)}
+.cva-yt-list a{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--ln);font-size:14px;line-height:1.5;color:var(--mu)}
+.cva-yt-list a[aria-current="true"],.cva-yt-list a:hover{color:var(--ink,#1f1e1b)}
+.cva-yt-list .i{flex:none;min-width:1em;font-feature-settings:'tnum' 1}
+.cva-yt-list .n{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cva-yt-q{display:inline-block;font-size:14px;border-bottom:1px solid var(--ink,#1f1e1b);padding-bottom:2px}
+.cva-nb-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 16px}
+.cva-nb-cell{min-width:0}
+.cva-nb-cell a{display:block}
+.cva-nb-img{display:block;aspect-ratio:1/1;background:#ebe7de;overflow:hidden}
+.cva .cva-nb-img img{width:100%;height:100%;object-fit:cover}
+.cva-nb-cell .a,.cva-nb-cell .t{display:block;font-size:13px;line-height:1.45;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cva-nb-cell .a{padding-top:10px}
+.cva-nb-cell .t{color:var(--mu)}
+.cva-nb-cell .r{display:block;font-size:12px;line-height:1.5;color:var(--mu);margin-top:4px}
+/* ★261120 ③ 이어지는 판 카드 = 디깅 카드 아래 두 줄과 같은 부품(프레싱 줄 .v 회색 · 가격 줄 .p 잉크 · 「판매 완료」 .p.s 회색 · 늘 있음 = 칸 높이 같음) */
+.cva-nb-cell .v,.cva-nb-cell .p{display:block;font-size:12px;line-height:1.5;min-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-feature-settings:'tnum' 1}
+.cva-nb-cell .v{color:var(--mu);margin-top:3px}
+.cva-nb-cell .p{color:var(--ink,#1f1e1b)}
+.cva-nb-cell .p.s{color:var(--mu)}
+/* ★261120 ③ 온라인 판매 중 거래 행 = 매장 판 「₩」 칸과 같은 꼴(왼쪽 가격 · 오른쪽 스토어 링크 · 그 아래 배송 링크) */
+.cva-deal.is-online.has-p{grid-template-columns:auto 1fr;gap:6px 24px;justify-items:start}
+.cva-deal.is-online.has-p .cva-buy,.cva-deal.is-online.has-p .nap{grid-column:2}
+/* ★261120 ③ 온라인 판 큐레이션(그 상품 글 · 빼기만) = 판 · 정보 칸 아래 · 사양표 오른쪽 칸 축(3fr 9fr) · 세리프 문단 · 가는 선 하나 */
+.cva-note{display:grid;grid-template-columns:3fr 9fr;gap:24px;padding:clamp(64px,6vw,88px) var(--g) 0}
+.cva-note-t{grid-column:2;max-width:40em;border-top:1px solid var(--ln);padding-top:22px;font-size:17px;line-height:1.9;color:var(--ink2)}
+.cva .cva-note-t p+p{margin-top:1.05em}
+@media(max-width:1100px){.cva-nb-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:860px){
+  .cva-listen{margin-top:26px}
+  .cva-lh{font-size:13px;padding-top:12px;margin-bottom:12px}
+  .cva-yt,.cva-yt-list{max-width:none}
+  .cva-yt-list a,.cva-yt-q{font-size:13px}
+  .cva-nb-grid{gap:22px 8px}
+  .cva-nb-cell .a,.cva-nb-cell .t{font-size:12px}
+  .cva-nb-cell .a{padding-top:8px}
+  .cva-note{display:block;padding:56px var(--g) 0}
+  .cva-note-t{max-width:none;padding-top:18px;font-size:16px;line-height:1.88}
+}
+@media(max-width:600px){.cva-nb-cell .v{margin-top:2px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:36px}}
+
 @media(max-width:860px){
   .cva-alb{display:block;padding:14px 0 0}
   .cva-info{padding:26px var(--g) 0}
@@ -166,3 +220,119 @@
   .cval-fn{margin:16px 0 0 !important;font-size:13px}
   .cval-empty{padding:36px var(--g) 0;font-size:15px}
 }
+
+/* ── ★261119 디깅 시안 공통(아트디렉터 dg-1056 · 시안 사본 전용) ──
+   도구 줄 한 줄 = 6열 칸에 맞물림(검색 1–2 · 장르 칩 3–4 · 레이블 5 · 정렬 6) · 휴대폰 3열(검색 1–3 · 장르 1–3 · 레이블 1–2 · 정렬 3) ·
+   보기 칩 「판매 중 · 다룬 판 전체」 = 머리 오른쪽(승인 글자 그대로) · 누르는 칸 = 보이는 꼴은 그대로 두고 ::after 로 ≥44 높이 */
+.cval-vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.cval-q{display:block;position:relative;min-width:0;margin:0}
+.cval-q input{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:16px;line-height:1.5;color:var(--ink,#1f1e1b);background:none;border:0;
+  border-bottom:1px solid var(--mu);border-radius:0;padding:6px 0 7px;margin:0;-webkit-appearance:none;appearance:none}
+.cval-q input::placeholder{color:var(--mu);opacity:1}
+.cval-q input:focus{outline:none;border-bottom-color:var(--ink,#1f1e1b)}
+.cval-q input:focus-visible{outline:2px solid var(--ink,#1f1e1b);outline-offset:3px}
+.cval-head{padding:34px var(--g) 0}
+.cval-head h1{font-size:clamp(28px,2.5vw,34px)}
+.cval-filter.cval-dig{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:var(--cg);row-gap:12px;align-items:end;
+  margin:22px var(--g) 0;padding:16px 0 0;border-top:1px solid var(--ln);font-size:15px;color:var(--mu)}
+.cval-dig .cval-q{grid-column:1/3}
+.cval-dig .cval-fg{grid-column:3/5;flex-wrap:nowrap;gap:8px 20px;padding-bottom:4px;min-width:0}   /* 칩 글 바닥 = 고르는 칸 글 바닥(둘 다 15px · 칸 아래 여백 7 = 칩 3 + 선 1 + 4) */
+.cval-dig .cval-fl{grid-column:5}
+.cval-dig .cval-sort{grid-column:6}
+.cval-cs{display:flex;align-items:baseline;gap:10px;min-width:0;margin:0;border-bottom:1px solid var(--ln);padding-bottom:7px}
+.cval-cs .cval-fk{flex:none;font-size:13px}
+.cval-cs .cval-fs{flex:1;min-width:0}
+.cval-cs select{width:100%;max-width:none;border:0;padding:0 18px 0 0;font-size:15px;text-overflow:ellipsis}
+.cval-dig .cval-fp{grid-column:auto;justify-self:start}
+.cval-dig .cval-fn{grid-column:1/-1;margin:0 !important}
+.cval-fg button,.cval-chips a,.cval-fp,.cval-clear{position:relative}
+.cval-fg button::after,.cval-chips a::after,.cval-fp::after,.cval-clear::after{content:"";position:absolute;left:-6px;right:-6px;top:-10px;bottom:-8px}
+.cval-cell{min-width:0}
+.cval figcaption span{min-width:0}
+/* ★261120 카드 아래 두 줄 = 프레싱 줄(.v · 회색) · 가격 줄(.p · 잉크 · 「판매 완료」 = .p.s 회색) · 늘 있음(빈 줄도 18 = 칸 높이 같음) */
+.cval figcaption .v,.cval figcaption .p{display:block;font-size:12px;line-height:1.5;min-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-feature-settings:'tnum' 1}
+.cval figcaption .v{color:var(--mu);margin-top:3px}
+.cval figcaption .p{color:var(--ink,#1f1e1b);margin:0}
+.cval figcaption .p.s{color:var(--mu)}
+@media(max-width:1100px){.cval-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:860px){
+  .cval-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:26px var(--g) 0}
+  .cval-head h1{font-size:26px}
+  .cval-chips{margin-top:0;gap:18px;font-size:14px}
+  .cval-filter.cval-dig{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--cgp);row-gap:14px;margin:14px var(--g) 0;padding-top:10px;font-size:14px}
+  .cval-dig .cval-q{grid-column:1/-1}
+  .cval-dig .cval-q input{min-height:44px}
+  .cval-dig .cval-fg{grid-column:1/-1;gap:8px 18px;padding-bottom:0}
+  .cval-dig .cval-fl{grid-column:1/3}
+  .cval-dig .cval-sort{grid-column:3}
+  .cval-cs{display:block;padding-bottom:5px}
+  .cval-cs .cval-fk{display:block;font-size:12px;line-height:1.3;margin-bottom:1px}
+  .cval-cs .cval-fs{display:block}
+  .cval-cs select{font-size:16px;padding:10px 13px 4px 0;margin-top:-10px}
+  .cval-dig .cval-fs::after{right:1px}
+  .cval-dig .cval-fp{margin:0}
+}
+@media(max-width:600px){.cval-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* ── 시안 B = 크레이트 — 칸 사이 16(휴대폰 8) · 줄 사이 28(휴대폰 22) · 아티스트 · 앨범 한 줄씩(말줄임) + 메타 줄 늘 있음
+   (연도 왼쪽 · 가격 또는 「판매 완료」 오른쪽) = 칸 높이 같음 ── */
+.cval{--cg:16px;--cgp:8px}
+.cval-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:28px var(--cg);padding:24px var(--g) 0}
+.cval figcaption{font-size:13px;line-height:1.45;padding-top:8px}
+.cval figcaption .a,.cval figcaption .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:1100px){.cval-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:860px){.cval-grid{gap:24px var(--cgp);padding:20px var(--g) 0}}
+@media(max-width:600px){
+  .cval-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px var(--cgp)}
+  .cval figcaption{font-size:12px;line-height:1.42;padding-top:7px}
+  .cval figcaption .v{margin-top:2px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:36px}
+  /* ★261120 휴대폰 칸(≈109px) = 프레싱 줄 두 줄까지(연도가 잘리지 않게 · 높이 늘 36 = 칸 높이 같음) */
+}
+
+/* ── ★261120 1600 이상 7열(관제 수용 · 1920 칸 ≈ 245) — 도구 줄도 7칸에 맞물림(검색 1–2 · 장르 칩 3–5 · 레이블 6 · 정렬 7) ── */
+@media(min-width:1600px){
+  .cval-grid{grid-template-columns:repeat(7,minmax(0,1fr))}
+  .cval-filter.cval-dig{grid-template-columns:repeat(7,minmax(0,1fr))}
+  .cval-dig .cval-fg{grid-column:3/6}
+  .cval-dig .cval-fl{grid-column:6}
+  .cval-dig .cval-sort{grid-column:7}
+}
+/* ── ★261120 기획전 /album/set/<id>/ — 짝 = 칸 둘(셋) 한 묶음(PC 세 묶음 한 줄 = 6열 칸 폭 · 휴대폰 한 묶음 한 줄) · 문 = 이름 줄 + 격자 ── */
+.cvs-pairs{list-style:none;margin:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-flow:row dense;gap:40px var(--cg);padding:24px var(--g) 0}
+/* ★261120 관제 — 묶음 = 판 수만큼 칸을 차지(6열 격자 · 디깅 칸과 같은 폭) · 판 한 번씩 */
+.cvs-pair.k1{grid-column:span 1}.cvs-pair.k2{grid-column:span 2}.cvs-pair.k3{grid-column:span 3}.cvs-pair.k4{grid-column:span 4}.cvs-pair.k5{grid-column:span 5}.cvs-pair.k6{grid-column:span 6}
+.cvs-pair{min-width:0;border-top:1px solid var(--ln);padding-top:14px}   /* 짝 하나 = 선 하나(편집장 줄 승인 전에도 묶음이 읽히게) */
+.cvs-two{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px var(--cg)}
+.cvs-two.k1{grid-template-columns:minmax(0,1fr)}.cvs-two.k3{grid-template-columns:repeat(3,minmax(0,1fr))}.cvs-two.k4{grid-template-columns:repeat(4,minmax(0,1fr))}.cvs-two.k5{grid-template-columns:repeat(5,minmax(0,1fr))}.cvs-two.k6{grid-template-columns:repeat(6,minmax(0,1fr))}
+.cvs-line{font-size:14px;line-height:1.6;color:var(--ink2);margin:12px 0 0}
+.cvs-door{padding:clamp(48px,5vw,72px) var(--g) 0}
+.cvs-door .cval-grid{padding:0}
+.cvs-door .cvs-line{margin:0 0 16px}
+@media(max-width:1100px){.cvs-pairs{grid-template-columns:repeat(4,minmax(0,1fr))}.cvs-pair.k5,.cvs-pair.k6{grid-column:span 4}.cvs-two.k5,.cvs-two.k6{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:600px){.cvs-pairs{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px var(--cgp)}.cvs-two{gap:22px var(--cgp)}.cvs-pair.k4,.cvs-pair.k5,.cvs-pair.k6{grid-column:span 3}.cvs-two.k4,.cvs-two.k5,.cvs-two.k6{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* ── ★261121 차분 손질 v1(아트디렉터 dg-1096 · 원장 [261121 집행 2차]) ── */
+/* f. 회색 글자 = #5a554b (바탕 #f7f4ec 대비 6.74:1 · 이 세 쪽 안만) */
+.cva,.cval{--mu:#5a554b}
+/* d. 상세 판 720 → 480(눌러서 원본 · 움직임 0) · 정보 칸 줄 길이 제한 */
+.cva-alb{grid-template-columns:minmax(0,480px) minmax(0,1fr);gap:clamp(36px,4vw,56px)}
+.cva-info{max-width:620px}
+.cva-zoom{cursor:zoom-in}
+/* a. 목록 · 카드 글 13px 이상 · PC 줄 사이 숨 */
+.cval-grid{gap:40px var(--cg)}
+.cval figcaption{font-size:13px}
+.cval figcaption .v,.cval figcaption .p,.cva-nb-cell .v,.cva-nb-cell .p,.cva-nb-cell .r,.cva-nb-cell .a,.cva-nb-cell .t{font-size:13px}
+@media(max-width:860px){
+  .cva-plate{max-width:calc(380px + 2 * var(--g));padding:0 var(--g)}
+  .cva-nb-cell .a,.cva-nb-cell .t{font-size:13px}
+}
+@media(max-width:600px){
+  .cval{--cgp:12px}
+  .cval-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px var(--cgp);padding:20px var(--g) 0}
+  .cval figcaption{font-size:13px;line-height:1.4;padding-top:9px}
+  .cval figcaption .a{white-space:nowrap}
+  .cval figcaption .t{color:var(--ink2);white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .cval figcaption .v{font-size:13px;line-height:1.4;margin-top:4px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .cval figcaption .p{font-size:13px;line-height:1.4;min-height:1.4em;margin-top:2px}
+}
+/* ★261121 메인 고침 — 휴대폰 2열 = 판본 줄 두 줄 자리 비움(3열 때 min-height 36) 해제 → 판본 바로 아래 가격(빈 줄 0) */
+@media(max-width:600px){.cval figcaption .v{min-height:0}}
