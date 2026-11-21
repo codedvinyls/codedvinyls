@@ -945,7 +945,7 @@
 {"g":"classical","l":"mercury","lc":"Mercury SR90122","n":18,"on":1,"pr":45000,"t":1,"v":"US 1st Press · 1958","y":1958},
 {"g":"classical","l":"westminster","lc":"Westminster WL 5233","n":15,"on":0,"s":1,"t":1,"v":"US 1st Press · 1954","y":1954},
 {"g":"classical","l":"philips","lc":"Philips PHS 900-082","n":24,"on":1,"pr":39000,"t":1,"v":"US 1st Press · 1965","y":1965},
-{"g":"classical","l":"eterna","lc":"ETERNA 8 25 015","n":17,"on":1,"pr":179000,"t":1,"v":"DDR 1st Press · 1961","y":1961},
+{"g":"classical","l":"eterna","lc":"ETERNA 8 25 015","n":17,"on":0,"s":1,"t":1,"v":"DDR 1st Press · 1961","y":1961},
 {"g":"classical","l":"eterna","lc":"ETERNA 8 25 121","n":2,"on":0,"s":1,"t":1,"v":"DDR 1st Press · 1966","y":1966},
 {"g":"classical","l":"eterna","lc":"ETERNA 8 25 378","n":33,"on":0,"s":1,"t":1,"v":"DDR 1st Press · 1966","y":1966},
 {"g":"classical","l":"trikont-unsere-stimme","lc":"Trikont-Unsere Stimme US-0154","n":70,"on":0,"s":1,"t":1,"v":"Germany 1st Press · 1988","y":1988},
@@ -954,7 +954,7 @@
 {"g":"classical","l":"eterna","lc":"ETERNA 8 20 621","n":65,"on":0,"t":1,"v":"DDR 1st Press · 1966","y":1966},
 {"g":"classical","l":"eterna","lc":"ETERNA 8 25 128","n":41,"on":0,"t":1,"v":"DDR 1st Press · 1966","y":1966},
 {"g":"classical","l":"eterna","lc":"ETERNA 8 20 636","n":68,"on":0,"s":1,"t":1,"v":"DDR 1st Press · 1967","y":1967},
-{"g":"classical","l":"eterna","lc":"ETERNA 8 25 115","n":11,"on":1,"pr":219000,"t":1,"v":"DDR 1st Press · 1964","y":1964},
+{"g":"classical","l":"eterna","lc":"ETERNA 8 25 115","n":11,"on":0,"s":1,"t":1,"v":"DDR 1st Press · 1964","y":1964},
 {"g":"classical","l":"eterna","lc":"ETERNA 8 25 513","n":23,"on":1,"pr":159000,"t":1,"v":"DDR 1st Press · 1966","y":1966},
 {"g":"classical","l":"eterna","lc":"ETERNA 8 25 566","n":35,"on":1,"pr":179000,"t":1,"v":"DDR 1st Press · 1966","y":1966},
 {"g":"classical","l":"melodia-eurodisc","lc":"Melodia-Eurodisc 87100 XEK","n":45,"on":0,"s":1,"t":1,"y":1973},
@@ -965,7 +965,7 @@
 {"g":"classical","l":"eterna","lc":"ETERNA 8 25 955","n":67,"on":1,"pr":19000,"t":1,"v":"DDR 1st Press · 1971","y":1971},
 {"g":"classical","l":"melodia-eterna","lc":"Melodia Eterna 8 26 360","n":47,"on":0,"s":1,"t":1,"v":"DDR Reissue · 1973","y":1973},
 {"g":"classical","l":"melodia-eterna","lc":"Melodia Eterna 8 26 949","n":14,"on":0,"s":1,"t":1,"v":"DDR 1st Press · 1977","y":1977},
-{"g":"classical","l":"decca","lc":"Decca SXL 6426","n":8,"on":1,"pr":249000,"t":1,"v":"UK Repress · 1972","y":1972},
+{"g":"classical","l":"decca","lc":"Decca SXL 6426","n":8,"on":0,"s":1,"t":1,"v":"UK Repress · 1972","y":1972},
 {"g":"classical","l":"thorofon","lc":"Thorofon MTH 318","n":71,"on":1,"pr":79000,"t":1,"v":"Germany 1st Press · 1986","y":1986},
 {"g":"classical","lc":"8 27 944","n":5,"on":1,"pr":129000,"t":1,"v":"DDR 1st Press · 1986","y":1986},
 {"g":"classical","l":"eterna","lc":"ETERNA 8 26 864","n":57,"on":0,"s":1,"t":1,"v":"DDR 1st Press · 1977","y":1977},
@@ -2029,5 +2029,5 @@
 {"alt":"Ursula Trede-Boettcher, Wolfgang Boettcher, Marianne Boettcher 〈Musik Aus Mannheim〉 자켓","g":"classical","l":"promoton","lc":"Promoton 501 S","n":94,"on":1,"pr":29000,"t":1,"v":"Germany 1st Press"},
 {"alt":"Dvořák, Detroit Symphony Orchestra, Paul Paray 〈Symphony No. 9 in E Minor, Op. 95, \"From The New World\"〉 자켓","g":"classical","l":"mercury","lc":"Mercury MG50262","n":95,"on":0,"s":1,"t":1,"v":"US 1st Press · 1960","y":1960},
 {"alt":"Pavel Bořkovec, Erwin Schulhoff - Jan Panenka / Czech Philharmonic Orchestra, Zdeněk Košler, Dagmar Baloghová, Prague Chamber Orchestra, Jiří Kout 〈Piano Concerto No.1 / Piano Concerto No.2〉 자켓","g":"classical","l":"supraphon","lc":"Supraphon 1 10 1205","n":96,"on":1,"pr":9000,"t":1,"v":"Czechoslovakia 1st Press · 1972","y":1972},
-{"g":"classical","l":"erato","lc":"Erato LDE 3236","n":1186,"on":1,"pr":1090000,"t":1,"v":"France 1st Press"}
+{"g":"classical","l":"erato","lc":"Erato LDE 3236","n":1186,"on":0,"s":1,"t":1,"v":"France 1st Press"}
 ]}
