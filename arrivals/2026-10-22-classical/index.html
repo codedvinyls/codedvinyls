@@ -188,6 +188,10 @@ footer{background:var(--ink);color:var(--paper)}
 .gal-close:focus-visible{outline:2px solid var(--yellow)}
 @media(max-width:1080px){.gal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:680px){.gal-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;row-gap:32px}.gal-title{font-size:13.5px}.gal-lb-inner{grid-template-columns:1fr;padding:44px 18px 24px}}
+
+.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-family:var(--cvf-sans,"Pretendard Variable","Pretendard",sans-serif);font-size:13px;font-weight:400;letter-spacing:0;color:var(--cvf-muted,#6b655a)}
+.rec-deal.cv-sold-row{display:flex;align-items:baseline;gap:12px;border-top:1px solid var(--line);padding-top:12px;line-height:1.3}
+@media(max-width:860px){.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-size:12px}}
 </style>
 <link rel="stylesheet" href="/assets/cv-album.css">
 <link rel="stylesheet" href="/assets/cv-body.css">
@@ -245,7 +249,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Mozart - Carlo Maria Giulini, Philharmonia Orchestra And Chorus</span>
             <span class="gal-title">The Marriage Of Figaro</span>
-            <span class="gal-price" data-krw="1090000">₩1,090,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식 · 오페라</dd></div>
@@ -350,7 +354,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">Samson François - Debussy</span>
             <span class="gal-title">Les Derniers Enregistrements De Samson François</span>
-            <span class="gal-price" data-krw="290000">₩290,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식 · 인상주의</dd></div>
@@ -369,7 +373,7 @@ footer{background:var(--ink);color:var(--paper)}
           <div class="gal-cap">
             <span class="gal-artist">J.S. Bach, Sigiswald Kuijken</span>
             <span class="gal-title">Drei Sonaten Und Drei Partiten Für Violine Solo BWV 1001-1006</span>
-            <span class="gal-price" data-krw="199000">₩199,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <dl class="gal-spec" hidden>
             <div><dt>장르</dt><dd>클래식 · 바로크</dd></div>
