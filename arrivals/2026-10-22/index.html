@@ -171,6 +171,10 @@ footer{background:var(--ink);color:var(--paper)}
 .gal-price{font-family:var(--mono);font-size:12px;color:var(--ink);letter-spacing:.02em;margin-top:4px}
 @media(max-width:1080px){.gal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:680px){.gal-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;row-gap:32px}.gal-title{font-size:13.5px}}
+
+.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-family:var(--cvf-sans,"Pretendard Variable","Pretendard",sans-serif);font-size:13px;font-weight:400;letter-spacing:0;color:var(--cvf-muted,#6b655a)}
+.rec-deal.cv-sold-row{display:flex;align-items:baseline;gap:12px;border-top:1px solid var(--line);padding-top:12px;line-height:1.3}
+@media(max-width:860px){.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-size:12px}}
 </style><style>
 .dp-wrap{max-width:1240px;margin:0 auto;padding-left:clamp(20px,4vw,56px);padding-right:clamp(20px,4vw,56px)}
 .dp-hero{background:var(--paper);border-bottom:1px solid var(--line)}
@@ -253,10 +257,6 @@ html:has(.gal-lb[open]){overflow:hidden}
  .gal-lb-cur{margin-top:22px;line-height:1.78}
  .gal-lb-spec{margin-top:24px}
 }
-
-.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-family:var(--cvf-sans,"Pretendard Variable","Pretendard",sans-serif);font-size:13px;font-weight:400;letter-spacing:0;color:var(--cvf-muted,#6b655a)}
-.rec-deal.cv-sold-row{display:flex;align-items:baseline;gap:12px;border-top:1px solid var(--line);padding-top:12px;line-height:1.3}
-@media(max-width:860px){.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-size:12px}}
 </style>
 <link rel="stylesheet" href="/assets/cv-album.css">
 <link rel="stylesheet" href="/assets/cv-body.css">
@@ -291,7 +291,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">Mozart - Carlo Maria Giulini, Philharmonia Orchestra And Chorus</span>
             <span class="gal-title">The Marriage Of Figaro</span>
-            <span class="gal-price" data-krw="1090000">₩1,090,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>모차르트(Mozart)의 오페라로, 카를로 마리아 줄리니(Carlo Maria Giulini)가 필하모니아 오케스트라와 합창단을 지휘했습니다. 1959년 런던 킹스웨이 홀(Kingsway Hall)에서 월터 레그(Walter Legge)의 제작으로 녹음했어요. 미국에서는 같은 녹음이 에인절(Angel) 레이블로 나왔습니다.</p>
           <dl class="gal-spec" hidden>
@@ -420,7 +420,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">Samson François - Debussy</span>
             <span class="gal-title">Les Derniers Enregistrements De Samson François</span>
-            <span class="gal-price" data-krw="290000">₩290,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>삼손 프랑수아(Samson François)가 남긴 드뷔시(Debussy)의 피아노곡 녹음을 그가 세상을 떠난 뒤 펴낸 세트입니다. 라벨에는 위쪽의 흰 Stéréo 글자와 우표 테두리 안의 컬러 강아지 그림이 찍혀 있어요.</p>
           <dl class="gal-spec" hidden>
@@ -441,7 +441,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">Schubert / Bridge, Mstislav Rostropovich, Benjamin Britten</span>
             <span class="gal-title">Sonata For Arpeggione And Piano / Sonata For Cello And Piano</span>
-            <span class="gal-price" data-krw="249000">₩249,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>므스티슬라프 로스트로포비치(Mstislav Rostropovich)의 첼로와 벤저민 브리튼(Benjamin Britten)의 피아노로 슈베르트(Schubert)의 아르페지오네 소나타와 브리지(Bridge)의 첼로 소나타를 담았어요. 1968년 7월 서퍽 스네이프의 몰팅스(The Maltings)에서 녹음했습니다. 첫 발매는 1970년이고, 이 판은 그 뒤에 찍은 두 번째 프레싱이에요.</p>
           <dl class="gal-spec" hidden>
@@ -483,7 +483,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">J.S. Bach, Sigiswald Kuijken</span>
             <span class="gal-title">Drei Sonaten Und Drei Partiten Für Violine Solo BWV 1001-1006</span>
-            <span class="gal-price" data-krw="199000">₩199,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>시히스발트 카위컨(Sigiswald Kuijken)이 연주한 바흐(Bach)의 무반주 바이올린 소나타 세 곡과 파르티타 세 곡이에요. 녹음은 발매와 같은 해 이탈리아 아르티미노의 빌라 데이 메디치(Villa dei Medici)에서 했습니다.</p>
           <dl class="gal-spec" hidden>
@@ -504,7 +504,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">Ludwig van Beethoven, Dieter Zechlin, Gewandhausorchester Leipzig, Kurt Sanderling</span>
             <span class="gal-title">Konzert Für Klavier Und Orchester Nr. 5 Es-dur Op. 73</span>
-            <span class="gal-price" data-krw="219000">₩219,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>디터 체힐린(Dieter Zechlin)이 독주를, 쿠르트 잔덜링(Kurt Sanderling)이 지휘를 맡은 베토벤(Beethoven)의 피아노 협주곡 5번입니다. 협연 악단은 라이프치히 게반트하우스 관현악단(Gewandhausorchester Leipzig)이에요. 1963년 6월 라이프치히의 하일란츠 교회(Heilandskirche)에서 녹음했어요.</p>
           <dl class="gal-spec" hidden>
@@ -589,7 +589,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">Mozart - Magda Laszlo, Hilde Roessel-Majdan, Petre Munteanu, Richard Standen, The Akademie Kammerchor, Hermann Scherchen Conducting The Orchestra Of The Vienna State Opera</span>
             <span class="gal-title">Requiem K. 626</span>
-            <span class="gal-price" data-krw="49000">₩49,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>헤르만 셰르헨(Hermann Scherchen)이 빈 국립 가극장 관현악단과 아카데미 실내 합창단(Akademie Kammerchor)을 지휘한 모차르트(Mozart)의 레퀴엠이에요. 1953년 7월 빈 콘체르트하우스(Konzerthaus)에서 녹음했고, 발매는 이듬해 4월이었습니다.</p>
           <dl class="gal-spec" hidden>
@@ -629,7 +629,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">Wolfgang Amadeus Mozart, Staatskapelle Dresden, Otmar Suitner</span>
             <span class="gal-title">Eine Kleine Nachtmusik G-dur KV 525 / Serenata Notturna D-dur KV 239 / Sinfonie A-dur KV 201</span>
-            <span class="gal-price" data-krw="179000">₩179,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>모차르트(Mozart)의 세레나데 두 곡과 교향곡 한 곡을 오트마어 주이트너(Otmar Suitner)와 드레스덴 국립관현악단(Staatskapelle Dresden)의 연주로 담았어요. 녹음 장소는 드레스덴 루카스 교회(Lukaskirche)의 스튜디오입니다. 라벨은 청록과 흰색 두 가지 색으로 찍혔어요.</p>
           <dl class="gal-spec" hidden>
@@ -693,7 +693,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">Wolfgang Amadeus Mozart - Annerose Schmidt, Dresdner Philharmonie, Kurt Masur</span>
             <span class="gal-title">Konzert Für Klavier Und Orchester D-moll KV 466 / Konzert Für Klavier Und Orchester B-dur KV 456</span>
-            <span class="gal-price" data-krw="179000">₩179,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>아네로제 슈미트(Annerose Schmidt)의 피아노와 쿠르트 마주어(Kurt Masur)가 지휘한 드레스덴 필하모니 관현악단이 모차르트(Mozart)의 피아노 협주곡 두 곡을 연주했습니다. 드레스덴 루카스 교회(Lukaskirche)의 스튜디오에서 녹음했어요.</p>
           <dl class="gal-spec" hidden>
@@ -1006,7 +1006,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">Igor Strawinsky, Walter Olbertz, Gewandhausorchester Leipzig, Václav Neumann</span>
             <span class="gal-title">Konzert Für Klavier, Bläser, Kontrabässe Und Pauken / Sérénade En La / Sonate</span>
-            <span class="gal-price" data-krw="179000">₩179,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>발터 올베르츠(Walter Olbertz)가 스트라빈스키(Strawinsky)의 협주곡과 세레나데, 소나타를 연주한 앨범이에요. 협주곡은 바츨라프 노이만(Václav Neumann)이 지휘한 라이프치히 게반트하우스 관현악단(Gewandhausorchester Leipzig)과 함께했습니다. 초록과 크림색을 쓴 라벨이 붙어 있어요.</p>
           <dl class="gal-spec" hidden>
