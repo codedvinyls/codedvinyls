@@ -1,0 +1,27 @@
+/* CODEDVINYLS 판 카드 한 벌 · 틱 (2026-11-22 · 구현 ② 에서 지음 · 구현 ④ 에서 cv3-album.css 맨 위 두 절을 이 파일로 옮김 — 규칙 글자 그대로)
+   기준 = 261121 디자인 기준 문서 design_standard_blank_v1 (§6-2 판 카드 · §6-7 틱)
+   마크업 = _tools/site_card.py. 거는 쪽 = 앨범 목록(site_album_v3 · cv3-album.css 앞) · 앨범 쪽(site_album_detail_v3 · cv3-detail.css 앞).
+   토큰 --cv3-… 은 cv3-base.css 가 정한다(틀 v3 위에서만). 전환 · 애니메이션 · 그림자 · 둥근 모서리 0 · 외부 주소 0. */
+
+/* ── 판 카드(§6-2) ── 받침 정사각 · 글 넉 줄 · 가격 줄은 늘 같은 높이 */
+.cv3-card{display:flex;flex-direction:column;min-width:0;margin:0;padding:0;border:0;color:var(--cv3-ink);text-decoration:none;
+  font-family:var(--cv3-sans);font-weight:400;font-style:normal;font-synthesis:none;letter-spacing:0;text-align:left;
+  word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+.cv3-card .cv3-jk{display:block;box-sizing:border-box;aspect-ratio:1/1;padding:var(--cv3-s2);background:var(--cv3-stage);overflow:hidden}
+.cv3-card .cv3-jk img{display:block;width:100%;height:100%;max-width:none;margin:0;object-fit:cover}
+.cv3-card .cv3-ar{display:block;margin-top:var(--cv3-s3);font-size:var(--cv3-ui);font-weight:500;line-height:1.4;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cv3-card .cv3-al{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.8em;
+  font-size:var(--cv3-ui);line-height:1.4}
+.cv3-card .cv3-ed{display:block;min-height:1.4em;margin-top:var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cv3-card .cv3-pr{display:block;min-height:1.4em;margin-top:var(--cv3-s1);font-size:var(--cv3-ui);font-weight:500;line-height:1.4;
+  font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cv3-card .cv3-pr .cv3-ch{font-weight:400;color:var(--cv3-muted)}
+.cv3-card .cv3-pr.cv3-so{font-weight:400;color:var(--cv3-sold)}
+.cv3-card:focus-visible{outline:2px solid var(--cv3-ink);outline-offset:2px}
+
+/* ── 틱(§6-7) ── 16 × 2 · 매장 = 노랑 · 온라인 = 회색 */
+.cv3-tick{display:inline-block;position:relative;top:-1px;width:16px;height:2px;margin-right:var(--cv3-s2);
+  background:var(--cv3-yellow);vertical-align:middle}
+.cv3-tick.cv3-tick-o{background:var(--cv3-muted)}

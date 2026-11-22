@@ -1,0 +1,149 @@
+/* CODEDVINYLS 앨범 쪽 v3 (2026-11-22 · 구현 ④)
+   기준 = 261121 디자인 기준 문서 design_standard_blank_v1 (§4 앨범 쪽 위 · §6-3 거래 행 · §6-4 사진 받침 · §6-5 문 · 사실 · §6-9 구획 · 경로 줄 · §7 휴대폰)
+   마크업 = _tools/site_album_detail_v3.py(쪽) · _tools/site_deal.py(거래 행 · 등급) · _tools/site_card.py(판 카드 — 모양은 cv3-card.css).
+   스위치 = site_frame.json "album3": "v3"(틀 v3 위에서만 — 토큰 --cv3-… 은 cv3-base.css 가 정한다).
+   · 클래스 = cv3- · 전환 · 애니메이션 · 그림자 · 둥근 모서리 0 · 외부 주소 0 · 채운 단추 = 사는 단추 하나. */
+
+/* ── 쪽 바탕 ── */
+.cv3-pd{box-sizing:border-box;width:auto;max-width:none;margin:0;padding:var(--cv3-s3) var(--cv3-m) 0;background:var(--cv3-paper);color:var(--cv3-ink);
+  font-family:var(--cv3-sans);font-size:var(--cv3-ui);font-weight:400;font-style:normal;font-synthesis:none;line-height:1.6;
+  letter-spacing:0;text-align:left;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+.cv3-pd *{box-sizing:border-box}
+.cv3-pd a{color:inherit;text-decoration:none}
+.cv3-pd :where(h1,h2,p,dl,dt,dd){margin:0;padding:0;font-weight:400;font-style:normal;letter-spacing:0}
+.cv3-pd a:focus-visible,.cv3-pd button:focus-visible{outline:2px solid var(--cv3-ink);outline-offset:2px}
+
+/* ── 경로 줄(§6-9 · 앨범 목록 v3 과 같은 값) ── 13px · 위 24 · 낱말 사이 8 */
+.cvf-on .crumb{margin:0;padding:var(--cv3-s4) var(--cv3-m) 0;gap:var(--cv3-s2);font-family:var(--cv3-sans);font-size:var(--cv3-sm);
+  font-weight:400;line-height:1.4;letter-spacing:0;text-transform:none;color:var(--cv3-muted)}
+.cvf-on .crumb a{margin:0;padding:0;color:var(--cv3-muted)}
+.cvf-on .crumb > span{margin:0;padding:0;color:var(--cv3-muted)}
+
+/* ── 위(§4) ── 사진 받침 = 1 ~ 2칸(48 ~ 936) · 이름 · 거래 · 글 = 3칸째(960) */
+.cv3-top{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--cv3-g);align-items:start}
+.cv3-vw{grid-column:1 / 3;min-width:0}
+.cv3-bx{grid-column:3;min-width:0}
+
+/* ── 사진 받침(§6-4) ── 높이 600 · 자켓 504 · 사진 1장 = 받침 + 자켓만 */
+.cv3-stage{position:relative;display:flex;align-items:center;justify-content:center;height:600px;background:var(--cv3-stage)}
+.cv3-stage .cv3-zoom{display:block;width:504px;height:504px;max-width:calc(100% - var(--cv3-s5));line-height:0}
+.cv3-stage img{display:block;width:100%;height:100%;max-width:none;margin:0;object-fit:contain}
+.cv3-scnt{position:absolute;right:var(--cv3-s3);bottom:var(--cv3-s3);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-thumbs{display:flex;gap:var(--cv3-s2);margin-top:var(--cv3-s2)}
+.cv3-thumbs button{-webkit-appearance:none;appearance:none;width:72px;height:72px;margin:0;padding:0;border:0;border-radius:0;background:var(--cv3-stage);cursor:pointer}
+.cv3-thumbs button img{display:block;width:100%;height:100%;max-width:none;object-fit:cover}
+.cv3-thumbs button[aria-current="true"]{outline:1px solid var(--cv3-ink);outline-offset:-1px}
+
+/* ── 이름 칸 ── 아티스트 15/500 · 이름 = 명조 40(쪽에서 한 번) · 판본 두 줄 13 흐림 · 들어온 기록 15 */
+.cv3-bx h1{font-size:var(--cv3-ui);line-height:1.4}
+.cv3-h-ar{display:block;font-family:var(--cv3-sans);font-size:var(--cv3-ui);font-weight:500;line-height:1.4}
+.cv3-h-al{display:block;margin-top:var(--cv3-s2);font-family:var(--cv3-serif);font-size:var(--cv3-d2);font-weight:400;line-height:1.18;letter-spacing:-.02em}
+.cv3-press{margin-top:var(--cv3-s3);font-size:var(--cv3-sm);line-height:1.6;color:var(--cv3-muted)}
+.cv3-came{margin-top:var(--cv3-s3);font-size:var(--cv3-ui);line-height:1.4}
+
+/* ── 거래 행(§6-3) ── 윗선 · 위 32 + 안 24 · 가격 24/500 · 사는 단추 56 */
+.cv3-dealb{margin-top:var(--cv3-s5);padding-top:var(--cv3-s4);border-top:1px solid var(--cv3-line)}
+.cv3-price{display:block;font-size:var(--cv3-k2);font-weight:500;line-height:1.3;font-variant-numeric:tabular-nums}
+.cv3-where{margin-top:var(--cv3-s2);font-size:var(--cv3-body);font-weight:500;line-height:1.6}
+.cv3-where.cv3-where-n,.cv3-where.cv3-where-s{margin-top:0}
+.cv3-nap{font-size:var(--cv3-ui);line-height:1.6;color:var(--cv3-ink2)}
+.cv3-pd .cv3-buy{display:flex;align-items:center;justify-content:space-between;gap:var(--cv3-s3);height:56px;margin-top:var(--cv3-s3);padding:0 var(--cv3-s4);
+  background:var(--cv3-ink);color:var(--cv3-paper);font-size:var(--cv3-ui);font-weight:500;line-height:1.4}
+.cv3-lk{display:flex;flex-wrap:wrap;gap:var(--cv3-s2) var(--cv3-s4);margin-top:var(--cv3-s3);font-size:var(--cv3-ui);line-height:1.4}
+.cv3-grade{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:var(--cv3-s3);row-gap:var(--cv3-s1);
+  margin-top:var(--cv3-s4);padding-top:var(--cv3-s3);border-top:1px solid var(--cv3-line);font-size:var(--cv3-ui);line-height:1.6}
+.cv3-grade dt{color:var(--cv3-muted)}
+.cv3-code{margin-right:var(--cv3-s2);font-size:var(--cv3-sm)}
+.cv3-cond{margin-top:var(--cv3-s2);font-size:var(--cv3-ui);line-height:1.7;color:var(--cv3-ink2)}
+.cv3-dealb > .cv3-cond:first-child{margin-top:0}
+.cv3-dealb > .cv3-grade:first-child{margin-top:0;padding-top:0;border-top:0}
+
+/* ── 글 · 들어 보기 ── 거래 행 아래 · 윗선 · 본문 17/1.7 */
+.cv3-story{margin-top:var(--cv3-s4);padding-top:var(--cv3-s4);border-top:1px solid var(--cv3-line)}
+.cv3-note p{font-size:var(--cv3-body);line-height:1.7}
+.cv3-note p + p{margin-top:var(--cv3-s3)}
+.cv3-lisq{display:flex;gap:var(--cv3-s3);align-items:baseline;font-size:var(--cv3-ui);line-height:1.6}
+.cv3-note + .cv3-lisq{margin-top:var(--cv3-s3)}
+.cv3-kk{flex:0 0 auto;font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-lis{min-width:0}
+.cv3-lis a{display:block}
+/* 그 자리 재생(s6) — 스크립트가 줄 아래에 끼우는 틀 · 16:9 · 받침색 · 영상이 여럿일 때만 펼친 링크 = 굵기 500(하나뿐이면 표시 0 · 줄 바꿈 자리 무변) */
+.cv3-lis a[aria-expanded="true"]:not(:only-child){font-weight:500}
+.cv3-yt{position:relative;aspect-ratio:16 / 9;margin-top:var(--cv3-s3);background:var(--cv3-stage)}
+.cv3-yt iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+/* ── 구획(§6-9) ── 위 64 · 윗선 · 안 위 32 · 왼쪽 1/3 = 이름 칸 · 오른쪽 2/3 = 내용 */
+.cv3-sec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--cv3-g);margin-top:var(--cv3-s7);padding-top:var(--cv3-s5);
+  border-top:1px solid var(--cv3-line)}
+.cv3-sec-r{grid-column:1;min-width:0}
+.cv3-sec-m{grid-column:2 / 4;min-width:0}
+.cv3-sec-r h2{font-size:var(--cv3-k2);font-weight:500;line-height:1.3;letter-spacing:-.01em}
+.cv3-go{display:inline-block;margin-top:var(--cv3-s3);font-size:var(--cv3-ui);line-height:1.4}
+.cv3-pn{display:flex;gap:var(--cv3-s4);margin-top:var(--cv3-s2);font-size:var(--cv3-ui);line-height:1.4;color:var(--cv3-muted)}
+
+/* ── 문(§6-5 이름 칸 꼴) ── 윗선 · 위아래 16 · 덧말(13 흐림)이 이름(24) 위 */
+.cv3-doors{display:block;max-width:24em;margin-top:var(--cv3-s4)}
+.cv3-door{display:flex;flex-direction:column;row-gap:var(--cv3-s1);padding:var(--cv3-s3) 0;border-top:1px solid var(--cv3-line)}
+.cv3-nm{font-size:var(--cv3-k2);line-height:1.3}
+.cv3-mt{order:-1;font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+
+/* ── 사실(§6-5) ── 두 열(504 · 960) · 윗선 · 위아래 16 · 이름표 13 흐림 · 값 15 · 긴 사실 = 한 줄 전체 */
+.cv3-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--cv3-g)}
+.cv3-fact{min-width:0;padding:var(--cv3-s3) 0;border-top:1px solid var(--cv3-line)}
+.cv3-fact dt{font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-fact dd{margin-top:var(--cv3-s1);font-size:var(--cv3-ui);line-height:1.6;overflow-wrap:anywhere}
+.cv3-fact-w{grid-column:1 / -1}
+.cv3-fact-0{padding-top:0;border-top:0}
+
+/* ── 판 카드 줄(§6-2) ── 이름 칸 옆 4장 · 5장 이상 = 이름 줄 아래 6장 한 줄 */
+.cv3-cardrow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--cv3-g);row-gap:var(--cv3-s6)}
+
+@media (min-width:1200px){
+  /* 문 줄과 사실 줄이 같은 가로선에 서게 — 줄 높이 한 값(88) · 이름 칸 첫 줄 = 구획 이름 */
+  .cv3-rows .cv3-sec-r h2{min-height:88px}
+  .cv3-rows .cv3-doors{margin-top:0}
+  .cv3-rows .cv3-door,.cv3-rows .cv3-fact:not(.cv3-fact-w){min-height:88px}
+  .cv3-sec.cv3-wide > .cv3-sec-r,.cv3-sec.cv3-wide > .cv3-sec-m{grid-column:1 / -1}
+  .cv3-sec.cv3-wide > .cv3-sec-m{margin-top:var(--cv3-s4)}
+  .cv3-cardrow.cv3-c6{grid-template-columns:repeat(6,minmax(0,1fr))}
+}
+
+/* ── 601 ~ 1199(시안 없음 · 끊는 점 = 틀 v3 · 앨범 목록 v3 과 같은 1199 · 767) ──
+   768 ~ 1199 = 위는 두 칸 반반(사진 받침 정사각 · 이름 · 거래 · 글) — 가격이 첫 화면에 서게 · 구획은 한 열(이름 위 · 내용 아래) · 판 카드 4열
+   601 ~ 767 = 위도 한 열(사진 → 이름 · 거래 · 글) · 판 카드 3열 */
+@media (max-width:1199px){
+  .cv3-top{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cv3-vw{grid-column:1}
+  .cv3-bx{grid-column:2}
+  .cv3-stage{height:auto;aspect-ratio:1 / 1}
+  .cv3-stage .cv3-zoom{width:84%;height:84%;max-width:none}
+  .cv3-thumbs{flex-wrap:wrap}
+  .cv3-sec{grid-template-columns:minmax(0,1fr)}
+  .cv3-sec-r,.cv3-sec-m{grid-column:1}
+  .cv3-sec-m{margin-top:var(--cv3-s4)}
+  .cv3-fact-0{padding-top:var(--cv3-s3);border-top:1px solid var(--cv3-line)}
+}
+@media (max-width:767px){
+  .cv3-top{grid-template-columns:minmax(0,1fr)}
+  .cv3-vw,.cv3-bx{grid-column:1}
+  .cv3-bx{margin-top:var(--cv3-s4)}
+  .cv3-stage{aspect-ratio:10 / 9}
+  .cv3-stage .cv3-zoom{width:81%;height:90%}
+  .cv3-pd .cv3-buy{max-width:432px}
+  .cv3-note,.cv3-lisq,.cv3-cond,.cv3-yt{max-width:38em}
+  .cv3-cardrow{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* ── 600 이하 = 시안(390 · §7) ── 받침 10:9 · 구획 사이 48 + 24 · 판 카드 2열 */
+@media (max-width:600px){
+  .cv3-scnt{display:none}
+  .cv3-thumbs{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+  .cv3-thumbs button{width:auto;height:auto;aspect-ratio:1 / 1}
+  .cv3-dealb{margin-top:var(--cv3-s4);padding-top:var(--cv3-s3)}
+  .cv3-pd .cv3-buy{max-width:none}
+  .cv3-sec{margin-top:var(--cv3-s6);padding-top:var(--cv3-s4)}
+  .cv3-doors{max-width:none}
+  .cv3-cardrow{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:var(--cv3-s5)}
+}
+
+@media print{.cv3-thumbs,.cv3-pn,.cv3-yt{display:none !important}}

@@ -1235,8 +1235,957 @@
     }
    },
    "bytes": 3280928
+  },
+  {
+   "dir": "ibm-plex-sans-kr",
+   "pkg": "@ibm/plex-sans-kr",
+   "ver": "1.1.0",
+   "note": "OFL 1.1 · RFN Plex · IBM 원 배포 split woff2 그대로 · 굵기 400 · 500 만",
+   "files": {
+    "IBMPlexSansKR-Regular-00.woff2": {
+     "bytes": 7520,
+     "sha256": "7dddd6c79e2f30d03002656ffd8da04f90c75bb4b36faa22fce69219e4164161",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-00.woff2"
+    },
+    "IBMPlexSansKR-Regular-01.woff2": {
+     "bytes": 6888,
+     "sha256": "09c94fe2043dc425a1cbf6302ddfe73661524804fb4be14a8aa531bc26426c2e",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-01.woff2"
+    },
+    "IBMPlexSansKR-Regular-02.woff2": {
+     "bytes": 9524,
+     "sha256": "b5fcf4fb9669d07243bd32419cf656f430156b094f9c6edf5452f8119bd2f452",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-02.woff2"
+    },
+    "IBMPlexSansKR-Regular-03.woff2": {
+     "bytes": 9068,
+     "sha256": "6619c1e1dbae030d4a789fabbd0d06901d9bae0660364321c5c9cfc05365c8f9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-03.woff2"
+    },
+    "IBMPlexSansKR-Regular-04.woff2": {
+     "bytes": 11160,
+     "sha256": "c4ec43a808051967f72effb20f73b9b901e148013c150bd613c48498734dff4d",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-04.woff2"
+    },
+    "IBMPlexSansKR-Regular-05.woff2": {
+     "bytes": 11564,
+     "sha256": "cbc8af0c1e24509a4f290e4ec76192dd7485de82337bf78b53390e4a396dbe94",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-05.woff2"
+    },
+    "IBMPlexSansKR-Regular-06.woff2": {
+     "bytes": 11064,
+     "sha256": "664deaa0516b012e4e29781a250a2bc56389b24ab190d1581c6b4dfadb055488",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-06.woff2"
+    },
+    "IBMPlexSansKR-Regular-07.woff2": {
+     "bytes": 10196,
+     "sha256": "590423a2a915df0e6f59e1d1aed8e03ee6bf5b9cc0f0aac27d1f9bd7274e0b89",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-07.woff2"
+    },
+    "IBMPlexSansKR-Regular-08.woff2": {
+     "bytes": 11828,
+     "sha256": "19c486553d5f691ce8519d4848471f2da72ee295c0c75892500e57dcb765226c",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-08.woff2"
+    },
+    "IBMPlexSansKR-Regular-09.woff2": {
+     "bytes": 11372,
+     "sha256": "3dc5da25ff5b9c492fd84b745b9e7c4511a9e3d0824e2d3a408f9d9865d61197",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-09.woff2"
+    },
+    "IBMPlexSansKR-Regular-10.woff2": {
+     "bytes": 9900,
+     "sha256": "bf8632932c0a87d24f25cd9209a1c8d968bee6c3d8cfa5c145cca1b38b9bc4d6",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-10.woff2"
+    },
+    "IBMPlexSansKR-Regular-11.woff2": {
+     "bytes": 13440,
+     "sha256": "c28bb9c7c50fd6dae99fada97cb556a854e9d0e98fd2025cec7f769d315a0e78",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-11.woff2"
+    },
+    "IBMPlexSansKR-Regular-12.woff2": {
+     "bytes": 13176,
+     "sha256": "90e69e7d5391dafad76fcab535f761838dcafe366e2b071b77c2072e2ed33a4f",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-12.woff2"
+    },
+    "IBMPlexSansKR-Regular-13.woff2": {
+     "bytes": 12344,
+     "sha256": "0574dc4ba8785a9f8480aaf87ee9c93ee7ca74d1d8ec35491d04b448c83243ee",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-13.woff2"
+    },
+    "IBMPlexSansKR-Regular-14.woff2": {
+     "bytes": 12336,
+     "sha256": "b8b59c01153abb0492b9743cc6c0fdf6324156c3833a62668b718f1ebffd6b68",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-14.woff2"
+    },
+    "IBMPlexSansKR-Regular-15.woff2": {
+     "bytes": 11400,
+     "sha256": "6bff1f96e3af4d8424a9c030ee042d5b36579661aee21837b3847544011668a8",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-15.woff2"
+    },
+    "IBMPlexSansKR-Regular-16.woff2": {
+     "bytes": 11368,
+     "sha256": "dc918cb48f2149d6d502974a6a57b9ef1454e185d6878b934c90008c5604f0a9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-16.woff2"
+    },
+    "IBMPlexSansKR-Regular-17.woff2": {
+     "bytes": 12080,
+     "sha256": "42ad4f545d28607bbbac16792ea70d1969c6bfde1d89200072e2b0f7e8a072dd",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-17.woff2"
+    },
+    "IBMPlexSansKR-Regular-18.woff2": {
+     "bytes": 9756,
+     "sha256": "3f86ce0d67f22df04baacd70b22b850de3c2a9a4a284d7489f69a023c8e76868",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-18.woff2"
+    },
+    "IBMPlexSansKR-Regular-19.woff2": {
+     "bytes": 11816,
+     "sha256": "d39cd02374f7a4d62272047bda6613cd6c0549731e245915b45d681f4ae79587",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-19.woff2"
+    },
+    "IBMPlexSansKR-Regular-20.woff2": {
+     "bytes": 11340,
+     "sha256": "01ca12030c04940ef37f267cca560146f29b434aed3228b71bf93609196415fa",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-20.woff2"
+    },
+    "IBMPlexSansKR-Regular-21.woff2": {
+     "bytes": 9972,
+     "sha256": "bdbdfd03048f24fdb2569772b36a55bd967b960d3fc89e5514339e6a53a111d6",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-21.woff2"
+    },
+    "IBMPlexSansKR-Regular-22.woff2": {
+     "bytes": 12888,
+     "sha256": "3fe47d7f68da1cc302093ddacbfa8793fdb13317d066c209e968370d37359ca4",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-22.woff2"
+    },
+    "IBMPlexSansKR-Regular-23.woff2": {
+     "bytes": 12688,
+     "sha256": "72e088eccdde6c13fa1bdbe5455a989323baedc247e1ed36d247ed58cc13d7dd",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-23.woff2"
+    },
+    "IBMPlexSansKR-Regular-24.woff2": {
+     "bytes": 11524,
+     "sha256": "f684bd46fdab4f5ce0f7c68bb39f0f15e602d7f582fbe37caa28f216135da9d2",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-24.woff2"
+    },
+    "IBMPlexSansKR-Regular-25.woff2": {
+     "bytes": 11236,
+     "sha256": "f01bb88f121be440a7d6a7ab86d14f57b8ce27c1642533ba770afaa3578357bb",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-25.woff2"
+    },
+    "IBMPlexSansKR-Regular-26.woff2": {
+     "bytes": 12672,
+     "sha256": "a490547a5e083fa8cf11709541c7d922274ca8c97d54220d7c47c56349561941",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-26.woff2"
+    },
+    "IBMPlexSansKR-Regular-27.woff2": {
+     "bytes": 12084,
+     "sha256": "233f6a1d82bb8657c3d4a0eb19c2ebd96b313d91ca7d4d056d869c292655d0fb",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-27.woff2"
+    },
+    "IBMPlexSansKR-Regular-28.woff2": {
+     "bytes": 10428,
+     "sha256": "45130e99d5df84ec7150bf799196b2bf3de9d54e72d2551e1f545070f608edec",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-28.woff2"
+    },
+    "IBMPlexSansKR-Regular-29.woff2": {
+     "bytes": 11160,
+     "sha256": "dec8b5657a72327995dd72b7771961ecb7abc3df35e4033c9f771abf012bfeca",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-29.woff2"
+    },
+    "IBMPlexSansKR-Regular-30.woff2": {
+     "bytes": 11356,
+     "sha256": "264912dbb53be31342e7107b9d6a3a6b4a5eb8ecab30ca7360d2dfb040d8f9b8",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-30.woff2"
+    },
+    "IBMPlexSansKR-Regular-31.woff2": {
+     "bytes": 11508,
+     "sha256": "be99e82070c30d8cee497531a6bef641b786fb5d1666ecb1c7b5fdbeb4b205c1",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-31.woff2"
+    },
+    "IBMPlexSansKR-Regular-32.woff2": {
+     "bytes": 8936,
+     "sha256": "ecf91dd2397b646697d88d906346766403aaf2b28ba49fee8e5c28684e2afd64",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-32.woff2"
+    },
+    "IBMPlexSansKR-Regular-33.woff2": {
+     "bytes": 11200,
+     "sha256": "f963dedc9737499a782e8a7bb1483c9980e27c9ec0807d95d3be89e5e60a6b33",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-33.woff2"
+    },
+    "IBMPlexSansKR-Regular-34.woff2": {
+     "bytes": 10604,
+     "sha256": "39e229399e6a86761d5830e7264e85d15540930949c69c3a014ed4779e8dd338",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-34.woff2"
+    },
+    "IBMPlexSansKR-Regular-35.woff2": {
+     "bytes": 10696,
+     "sha256": "63225f4533a06f2eb4ac5263f24ace245cb0aa7c7d83b9d6ed99f89e170db112",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-35.woff2"
+    },
+    "IBMPlexSansKR-Regular-36.woff2": {
+     "bytes": 9076,
+     "sha256": "8b8076206caf6ef2a7163e0da75e5df5f1d200886fb745dd8e503c9df269c5ce",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-36.woff2"
+    },
+    "IBMPlexSansKR-Regular-37.woff2": {
+     "bytes": 11076,
+     "sha256": "c37426f2d1f8e2ebfb222da7b1a8ba26ecf46b3e0f5c1b6be0ea819d12c95cc9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-37.woff2"
+    },
+    "IBMPlexSansKR-Regular-38.woff2": {
+     "bytes": 10872,
+     "sha256": "6a2bb8810981cd3d78d7b4ea58bd48b29f64d4d9ccd2403827906d8aebb944bb",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-38.woff2"
+    },
+    "IBMPlexSansKR-Regular-39.woff2": {
+     "bytes": 9548,
+     "sha256": "30db31cc9ab71b362d5365d473301549784fd5860e09625d2badadf327e988e9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-39.woff2"
+    },
+    "IBMPlexSansKR-Regular-40.woff2": {
+     "bytes": 10088,
+     "sha256": "9b684091142135c3d695959c720e0727f61c3508e2e14fff9bfb22c471c5c90f",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-40.woff2"
+    },
+    "IBMPlexSansKR-Regular-41.woff2": {
+     "bytes": 10772,
+     "sha256": "3179c06ea05cc7ce5ccb3ccfd1a6d9eb7cc1cb9a32aceb550c504b8d8259219f",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-41.woff2"
+    },
+    "IBMPlexSansKR-Regular-42.woff2": {
+     "bytes": 10548,
+     "sha256": "f1ee3c246c54d64b840b12d05677590b45169caeea453d9fc20f423dd9a01afc",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-42.woff2"
+    },
+    "IBMPlexSansKR-Regular-43.woff2": {
+     "bytes": 9712,
+     "sha256": "e84af50bc521e2244a7421b15d5eccf5b1c3f3427e67da5304307f3caf0ed4a8",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-43.woff2"
+    },
+    "IBMPlexSansKR-Regular-44.woff2": {
+     "bytes": 11024,
+     "sha256": "e8636da499483884372b95d24651bb6a762b3d928e699b51d477fb9173bfda6b",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-44.woff2"
+    },
+    "IBMPlexSansKR-Regular-45.woff2": {
+     "bytes": 10604,
+     "sha256": "a90d6a4f04e95d32a054d34b0fdf983b5f664b271637dc002d507385ca7f7c47",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-45.woff2"
+    },
+    "IBMPlexSansKR-Regular-46.woff2": {
+     "bytes": 10672,
+     "sha256": "42631b9476da86df55d569eb157d294f25d2961f3e083762b1f2cdc0851d6428",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-46.woff2"
+    },
+    "IBMPlexSansKR-Regular-47.woff2": {
+     "bytes": 10140,
+     "sha256": "3a32ebe75865b35520ce23e7ddaa8e9336a3eb993954fae7baf5a9288b28d34e",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-47.woff2"
+    },
+    "IBMPlexSansKR-Regular-48.woff2": {
+     "bytes": 10644,
+     "sha256": "6249a1ddfc2bd3275d3b543a0d47de6aae81e953ee06c8f6a0027ecbb395c819",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-48.woff2"
+    },
+    "IBMPlexSansKR-Regular-49.woff2": {
+     "bytes": 10748,
+     "sha256": "beacdd74c8a4793f4d79f40bac9df1b5b39ce4fbe9f887858a29cef2e753a9fe",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-49.woff2"
+    },
+    "IBMPlexSansKR-Regular-50.woff2": {
+     "bytes": 10564,
+     "sha256": "452fe3b90e92e5c0f72f962c45b8bb857eb546a4157d79ad16ffeb1125057cde",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-50.woff2"
+    },
+    "IBMPlexSansKR-Regular-51.woff2": {
+     "bytes": 9920,
+     "sha256": "a062ef7a83e6f46acd69a3e305238380fb3d86fdeb156f179db4c1e34c312473",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-51.woff2"
+    },
+    "IBMPlexSansKR-Regular-52.woff2": {
+     "bytes": 10668,
+     "sha256": "7738e9e1c4e3f20428531591693ff02f10fc9698212a35684a585a6fc7179380",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-52.woff2"
+    },
+    "IBMPlexSansKR-Regular-53.woff2": {
+     "bytes": 10908,
+     "sha256": "073e3cefb14d2467d9c0479a4651e22a1f7a5956158f77b9a00962e051d544db",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-53.woff2"
+    },
+    "IBMPlexSansKR-Regular-54.woff2": {
+     "bytes": 9648,
+     "sha256": "428237310a1cfe48827007315837b9db3aca306c8d54802a0067f1cb627b5905",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-54.woff2"
+    },
+    "IBMPlexSansKR-Regular-55.woff2": {
+     "bytes": 11480,
+     "sha256": "2b07da64aae60a588bd99ada35cbb63a13d9a826e62131e5b65a713b806f10b4",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-55.woff2"
+    },
+    "IBMPlexSansKR-Regular-56.woff2": {
+     "bytes": 11744,
+     "sha256": "846631b520ac848594fa3d8489d727b575693051a0420ecbeda637ba1d6853aa",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-56.woff2"
+    },
+    "IBMPlexSansKR-Regular-57.woff2": {
+     "bytes": 11388,
+     "sha256": "b772b939a4620c71420cd99b1b3c105d886a0fd02bca28f35d5ab494074992f5",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-57.woff2"
+    },
+    "IBMPlexSansKR-Regular-58.woff2": {
+     "bytes": 9624,
+     "sha256": "caccd6eeae4ba39103d49bb2db94225180f4e14572cff9ab83fd73236bea7ee5",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-58.woff2"
+    },
+    "IBMPlexSansKR-Regular-59.woff2": {
+     "bytes": 11536,
+     "sha256": "cec8d3bc5a9f1152e46c19a6c76744c0cb895aa8cb03f1d9f4cc465eae701897",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-59.woff2"
+    },
+    "IBMPlexSansKR-Regular-60.woff2": {
+     "bytes": 10732,
+     "sha256": "67efdec8e1c7081992a3b10ad24c377a77bddfcdd7ca8f3d110ac087e5c287ea",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-60.woff2"
+    },
+    "IBMPlexSansKR-Regular-61.woff2": {
+     "bytes": 8932,
+     "sha256": "33a0d01a3e448cd3f1dd0a51c1f3d124ab2fb70c0db30b886596cc98ced59d00",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-61.woff2"
+    },
+    "IBMPlexSansKR-Regular-62.woff2": {
+     "bytes": 3284,
+     "sha256": "c536bf505286669716936cd3fdef4dfe952a31bdb2922de16177d048c5b38f23",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-62.woff2"
+    },
+    "IBMPlexSansKR-Regular-63.woff2": {
+     "bytes": 4860,
+     "sha256": "a88a92501bb4cd59c66656fcdaca0799f416450333c0ef3fe93db3266b6cec35",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-63.woff2"
+    },
+    "IBMPlexSansKR-Regular-64.woff2": {
+     "bytes": 8408,
+     "sha256": "2e5c77cebeca87fa93fd1c5313751f1a76fe5c8338b4c40350141732a1810013",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-64.woff2"
+    },
+    "IBMPlexSansKR-Regular-65.woff2": {
+     "bytes": 2580,
+     "sha256": "f03d844b3d73e8382fef086460691c777e07fce2853baf373ef36ad7a8824ed5",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-65.woff2"
+    },
+    "IBMPlexSansKR-Regular-66.woff2": {
+     "bytes": 4464,
+     "sha256": "52588b176310bd73547df3c65ccd431f89775a127a4841f931fb1c3678f925c8",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-66.woff2"
+    },
+    "IBMPlexSansKR-Regular-67.woff2": {
+     "bytes": 6428,
+     "sha256": "3a622c0133dc4d7afc90916fdbf27111d3f248be5358436b0ff194ef47756e90",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-67.woff2"
+    },
+    "IBMPlexSansKR-Regular-68.woff2": {
+     "bytes": 9448,
+     "sha256": "5602b576c1437d16790418c4603022f0d03f55d8ad090e8871caade0bbaf7bba",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-68.woff2"
+    },
+    "IBMPlexSansKR-Regular-69.woff2": {
+     "bytes": 5744,
+     "sha256": "0e2df0f4dcf701501d2aa10bb222eb564079f3511fc1c84b5aa2f241335a9fcf",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-69.woff2"
+    },
+    "IBMPlexSansKR-Regular-70.woff2": {
+     "bytes": 4264,
+     "sha256": "8208710cc22717ed3cb1a06cb5c55a2e6e36dca6179fb8eaaecf98e83706671b",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-70.woff2"
+    },
+    "IBMPlexSansKR-Regular-71.woff2": {
+     "bytes": 6152,
+     "sha256": "3c000102acc2c4b9755c477dd2af528862e475d344c0207508e8e5ba07fa86a7",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-71.woff2"
+    },
+    "IBMPlexSansKR-Regular-72.woff2": {
+     "bytes": 5796,
+     "sha256": "00c279e6782810309b55f6e7f0b87266c6e34a120c8a56f584382392400decf1",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-72.woff2"
+    },
+    "IBMPlexSansKR-Regular-73.woff2": {
+     "bytes": 6584,
+     "sha256": "536d75c23d2348e688ba00e935dc2f57ef5be481ed3924f02698ef12f4482820",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-73.woff2"
+    },
+    "IBMPlexSansKR-Regular-74.woff2": {
+     "bytes": 7404,
+     "sha256": "18b89fbbe1ffbcb3c783a65c4f991eb6aa3a2a2cfdcf32cca56991e9bf83cebb",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-74.woff2"
+    },
+    "IBMPlexSansKR-Regular-75.woff2": {
+     "bytes": 6920,
+     "sha256": "fb50f7047eed74e580370d10e21cabaa7cda59b804aa3452b565db90d4dbd3fb",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-75.woff2"
+    },
+    "IBMPlexSansKR-Regular-76.woff2": {
+     "bytes": 7872,
+     "sha256": "3934a9c08bb70fcfe0b5cb0b18c90eb76f607c9a6a959c2e4c37bf74b7e7bdb8",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-76.woff2"
+    },
+    "IBMPlexSansKR-Regular-77.woff2": {
+     "bytes": 8300,
+     "sha256": "60a7db5bd8184e9f6813d56285aedb1368066e262795bfa696482d0ea4ed2b58",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-77.woff2"
+    },
+    "IBMPlexSansKR-Regular-78.woff2": {
+     "bytes": 9404,
+     "sha256": "b1d8bc4c917cd2ec8144663fcf80c9fd0c57275c112df0334ca5333438a4088e",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-78.woff2"
+    },
+    "IBMPlexSansKR-Regular-79.woff2": {
+     "bytes": 11100,
+     "sha256": "50e73c623ed496eb17c50479233ee406ff6e166820369e2d322ccc607796b87e",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-79.woff2"
+    },
+    "IBMPlexSansKR-Regular-80.woff2": {
+     "bytes": 9632,
+     "sha256": "424cba8e42e7c4d9bc3a7cbd5a3a5837d05a6b2b6a107cc290bab7f8e018cf74",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-80.woff2"
+    },
+    "IBMPlexSansKR-Regular-81.woff2": {
+     "bytes": 10072,
+     "sha256": "4bb4726771be77bcae549ea7cdf25a5f7a0431f15c02f7b08013303486b4074a",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-81.woff2"
+    },
+    "IBMPlexSansKR-Regular-82.woff2": {
+     "bytes": 9700,
+     "sha256": "56eef137ac84fa6228e297f1e1b08b8a8e8052205eb3750a5a662024bc9c05fb",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-82.woff2"
+    },
+    "IBMPlexSansKR-Regular-83.woff2": {
+     "bytes": 9628,
+     "sha256": "fb58ccb4aff438990d6482a53829e368f451d1109de25184e88a916d2140f056",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-83.woff2"
+    },
+    "IBMPlexSansKR-Regular-84.woff2": {
+     "bytes": 9036,
+     "sha256": "65a7e079119ca5f9f84831de7e8bf85efe3d11eefd02a1f71de44ef6ce4360eb",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-84.woff2"
+    },
+    "IBMPlexSansKR-Regular-85.woff2": {
+     "bytes": 9512,
+     "sha256": "3eb2669d6ce34d2c7b6aa00a574c53430017b0414cd59dc99a25dc74a94b9d77",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-85.woff2"
+    },
+    "IBMPlexSansKR-Regular-86.woff2": {
+     "bytes": 9568,
+     "sha256": "b3f3c982061cb433b6b7db379e8cc5614375e9894370ec1c53453fb3948794a2",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-86.woff2"
+    },
+    "IBMPlexSansKR-Regular-87.woff2": {
+     "bytes": 9196,
+     "sha256": "c05e8ab605ed0df8ec7b24d87902a39d9c67b2a7f0bf04d1f95f37692dc5637a",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-87.woff2"
+    },
+    "IBMPlexSansKR-Regular-88.woff2": {
+     "bytes": 9232,
+     "sha256": "3f6dcf66c6fbcc15ce03ed20fa318c9a429ac6e35ae16e00a92ad714c10605a3",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-88.woff2"
+    },
+    "IBMPlexSansKR-Regular-89.woff2": {
+     "bytes": 8748,
+     "sha256": "d4e06c06d46fcebc866a9a8c2d8c4e8d3c5d7fd777367c8172b3e3927395a63d",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-89.woff2"
+    },
+    "IBMPlexSansKR-Regular-90.woff2": {
+     "bytes": 10176,
+     "sha256": "20b92e314a6d42774de1f9e2273d01d2e096649f79c8cad8b1483231d909d608",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-90.woff2"
+    },
+    "IBMPlexSansKR-Regular-91.woff2": {
+     "bytes": 9528,
+     "sha256": "263976940fb397e1aaff1b29e1c890ee65b0c5f2280c5d884802c2a641668568",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-91.woff2"
+    },
+    "IBMPlexSansKR-Regular-92.woff2": {
+     "bytes": 16848,
+     "sha256": "deb550652cbc2cbb9ad8de762bd79099743c1aa3a42c75891eeea6ee27620306",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-92.woff2"
+    },
+    "IBMPlexSansKR-Regular-93.woff2": {
+     "bytes": 3232,
+     "sha256": "ca3480c7a835e193a28882d4b01e570f04d5a1ac1fdbc1f30cdfaf34e8126df6",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Regular-93.woff2"
+    },
+    "IBMPlexSansKR-Medium-00.woff2": {
+     "bytes": 7560,
+     "sha256": "f02aabffd78ca6e85049861a4d090d0340ea0a3a5f81f8eb334a00e21c50ad78",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-00.woff2"
+    },
+    "IBMPlexSansKR-Medium-01.woff2": {
+     "bytes": 6880,
+     "sha256": "7a085b0ecd2fa43f7412b9ed75440ce61edcf64e9638159476fcbdc6a009d1f9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-01.woff2"
+    },
+    "IBMPlexSansKR-Medium-02.woff2": {
+     "bytes": 9400,
+     "sha256": "d25932405b7ffb007c98edd685bd592f240b0a36d24f22f960d541bade5e33f3",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-02.woff2"
+    },
+    "IBMPlexSansKR-Medium-03.woff2": {
+     "bytes": 8804,
+     "sha256": "9c3e90cdbe1d61911765d02d67883b0a6d9fc1c791cc524ff5a07563afabd494",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-03.woff2"
+    },
+    "IBMPlexSansKR-Medium-04.woff2": {
+     "bytes": 11020,
+     "sha256": "f7de0cf96607bbbbae6df5b5f61d93c7c8e174105ac75ce8d302a626bc1ae2b8",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-04.woff2"
+    },
+    "IBMPlexSansKR-Medium-05.woff2": {
+     "bytes": 11664,
+     "sha256": "4e8a175f1ab20e0e4e4a776f02fad786d3aaf9c6b5037fefe54785e3e639fdea",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-05.woff2"
+    },
+    "IBMPlexSansKR-Medium-06.woff2": {
+     "bytes": 11192,
+     "sha256": "5eac4500fb2b51a995e3e06b21da34861e26c37a17ea1d64a1dad672fd8ef808",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-06.woff2"
+    },
+    "IBMPlexSansKR-Medium-07.woff2": {
+     "bytes": 10176,
+     "sha256": "5ccb1b15c9ace51b4d9907093bbc8ec3098624c0aeabd60719de829c46b97344",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-07.woff2"
+    },
+    "IBMPlexSansKR-Medium-08.woff2": {
+     "bytes": 11924,
+     "sha256": "665e9c46f81dd9233ce795a752aca16e805fcebee1a97f0b96c149a000bc1eee",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-08.woff2"
+    },
+    "IBMPlexSansKR-Medium-09.woff2": {
+     "bytes": 11364,
+     "sha256": "5c04eb7ee834c6e993a1284ca48ec9bcf49fe7ea3a35b898cd5b23d61ae354dc",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-09.woff2"
+    },
+    "IBMPlexSansKR-Medium-10.woff2": {
+     "bytes": 9836,
+     "sha256": "c5efecde84f586b765371ad896acf8eab0931dd96dd32c249c17c900d332e6b2",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-10.woff2"
+    },
+    "IBMPlexSansKR-Medium-11.woff2": {
+     "bytes": 13340,
+     "sha256": "d1a299477c82acad4fcae92abaf866cb3b801b34d6f3ee16a6a559e791cdbee9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-11.woff2"
+    },
+    "IBMPlexSansKR-Medium-12.woff2": {
+     "bytes": 13148,
+     "sha256": "86a74467087a8984611eda2c637c000b8373534ff39afcc08781c4f0cbfa8e54",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-12.woff2"
+    },
+    "IBMPlexSansKR-Medium-13.woff2": {
+     "bytes": 12472,
+     "sha256": "2e55ed63a80fd3151e95b8c96b780808a6ad5eea7980b42c3ea065030c111f13",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-13.woff2"
+    },
+    "IBMPlexSansKR-Medium-14.woff2": {
+     "bytes": 12424,
+     "sha256": "dc90fe17e8f76337f5448d9b7c1954c47a93500c9efd1228a88aa932725868b9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-14.woff2"
+    },
+    "IBMPlexSansKR-Medium-15.woff2": {
+     "bytes": 11288,
+     "sha256": "c3c283c5aecb45f224f724fd006eaf7f5c1972113e9b4c7dd296eaca269f38cd",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-15.woff2"
+    },
+    "IBMPlexSansKR-Medium-16.woff2": {
+     "bytes": 11460,
+     "sha256": "161e6a5250ca87d3abbf11a9b468d785313c5b52b3b348d7ea0195f4fd3fe951",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-16.woff2"
+    },
+    "IBMPlexSansKR-Medium-17.woff2": {
+     "bytes": 11852,
+     "sha256": "c600b1fa0abc2e9cff5389266b457be75a601e0b7f1d7109c280453d58e673ad",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-17.woff2"
+    },
+    "IBMPlexSansKR-Medium-18.woff2": {
+     "bytes": 9776,
+     "sha256": "11967005e8a15b1e20eb25aba4cbd4b1a3b924f59f9844d1f2ec7b40bcc219b3",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-18.woff2"
+    },
+    "IBMPlexSansKR-Medium-19.woff2": {
+     "bytes": 11968,
+     "sha256": "deace15e6b4ee6e4254893d9626b15634758788862781aa854118c69b19c37a2",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-19.woff2"
+    },
+    "IBMPlexSansKR-Medium-20.woff2": {
+     "bytes": 11380,
+     "sha256": "3e7ace7bfad7923c36e087f33336a50efe1d95a8f92476ec2cca8a38b3b7da82",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-20.woff2"
+    },
+    "IBMPlexSansKR-Medium-21.woff2": {
+     "bytes": 10088,
+     "sha256": "bf484fd5d0b7c3531995909a7087bfe7b7c182edbbff75358224380f40cccbc0",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-21.woff2"
+    },
+    "IBMPlexSansKR-Medium-22.woff2": {
+     "bytes": 12868,
+     "sha256": "969fa01dd8c4230cf5d5b2e74110b55d95bff16a44b8291219a25c16f9295ce4",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-22.woff2"
+    },
+    "IBMPlexSansKR-Medium-23.woff2": {
+     "bytes": 12476,
+     "sha256": "3335814bb1c5560e6a1d5666e4916795d7ffe557d510ac2b24f3e0aaba817f2c",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-23.woff2"
+    },
+    "IBMPlexSansKR-Medium-24.woff2": {
+     "bytes": 11644,
+     "sha256": "babd3eb0439b52d0493c9ee6d5ba620a7127462b18b25628afed8a93391b143d",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-24.woff2"
+    },
+    "IBMPlexSansKR-Medium-25.woff2": {
+     "bytes": 11112,
+     "sha256": "e7a53036bbda98ce519fa575248f1613f5c8de8ecfd1e3c1b9a38858fc89d782",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-25.woff2"
+    },
+    "IBMPlexSansKR-Medium-26.woff2": {
+     "bytes": 12676,
+     "sha256": "89f73b16944ef761a7a029bd940ad50b1a15b0e0e81253390bfcfd155589fd4f",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-26.woff2"
+    },
+    "IBMPlexSansKR-Medium-27.woff2": {
+     "bytes": 12152,
+     "sha256": "e82d7ce8589ed5bdb3f1b4ce7c89bcf219dd7a3dce70cee277f26c5ef8ee2dc7",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-27.woff2"
+    },
+    "IBMPlexSansKR-Medium-28.woff2": {
+     "bytes": 10496,
+     "sha256": "d12e579303fc1e5309116244c87e1c7563972d0a68b38a3253aaded704a51f0e",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-28.woff2"
+    },
+    "IBMPlexSansKR-Medium-29.woff2": {
+     "bytes": 11136,
+     "sha256": "ea66f51f97d4ac043eba3813f1c9355bd20361807d4695f0af0627a3070cbdc1",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-29.woff2"
+    },
+    "IBMPlexSansKR-Medium-30.woff2": {
+     "bytes": 11436,
+     "sha256": "b134e0434b8a964ba4fd7273fb3fdc00837f830ea7ba48a97cd65da8b540d733",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-30.woff2"
+    },
+    "IBMPlexSansKR-Medium-31.woff2": {
+     "bytes": 11368,
+     "sha256": "4e0d31f29e8004f438231ac1c981173838fb427d6883f27bbb8df93232247dfd",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-31.woff2"
+    },
+    "IBMPlexSansKR-Medium-32.woff2": {
+     "bytes": 8832,
+     "sha256": "f87c7f6bfd62bcc263d95024407634f70cd475e1453d98dbf4fcb4d07fa2cf6f",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-32.woff2"
+    },
+    "IBMPlexSansKR-Medium-33.woff2": {
+     "bytes": 11292,
+     "sha256": "66b64f8c6f0a24f65f1bbc744984f87fffc1e36d6c3c5abde16c68b832c6e5c0",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-33.woff2"
+    },
+    "IBMPlexSansKR-Medium-34.woff2": {
+     "bytes": 10544,
+     "sha256": "3b1c58765a9046a1db3a7807d27d1ffdac2bb08859f06f338ba83f8e6f03bcf9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-34.woff2"
+    },
+    "IBMPlexSansKR-Medium-35.woff2": {
+     "bytes": 10700,
+     "sha256": "ec2d9d58bf99ec1c0e01c9d0f8b63cbc654a61a0aa015fee5160c46ba188689c",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-35.woff2"
+    },
+    "IBMPlexSansKR-Medium-36.woff2": {
+     "bytes": 8932,
+     "sha256": "28d26eea49240e90404f026d6b2c8365039d959adab2e59ae9913a3599819cd0",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-36.woff2"
+    },
+    "IBMPlexSansKR-Medium-37.woff2": {
+     "bytes": 11024,
+     "sha256": "9ef64562930dcc3466e2628df4ca231f620324ca224827c14b38bbe34845dfc3",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-37.woff2"
+    },
+    "IBMPlexSansKR-Medium-38.woff2": {
+     "bytes": 11008,
+     "sha256": "ce2978126451acf486a7d5161548d46d8c03f749ad60051e2191cc2045af3f48",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-38.woff2"
+    },
+    "IBMPlexSansKR-Medium-39.woff2": {
+     "bytes": 9580,
+     "sha256": "4c6c914f0e50d09cdcb258405fc0e4b40666e6952e1a50adbbefcb4936e9bd21",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-39.woff2"
+    },
+    "IBMPlexSansKR-Medium-40.woff2": {
+     "bytes": 10212,
+     "sha256": "778eb0557372df4d199a5fbd0ea5ff0f0a405ef2acb3f27819b7cac817b8af7b",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-40.woff2"
+    },
+    "IBMPlexSansKR-Medium-41.woff2": {
+     "bytes": 10788,
+     "sha256": "13a52c7b8fb36cea3283a3cc7a5aef56506a70d3f0a58ed8a9aabe70f1d4d474",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-41.woff2"
+    },
+    "IBMPlexSansKR-Medium-42.woff2": {
+     "bytes": 10352,
+     "sha256": "aec9f9e275f2f3ffb4f20d11f8e3a2e6daf84accbaf29508afa4b0b5106f738f",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-42.woff2"
+    },
+    "IBMPlexSansKR-Medium-43.woff2": {
+     "bytes": 9584,
+     "sha256": "9d3daa468cfaff1cb0c16feb7c2ecddebe071955bcbc00deb7d99e06a33961a9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-43.woff2"
+    },
+    "IBMPlexSansKR-Medium-44.woff2": {
+     "bytes": 11220,
+     "sha256": "ec1b15122438542f1c7d3032c7d654cf9c34d5b409a3232da067a1ed9201a8aa",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-44.woff2"
+    },
+    "IBMPlexSansKR-Medium-45.woff2": {
+     "bytes": 10668,
+     "sha256": "3da24c6d8957f3a7f37e43bb9f6575b5e9b5b82660f0d42dab786d32ef7be094",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-45.woff2"
+    },
+    "IBMPlexSansKR-Medium-46.woff2": {
+     "bytes": 10820,
+     "sha256": "1ddfa570810213334f0f5e340ce54a26a705e61c98b294afab5a17589fffe127",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-46.woff2"
+    },
+    "IBMPlexSansKR-Medium-47.woff2": {
+     "bytes": 10060,
+     "sha256": "b77f7d633139c5e6e558e4d3f2586d06c81154f848f122c8619554ca71e63324",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-47.woff2"
+    },
+    "IBMPlexSansKR-Medium-48.woff2": {
+     "bytes": 10712,
+     "sha256": "aef7bb1ee358ba4f1a712834e6ac2f83436d17f949c6593f2f3eda3b7c6e84f1",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-48.woff2"
+    },
+    "IBMPlexSansKR-Medium-49.woff2": {
+     "bytes": 10812,
+     "sha256": "3616dd92c4cbe42f574f0b7ca7b6ab9b8d6de489d7820288e6f8296cfe1807dc",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-49.woff2"
+    },
+    "IBMPlexSansKR-Medium-50.woff2": {
+     "bytes": 10452,
+     "sha256": "68741e4e3c374f834159e6efcedfd7a3fbee79879928b4f49c61881588b93521",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-50.woff2"
+    },
+    "IBMPlexSansKR-Medium-51.woff2": {
+     "bytes": 9888,
+     "sha256": "bf396d9870aafdd9dd0219d727c74d9272a73f76f809618934254b133325b03d",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-51.woff2"
+    },
+    "IBMPlexSansKR-Medium-52.woff2": {
+     "bytes": 10752,
+     "sha256": "a452441ac4059e51cc2f1aaaa3160f509239ef723eccee444e3b52100d97a047",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-52.woff2"
+    },
+    "IBMPlexSansKR-Medium-53.woff2": {
+     "bytes": 10900,
+     "sha256": "7da2e5c8ae11008bfcfa105daad8bd5599c86d76be3e28e16aea4ac7fa5be627",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-53.woff2"
+    },
+    "IBMPlexSansKR-Medium-54.woff2": {
+     "bytes": 9644,
+     "sha256": "6c27f66f479e2f5ce0553a79a8c25fae83e96c27e435ef130bc0e327720e3c61",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-54.woff2"
+    },
+    "IBMPlexSansKR-Medium-55.woff2": {
+     "bytes": 11376,
+     "sha256": "10f7001afc55d5af74e7472042d2ed4633d6aa293ee3eca6d14e920e59a0904f",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-55.woff2"
+    },
+    "IBMPlexSansKR-Medium-56.woff2": {
+     "bytes": 11664,
+     "sha256": "ba0c285bf9b505d1c1d03b8d439a52c6bee12b572b8200e2981ce7efd5c6ccf7",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-56.woff2"
+    },
+    "IBMPlexSansKR-Medium-57.woff2": {
+     "bytes": 11344,
+     "sha256": "03e1ba8bd5e076661c7e45223fa5de0e0796ef88d2e37b2d3d28e00499bcd2a9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-57.woff2"
+    },
+    "IBMPlexSansKR-Medium-58.woff2": {
+     "bytes": 9608,
+     "sha256": "e4a8c5c27e6d9e77f1f86c2fd0d41504efd71994fec3ac607e1b7621bef5a87e",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-58.woff2"
+    },
+    "IBMPlexSansKR-Medium-59.woff2": {
+     "bytes": 11624,
+     "sha256": "ce2935e1ab1946ca13dfd7a0bf0fc4e58692d87364ad5cab2bee32403f02e666",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-59.woff2"
+    },
+    "IBMPlexSansKR-Medium-60.woff2": {
+     "bytes": 10696,
+     "sha256": "6ad2b1a2478bceb9a39481d41de10a69b78953c524a647531a5af896458fa139",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-60.woff2"
+    },
+    "IBMPlexSansKR-Medium-61.woff2": {
+     "bytes": 8904,
+     "sha256": "ad6aa4cab9c443aa32d25bdcfeab25eca5fbb973ecf48ddd019e59b8855ec092",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-61.woff2"
+    },
+    "IBMPlexSansKR-Medium-62.woff2": {
+     "bytes": 3252,
+     "sha256": "707d3ee2f3133969e1b1c510d94d01ea10b3ccdf7b12c4f47dbd79c406a95192",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-62.woff2"
+    },
+    "IBMPlexSansKR-Medium-63.woff2": {
+     "bytes": 4868,
+     "sha256": "32a748fe753e67b4a40f476ffc85c84622237f9f55e2d0e2c84ba836e17de942",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-63.woff2"
+    },
+    "IBMPlexSansKR-Medium-64.woff2": {
+     "bytes": 8420,
+     "sha256": "b53c12b3de93344537d6b542df300f9676e73f44fc47b004b5484c480251b451",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-64.woff2"
+    },
+    "IBMPlexSansKR-Medium-65.woff2": {
+     "bytes": 2588,
+     "sha256": "363ff38f9cfdc09c234642d76f56387c009cc6cd78d248f7a8c858db638436c0",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-65.woff2"
+    },
+    "IBMPlexSansKR-Medium-66.woff2": {
+     "bytes": 4520,
+     "sha256": "f637ca687acf81941bf626c656150e609e5faaa2915c5afaa7dbada9400d632c",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-66.woff2"
+    },
+    "IBMPlexSansKR-Medium-67.woff2": {
+     "bytes": 6456,
+     "sha256": "5c8b8723a7ce65c32309f8afc8ccda883241edba4ea7d59742c8658d2c226aa7",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-67.woff2"
+    },
+    "IBMPlexSansKR-Medium-68.woff2": {
+     "bytes": 9260,
+     "sha256": "f554f0eb394eb4ea2fc3eebdb23165b4fa7b648584eafa1071f4fdf2e8c89604",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-68.woff2"
+    },
+    "IBMPlexSansKR-Medium-69.woff2": {
+     "bytes": 5884,
+     "sha256": "4657779ec6e7a7351ec60b489cc95996e1719be2fd7637f216aeda3f9037e4d0",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-69.woff2"
+    },
+    "IBMPlexSansKR-Medium-70.woff2": {
+     "bytes": 4320,
+     "sha256": "e614e02a11d93c9b3903dd16c4f440c1be866d2caf516e8e891e637a41809bf6",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-70.woff2"
+    },
+    "IBMPlexSansKR-Medium-71.woff2": {
+     "bytes": 6124,
+     "sha256": "84a2fc93c4353a928c8a22fbfcb0f48961061029a6d2c77605978631a611f681",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-71.woff2"
+    },
+    "IBMPlexSansKR-Medium-72.woff2": {
+     "bytes": 5808,
+     "sha256": "1606e4fb366577cf424866415c3e2d65892bafef275a88d84bce5a9f1b01a9a3",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-72.woff2"
+    },
+    "IBMPlexSansKR-Medium-73.woff2": {
+     "bytes": 6520,
+     "sha256": "30efbabee9e20790ea5485ece24df0cf47b93d388ff8da6292d59ea4a3c8b21e",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-73.woff2"
+    },
+    "IBMPlexSansKR-Medium-74.woff2": {
+     "bytes": 7476,
+     "sha256": "0057ad69493033e15f07c2f26bbf02014800f3521381f5679e8e1e554d049ad3",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-74.woff2"
+    },
+    "IBMPlexSansKR-Medium-75.woff2": {
+     "bytes": 6956,
+     "sha256": "f01b53d7a1bf84b798dd7e33dd43e803c09891c66062c2c22f8a8a423844a2a1",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-75.woff2"
+    },
+    "IBMPlexSansKR-Medium-76.woff2": {
+     "bytes": 7928,
+     "sha256": "fa33308bdf047b3640f5b7543795fe52fc2cce5971a764983407c7cbc17d94ab",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-76.woff2"
+    },
+    "IBMPlexSansKR-Medium-77.woff2": {
+     "bytes": 8356,
+     "sha256": "d298a5deecb8d4a1f7083db0f689aa24353b3e4e2b048f1b14377d88a2e95dcd",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-77.woff2"
+    },
+    "IBMPlexSansKR-Medium-78.woff2": {
+     "bytes": 9504,
+     "sha256": "f244c423ba51f017f12e3ad61686500ea72a0109091ce53997d14f6ff60eaaf6",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-78.woff2"
+    },
+    "IBMPlexSansKR-Medium-79.woff2": {
+     "bytes": 11172,
+     "sha256": "a226b06803c58958d7d18bf73e06e1d64621111b09749b189f477d3d199dd876",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-79.woff2"
+    },
+    "IBMPlexSansKR-Medium-80.woff2": {
+     "bytes": 9596,
+     "sha256": "5e3e927b2a1f8eaf96de79698e1a172d42505206b3205a4bc1760d449e007254",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-80.woff2"
+    },
+    "IBMPlexSansKR-Medium-81.woff2": {
+     "bytes": 10088,
+     "sha256": "295f82ae9ac42eb8bf0c7c3e91de8befbae4cab2aa7d435ec9007af85c53c05a",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-81.woff2"
+    },
+    "IBMPlexSansKR-Medium-82.woff2": {
+     "bytes": 9716,
+     "sha256": "58297a47cd67cc3f82c8b788903888a55a5a3f01db3baa9b532e612711cd7ae9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-82.woff2"
+    },
+    "IBMPlexSansKR-Medium-83.woff2": {
+     "bytes": 9636,
+     "sha256": "62f8a857ed246c41dab66f3bf19949ce42e34939f404f05e0cf3eb1549ee436d",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-83.woff2"
+    },
+    "IBMPlexSansKR-Medium-84.woff2": {
+     "bytes": 9016,
+     "sha256": "f4f6ca662d5cf86343c55ba9374dfd022aced85162435e8cb5a5f8b1a46b00f4",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-84.woff2"
+    },
+    "IBMPlexSansKR-Medium-85.woff2": {
+     "bytes": 9620,
+     "sha256": "d10bae7bc636f6fa2f367fbca6c8869014a670df70676c8e83589e9e5cd8b99e",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-85.woff2"
+    },
+    "IBMPlexSansKR-Medium-86.woff2": {
+     "bytes": 9600,
+     "sha256": "f5091867178a9a0d24307570b7184b7b8d210b330a7c87be7e0ee15c17f171e9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-86.woff2"
+    },
+    "IBMPlexSansKR-Medium-87.woff2": {
+     "bytes": 9104,
+     "sha256": "caa28749cec9c00b80d7ba9eebc374edbe39c183986565274522f0ad0509dec7",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-87.woff2"
+    },
+    "IBMPlexSansKR-Medium-88.woff2": {
+     "bytes": 9240,
+     "sha256": "af0213732c9bbc2ff846280ccb08cd788ab7ecd047d2adfa98dc1fe59a72ae94",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-88.woff2"
+    },
+    "IBMPlexSansKR-Medium-89.woff2": {
+     "bytes": 8828,
+     "sha256": "5917dcb7fc0e03bde826311e51540b5eeb6256bb4f815fa32c9f69f59640cfc4",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-89.woff2"
+    },
+    "IBMPlexSansKR-Medium-90.woff2": {
+     "bytes": 10060,
+     "sha256": "c2dab51419a69249b5049c26de12ff6102bd09bda17ab0cb1eb15168a22f532a",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-90.woff2"
+    },
+    "IBMPlexSansKR-Medium-91.woff2": {
+     "bytes": 9604,
+     "sha256": "52111680fb68f1de901d86800ef247372d84f117a932e0864c2b3d0eaad210e9",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-91.woff2"
+    },
+    "IBMPlexSansKR-Medium-92.woff2": {
+     "bytes": 17496,
+     "sha256": "62a050b2adf25a4e7a85ac15fe1eddf80d34e721040a57e3f1a847d5ba11311b",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-92.woff2"
+    },
+    "IBMPlexSansKR-Medium-93.woff2": {
+     "bytes": 3432,
+     "sha256": "26bf257e28bf7a0dbe0e781911d565654f8c15cbdc5833e9d96d0e8d28cd0596",
+     "from": "/fonts/split/woff2/hinted/IBMPlexSansKR-Medium-93.woff2"
+    }
+   },
+   "bytes": 1848700
   }
  ],
- "total_bytes": 6543832,
- "files": 240
+ "total_bytes": 8392532,
+ "files": 428
 }

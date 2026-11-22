@@ -1,0 +1,109 @@
+/* CODEDVINYLS 판 카드 한 벌 + 앨범 목록 v3 (2026-11-22 · 구현 ②)
+   기준 = 261121 디자인 기준 문서 design_standard_blank_v1 (§4 이름 칸형 · §6-2 판 카드 · §6-6 거르기 레일 · §6-7 날짜 묶음 · 틱 · §6-9 「더 보기」)
+   마크업 = _tools/site_card.py(카드) · _tools/site_album_v3.py(목록) · 브라우저 쪽 칸 = assets/cv3-album.js.
+   스위치 = site_frame.json "albums3": "v3"(틀 v3 위에서만 — 토큰 --cv3-… 은 cv3-base.css 가 정한다).
+   · 클래스 = cv3- · 전환 · 애니메이션 · 그림자 · 둥근 모서리 0 · 외부 주소 0.
+   · 판 카드 · 틱 두 절은 assets/cv3-card.css 로 옮겼다(★261122 구현 ④ · 앨범 쪽과 함께 쓴다) — 이 파일 앞에 그 파일을 건다. */
+
+/* ── 카드 격자 ── PC 한 줄 4장 · 휴대폰 2장(§4) */
+/*   줄 사이 48 = 격자 줄 사이 16 + 칸 아래 32 — 날짜 묶음 머리(한 줄 전체)와 그 아래 첫 줄 사이는 16 이어야 해서 둘로 나눈다 */
+.cv3-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--cv3-g);row-gap:var(--cv3-s3);
+  margin:0;padding:0;list-style:none}
+.cv3-cell{min-width:0;margin:0;padding:0 0 var(--cv3-s5)}
+
+/* ── 앨범 목록(§4 이름 칸형) ── 왼쪽 1/3 = 이름 · 거르기 / 오른쪽 2/3 = 판 */
+.cv3-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--cv3-g);box-sizing:border-box;
+  width:auto;max-width:none;margin:0;padding:var(--cv3-s5) var(--cv3-m) 0;background:var(--cv3-paper);color:var(--cv3-ink);
+  font-family:var(--cv3-sans);font-size:var(--cv3-ui);font-weight:400;font-style:normal;font-synthesis:none;line-height:1.4;
+  letter-spacing:0;text-align:left;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+.cv3-list *{box-sizing:border-box}
+.cv3-list [hidden]{display:none !important}
+.cv3-list a{color:inherit;text-decoration:none}
+.cv3-list button,.cv3-list select,.cv3-list input{-webkit-appearance:none;appearance:none;margin:0;border:0;border-radius:0;background:none;
+  box-shadow:none;font:inherit;color:inherit;letter-spacing:0;text-align:left}
+.cv3-list button{cursor:pointer}
+.cv3-rail{grid-column:1;min-width:0}
+.cv3-main{grid-column:2 / 4;min-width:0}
+.cv3-js .cv3-cell.is-off,.cv3-js .cv3-cell.is-later{display:none}
+
+/* ── 거르기 레일(§6-6) ── 상자 칩 0 · 고른 것 = 글자 색 + 아래 1px 선 */
+.cv3-hh h1{margin:0;padding:0;font-family:var(--cv3-serif);font-size:var(--cv3-d2);font-weight:400;line-height:1.18;letter-spacing:-.02em}
+.cv3-cnt{display:block;min-height:1.4em;margin-top:var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-tabs{display:flex;gap:var(--cv3-s4);margin:var(--cv3-s5) 0 0;padding:0}
+.cv3-tabs a,.cv3-chips a,.cv3-chips button,.cv3-chips span,.cv3-fp{display:block;padding:var(--cv3-s1) 0;
+  font-size:var(--cv3-ui);line-height:1.4;color:var(--cv3-muted);white-space:nowrap}
+.cv3-tabs a[aria-current],.cv3-chips [aria-current],.cv3-fp[aria-pressed="true"]{color:var(--cv3-ink);box-shadow:inset 0 -1px 0 var(--cv3-ink)}
+.cv3-chips [aria-disabled="true"]{color:var(--cv3-line);cursor:default}
+.cv3-flt{display:block;margin:var(--cv3-s5) 0 0;padding:0}
+.cv3-flt .cv3-k{display:block;margin-bottom:var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-chips{display:flex;flex-direction:column;align-items:flex-start}
+/*   고르는 칸 = 보이는 글자(.cv3-sel-v · 고른 값) 위에 투명한 select 를 덮는다 — 글자 폭만큼만 자리를 잡는다(시안 「전체 ▾」) */
+.cv3-sel{position:relative;display:inline-block;max-width:100%;vertical-align:top}
+.cv3-sel-v{display:block;padding:var(--cv3-s1) 0;font-size:var(--cv3-ui);line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cv3-sel-v::after{content:"▾";margin-left:var(--cv3-s1);font-size:var(--cv3-sm)}
+.cv3-sel select{position:absolute;left:0;top:0;width:100%;height:100%;padding:0;opacity:0;font-size:var(--cv3-ui);cursor:pointer}
+.cv3-sel:focus-within{outline:2px solid var(--cv3-ink);outline-offset:2px}
+.cv3-flt.cv3-fq{display:none}
+.cv3-fq input{display:block;width:100%;padding:var(--cv3-s1) 0;border-bottom:1px solid var(--cv3-ink);font-size:var(--cv3-ui);line-height:1.4;outline:0}
+.cv3-fq input::placeholder{color:var(--cv3-muted);opacity:1}
+.cv3-fq input::-webkit-search-decoration,.cv3-fq input::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
+.cv3-fn{margin:var(--cv3-s5) 0 0;padding:0}
+.cv3-clear{display:inline-block;padding:var(--cv3-s1) 0;font-size:var(--cv3-ui);line-height:1.4;box-shadow:inset 0 -1px 0 var(--cv3-line)}
+
+/* ── 날짜 묶음 머리(§6-7) ── 날짜 13 → 틱 + 이름 15/500 → 수 13 흐림 · 아래 16 · 묶음 사이 = 줄 사이 48 */
+.cv3-grp-h{grid-column:1 / -1;display:flex;align-items:baseline;gap:var(--cv3-s3);min-width:0;margin:0;padding:0;line-height:1.4}
+.cv3-grp-h .cv3-d,.cv3-grp-h .cv3-gn{font-size:var(--cv3-sm)}
+.cv3-grp-h .cv3-gn{color:var(--cv3-muted)}
+.cv3-grp-h .cv3-gk{font-size:var(--cv3-ui);font-weight:500}
+
+/* ── 「더 보기」(§6-9) ── 글자 한 줄 · 상자 단추 아님 */
+.cv3-list .cv3-more{display:block;width:100%;margin:var(--cv3-s3) 0 0;padding:var(--cv3-s3) 0 0;border-top:1px solid var(--cv3-line);
+  font-size:var(--cv3-ui);line-height:1.4}
+.cv3-empty{margin:0;padding:0;font-size:var(--cv3-ui);line-height:1.7;color:var(--cv3-ink2)}
+.cv3-empty:empty{display:none}
+
+/* ── 경로 줄(장르 목록 · §6-9) ── 13px · 위 24 · 낱말 사이 8 */
+.cvf-on .crumb{margin:0;padding:var(--cv3-s4) var(--cv3-m) 0;gap:var(--cv3-s2);font-family:var(--cv3-sans);font-size:var(--cv3-sm);
+  font-weight:400;line-height:1.4;letter-spacing:0;text-transform:none;color:var(--cv3-muted)}
+.cvf-on .crumb a{margin:0;padding:0;color:var(--cv3-muted)}
+.cvf-on .crumb > span{margin:0;padding:0;color:var(--cv3-muted)}
+
+/* ── 초점 테두리(틀 v3 과 같은 값) ── */
+.cv3-list a:focus-visible,.cv3-list button:focus-visible,.cv3-fq input:focus-visible{outline:2px solid var(--cv3-ink);outline-offset:2px}
+
+/* 이름 칸은 목록을 따라 내려온다(§6-6) — 이름 칸이 옆에 설 때만 */
+@media (min-width:1200px){
+  .cv3-rail{position:sticky;top:var(--cv3-s5);align-self:start}
+}
+
+/* ── 601 ~ 1199(시안 없음 · 기준 §4 제안 ② · 끊는 점 = 틀 v3 머리와 같은 1199) ── 한 열: 이름 · 거르기 위 · 판 아래 · 옆 여백 48 · 판 카드 4열
+   (이름 칸을 옆에 둔 채 1024 까지 내리면 카드 폭이 135 가 되어 가격 줄의 판매처 글자가 잘린다 — 화면 확인) */
+@media (max-width:1199px){
+  .cv3-list{grid-template-columns:minmax(0,1fr);padding-top:var(--cv3-s4)}
+  .cv3-rail,.cv3-main{grid-column:1}
+  .cv3-hh{display:flex;align-items:baseline;justify-content:space-between;gap:var(--cv3-s3)}
+  .cv3-cnt{margin-top:0;flex:none}
+  .cv3-tabs{margin-top:var(--cv3-s3)}
+  .cv3-flt{display:flex;align-items:baseline;gap:var(--cv3-s3);margin-top:var(--cv3-s3)}
+  .cv3-flt .cv3-k{flex:none;margin-bottom:0}
+  .cv3-chips{flex-direction:row;flex-wrap:wrap;gap:0 var(--cv3-s3)}
+  .cv3-flt.cv3-half{display:inline-flex;width:49%;vertical-align:top}
+  .cv3-half .cv3-sel{min-width:0;flex:0 1 auto}
+  .cv3-fn{margin-top:var(--cv3-s3)}
+  .cv3-main{margin-top:var(--cv3-s4);padding-top:var(--cv3-s4);border-top:1px solid var(--cv3-line)}
+}
+
+/* 601 ~ 767 = 3열(4열이면 카드 폭 108 ~ 150 — 가격 줄의 판매처 글자가 잘린다 · 시안 없음) */
+@media (max-width:767px){
+  .cv3-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* ── 600 이하 = 시안(390) ── 판 카드 2열 · 줄 사이 32 · 찾기 칸(머리의 찾기 칸이 숨는 폭) */
+@media (max-width:600px){
+  .cv3-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cv3-cell{padding-bottom:var(--cv3-s3)}
+  .cv3-flt.cv3-fq{display:flex}
+  .cv3-fq input{flex:1 1 auto;min-width:0;width:auto}
+}
+
+@media print{.cv3-tabs,.cv3-flt,.cv3-fn,.cv3-list .cv3-more{display:none !important}}
