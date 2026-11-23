@@ -56,7 +56,7 @@
 {"g":"jazz","l":"blue-note","lc":"Blue Note BST 84249","n":2040,"on":1,"pr":490000,"t":1,"v":"US 1st Press · 1966","y":1966},
 {"g":"jazz","l":"united-artists-records","lc":"United Artists Records UAS 5011","n":2041,"on":1,"pr":79000,"t":1,"v":"US 1st Press · 1958","y":1958},
 {"g":"jazz","l":"horizon","lc":"Horizon SP 709","n":2042,"on":1,"pr":23000,"t":1,"v":"US 1st Press · 1976","y":1976},
-{"g":"jazz","l":"horizon","lc":"Horizon SP-715","n":2043,"on":1,"pr":19000,"t":1,"v":"US 1st Press · 1976","y":1976},
+{"g":"jazz","l":"horizon","lc":"Horizon SP-715","n":2043,"on":0,"s":1,"t":1,"v":"US 1st Press · 1976","y":1976},
 {"l":"blue-note","lc":"Blue Note BST-84190","n":2044,"on":1,"pr":59000,"t":1,"v":"US 1st Press · 1965","y":1965},
 {"g":"jazz","l":"blue-note","lc":"Blue Note BST 84086","n":2045,"on":1,"pr":139000,"t":1,"v":"US Repress · 1967","y":1967},
 {"g":"jazz","l":"prestige","lc":"Prestige P 24072","n":2046,"on":1,"pr":39000,"t":1,"y":1977},
