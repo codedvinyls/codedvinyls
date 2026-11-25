@@ -224,6 +224,10 @@ html:has(.gal-lb[open]){overflow:hidden}
  .gal-lb-cur{margin-top:22px;line-height:1.78}
  .gal-lb-spec{margin-top:24px}
 }
+
+.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-family:var(--cvf-sans,"Pretendard Variable","Pretendard",sans-serif);font-size:13px;font-weight:400;letter-spacing:0;color:var(--cvf-muted,#6b655a)}
+.rec-deal.cv-sold-row{display:flex;align-items:baseline;gap:12px;border-top:1px solid var(--line);padding-top:12px;line-height:1.3}
+@media(max-width:860px){.gal-cap .gal-price.cv-sold,.dp-list .gal-price.cv-sold,.rec-deal .cv-sold{font-size:12px}}
 </style>
 <link rel="stylesheet" href="/assets/cv-album.css?v=2211d9c3a345">
 <link rel="stylesheet" href="/assets/cv-body.css?v=91537a25a6aa">
@@ -399,7 +403,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">Jim Hall</span>
             <span class="gal-title">Commitment</span>
-            <span class="gal-price" data-krw="19000">₩19,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>짐 홀(Jim Hall)이 1976년 6월부터 7월까지 뉴욕에서 녹음한 앨범으로, 존 스나이더(John Snyder)가 제작했어요.</p>
           <dl class="gal-spec" hidden>
@@ -615,7 +619,7 @@ html:has(.gal-lb[open]){overflow:hidden}
           <div class="gal-cap">
             <span class="gal-artist">Billie Poole</span>
             <span class="gal-title">Sermonette</span>
-            <span class="gal-price" data-krw="15000">₩15,000</span>
+            <span class="gal-price cv-sold" data-sold="">판매 완료</span>
           </div>
           <p class="gal-cur" hidden>빌리 풀(Billie Poole)의 목소리를 앞세운 보컬 앨범이에요.</p>
           <dl class="gal-spec" hidden>
