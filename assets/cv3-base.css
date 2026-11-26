@@ -20,8 +20,10 @@
   --cv3-d2:40px;--cv3-k2:24px;--cv3-body:17px;--cv3-ui:15px;--cv3-sm:13px;
   /* 간격 한 벌(§5) */
   --cv3-s1:4px;--cv3-s2:8px;--cv3-s3:16px;--cv3-s4:24px;--cv3-s5:32px;--cv3-s6:48px;--cv3-s7:64px;--cv3-s8:96px;
-  /* 옆 여백 · 칸 사이(§4) */
-  --cv3-m:48px;--cv3-g:24px;
+  /* 옆 여백 · 칸 사이(§4) — 쪽 폭 한계(기준 문서 §9-7 · 랜딩 정합 게이트 「풀폭 --max ≤1440」): 화면이 --max 를 넘으면 넘는 만큼 옆 여백이 자란다
+     = 글 · 격자 폭은 --max − 96(1440 → 1344)에서 멈추고 바탕 · 가로선만 화면 끝까지 간다. --max 이하 폭에서는 48 그대로.
+     --max 는 쪽 머리 <style>(site_frame_v3.MAX_STYLE)가 정한다 — 게이트가 읽는 값과 실제 폭이 같은 한 값이다. */
+  --cv3-m:max(48px,calc((100vw - var(--max,1440px)) / 2 + 48px));--cv3-g:24px;
 }
 @media (max-width:600px){:root{--cv3-m:16px;--cv3-g:16px;--cv3-d2:30px;--cv3-k2:20px;--cv3-body:16px}}
 
@@ -84,6 +86,31 @@
   .cv3-q{display:none}
   .cv3-q-go{display:flex;align-items:center;font-size:var(--cv3-ui);line-height:1.4;white-space:nowrap}
   .cv3-nav a::before{content:"";position:absolute;top:0;bottom:0;left:-8px;right:-8px}
+}
+
+/* ── 외국어판 머리(★261124 s21 · 편집장 dg-1176 화면 실측 ① ②) ── 한국어판(html lang="ko")에는 한 줄도 걸리지 않는다.
+   ① 일본어 찾기 안내 글자(「アーティスト · アルバム · レーベル」 221px)가 160px 칸에서 잘린다 → 일본어판만 칸 224px.
+   ② 영어 · 일본어 메뉴가 길어 세 칸 격자(1200 이상)의 가운데 칸을 넘는다(1200 = 영어 맞닿음 · 일본어 겹침) →
+      그 언어판만 격자로 바뀌는 폭을 올린다(그 아래는 900 ~ 1199 와 같은 가로 한 줄 · 양끝 맞춤) · 좁은 가로 한 줄에서는 메뉴 사이를 24 로. */
+html:lang(ja) .cv3-q input{width:224px}
+@media (min-width:1200px) and (max-width:1359px){
+  html:lang(en) .cv3-hd{display:flex;justify-content:space-between;column-gap:var(--cv3-s4)}
+  html:lang(en) .cv3-mark,html:lang(en) .cv3-q{flex:none}
+}
+@media (min-width:1200px) and (max-width:1439px){
+  html:lang(ja) .cv3-hd{display:flex;justify-content:space-between;column-gap:var(--cv3-s4)}
+  html:lang(ja) .cv3-mark,html:lang(ja) .cv3-q{flex:none}
+}
+@media (min-width:900px) and (max-width:1099px){
+  html:lang(en) .cv3-nav,html:lang(ja) .cv3-nav{gap:var(--cv3-s4)}
+}
+/* 일본어판 900 ~ 959 = 넓어진 찾기 칸까지 한 줄에 서면 메뉴 끝과 3px 로 붙는다 → 601 ~ 899 와 같은 두 줄 꼴(윗줄 워드마크 + 찾기 · 아랫줄 메뉴)을 959 까지 */
+@media (min-width:900px) and (max-width:959px){
+  html:lang(ja) .cv3-hd{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:64px 44px;height:auto;column-gap:var(--cv3-s3)}
+  html:lang(ja) .cv3-mark{grid-column:1;grid-row:1}
+  html:lang(ja) .cv3-q{grid-column:2;grid-row:1;justify-self:end}
+  html:lang(ja) .cv3-nav{grid-column:1 / -1;grid-row:2;justify-content:space-between;gap:var(--cv3-s3);
+    margin:0 calc(-1 * var(--cv3-m));padding:0 var(--cv3-m);border-top:1px solid var(--cv3-line)}
 }
 
 /* ── 꼬리(§6-10) ── 어두운 면 · 13px · 6열 격자 */

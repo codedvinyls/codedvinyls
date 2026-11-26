@@ -1,0 +1,249 @@
+/* CODEDVINYLS 「v3 글자 옷」 (2026-11-22 · 구현 ⑦) — 본문을 v3 로 다시 짓지 않은 쪽(옛 회차 · 하루 쪽 · 안내 · 장르 · 공지 · 법적 쪽 · 클래식 장 …)에
+   CSS 한 겹만 더 건다. 쪽의 구조 · 글자 · 쪽 안 스타일 · 옛 CSS 는 그대로 두고 뒤에서 덮는다(body.cv3-skin 아래로만 — 다른 쪽에 새지 않는다).
+   기준 = 261121 디자인 기준 문서 design_standard_blank_v1 (§1 색 · §2 글꼴 · §3 글자 5단계 · §4 세로 선 · §5 간격).
+   거는 곳 = _tools/site_rest_v3.py skin()(스위치 site_frame.json "skin3" · 틀 v3 위에서만 — 토큰 --cv3-… 은 cv3-base.css 가 정한다).
+   · 바탕 · 글자 색 = 종이 · 잉크 · 둘째 글 · 흐림 · 헤어라인 한 벌 / 글꼴 = 본문 IBM Plex Sans KR 400 · 500 · 쪽 이름(h1) 한 줄만 Noto Serif KR 400
+   · 글자 = 다섯 단계 / 옆 선 = 48(휴대폰 16) / 글 쪽(안내 · 법적 · 「판이 되기까지」)의 본문 = 둘째 열(504 선) · 폭 660
+   · 전환 · 애니메이션 · 그림자 · 둥근 모서리 0 · 외부 주소 0. 틀(공지 줄 · 머리 · 꼬리)은 건드리지 않는다. */
+
+/* ── 토큰 ── 옛 쪽 CSS 가 읽는 이름을 v3 값으로(쪽 안 :root 값보다 가까운 자리라 이긴다) */
+body.cv3-skin.cv3-skin{
+  --paper:var(--cv3-paper);--surface:var(--cv3-paper);--ink:var(--cv3-ink);--muted:var(--cv3-muted);--muted-strong:var(--cv3-ink2);--line:var(--cv3-line);
+  --sans:var(--cv3-sans);--display:var(--cv3-sans);--mono:var(--cv3-sans);--cvf-sans:var(--cv3-sans);--cvf-line:var(--cv3-line);--cvf-muted:var(--cv3-muted);
+  --cvb-serif:var(--cv3-sans);--cvb-ink2:var(--cv3-ink2);--g:var(--cv3-m);--max:none;
+  --cv3-c2:calc(var(--cv3-m) + (100% - 2 * var(--cv3-m) - 2 * var(--cv3-g)) / 3 + var(--cv3-g));
+  background:var(--cv3-paper);color:var(--cv3-ink);font-family:var(--cv3-sans);font-size:var(--cv3-ui);font-synthesis:none;
+  word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+@media (max-width:1199px){body.cv3-skin.cv3-skin{--cv3-c2:var(--cv3-m)}}
+/* 그림(도해) 안 글자는 그린 글꼴 그대로 — 글자 폭이 바뀌면 도해가 어긋난다 */
+body.cv3-skin.cv3-skin svg{--sans:"Pretendard Variable","Pretendard","Apple SD Gothic Neo",system-ui,sans-serif;--display:var(--sans);
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+
+/* ── 글꼴(§2) ── 본문 = 고딕 한 가지 · 굵기 400(이름 · 가격 · 구획 이름 · 강조 = 500) · 기울임 · 대문자 변환 · 자간 0 */
+body.cv3-skin.cv3-skin.cv3-skin :not(.cv3-strip,.cv3-strip *,.cv3-hd,.cv3-hd *,.cv3-ft,.cv3-ft *,svg,svg *){
+  font-family:var(--cv3-sans) !important;font-weight:400 !important;font-style:normal !important;letter-spacing:0 !important;text-transform:none !important}
+body.cv3-skin.cv3-skin.cv3-skin :is(h2,h3,h4,b,strong,th,summary,.rec-title,.gal-title,.ct,.rec-deal-amt,.cvg-hw,.name,.pg-title,.gal-lb-title,.code):not(.cv3-strip *,.cv3-hd *,.cv3-ft *,svg *),
+body.cv3-skin.cv3-skin.cv3-skin :is(h2,h3,h4) :not(svg *){font-weight:500 !important}
+/* 쪽 이름 한 줄만 명조 40(휴대폰 30) */
+body.cv3-skin.cv3-skin.cv3-skin.cv3-skin :is(h1,.dp-h1),body.cv3-skin.cv3-skin.cv3-skin.cv3-skin :is(h1,.dp-h1) *{
+  font-family:var(--cv3-serif) !important;font-weight:400 !important;letter-spacing:-.02em !important}
+body.cv3-skin.cv3-skin.cv3-skin :is(h1,.dp-h1){line-height:1.18 !important;text-wrap:initial}
+body.cv3-skin.cv3-skin.cv3-skin h2{line-height:1.3 !important;letter-spacing:-.01em !important}
+
+/* ── 색(§1) ── 글 = 잉크 · 둘째 글 · 흐림 세 가지 / 흰 면 · 어두운 면 · 노란 면 0 */
+body.cv3-skin.cv3-skin .page{max-width:none !important;border:0 !important;background:var(--cv3-paper) !important}
+body.cv3-skin.cv3-skin :is(article,main,section,.art-hero,.doc-hero,.notice-hero,.archive-hero,.crumb){background-color:transparent !important}
+body.cv3-skin.cv3-skin :is(p,li,dd,td,blockquote):not(.cv3-strip *,.cv3-hd *,.cv3-ft *){color:var(--cv3-ink)}
+body.cv3-skin.cv3-skin.cv3-skin :is(.dek,.lede,p.lead,.dp-dek,.group-lead,.group-lede,.rec-note,.desc,.doc-section p,.doc-section li,.doc-table td,.notice-card p,.gcard p,.curation p,
+  .intro-copy p,.callout p,.important p,.update-card p,.cvg-df,.kw-lead,.cvg-lead):not(.cv3-ft *){color:var(--cv3-ink2) !important}
+body.cv3-skin.cv3-skin.cv3-skin :is(.kicker,.byline,.meta,.mono,figcaption,.note,.rec-kicker,.rec-artist,.rec-press,.rec-meta div,.gal-artist,.group-count,.gk,
+  .update-date,.notice-date,.notice-meta,.pg-date,.pg-label,.dp-num,.dp-name,.dp-n,.section-kicker,.refs,.refs li,.scale-note div,.cvg-or,.cvg-ch,.cvg-pl,.era .ey,.era .eo,.cm,.cfn):not(.cv3-ft *){
+  color:var(--cv3-muted) !important}
+body.cv3-skin.cv3-skin.cv3-skin :is(.rec-meta b,.era .ey b,.doc-section b,.doc-table td b,.refs summary){color:var(--cv3-ink) !important}
+body.cv3-skin.cv3-skin :not(.cv3-strip *,.cv3-hd *,.cv3-ft *,.cv3-ft,svg *){border-color:var(--cv3-line)}
+
+/* ── 글자 다섯 단계(§3) ── 옛 쪽 CSS 가 글자 크기를 정한 자리마다 가장 가까운 단계로(쪽 이름 = 40 · 구획 이름 = 24 · 본문 17 · 카드 · 표 15 · 이름표 · 날짜 13) */
+body.cv3-skin.cv3-skin.cv3-skin .album .idx b,body.cv3-skin.cv3-skin.cv3-skin .album h3,body.cv3-skin.cv3-skin.cv3-skin .archive .ah h2,
+body.cv3-skin.cv3-skin.cv3-skin .curate .ah h2,body.cv3-skin.cv3-skin.cv3-skin .curation h2,body.cv3-skin.cv3-skin.cv3-skin .doc-section h2,
+body.cv3-skin.cv3-skin.cv3-skin .ev-apply .date,body.cv3-skin.cv3-skin.cv3-skin .gal-close,body.cv3-skin.cv3-skin.cv3-skin .gal-lb-title,
+body.cv3-skin.cv3-skin.cv3-skin .gcard h2,body.cv3-skin.cv3-skin.cv3-skin .genre-gateway .gw-title,body.cv3-skin.cv3-skin.cv3-skin .group-head h2,
+body.cv3-skin.cv3-skin.cv3-skin .kw h2,body.cv3-skin.cv3-skin.cv3-skin .kw-cover h2,body.cv3-skin.cv3-skin.cv3-skin .notice-card h2,
+body.cv3-skin.cv3-skin.cv3-skin .notice-section h2,body.cv3-skin.cv3-skin.cv3-skin .prose h2,body.cv3-skin.cv3-skin.cv3-skin .sw-body h2,
+body.cv3-skin.cv3-skin.cv3-skin .update-card h2{font-size:var(--cv3-k2) !important}
+body.cv3-skin.cv3-skin.cv3-skin .album p,body.cv3-skin.cv3-skin.cv3-skin .archive-hero .dek,body.cv3-skin.cv3-skin.cv3-skin .art-hero .dek,
+body.cv3-skin.cv3-skin.cv3-skin .ccard .ct,body.cv3-skin.cv3-skin.cv3-skin .chain h3,body.cv3-skin.cv3-skin.cv3-skin .cta .cta-lead,
+body.cv3-skin.cv3-skin.cv3-skin .cta-band .lead,body.cv3-skin.cv3-skin.cv3-skin .curation h3,body.cv3-skin.cv3-skin.cv3-skin .curation p.lead,
+body.cv3-skin.cv3-skin.cv3-skin .cvg .cvg-g h2,body.cv3-skin.cv3-skin.cv3-skin .cvg-g h2,body.cv3-skin.cv3-skin.cv3-skin .cvg-hw,
+body.cv3-skin.cv3-skin.cv3-skin .cvg-lead,body.cv3-skin.cv3-skin.cv3-skin .cvk-rows dd .sp,body.cv3-skin.cv3-skin.cv3-skin .cvk-ti .o,
+body.cv3-skin.cv3-skin.cv3-skin .diff-table td,body.cv3-skin.cv3-skin.cv3-skin .doc-hero .lede,body.cv3-skin.cv3-skin.cv3-skin .dp-cta,
+body.cv3-skin.cv3-skin.cv3-skin .dp-dek,body.cv3-skin.cv3-skin.cv3-skin .dp-kr,body.cv3-skin.cv3-skin.cv3-skin .ev-hero .dek,
+body.cv3-skin.cv3-skin.cv3-skin .ev-lead p,body.cv3-skin.cv3-skin.cv3-skin .ev-sec .sh h2,body.cv3-skin.cv3-skin.cv3-skin .flip .cap .gt,
+body.cv3-skin.cv3-skin.cv3-skin .gal-head h2,body.cv3-skin.cv3-skin.cv3-skin .genre-gateway .gw-sub,body.cv3-skin.cv3-skin.cv3-skin .intro p,
+body.cv3-skin.cv3-skin.cv3-skin .intro-copy .lead,body.cv3-skin.cv3-skin.cv3-skin .kw .kw-lead,body.cv3-skin.cv3-skin.cv3-skin .kw h3,
+body.cv3-skin.cv3-skin.cv3-skin .kw summary,body.cv3-skin.cv3-skin.cv3-skin .kw-content,body.cv3-skin.cv3-skin.cv3-skin .kw-content>p,
+body.cv3-skin.cv3-skin.cv3-skin .kw-lead,body.cv3-skin.cv3-skin.cv3-skin .mat .col .name,body.cv3-skin.cv3-skin.cv3-skin .notice-hero .dek,
+body.cv3-skin.cv3-skin.cv3-skin .notice-section .lead,body.cv3-skin.cv3-skin.cv3-skin .notice-table td,body.cv3-skin.cv3-skin.cv3-skin .prose .lead,
+body.cv3-skin.cv3-skin.cv3-skin .prose h3,body.cv3-skin.cv3-skin.cv3-skin .prose p,body.cv3-skin.cv3-skin.cv3-skin .rec-title,
+body.cv3-skin.cv3-skin.cv3-skin .section-head h2,body.cv3-skin.cv3-skin.cv3-skin .sw .refs summary,body.cv3-skin.cv3-skin.cv3-skin .sw .sw-deeper h2,
+body.cv3-skin.cv3-skin.cv3-skin .sw .sw-deeper li,body.cv3-skin.cv3-skin.cv3-skin .sw .sw-more li,body.cv3-skin.cv3-skin.cv3-skin .sw .sw-next,
+body.cv3-skin.cv3-skin.cv3-skin .sw .sw-prev,body.cv3-skin.cv3-skin.cv3-skin .sw .sw-ref-link,body.cv3-skin.cv3-skin.cv3-skin .sw-body p,
+body.cv3-skin.cv3-skin.cv3-skin .sw-step-hero .dek{font-size:var(--cv3-body) !important}
+body.cv3-skin.cv3-skin.cv3-skin .buy h3,body.cv3-skin.cv3-skin.cv3-skin .callout p,body.cv3-skin.cv3-skin.cv3-skin .ccard .cn,
+body.cv3-skin.cv3-skin.cv3-skin .chain p,body.cv3-skin.cv3-skin.cv3-skin .cplace,body.cv3-skin.cv3-skin.cv3-skin .curation p,
+body.cv3-skin.cv3-skin.cv3-skin .cvg-ch,body.cv3-skin.cv3-skin.cv3-skin .cvg-df,body.cv3-skin.cv3-skin.cv3-skin .cvg-idx,
+body.cv3-skin.cv3-skin.cv3-skin .cvg-kind,body.cv3-skin.cv3-skin.cv3-skin .cvg-or,body.cv3-skin.cv3-skin.cv3-skin .cvk-cmp,
+body.cv3-skin.cv3-skin.cv3-skin .cvk-cmp-go,body.cv3-skin.cv3-skin.cv3-skin .cvk-gt .nm,body.cv3-skin.cv3-skin.cv3-skin .cvk-gt .nm .o,
+body.cv3-skin.cv3-skin.cv3-skin .cvk-gt .tx,body.cv3-skin.cv3-skin.cv3-skin .cvk-more,body.cv3-skin.cv3-skin.cv3-skin .cvk-rows dd,
+body.cv3-skin.cv3-skin.cv3-skin .cvk-rows dt,body.cv3-skin.cv3-skin.cv3-skin .cvk-ti .kn,body.cv3-skin.cv3-skin.cv3-skin .cvk-ti .m,
+body.cv3-skin.cv3-skin.cv3-skin .cvk-tl .t,body.cv3-skin.cv3-skin.cv3-skin .cvk-tl .y,body.cv3-skin.cv3-skin.cv3-skin .cvk-tr .s,
+body.cv3-skin.cv3-skin.cv3-skin .cvk-tr .t,body.cv3-skin.cv3-skin.cv3-skin .diff-table tbody th,body.cv3-skin.cv3-skin.cv3-skin .doc-section h3,
+body.cv3-skin.cv3-skin.cv3-skin .doc-section li,body.cv3-skin.cv3-skin.cv3-skin .doc-section ol.num>li,body.cv3-skin.cv3-skin.cv3-skin .doc-section p,
+body.cv3-skin.cv3-skin.cv3-skin .doc-section ul.dash>li,body.cv3-skin.cv3-skin.cv3-skin .dp-list .t,body.cv3-skin.cv3-skin.cv3-skin .eintro,
+body.cv3-skin.cv3-skin.cv3-skin .era .ed,body.cv3-skin.cv3-skin.cv3-skin .ev-about p,body.cv3-skin.cv3-skin.cv3-skin .ev-apply .btn,
+body.cv3-skin.cv3-skin.cv3-skin .ev-apply .how,body.cv3-skin.cv3-skin.cv3-skin .ev-apply .note,body.cv3-skin.cv3-skin.cv3-skin .ev-lead p.sub,
+body.cv3-skin.cv3-skin.cv3-skin .ev-line,body.cv3-skin.cv3-skin.cv3-skin .flip .cap p,body.cv3-skin.cv3-skin.cv3-skin .gal-lb-album,
+body.cv3-skin.cv3-skin.cv3-skin .gal-lb-cur,body.cv3-skin.cv3-skin.cv3-skin .gal-title,body.cv3-skin.cv3-skin.cv3-skin .gcard p,
+body.cv3-skin.cv3-skin.cv3-skin .genre-gateway .gw-cta,body.cv3-skin.cv3-skin.cv3-skin .grade-row .code,
+body.cv3-skin.cv3-skin.cv3-skin .grade-row .desc,body.cv3-skin.cv3-skin.cv3-skin .group-lead,body.cv3-skin.cv3-skin.cv3-skin .group-lede,
+body.cv3-skin.cv3-skin.cv3-skin .important p,body.cv3-skin.cv3-skin.cv3-skin .intro-copy p,body.cv3-skin.cv3-skin.cv3-skin .kc-chapters li>p,
+body.cv3-skin.cv3-skin.cv3-skin .kp-cells dd,body.cv3-skin.cv3-skin.cv3-skin .kp-cells dt,body.cv3-skin.cv3-skin.cv3-skin .kw .refs,
+body.cv3-skin.cv3-skin.cv3-skin .kw-cover .kc-records p,body.cv3-skin.cv3-skin.cv3-skin .kw-cover h3,body.cv3-skin.cv3-skin.cv3-skin .node .nb p,
+body.cv3-skin.cv3-skin.cv3-skin .node .ny b,body.cv3-skin.cv3-skin.cv3-skin .notice-card p,body.cv3-skin.cv3-skin.cv3-skin .nt-motif-marks,
+body.cv3-skin.cv3-skin.cv3-skin .pg-title,body.cv3-skin.cv3-skin.cv3-skin .pressing .what,body.cv3-skin.cv3-skin.cv3-skin .prog-note,
+body.cv3-skin.cv3-skin.cv3-skin .prose blockquote,body.cv3-skin.cv3-skin.cv3-skin .prose li,body.cv3-skin.cv3-skin.cv3-skin .rec-deal-amt,
+body.cv3-skin.cv3-skin.cv3-skin .sw .refs,body.cv3-skin.cv3-skin.cv3-skin .sw .sw-fig-hold,body.cv3-skin.cv3-skin.cv3-skin .sw .sw-more p,
+body.cv3-skin.cv3-skin.cv3-skin .sw .sw-next p,body.cv3-skin.cv3-skin.cv3-skin .sw .sw-table,body.cv3-skin.cv3-skin.cv3-skin .sw .sw-tbl table,
+body.cv3-skin.cv3-skin.cv3-skin .term-row .desc,body.cv3-skin.cv3-skin.cv3-skin .update-card p{font-size:var(--cv3-ui) !important}
+body.cv3-skin.cv3-skin.cv3-skin .album .cond,body.cv3-skin.cv3-skin.cv3-skin .album .data,body.cv3-skin.cv3-skin.cv3-skin .album .idx,
+body.cv3-skin.cv3-skin.cv3-skin .archive .ah .n,body.cv3-skin.cv3-skin.cv3-skin .archive-hero .kicker,body.cv3-skin.cv3-skin.cv3-skin .art-hero .byline,
+body.cv3-skin.cv3-skin.cv3-skin .art-hero .kicker,body.cv3-skin.cv3-skin.cv3-skin .art-hero .meta,body.cv3-skin.cv3-skin.cv3-skin .atable,
+body.cv3-skin.cv3-skin.cv3-skin .atable td.ca,body.cv3-skin.cv3-skin.cv3-skin .atable td.og,body.cv3-skin.cv3-skin.cv3-skin .callout a,
+body.cv3-skin.cv3-skin.cv3-skin .ccard .cfn,body.cv3-skin.cv3-skin.cv3-skin .ccard .cgo,body.cv3-skin.cv3-skin.cv3-skin .ccard .cm,
+body.cv3-skin.cv3-skin.cv3-skin .chain .dev,body.cv3-skin.cv3-skin.cv3-skin .chain .n,body.cv3-skin.cv3-skin.cv3-skin .chain .spec,
+body.cv3-skin.cv3-skin.cv3-skin .crumb,body.cv3-skin.cv3-skin.cv3-skin .cta,body.cv3-skin.cv3-skin.cv3-skin .cta .cta-eyebrow,
+body.cv3-skin.cv3-skin.cv3-skin .cta .nap,body.cv3-skin.cv3-skin.cv3-skin .cta-band .btn,body.cv3-skin.cv3-skin.cv3-skin .cta-band .sub,
+body.cv3-skin.cv3-skin.cv3-skin .cta-buttons a,body.cv3-skin.cv3-skin.cv3-skin .curate .ah .n,body.cv3-skin.cv3-skin.cv3-skin .curation .kicker,
+body.cv3-skin.cv3-skin.cv3-skin .cvg sup.fn,body.cv3-skin.cv3-skin.cv3-skin .cvg-ch .lb,body.cv3-skin.cv3-skin.cv3-skin .cvg-pl,
+body.cv3-skin.cv3-skin.cv3-skin .cvk-cmp td+td,body.cv3-skin.cv3-skin.cv3-skin .cvk-cmp th,body.cv3-skin.cv3-skin.cv3-skin .cvk-fig figcaption,
+body.cv3-skin.cv3-skin.cv3-skin .cvk-fig sup.fn,body.cv3-skin.cv3-skin.cv3-skin .cvk-gt .ax,body.cv3-skin.cv3-skin.cv3-skin .cvk-gt .g,
+body.cv3-skin.cv3-skin.cv3-skin .cvk-gt .nm .c,body.cv3-skin.cv3-skin.cv3-skin .cvk-tr .m,body.cv3-skin.cv3-skin.cv3-skin .cvk-tr h3,
+body.cv3-skin.cv3-skin.cv3-skin .deep>summary,body.cv3-skin.cv3-skin.cv3-skin .deep>summary .sub,body.cv3-skin.cv3-skin.cv3-skin .diff-table thead th,
+body.cv3-skin.cv3-skin.cv3-skin .doc-hero .kicker,body.cv3-skin.cv3-skin.cv3-skin .doc-plate figcaption,
+body.cv3-skin.cv3-skin.cv3-skin .doc-section .kicker,body.cv3-skin.cv3-skin.cv3-skin .doc-section .note,body.cv3-skin.cv3-skin.cv3-skin .doc-table,
+body.cv3-skin.cv3-skin.cv3-skin .doc-table th,body.cv3-skin.cv3-skin.cv3-skin .dp-bar,body.cv3-skin.cv3-skin.cv3-skin .dp-en,
+body.cv3-skin.cv3-skin.cv3-skin .dp-links,body.cv3-skin.cv3-skin.cv3-skin .dp-list .gal-price.cv-sold,body.cv3-skin.cv3-skin.cv3-skin .dp-n,
+body.cv3-skin.cv3-skin.cv3-skin .dp-name,body.cv3-skin.cv3-skin.cv3-skin .dp-nap,body.cv3-skin.cv3-skin.cv3-skin .dp-num,
+body.cv3-skin.cv3-skin.cv3-skin .dp-prev,body.cv3-skin.cv3-skin.cv3-skin .era .eo,body.cv3-skin.cv3-skin.cv3-skin .era .ey,
+body.cv3-skin.cv3-skin.cv3-skin .era .ey b,body.cv3-skin.cv3-skin.cv3-skin .ev-about .nap,body.cv3-skin.cv3-skin.cv3-skin .ev-apply .date small,
+body.cv3-skin.cv3-skin.cv3-skin .ev-apply .how-t,body.cv3-skin.cv3-skin.cv3-skin .ev-apply .rows,body.cv3-skin.cv3-skin.cv3-skin .ev-hero .kicker,
+body.cv3-skin.cv3-skin.cv3-skin .ev-hero .meta,body.cv3-skin.cv3-skin.cv3-skin .ev-sec .sh span,body.cv3-skin.cv3-skin.cv3-skin .fig.listen .lk,
+body.cv3-skin.cv3-skin.cv3-skin .flip .cap .gk,body.cv3-skin.cv3-skin.cv3-skin .gal-artist,body.cv3-skin.cv3-skin.cv3-skin .gal-cap .gal-price.cv-sold,
+body.cv3-skin.cv3-skin.cv3-skin .gal-head .group-count,body.cv3-skin.cv3-skin.cv3-skin .gal-head .group-kr,
+body.cv3-skin.cv3-skin.cv3-skin .gal-lb .gal-spec .gal-press dd,body.cv3-skin.cv3-skin.cv3-skin .gal-lb .gal-spec div,
+body.cv3-skin.cv3-skin.cv3-skin .gal-lb-artist,body.cv3-skin.cv3-skin.cv3-skin .gal-lb-price,body.cv3-skin.cv3-skin.cv3-skin .gal-note,
+body.cv3-skin.cv3-skin.cv3-skin .gal-price,body.cv3-skin.cv3-skin.cv3-skin .gcard .gk,body.cv3-skin.cv3-skin.cv3-skin .gcard .go,
+body.cv3-skin.cv3-skin.cv3-skin .gear .col,body.cv3-skin.cv3-skin.cv3-skin .genre-gateway .gw-meta,body.cv3-skin.cv3-skin.cv3-skin .grade-row .ko,
+body.cv3-skin.cv3-skin.cv3-skin .grade-scale .chip,body.cv3-skin.cv3-skin.cv3-skin .grade-scale .sep,
+body.cv3-skin.cv3-skin.cv3-skin .group-head .group-count,body.cv3-skin.cv3-skin.cv3-skin .group-head .group-kr,
+body.cv3-skin.cv3-skin.cv3-skin .intro-copy .label-row span,body.cv3-skin.cv3-skin.cv3-skin .kw .cvk-fig sup,
+body.cv3-skin.cv3-skin.cv3-skin .kw .cvk-tr h3,body.cv3-skin.cv3-skin.cv3-skin .kw-badge,body.cv3-skin.cv3-skin.cv3-skin .mat .col .d,
+body.cv3-skin.cv3-skin.cv3-skin .mat .col .lab,body.cv3-skin.cv3-skin.cv3-skin .mono,body.cv3-skin.cv3-skin.cv3-skin .na-video .vcap,
+body.cv3-skin.cv3-skin.cv3-skin .node .ny .nd,body.cv3-skin.cv3-skin.cv3-skin .notice,body.cv3-skin.cv3-skin.cv3-skin .notice-go,
+body.cv3-skin.cv3-skin.cv3-skin .notice-hero .kicker,body.cv3-skin.cv3-skin.cv3-skin .notice-meta,body.cv3-skin.cv3-skin.cv3-skin .pg-date,
+body.cv3-skin.cv3-skin.cv3-skin .pg-label,body.cv3-skin.cv3-skin.cv3-skin .pressing .who,body.cv3-skin.cv3-skin.cv3-skin .pressing .who b,
+body.cv3-skin.cv3-skin.cv3-skin .rec-artist,body.cv3-skin.cv3-skin.cv3-skin .rec-curation,body.cv3-skin.cv3-skin.cv3-skin .rec-deal .cv-sold,
+body.cv3-skin.cv3-skin.cv3-skin .rec-deal-label,body.cv3-skin.cv3-skin.cv3-skin .rec-deal-note,body.cv3-skin.cv3-skin.cv3-skin .rec-grade,
+body.cv3-skin.cv3-skin.cv3-skin .rec-grade .gk,body.cv3-skin.cv3-skin.cv3-skin .rec-grade .gv,body.cv3-skin.cv3-skin.cv3-skin .rec-kicker,
+body.cv3-skin.cv3-skin.cv3-skin .rec-meta div,body.cv3-skin.cv3-skin.cv3-skin .rec-note,body.cv3-skin.cv3-skin.cv3-skin .rec-press,
+body.cv3-skin.cv3-skin.cv3-skin .rec-shop,body.cv3-skin.cv3-skin.cv3-skin .refs li,body.cv3-skin.cv3-skin.cv3-skin .refs summary,
+body.cv3-skin.cv3-skin.cv3-skin .refs>summary,body.cv3-skin.cv3-skin.cv3-skin .scale-note div,body.cv3-skin.cv3-skin.cv3-skin .section-head .more,
+body.cv3-skin.cv3-skin.cv3-skin .section-kicker,body.cv3-skin.cv3-skin.cv3-skin .section-note,body.cv3-skin.cv3-skin.cv3-skin .spec-grid div,
+body.cv3-skin.cv3-skin.cv3-skin .sw .sw-table sup,body.cv3-skin.cv3-skin.cv3-skin .sw .sw-table th,body.cv3-skin.cv3-skin.cv3-skin .sw figcaption,
+body.cv3-skin.cv3-skin.cv3-skin .term-row .code,body.cv3-skin.cv3-skin.cv3-skin .term-row .ko,body.cv3-skin.cv3-skin.cv3-skin .update-date,
+body.cv3-skin.cv3-skin.cv3-skin .update-go,body.cv3-skin.cv3-skin.cv3-skin figure.fig figcaption{font-size:var(--cv3-sm) !important}
+body.cv3-skin.cv3-skin.cv3-skin .archive-hero h1,body.cv3-skin.cv3-skin.cv3-skin .art-hero h1,body.cv3-skin.cv3-skin.cv3-skin .cva-title,
+body.cv3-skin.cv3-skin.cv3-skin .cvg h1,body.cv3-skin.cv3-skin.cv3-skin .doc-hero h1,body.cv3-skin.cv3-skin.cv3-skin .dp-h1,
+body.cv3-skin.cv3-skin.cv3-skin .ev-hero h1,body.cv3-skin.cv3-skin.cv3-skin .kw h1,body.cv3-skin.cv3-skin.cv3-skin .notice-hero h1,
+body.cv3-skin.cv3-skin.cv3-skin .sw-step-hero h1,body.cv3-skin.cv3-skin.cv3-skin h1{font-size:var(--cv3-d2) !important}
+
+/* ── 옆 여백(§4) ── 옛 쪽의 옆 여백(화면 폭 따라 24 ~ 56)을 틀과 같은 선(48 · 휴대폰 16)으로 */
+body.cv3-skin.cv3-skin.cv3-skin .archive-hero,body.cv3-skin.cv3-skin.cv3-skin .art-hero,body.cv3-skin.cv3-skin.cv3-skin .callout,
+body.cv3-skin.cv3-skin.cv3-skin .cta,body.cv3-skin.cv3-skin.cv3-skin .cta-band,body.cv3-skin.cv3-skin.cv3-skin .curation,
+body.cv3-skin.cv3-skin.cv3-skin .deep,body.cv3-skin.cv3-skin.cv3-skin .dp-wrap,body.cv3-skin.cv3-skin.cv3-skin .ev-about,
+body.cv3-skin.cv3-skin.cv3-skin .ev-apply .in,body.cv3-skin.cv3-skin.cv3-skin .ev-hero .copy,body.cv3-skin.cv3-skin.cv3-skin .ev-lead,
+body.cv3-skin.cv3-skin.cv3-skin .ev-line,body.cv3-skin.cv3-skin.cv3-skin .ev-sec,body.cv3-skin.cv3-skin.cv3-skin .gal-group,
+body.cv3-skin.cv3-skin.cv3-skin .gal-note,body.cv3-skin.cv3-skin.cv3-skin .genre-gateway,body.cv3-skin.cv3-skin.cv3-skin .group-head,
+body.cv3-skin.cv3-skin.cv3-skin .group-lead,body.cv3-skin.cv3-skin.cv3-skin .intro,body.cv3-skin.cv3-skin.cv3-skin .intro-block,
+body.cv3-skin.cv3-skin.cv3-skin .notice,body.cv3-skin.cv3-skin.cv3-skin .notice-card,body.cv3-skin.cv3-skin.cv3-skin .notice-hero,
+body.cv3-skin.cv3-skin.cv3-skin .notice-section,body.cv3-skin.cv3-skin.cv3-skin .rec-deal-note,body.cv3-skin.cv3-skin.cv3-skin .refs,
+body.cv3-skin.cv3-skin.cv3-skin .section-head,body.cv3-skin.cv3-skin.cv3-skin .spec{padding-left:var(--cv3-m) !important;padding-right:var(--cv3-m) !important}
+
+/* ── 경로 줄(v3 쪽과 같은 값) ── 13px · 위 24 · 낱말 사이 8 */
+body.cv3-skin.cv3-skin .crumb{margin:0 !important;padding:var(--cv3-s4) var(--cv3-m) 0 !important;gap:var(--cv3-s2) !important;border:0 !important;
+  font-size:var(--cv3-sm) !important;line-height:1.4 !important;color:var(--cv3-muted) !important}
+body.cv3-skin.cv3-skin .crumb a,body.cv3-skin.cv3-skin .crumb > span{margin:0;padding:0;color:var(--cv3-muted) !important}
+
+/* ── 가운데 맞춘 칸 → 왼 선 ── 옛 쪽은 좁은 칸을 가운데 뒀다. 틀과 같은 왼 선(48)에서 시작하게 */
+body.cv3-skin.cv3-skin :is(.art-hero .wrap,.notice-hero .wrap,.archive-hero .wrap,.notice-section .wrap,.intro-block,.curation,.gal-note,.gal-group,.dp-wrap,
+  .sw-step-hero,.prose,.refs,.deep,.spec,.archive,.curate,.ev-hero .in,.ev-sec,.ev-line,.ev-apply .in,.ev-lead,.ev-about,.pressing,.intro){margin-left:0 !important;margin-right:auto !important}
+
+/* ══ 글 쪽 ══ 쪽 이름 = 48 선 · 본문 = 둘째 열(504 선 · 폭 660) — 안내 · 법적 쪽(doc-) · 「판이 되기까지」(sw-) · 옛 꼴 글(prose) */
+body.cv3-skin.cv3-skin :is(.doc-hero,.sw-step-hero){display:block !important;max-width:none !important;padding-top:var(--cv3-s5) !important;padding-bottom:0 !important;border:0 !important}
+body.cv3-skin.cv3-skin :is(.doc-hero,.sw-step-hero){padding-left:var(--cv3-m) !important;padding-right:var(--cv3-m) !important}
+body.cv3-skin.cv3-skin :is(.doc-hero,.sw-step-hero) h1{margin:0 !important;max-width:none}
+body.cv3-skin.cv3-skin :is(.doc-hero .lede,.sw-step-hero .dek){margin:var(--cv3-s3) 0 0 !important;max-width:38em !important;line-height:1.7 !important}
+body.cv3-skin.cv3-skin :is(.doc-hero,.sw-step-hero) .kicker{display:block;margin:0 0 var(--cv3-s2) !important}
+@media (min-width:1200px){
+  body.cv3-skin.cv3-skin :is(.doc-hero,.sw-step-hero){display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--cv3-g);align-items:baseline}
+  body.cv3-skin.cv3-skin :is(.doc-hero,.sw-step-hero) > *{grid-column:1}
+  body.cv3-skin.cv3-skin :is(.doc-hero .lede,.sw-step-hero .dek,.doc-hero > .cv-i18n-note){grid-column:2 / 4;margin-top:0 !important}
+}
+body.cv3-skin.cv3-skin :is(.sw-body,.sw .refs,.sw .sw-more,.sw .sw-prev,.sw .sw-next,.sw .sw-deeper,.prose){
+  max-width:none !important;margin-left:0 !important;margin-right:0 !important;padding-left:var(--cv3-c2) !important;padding-right:var(--cv3-m) !important}
+body.cv3-skin.cv3-skin.cv3-skin :is(.doc-section,.important){max-width:none !important;margin:var(--cv3-s7) var(--cv3-m) 0 !important;
+  padding:var(--cv3-s5) 0 0 calc(var(--cv3-c2) - var(--cv3-m)) !important;border:0 !important;border-top:1px solid var(--cv3-line) !important}
+body.cv3-skin.cv3-skin :is(.doc-section,.important,.sw-body,.prose) > :is(p,h2,h3,ul,ol,.note,.clause,blockquote,.mat,.gear){max-width:660px !important}
+body.cv3-skin.cv3-skin :is(.doc-section .clause) > :not(.table-wrap,table){max-width:660px !important}
+body.cv3-skin.cv3-skin :is(.doc-section,.sw-body,.prose) p{line-height:1.8 !important}
+body.cv3-skin.cv3-skin.cv3-skin .doc-section > h2{margin-top:0 !important;padding-left:0 !important;padding-right:0 !important}
+body.cv3-skin.cv3-skin.cv3-skin :is(.term-row,.grade-row,.group-lede,.grade-scale,.scale-note){padding-left:0 !important;padding-right:0 !important}
+/* 법적 쪽 머리 위 한 줄(쪽 이름 · 주소) — 상자 꼴을 내리고 이름표 줄로 */
+body.cv3-skin.cv3-skin .signal-row{display:flex !important;justify-content:space-between;gap:var(--cv3-s3);padding:var(--cv3-s4) var(--cv3-m) 0 !important;border:0 !important;
+  background:transparent !important;font-size:var(--cv3-sm) !important;line-height:1.4 !important;color:var(--cv3-muted) !important}
+body.cv3-skin.cv3-skin .signal-row > *{padding:0 !important;border:0 !important;font-size:var(--cv3-sm) !important;color:var(--cv3-muted) !important}
+
+/* ── 표 ── 헤어라인 · 머리 칸 흰 면 0 */
+body.cv3-skin.cv3-skin :is(table) :is(th,td){background:transparent !important;border-color:var(--cv3-line) !important}
+
+/* ── 단추 꼴 → 글자 한 줄 ── 채운 단추는 앨범 쪽 사는 단추 하나뿐(§0) */
+body.cv3-skin.cv3-skin :is(a.btn,.cta-band .btn,.cta-buttons a,a.gw-cta,.dp-cta,.ev-apply .btn):not(.cv3-ft *){background:transparent !important;color:var(--cv3-ink) !important;
+  border:0 !important;border-bottom:1px solid var(--cv3-ink) !important;padding:0 0 var(--cv3-s1) !important;height:auto !important;min-height:0 !important}
+
+/* ── 틱 ── 16 × 2 */
+body.cv3-skin.cv3-skin .cvb-tick{width:16px !important;height:2px !important;margin-right:var(--cv3-s2) !important;top:0 !important}
+
+/* ── 꼬리 앞 ── 본문 끝 ↔ 꼬리 = 96(틀 값) — 옛 본문 끝의 아래 선 · 여백이 겹치지 않게 */
+body.cv3-skin.cv3-skin :is(article,main) > :last-child{border-bottom:0 !important}
+
+/* ── 쪽 안에 손으로 적힌 글자 크기 → 둘레 글자 크기 ── */
+body.cv3-skin.cv3-skin [style*="font-size"]:not(.cv3-strip *,.cv3-hd *,.cv3-ft *,svg *){font-size:inherit !important}
+
+/* ══ 옛 회차(글 카드 세대 · 영상 칸 세대) ══ 카드 글 = 48 선에서 시작 · 칸 사이 24 · 칸 옆 선 0(줄 아래 선만) */
+body.cv3-skin.cv3-skin .rec-grid{padding:0 var(--cv3-m) !important;column-gap:var(--cv3-g) !important}
+body.cv3-skin.cv3-skin .rec-grid .rec{border-left:0 !important;border-right:0 !important;background:transparent !important}
+body.cv3-skin.cv3-skin .rec-grid :is(.rec-body,.rec-cover){padding-left:0 !important;padding-right:0 !important}
+body.cv3-skin.cv3-skin.cv3-skin .group-head :is(h2,.group-kr){font-size:var(--cv3-k2) !important;font-weight:500 !important;color:var(--cv3-ink) !important}
+body.cv3-skin.cv3-skin article > .na-video{margin:var(--cv3-s5) 0 0 var(--cv3-m) !important}
+body.cv3-skin.cv3-skin .rec-grade span{border-color:var(--cv3-line) !important}
+
+/* ── 하루 쪽 ── 가운데 1240 칸을 풀어 틀과 같은 폭(48 ~ 오른쪽 48)으로 */
+body.cv3-skin.cv3-skin :is(.dp-wrap,.gal-group,.gal-note){max-width:none !important}
+
+/* ── 「판이 되기까지」 머리 ── 가운데 맞춤 → 왼 선 */
+body.cv3-skin.cv3-skin .sw-step-hero,body.cv3-skin.cv3-skin .sw-step-hero :is(h1,.dek){text-align:left !important}
+/* ── 장르 · 레이블 목록 ── 칸 글 = 48 선 */
+body.cv3-skin.cv3-skin :is(.archive,.curate){max-width:none !important;padding-left:var(--cv3-m) !important;padding-right:var(--cv3-m) !important}
+body.cv3-skin.cv3-skin .genre-grid .gcard{padding-left:var(--cv3-m) !important;padding-right:var(--cv3-m) !important}
+
+/* ══ 클래식 장 · 클래식 용어 · 클래식 머리 ══ 가운데 칸 → 쪽 이름 48 선 · 본문 둘째 열(504 선) */
+body.cv3-skin.cv3-skin main.kw{max-width:none !important;margin:0 !important;padding-left:var(--cv3-c2) !important;padding-right:var(--cv3-m) !important}
+@media (min-width:1200px){
+  body.cv3-skin.cv3-skin main.kw > :is(.kw-badge,h1){margin-left:calc(-1 * ((100vw - 2 * var(--cv3-m) - 2 * var(--cv3-g)) / 3 + var(--cv3-g))) !important}
+}
+body.cv3-skin.cv3-skin main.kw-chapter > *{max-width:760px}
+body.cv3-skin.cv3-skin main.kw > h1{max-width:none}
+
+/* ── 옛 평면 사본(본문 결 CSS 가 안 걸리는 쪽) ── 어두운 면 · 노란 면 · 흰 면 · 본문 틱을 같은 결로 */
+body.cv3-skin.cv3-skin :is(div.callout,aside.genre-gateway,div.important,section.cta,div.cta-band,section.ev-apply,span.chip,span.on,th,div.c,blockquote,
+  section.curation-wrap,section.dp-tail,div.grade-scale,div.scale-note,.store-band,.info-strip):not(.cv3-ft *){background:transparent !important;color:var(--cv3-ink) !important}
+body.cv3-skin.cv3-skin :is(div.callout,aside.genre-gateway,div.important,section.cta,div.cta-band,section.ev-apply,.store-band) :is(p,h2,h3,span,div,b,strong,li,a){color:var(--cv3-ink) !important}
+body.cv3-skin.cv3-skin span.chip{border:1px solid var(--cv3-line) !important}
+body.cv3-skin.cv3-skin span.on{padding-left:0 !important;color:var(--cv3-muted) !important}
+body.cv3-skin.cv3-skin :not(.cv3-strip *,.cv3-hd *,.cv3-ft *) > span.tick:not(.dp-name > .tick){display:none !important}
+body.cv3-skin.cv3-skin :not(.cv3-strip *,.cv3-hd *,.cv3-ft *,svg *){border-radius:0 !important;box-shadow:none !important}
+body.cv3-skin.cv3-skin.cv3-skin.cv3-skin main > :is(.grade-scale,.scale-note){padding-left:var(--cv3-m) !important;padding-right:var(--cv3-m) !important;border:0 !important}
+body.cv3-skin.cv3-skin a:not(.cv3-strip a,.cv3-hd a,.cv3-ft a){color:inherit}
+
+/* ── 온라인 회차 앞뒤 칸 ── 긴 제목이 휴대폰에서 쪽 폭을 넘지 않게 */
+body.cv3-skin.cv3-skin :is(.pg-cell,.pg-text){min-width:0 !important;max-width:100% !important}
+body.cv3-skin.cv3-skin :is(.pg-title,.pg-label,.pg-date){white-space:normal !important;overflow-wrap:anywhere}

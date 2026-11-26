@@ -8,6 +8,9 @@
 <meta name="description" content="코디드바이닐즈가 음반을 녹음부터 판본까지 깊이 읽은 글을 모았습니다.">
 <link rel="stylesheet" href="/assets/cv-nav.css?v=412c70b2fe94">
 <link rel="stylesheet" href="/assets/cv-frame.css?v=121c68b12605">
+<link rel="stylesheet" href="/assets/fonts/cv3-fonts.css?v=aaa19e971a4e">
+<link rel="stylesheet" href="/assets/cv3-base.css?v=60294dcaca21">
+<style data-cv3="max">:root{--max:1440px}</style>
 <link rel="canonical" href="https://codedvinyls.com/journal/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="코디드바이닐즈">
@@ -25,283 +28,33 @@
 </script>
 <link rel="stylesheet" href="/assets/fonts/cv-fonts.css?v=7312f61dab8a">
 <link rel="stylesheet" href="/assets/cv-type.css?v=9770cfffc9db">
-<style>
-:root{
-  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
-  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
-  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
-  --mono:"Courier New",monospace;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
-
-.top-grid{display:grid;grid-template-columns:260px repeat(6,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
-.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
-.logo-cell img{width:188px;height:auto}
-.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
-.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
-.nav-cell:last-child{border-right:0}
-.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
-.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
-.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
-.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
-.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
-
-.crumb{border-bottom:1px solid var(--line);background:var(--surface);padding:16px 26px;font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.05em;display:flex;gap:10px;align-items:center}
-.crumb a:hover{color:var(--ink)}
-
-.archive-hero{padding:clamp(52px,7vw,104px) clamp(24px,4vw,56px);border-bottom:1px solid var(--line)}
-.archive-hero .wrap{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
-.archive-hero .kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.09em}
-.archive-hero h1{margin:0;font-size:clamp(32px,5vw,58px);line-height:1.08;font-weight:800;letter-spacing:-.02em}
-.archive-hero .dek{margin:0;max-width:700px;font-size:clamp(16px,1.8vw,19px);line-height:1.75;color:#3a372f}
-
-.update-list{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
-.update-card{display:grid;grid-template-columns:minmax(150px,38%) 1fr;min-height:300px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper);transition:background .18s}
-.update-card:nth-child(even){border-right:0}
-.update-card:hover{background:var(--surface)}
-.update-cover{padding:clamp(18px,2.3vw,30px);border-right:1px solid var(--line);display:flex;align-items:center;justify-content:center}
-.update-cover img{width:min(100%,190px);aspect-ratio:1/1;object-fit:cover;filter:drop-shadow(0 8px 16px rgba(31,30,27,.18))}
-.update-body{padding:clamp(24px,3vw,38px);display:flex;flex-direction:column;gap:14px}
-.update-date{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted)}
-.update-card h2{margin:0;font-size:clamp(20px,2.3vw,28px);line-height:1.2;font-weight:800}
-.update-card p{margin:0;font-size:14.5px;line-height:1.75;color:#3a372f}
-.update-go{margin-top:auto;align-self:flex-start;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;border-bottom:2px solid var(--yellow);padding-bottom:2px}
-.update-card:hover .update-go{background:var(--yellow)}
-
-.store-band{background:var(--ink);color:var(--paper);padding:clamp(36px,5vw,60px) clamp(24px,4vw,56px);display:flex;align-items:center;justify-content:space-between;gap:24px}
-.store-band div{display:flex;flex-direction:column;gap:8px}
-.store-band strong{font-size:clamp(18px,2vw,23px)}
-.store-band span{font-family:var(--mono);font-size:12px;color:rgba(247,244,236,.7)}
-.store-band a{background:var(--yellow);color:var(--ink);padding:16px 24px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;white-space:nowrap}
-
-footer{background:var(--ink);color:var(--paper)}
-.footer-base{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 26px;font-family:var(--mono);font-size:12px;flex-wrap:wrap;border-top:1px solid rgba(247,244,236,.18)}
-
-@media(max-width:1080px){
-  .top-grid{grid-template-columns:1fr 1fr}
-  .logo-cell{grid-column:1/3;border-right:0;border-bottom:1px solid var(--line)}
-  .nav-cell:nth-child(even){border-right:0}
-  .update-list{grid-template-columns:1fr}
-  .update-card{border-right:0}
-}
-@media(max-width:680px){
-  .page{border-left:0;border-right:0}
-  .nav-cell{min-height:60px;padding:16px 14px;font-size:11.5px}
-  .update-card{grid-template-columns:1fr}
-  .update-cover{border-right:0;border-bottom:1px solid var(--line);padding:26px}
-  .update-cover img{width:min(100%,240px)}
-  .store-band{align-items:flex-start;flex-direction:column}
-  .footer-base{flex-direction:column;gap:8px;align-items:flex-start}
-}
-
-/* ★261013 저널 허브 — 딥다이브(카드) · 장르 · 레이블(링크 그리드) */
-.j-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:clamp(28px,3.4vw,44px) clamp(24px,4vw,56px) 18px;border-bottom:1px solid var(--line)}
-.j-kicker{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;color:var(--muted);margin-bottom:6px}
-.j-head h2{margin:0;font-size:clamp(22px,2.6vw,32px);font-weight:800;letter-spacing:-.01em}
-.j-head p{margin:0;font-size:14.5px;line-height:1.7;color:#3a372f;max-width:620px}
-.j-links{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
-.j-links a{display:flex;flex-direction:column;gap:6px;padding:22px clamp(18px,2.4vw,30px);border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:17px;font-weight:700;transition:background .18s}
-.j-links a span{font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.04em;color:var(--muted)}
-.j-links a:hover{background:var(--surface)}
-.j-links.labels{grid-template-columns:repeat(4,1fr)}
-.j-links.labels a{font-size:15.5px}
-@media(max-width:1080px){.j-links,.j-links.labels{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){.j-head{flex-direction:column}.j-links,.j-links.labels{grid-template-columns:1fr 1fr}.j-links a{font-size:15px}}
-</style>
-<link rel="stylesheet" href="/assets/cv-body.css?v=91537a25a6aa">
+<link rel="stylesheet" href="/assets/cv3-read.css?v=07bf6018f506">
 </head>
-<body class="cvf-on cvb-on cvb-jnl">
+<body class="cvf-on">
 <div class="page" id="top">
 
-  <header class="cvf-hd" data-cvf-hd>
-    <a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="168" height="13"></a>
-    <nav class="cvf-nav" aria-label="메뉴"><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/">아카이브</a><a href="/journal/" aria-current="page">저널</a><a href="/store.html">매장·온라인</a></nav>
-    <a class="cvf-menu" href="#cvf-sheet" aria-controls="cvf-sheet" aria-expanded="false">메뉴</a>
-  </header>
-  <div class="cvf-sheet" id="cvf-sheet" role="dialog" aria-modal="true" aria-label="메뉴">
-    <div class="cvf-sheet-hd"><a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="118" height="9"></a><a class="cvf-close" href="#">닫기</a></div>
-    <nav class="cvf-sheet-nav"><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/">아카이브</a><a href="/journal/" aria-current="page">저널</a><a href="/store.html">매장·온라인</a></nav>
-    <p class="cvf-sheet-notice"><a href="/notice/"><span class="cvf-k">공지</span><span>이용약관·개인정보처리방침 변경 외 3건</span><span aria-hidden="true">→</span></a></p>
-    <p class="cvf-sheet-nap">코디드바이닐즈 회현 · 회현 지하쇼핑센터 마열 3호</p>
-  </div><main>
-    <section class="archive-hero">
-      <div class="wrap">
-        <h1>저널</h1>
-        <p class="dek">음반은 새 주인을 만나 떠나도 기록은 가게에 남습니다.</p>
-      </div>
-    </section>
-
-    <div class="j-head" id="deepdive"><div><h2>글</h2></div><p>음반을 녹음부터 판본까지 깊이 읽습니다.</p></div>
-    <section class="update-list" aria-label="글">
-      
-      <a class="update-card" href="/journal/neil-young-crazy-horse-1969/">
-        <div class="update-cover"><img src="/assets/arrivals/ar-261110-18-022.jpg" alt="그룹은 이제 그만" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">11.21</span>
-          <h2>그룹은 이제 그만</h2>
-          <p>1968년 11월, 처음 혼자 무대에 선 닐 영은 이제 그룹은 그만이라고 말했습니다. 오버더빙으로 쌓아 올린 첫 앨범 뒤에 그는 함께 연주할 사람들이 필요했고, 이듬해 로키츠의 세 사람과 크레이지 호스를 꾸려 이 판을 만들었습니다.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/kurt-sanderling-beethoven-emperor/">
-        <div class="update-cover"><img src="/assets/arrivals/ar-261022-08-035.jpg" alt="멈춘 그 자리에서" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">11.21</span>
-          <h2>멈춘 그 자리에서</h2>
-          <p>1941년 6월 22일 아침, 레닌그라드에서 베토벤 교향곡 8번 3악장을 연습하던 쿠르트 잔덜링은 전쟁 소식에 연습을 멈췄습니다. 1944년 「멈춘 그 자리」에서 다시 시작한 그는 1960년 동독으로 돌아갔고, 게반트하우스 관현악단, 피아니스트 디터 체힐린과 베토벤 〈황제〉를 남겼습니다.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/kertesz-new-world-1961/">
-        <div class="update-cover"><img src="/assets/journal-hub-kertesz-new-world-1961.jpg" alt="아직 앞에 있던 날들" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">11.21</span>
-          <h2>아직 앞에 있던 날들</h2>
-          <p>1961년 3월 빈의 조피엔잘에서, Decca는 1956년에 이미 녹음해 둔 드보르자크의 〈신세계로부터〉를 빈 필하모닉과 다시 녹음하며, 고향을 떠나온 서른한 살의 이슈트반 케르테스에게 지휘대를 맡겼습니다. 판에 실린 글과 영국 · 미국의 평, 그 뒤 열두 해까지.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/gewandhaus-orchestra-leipzig/">
-        <div class="update-cover"><img src="/assets/journal-hub-gewandhaus-orchestra-leipzig.jpg" alt="집의 이름을 단 악단" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">11.21</span>
-          <h2>집의 이름을 단 악단</h2>
-          <p>라이프치히 게반트하우스 관현악단은 직물 상인 회관(게반트하우스)의 이름을 단 악단입니다. 1944년 폭격으로 홀을 잃은 뒤 1947년부터 1981년까지 동물원의 콩그레스할레에서 연주했습니다. 전차 소리가 홀 안까지 들리던 그 홀, 선배에게서 후배로 이어진 악단의 성격, 마주어가 호네커에게 보낸 편지, 새 홀을 짓던 무렵 교회에서 녹음한 리스트, 그리고 1981년의 새 게반트하우스까지.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/aretha-franklin-i-never-loved-a-man-1967/">
-        <div class="update-cover"><img src="/assets/journal-hub-aretha-franklin-i-never-loved-a-man-1967.jpg" alt="늘 거기 있던 소리" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">11.18</span>
-          <h2>늘 거기 있던 소리</h2>
-          <p>1967년 아레사 프랭클린의 첫 애틀랜틱 앨범 〈I Never Loved A Man The Way I Love You〉. 컬럼비아에서 회사가 정해 주던 대로 노래하던 그녀를, 제리 웩슬러는 머슬숄스와 뉴욕의 피아노 앞에 앉혔습니다.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/oistrakh-devils-trill/">
-        <div class="update-cover"><img src="/assets/journal-hub-oistrakh-devils-trill.jpg" alt="소리를 낮춘 스타" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">11.15</span>
-          <h2>소리를 낮춘 스타</h2>
-          <p>1956년 2월 런던 애비 로드에서 다비트 오이스트라흐와 블라디미르 얌폴스키가 녹음한 타르티니 〈악마의 트릴〉과 모차르트 K.454. 이듬해 영국의 한 평자는 스타 바이올리니스트와 모차르트의 「위험한 동맹」이 이 판에서는 완전히 성공했다고 썼습니다.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/decca-and-london/">
-        <div class="update-cover"><img src="/assets/journal-hub-decca-and-london.png" alt="영국 Decca와 미국 London" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">11.01</span>
-          <h2>영국 Decca와 미국 London</h2>
-          <p>1934년 미국의 레코드 회사 Decca는 영국 Decca가 이름과 자금을 대서 세운 회사였습니다. 전쟁 뒤 미국에서 그 이름을 쓸 수 없게 되자 영국 Decca는 1947년 말부터 자기 판을 London이라는 이름으로 미국에 보냈고, 회사를 이끌던 에드워드 루이스는 훗날 귀 모양 표시 ffrr가 미국에서도 영국만큼 알려졌다고 적었습니다.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/auclair-schubert-mono/">
-        <div class="update-cover"><img src="/assets/auclair-schubert-mono.jpg" alt="비어 가던 홀의 환상곡" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">10.23</span>
-          <h2>비어 가던 홀의 환상곡</h2>
-          <p>슈베르트가 세상을 떠나기 열한 달 전에 쓴 바이올린과 피아노의 환상곡은 1828년 빈에서 차가운 평을 받았습니다. 1962년 바이올리니스트 미셸 오클레르가 피아니스트 주느비에브 주아와 에라토에 남긴 녹음, 그리고 그 뒤의 이야기.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/john-coltrane-time/">
-        <div class="update-cover"><img src="/assets/journal-hub-john-coltrane-time.jpg" alt="콜트레인의 시간" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">07.31</span>
-          <h2>콜트레인의 시간</h2>
-          <p>존 콜트레인은 자기 녹음이 정해진 기간 안에 판으로 나오기를 바랐습니다. 1961년 임펄스와 계약한 뒤 〈Ballads〉와 〈Meditations〉를 거쳐 늘 앞으로 가던 그의 걸음, 그리고 그가 떠난 뒤 1974년에야 처음 나온 1961년의 녹음 〈The Africa Brass Sessions, Vol. 2〉 이야기.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/dave-brubeck-time-out/">
-        <div class="update-cover"><img src="/assets/brubeck.jpg" alt="춤출 수 없는 박자" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">06.23</span>
-          <h2>춤출 수 없는 박자</h2>
-          <p>1959년 여름에 녹음한 데이브 브루벡 콰르텟의 〈Time Out〉은, 튀르키예 거리에서 들은 9/8 박자와 드럼 솔로에서 나온 5/4 박자에 전부 새로 쓴 곡과 그림 표지까지 더해 브루벡 스스로 불문율을 다 깼다고 말한 앨범입니다. 팔릴지 걱정한 회사와 이 앨범을 반긴 사장, 갈린 평과 회사도 놀란 반응, 뒷면 해설이 맺은 「첫 화살」 이야기를 담았습니다.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/wes-montgomery-incredible-jazz-guitar/">
-        <div class="update-cover"><img src="/assets/wes-montgomery-cover.jpg" alt="조용히 치려던 기타" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">06.19</span>
-          <h2>조용히 치려던 기타</h2>
-          <p>1960년 1월 뉴욕에서 녹음한 웨스 몽고메리의 리버사이드 둘째 앨범 〈The Incredible Jazz Guitar of Wes Montgomery〉. 옆집에 소리가 너무 커서 엄지로 줄을 퉁기기 시작했다는 인디애나폴리스의 기타리스트를 캐넌볼 애덜리가 리버사이드에 알렸고, 레이블은 이 앨범에 ‘믿기 어려운’이라는 제목을 달았습니다.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/gigi-gryce-jazz-lab-quintet/">
-        <div class="update-cover"><img src="/assets/gigi-gryce-jazz-lab-quintet.jpg" alt="새 옷을 입은 오랜 친구" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">06.15</span>
-          <h2>새 옷을 입은 오랜 친구</h2>
-          <p>1957년 리버사이드에서 나온 〈Gigi Gryce and the Jazz Lab Quintet〉. ‘실험실’이라는 이름을 단 지지 그라이스와 도널드 버드의 그룹 재즈 랩은 정작 실험실처럼 보일까 걱정했고, 그해 다운비트의 평자는 그들의 분젠 버너가 한창 달아올라 있다고 썼습니다.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/jazz-messengers-cafe-bohemia-vol1/">
-        <div class="update-cover"><img src="/assets/jazzmessengers.jpg" alt="함께 머무는 밴드" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">06.12</span>
-          <h2>함께 머무는 밴드</h2>
-          <p>1955년 11월 23일 밤, 뉴욕 그리니치빌리지의 카페 보헤미아에서 녹음한 재즈 메신저스의 〈At The Cafe Bohemia Vol.1〉. 벌이도 부담도 함께 나누던 협동조합 밴드의 다섯은 이듬해 흩어졌고, 이름은 드러머 아트 블레이키에게 남았습니다.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/shuggie-otis-freedom-flight/">
-        <div class="update-cover"><img src="/assets/shuggie.jpg" alt="누군가 히트시켜 줄 노래" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">06.06</span>
-          <h2>누군가 히트시켜 줄 노래</h2>
-          <p>1971년 슈기 오티스의 둘째 솔로 앨범 〈Freedom Flight〉. 제작도 제목도 아버지 조니 오티스의 몫이었지만, 「Strawberry Letter 23」만은 노래부터 드럼까지 슈기가 혼자 만들었습니다. 다른 누군가가 히트시킬 거라 여기고 쓴 그 노래는 1977년 브라더스 존슨의 녹음으로 R&amp;B 차트 1위에 올랐습니다.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      <a class="update-card" href="/journal/george-braith-soul-stream/">
-        <div class="update-cover"><img src="/assets/braith.jpg" alt="마디 없이 쓴 슬픔" loading="lazy"></div>
-        <div class="update-body">
-          <span class="update-date">06.06</span>
-          <h2>마디 없이 쓴 슬픔</h2>
-          <p>1963년 12월에 녹음해 1964년 블루노트에서 나온 조지 브레이스의 〈Soul Stream〉. 1면의 첫 곡 「The Man I Love」는 케네디의 죽음에서 영감을 받아 녹음했고, 타이틀곡은 같은 죽음에서 영감을 받아 그가 마디 없이 쓴 곡입니다.</p>
-          <span class="update-go">읽기 →</span>
-        </div>
-      </a>
-      
-    </section>
-
-    <div class="j-head" id="series"><div><h2>판이 되기까지</h2></div></div>
-    <nav class="j-links" aria-label="판이 되기까지">
-          <a href="/guide/originals/">오리지널 프레싱<span>어떤 판이고, 왜 그 판으로 듣나</span></a>
-          <a href="/guide/lp-origins/">LP의 기원<span>LP는 어떻게 지금의 형태가 되었나</span></a>
-          <a href="/guide/analog-recording/">녹음<span>판에 새기기 전, 연주는 어디에 먼저 담겼나</span></a>
-          <a href="/guide/mastering-and-cutting/">마스터링과 커팅<span>LP의 홈은 무엇 위에, 무엇으로, 누가 새겼나</span></a>
-          <a href="/guide/original-pressing/">도금과 프레싱<span>래커 한 장은 어떻게 수천 장의 LP가 되나</span></a>
-          <a href="/guide/analog-to-digital/">디지털이 들어온 자리<span>LP의 소리는 어디서 디지털을 거쳤나</span></a>
-    </nav>
-
-    <style>.j-door{margin:0;padding:clamp(28px,3.4vw,44px) clamp(24px,4vw,56px) 18px;font-size:15px;line-height:1.7}.j-door a{color:inherit}</style>
-    <p class="j-door"><a href="/archive/">아카이브 →</a></p>
+  <div class="cv3-strip"><div class="cv3-strip-in"><p class="cv3-strip-notice" data-cv-projection="cv3-notice"><a href="/notice/"><span class="cv3-k">공지</span><span>이용약관·개인정보처리방침 변경 외 3건</span><span aria-hidden="true">→</span></a></p><p class="cv3-strip-hours">회현동 매장 · 월·화·목·금·토 13:00–19:30 · 수·일 정기 휴무</p></div></div>
+  <header class="cv3-hd">
+    <a class="cv3-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="168" height="13"></a>
+    <nav class="cv3-nav" aria-label="메뉴"><a href="/album/">앨범</a><span class="cv3-two"><a href="/archive/">아카이브</a><a href="/journal/" aria-current="page">저널</a></span><a href="/store.html#visit">회현동 매장</a></nav>
+    <form class="cv3-q" action="/album/" method="get" role="search"><label><span>찾기</span><input type="search" name="q" placeholder="아티스트 · 앨범 · 레이블" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></label></form>
+    <a class="cv3-q-go" href="/album/">찾기</a>
+  </header><main class="cv3-rd cv3-jl-pg">
+    <div class="cv3-pgh cv3-t3"><h1>저널</h1><p class="cv3-dek">음반은 새 주인을 만나 떠나도 기록은 가게에 남습니다.</p></div>
+    <section class="cv3-sec cv3-t3"><div class="cv3-rail"><h2>글</h2><p class="cv3-tx">음반을 녹음부터 판본까지 깊이 읽습니다.</p></div><div class="cv3-main"><div class="cv3-jl"><a class="cv3-jrow" href="/journal/neil-young-crazy-horse-1969/"><span class="cv3-im"><img src="/assets/arrivals/ar-261110-18-022.jpg" alt="그룹은 이제 그만"></span><span class="cv3-jhd"><span class="cv3-d">11.21</span><span class="cv3-t">그룹은 이제 그만</span></span><span class="cv3-dk">1968년 11월, 처음 혼자 무대에 선 닐 영은 이제 그룹은 그만이라고 말했습니다. 오버더빙으로 쌓아 올린 첫 앨범 뒤에 그는 함께 연주할 사람들이 필요했고, 이듬해 로키츠의 세 사람과 크레이지 호스를 꾸려 이 판을 만들었습니다.</span></a><a class="cv3-jrow" href="/journal/kurt-sanderling-beethoven-emperor/"><span class="cv3-im"><img src="/assets/arrivals/ar-261022-08-035.jpg" alt="멈춘 그 자리에서"></span><span class="cv3-jhd"><span class="cv3-d">11.21</span><span class="cv3-t">멈춘 그 자리에서</span></span><span class="cv3-dk">1941년 6월 22일 아침, 레닌그라드에서 베토벤 교향곡 8번 3악장을 연습하던 쿠르트 잔덜링은 전쟁 소식에 연습을 멈췄습니다. 1944년 「멈춘 그 자리」에서 다시 시작한 그는 1960년 동독으로 돌아갔고, 게반트하우스 관현악단, 피아니스트 디터 체힐린과 베토벤 〈황제〉를 남겼습니다.</span></a><a class="cv3-jrow" href="/journal/kertesz-new-world-1961/"><span class="cv3-im"><img src="/assets/journal-hub-kertesz-new-world-1961.jpg" alt="아직 앞에 있던 날들" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">11.21</span><span class="cv3-t">아직 앞에 있던 날들</span></span><span class="cv3-dk">1961년 3월 빈의 조피엔잘에서, Decca는 1956년에 이미 녹음해 둔 드보르자크의 〈신세계로부터〉를 빈 필하모닉과 다시 녹음하며, 고향을 떠나온 서른한 살의 이슈트반 케르테스에게 지휘대를 맡겼습니다. 판에 실린 글과 영국 · 미국의 평, 그 뒤 열두 해까지.</span></a><a class="cv3-jrow" href="/journal/gewandhaus-orchestra-leipzig/"><span class="cv3-im"><img src="/assets/journal-hub-gewandhaus-orchestra-leipzig.jpg" alt="집의 이름을 단 악단" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">11.21</span><span class="cv3-t">집의 이름을 단 악단</span></span><span class="cv3-dk">라이프치히 게반트하우스 관현악단은 직물 상인 회관(게반트하우스)의 이름을 단 악단입니다. 1944년 폭격으로 홀을 잃은 뒤 1947년부터 1981년까지 동물원의 콩그레스할레에서 연주했습니다. 전차 소리가 홀 안까지 들리던 그 홀, 선배에게서 후배로 이어진 악단의 성격, 마주어가 호네커에게 보낸 편지, 새 홀을 짓던 무렵 교회에서 녹음한 리스트, 그리고 1981년의 새 게반트하우스까지.</span></a><a class="cv3-jrow" href="/journal/aretha-franklin-i-never-loved-a-man-1967/"><span class="cv3-im"><img src="/assets/journal-hub-aretha-franklin-i-never-loved-a-man-1967.jpg" alt="늘 거기 있던 소리" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">11.18</span><span class="cv3-t">늘 거기 있던 소리</span></span><span class="cv3-dk">1967년 아레사 프랭클린의 첫 애틀랜틱 앨범 〈I Never Loved A Man The Way I Love You〉. 컬럼비아에서 회사가 정해 주던 대로 노래하던 그녀를, 제리 웩슬러는 머슬숄스와 뉴욕의 피아노 앞에 앉혔습니다.</span></a><a class="cv3-jrow" href="/journal/oistrakh-devils-trill/"><span class="cv3-im"><img src="/assets/journal-hub-oistrakh-devils-trill.jpg" alt="소리를 낮춘 스타" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">11.15</span><span class="cv3-t">소리를 낮춘 스타</span></span><span class="cv3-dk">1956년 2월 런던 애비 로드에서 다비트 오이스트라흐와 블라디미르 얌폴스키가 녹음한 타르티니 〈악마의 트릴〉과 모차르트 K.454. 이듬해 영국의 한 평자는 스타 바이올리니스트와 모차르트의 「위험한 동맹」이 이 판에서는 완전히 성공했다고 썼습니다.</span></a><a class="cv3-jrow" href="/journal/decca-and-london/"><span class="cv3-im"><img src="/assets/journal-hub-decca-and-london.png" alt="영국 Decca와 미국 London" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">11.01</span><span class="cv3-t">영국 Decca와 미국 London</span></span><span class="cv3-dk">1934년 미국의 레코드 회사 Decca는 영국 Decca가 이름과 자금을 대서 세운 회사였습니다. 전쟁 뒤 미국에서 그 이름을 쓸 수 없게 되자 영국 Decca는 1947년 말부터 자기 판을 London이라는 이름으로 미국에 보냈고, 회사를 이끌던 에드워드 루이스는 훗날 귀 모양 표시 ffrr가 미국에서도 영국만큼 알려졌다고 적었습니다.</span></a><a class="cv3-jrow" href="/journal/auclair-schubert-mono/"><span class="cv3-im"><img src="/assets/auclair-schubert-mono.jpg" alt="비어 가던 홀의 환상곡" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">10.23</span><span class="cv3-t">비어 가던 홀의 환상곡</span></span><span class="cv3-dk">슈베르트가 세상을 떠나기 열한 달 전에 쓴 바이올린과 피아노의 환상곡은 1828년 빈에서 차가운 평을 받았습니다. 1962년 바이올리니스트 미셸 오클레르가 피아니스트 주느비에브 주아와 에라토에 남긴 녹음, 그리고 그 뒤의 이야기.</span></a><a class="cv3-jrow" href="/journal/john-coltrane-time/"><span class="cv3-im"><img src="/assets/journal-hub-john-coltrane-time.jpg" alt="콜트레인의 시간" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">07.31</span><span class="cv3-t">콜트레인의 시간</span></span><span class="cv3-dk">존 콜트레인은 자기 녹음이 정해진 기간 안에 판으로 나오기를 바랐습니다. 1961년 임펄스와 계약한 뒤 〈Ballads〉와 〈Meditations〉를 거쳐 늘 앞으로 가던 그의 걸음, 그리고 그가 떠난 뒤 1974년에야 처음 나온 1961년의 녹음 〈The Africa Brass Sessions, Vol. 2〉 이야기.</span></a><a class="cv3-jrow" href="/journal/dave-brubeck-time-out/"><span class="cv3-im"><img src="/assets/brubeck.jpg" alt="춤출 수 없는 박자" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">06.23</span><span class="cv3-t">춤출 수 없는 박자</span></span><span class="cv3-dk">1959년 여름에 녹음한 데이브 브루벡 콰르텟의 〈Time Out〉은, 튀르키예 거리에서 들은 9/8 박자와 드럼 솔로에서 나온 5/4 박자에 전부 새로 쓴 곡과 그림 표지까지 더해 브루벡 스스로 불문율을 다 깼다고 말한 앨범입니다. 팔릴지 걱정한 회사와 이 앨범을 반긴 사장, 갈린 평과 회사도 놀란 반응, 뒷면 해설이 맺은 「첫 화살」 이야기를 담았습니다.</span></a><a class="cv3-jrow" href="/journal/wes-montgomery-incredible-jazz-guitar/"><span class="cv3-im"><img src="/assets/wes-montgomery-cover.jpg" alt="조용히 치려던 기타" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">06.19</span><span class="cv3-t">조용히 치려던 기타</span></span><span class="cv3-dk">1960년 1월 뉴욕에서 녹음한 웨스 몽고메리의 리버사이드 둘째 앨범 〈The Incredible Jazz Guitar of Wes Montgomery〉. 옆집에 소리가 너무 커서 엄지로 줄을 퉁기기 시작했다는 인디애나폴리스의 기타리스트를 캐넌볼 애덜리가 리버사이드에 알렸고, 레이블은 이 앨범에 ‘믿기 어려운’이라는 제목을 달았습니다.</span></a><a class="cv3-jrow" href="/journal/gigi-gryce-jazz-lab-quintet/"><span class="cv3-im"><img src="/assets/gigi-gryce-jazz-lab-quintet.jpg" alt="새 옷을 입은 오랜 친구" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">06.15</span><span class="cv3-t">새 옷을 입은 오랜 친구</span></span><span class="cv3-dk">1957년 리버사이드에서 나온 〈Gigi Gryce and the Jazz Lab Quintet〉. ‘실험실’이라는 이름을 단 지지 그라이스와 도널드 버드의 그룹 재즈 랩은 정작 실험실처럼 보일까 걱정했고, 그해 다운비트의 평자는 그들의 분젠 버너가 한창 달아올라 있다고 썼습니다.</span></a><a class="cv3-jrow" href="/journal/jazz-messengers-cafe-bohemia-vol1/"><span class="cv3-im"><img src="/assets/jazzmessengers.jpg" alt="함께 머무는 밴드" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">06.12</span><span class="cv3-t">함께 머무는 밴드</span></span><span class="cv3-dk">1955년 11월 23일 밤, 뉴욕 그리니치빌리지의 카페 보헤미아에서 녹음한 재즈 메신저스의 〈At The Cafe Bohemia Vol.1〉. 벌이도 부담도 함께 나누던 협동조합 밴드의 다섯은 이듬해 흩어졌고, 이름은 드러머 아트 블레이키에게 남았습니다.</span></a><a class="cv3-jrow" href="/journal/shuggie-otis-freedom-flight/"><span class="cv3-im"><img src="/assets/shuggie.jpg" alt="누군가 히트시켜 줄 노래" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">06.06</span><span class="cv3-t">누군가 히트시켜 줄 노래</span></span><span class="cv3-dk">1971년 슈기 오티스의 둘째 솔로 앨범 〈Freedom Flight〉. 제작도 제목도 아버지 조니 오티스의 몫이었지만, 「Strawberry Letter 23」만은 노래부터 드럼까지 슈기가 혼자 만들었습니다. 다른 누군가가 히트시킬 거라 여기고 쓴 그 노래는 1977년 브라더스 존슨의 녹음으로 R&amp;B 차트 1위에 올랐습니다.</span></a><a class="cv3-jrow" href="/journal/george-braith-soul-stream/"><span class="cv3-im"><img src="/assets/braith.jpg" alt="마디 없이 쓴 슬픔" loading="lazy"></span><span class="cv3-jhd"><span class="cv3-d">06.06</span><span class="cv3-t">마디 없이 쓴 슬픔</span></span><span class="cv3-dk">1963년 12월에 녹음해 1964년 블루노트에서 나온 조지 브레이스의 〈Soul Stream〉. 1면의 첫 곡 「The Man I Love」는 케네디의 죽음에서 영감을 받아 녹음했고, 타이틀곡은 같은 죽음에서 영감을 받아 그가 마디 없이 쓴 곡입니다.</span></a></div></div></section>
+    <section class="cv3-sec cv3-t3"><div class="cv3-rail"><h2>판이 되기까지</h2></div><div class="cv3-main"><nav class="cv3-doors" aria-label="판이 되기까지"><a class="cv3-door" href="/guide/originals/"><span class="cv3-nm">오리지널 프레싱 <span class="cv3-arr">→</span></span><span class="cv3-mt">어떤 판이고, 왜 그 판으로 듣나</span></a><a class="cv3-door" href="/guide/lp-origins/"><span class="cv3-nm">LP의 기원 <span class="cv3-arr">→</span></span><span class="cv3-mt">LP는 어떻게 지금의 형태가 되었나</span></a><a class="cv3-door" href="/guide/analog-recording/"><span class="cv3-nm">녹음 <span class="cv3-arr">→</span></span><span class="cv3-mt">판에 새기기 전, 연주는 어디에 먼저 담겼나</span></a><a class="cv3-door" href="/guide/mastering-and-cutting/"><span class="cv3-nm">마스터링과 커팅 <span class="cv3-arr">→</span></span><span class="cv3-mt">LP의 홈은 무엇 위에, 무엇으로, 누가 새겼나</span></a><a class="cv3-door" href="/guide/original-pressing/"><span class="cv3-nm">도금과 프레싱 <span class="cv3-arr">→</span></span><span class="cv3-mt">래커 한 장은 어떻게 수천 장의 LP가 되나</span></a><a class="cv3-door" href="/guide/analog-to-digital/"><span class="cv3-nm">디지털이 들어온 자리 <span class="cv3-arr">→</span></span><span class="cv3-mt">LP의 소리는 어디서 디지털을 거쳤나</span></a></nav></div></section>
   </main>
 
-  <footer class="cvf-ft">
-    <div class="cvf-ft-grid">
-      <div class="cvf-ft-col cvf-ft-store"><a class="cvf-ft-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="140" height="11"></a><span>코디드바이닐즈 회현</span><span>회현 지하쇼핑센터 마열 3호</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">인스타그램 @codedvinyls</a></div>
-      <div class="cvf-ft-col"><b class="cvf-ft-h">둘러보기</b><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/">아카이브</a><a href="/journal/">저널</a></div>
-      <div class="cvf-ft-col"><a class="cvf-ft-h" href="/store.html">매장·온라인</a><a href="/store.html#visit">회현동 매장</a><a href="/notice/">공지</a><a href="/cd/">매장 CD 코너</a><a href="/store.html#online">온라인 구매</a></div>
-      <div class="cvf-ft-col"><b class="cvf-ft-h">안내</b><a href="/guide/grading/">등급 기준</a><a href="/guide/archival-standard/">보존 관리 기준</a><a href="/guide/glossary/">용어 사전</a><a href="/shipping-returns.html">배송·교환·환불</a><a href="/terms.html">이용약관</a><a href="/privacy.html">개인정보처리방침</a><a href="/about.html">사업자 정보</a></div>
+  <footer class="cv3-ft">
+    <div class="cv3-ft-cols">
+      <div class="cv3-ft-col cv3-ft-store"><a class="cv3-ft-mark" href="/"><img src="/assets/cv_wordmark_paper.svg" alt="코디드바이닐즈" width="140" height="11"></a><span>코디드바이닐즈 회현</span><span>회현 지하쇼핑센터 마열 3호</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">인스타그램 @codedvinyls</a></div>
+      <div class="cv3-ft-col"><span class="cv3-ft-h">둘러보기</span><a href="/album/">앨범</a><a href="/arrivals/">입고</a><a href="/archive/">아카이브</a><a href="/journal/">저널</a><a href="/store.html#visit">회현동 매장</a></div>
+      <div class="cv3-ft-col"><a class="cv3-ft-h" href="/store.html">회현동 매장</a><a href="/cd/">매장 CD 코너</a></div>
+      <div class="cv3-ft-col"><span class="cv3-ft-h">안내</span><a href="/guide/grading/">등급 기준</a><a href="/guide/archival-standard/">보존 관리 기준</a><a href="/guide/glossary/">용어 사전</a><a href="/store.html#online">온라인 구매</a><a href="/shipping-returns.html">배송·교환·환불</a><a href="/terms.html">이용약관</a><a href="/privacy.html">개인정보처리방침</a><a href="/about.html">사업자 정보</a><a href="/notice/">공지</a></div>
     </div>
-    <div class="cvf-ft-base"><span class="cvf-ft-plate">THE VINYL ARCHIVE</span><div class="cvf-ft-biz"><span>상호 코디드바이닐즈 · 대표자 최준홍 · 사업자등록번호 286-51-00775</span><span>통신판매업 신고번호 제2026-서울강남-00575호 · <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2865100775" target="_blank" rel="noopener">공정거래위원회 사업자 정보 확인</a></span><span>서울시 강남구 논현로 38길 20 · 전화 <a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span><span>호스팅서비스 제공자 GitHub, Inc.</span></div></div>
+    <div class="cv3-ft-base"><span class="cv3-ft-plate cvf-ft-plate" data-i18n="ft-plate">THE VINYL ARCHIVE</span><div class="cv3-ft-biz cvf-ft-biz" data-i18n="ft-biz"><span>상호 코디드바이닐즈 · 대표자 최준홍 · 사업자등록번호 286-51-00775</span><span>통신판매업 신고번호 제2026-서울강남-00575호 · <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2865100775" target="_blank" rel="noopener">공정거래위원회 사업자 정보 확인</a></span><span>서울시 강남구 논현로 38길 20 · 전화 <a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span><span>호스팅서비스 제공자 GitHub, Inc.</span></div></div>
   </footer>
 </div>
 
-<script src="/assets/cv-frame.js?v=36eca3bb7c07" defer></script>
 </body>
 </html>

@@ -20,6 +20,11 @@
 .cv3-card .cv3-pr .cv3-ch{font-weight:400;color:var(--cv3-muted)}
 .cv3-card .cv3-pr.cv3-so{font-weight:400;color:var(--cv3-sold)}
 .cv3-card:focus-visible{outline:2px solid var(--cv3-ink);outline-offset:2px}
+/* 회차 쪽 꼴(site_card.split) — 카드 껍데기 = div · 늘인 고리(a.cv3-go)가 카드 전체를 덮는다 · 감싼 칸(span.cv3-var = 공유 투영)은 상자를 만들지 않는다 */
+.cv3-card[data-cv-rec]{position:relative}
+.cv3-card .cv3-var{display:contents}
+.cv3-card .cv3-go{position:absolute;top:0;right:0;bottom:0;left:0;z-index:1}
+.cv3-card .cv3-go:focus-visible{outline:2px solid var(--cv3-ink);outline-offset:2px}
 
 /* ── 틱(§6-7) ── 16 × 2 · 매장 = 노랑 · 온라인 = 회색 */
 .cv3-tick{display:inline-block;position:relative;top:-1px;width:16px;height:2px;margin-right:var(--cv3-s2);

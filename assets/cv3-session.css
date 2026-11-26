@@ -1,0 +1,137 @@
+/* CODEDVINYLS 입고 목록 + 회차 쪽 v3 (2026-11-22 · 구현 ⑤)
+   기준 = 261121 디자인 기준 문서 design_standard_blank_v1 (§4 이름 칸형 · §6-7 날짜 줄 · 틱 · §6-8 줄 목록 · §6-9 회차 이름 칸 · 회차 앞뒤 · 「더 보기」 · §7 휴대폰 회차 쪽)
+   마크업 = _tools/site_session_v3.py · 판 카드 = _tools/site_card.py(모양은 cv3-card.css — 이 파일 앞에 건다) · 동작 = cv3-session.js(입고 목록만).
+   스위치 = site_frame.json "sessions3": "v3"(틀 v3 위에서만 — 토큰 --cv3-… 은 cv3-base.css 가 정한다).
+   · 클래스 = cv3- · 전환 · 애니메이션 · 그림자 · 둥근 모서리 0 · 외부 주소 0 · 채운 단추 0. */
+
+/* ── 쪽 바탕(목록 · 회차 공통) ── */
+.cv3-arr,.cv3-swrap{box-sizing:border-box;width:auto;max-width:none;margin:0;padding:0 var(--cv3-m);background:var(--cv3-paper);color:var(--cv3-ink);
+  font-family:var(--cv3-sans);font-size:var(--cv3-ui);font-weight:400;font-style:normal;font-synthesis:none;line-height:1.6;
+  letter-spacing:0;text-align:left;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+.cv3-arr *,.cv3-swrap *{box-sizing:border-box}
+.cv3-arr a,.cv3-swrap a{color:inherit;text-decoration:none}
+.cv3-arr :where(h1,h2,h3,p,figure),.cv3-swrap :where(h1,h2,h3,p,figure){margin:0;padding:0;font-weight:400;font-style:normal;letter-spacing:0}
+.cv3-arr [hidden]{display:none !important}
+.cv3-arr a:focus-visible,.cv3-arr button:focus-visible,.cv3-swrap a:focus-visible{outline:2px solid var(--cv3-ink);outline-offset:2px}
+
+/* ── 경로 줄(§6-9 · 앨범 목록 · 앨범 쪽 v3 과 같은 값) ── 13px · 위 24 · 낱말 사이 8 */
+.cvf-on .crumb{margin:0;padding:var(--cv3-s4) var(--cv3-m) 0;gap:var(--cv3-s2);font-family:var(--cv3-sans);font-size:var(--cv3-sm);
+  font-weight:400;line-height:1.4;letter-spacing:0;text-transform:none;color:var(--cv3-muted)}
+.cvf-on .crumb a{margin:0;padding:0;color:var(--cv3-muted)}
+.cvf-on .crumb > span{margin:0;padding:0;color:var(--cv3-muted)}
+
+/* ══ 입고 목록(§4 이름 칸형) ══ 왼쪽 1/3 = 쪽 이름 · 보기 낱말 / 오른쪽 2/3 = 줄 목록 */
+.cv3-arr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--cv3-g);padding-top:var(--cv3-s5)}
+.cv3-arail{grid-column:1;min-width:0}
+.cv3-amain{grid-column:2 / 4;min-width:0}
+.cv3-ahh h1{font-family:var(--cv3-serif);font-size:var(--cv3-d2);line-height:1.18;letter-spacing:-.02em}
+.cv3-achips{display:flex;flex-direction:column;align-items:flex-start;margin:var(--cv3-s5) 0 0;padding:0}
+.cv3-achips a{display:block;padding:var(--cv3-s1) 0;font-size:var(--cv3-ui);line-height:1.4;color:var(--cv3-muted);white-space:nowrap}
+.cv3-achips a[aria-current]{color:var(--cv3-ink);box-shadow:inset 0 -1px 0 var(--cv3-ink)}
+
+/* ── 줄 목록(§6-8) ── 두 열(504 · 960) · 받침 144 + 글 */
+.cv3-rws{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--cv3-g);row-gap:var(--cv3-s5)}
+.cv3-rw{display:grid;grid-template-columns:144px minmax(0,1fr);column-gap:var(--cv3-g);align-items:start;min-width:0}
+.cv3-rjk{display:block;aspect-ratio:1/1;padding:var(--cv3-s2);background:var(--cv3-stage);overflow:hidden}
+.cv3-rjk img{display:block;width:100%;height:100%;max-width:none;margin:0;object-fit:cover}
+.cv3-rtx{display:flex;flex-direction:column;min-width:0}
+.cv3-rk{font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-rd{margin-right:var(--cv3-s2);color:var(--cv3-ink);font-variant-numeric:tabular-nums}
+.cv3-rt{margin-top:var(--cv3-s1);font-size:var(--cv3-ui);font-weight:500;line-height:1.6}
+.cv3-rn{margin-top:var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-js .cv3-rw.cv3-rw-more,.cv3-js .cv3-rw.cv3-rw-off{display:none}
+
+/* ── 「더 보기」(§6-9) ── 글자 한 줄 · 상자 단추 아님 */
+.cv3-amore{-webkit-appearance:none;appearance:none;display:block;width:100%;margin:var(--cv3-s6) 0 0;padding:var(--cv3-s3) 0 0;border:0;
+  border-top:1px solid var(--cv3-line);border-radius:0;background:none;box-shadow:none;font:inherit;font-size:var(--cv3-ui);line-height:1.4;
+  color:inherit;letter-spacing:0;text-align:left;cursor:pointer}
+
+/* ══ 회차 쪽(§6-9 회차 이름 칸) ══ 이름 칸(날짜 줄 · 쪽 이름 · 가격 안내 · 소개 · 그 회차의 글 · 진열 안내) ↔ 그날 들어온 판 */
+.cv3-swrap{padding-top:var(--cv3-s3)}
+.cv3-sp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--cv3-g);align-items:start}
+.cv3-srail{grid-column:1;min-width:0}
+.cv3-smain{grid-column:2 / 4;min-width:0}
+.cv3-sdl{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--cv3-s1) var(--cv3-s3);font-size:var(--cv3-body);line-height:1.4}
+.cv3-sd,.cv3-sn{font-size:var(--cv3-sm)}
+.cv3-sd{font-variant-numeric:tabular-nums}
+.cv3-sn{color:var(--cv3-muted)}
+.cv3-sk{font-size:var(--cv3-ui);font-weight:500}
+.cv3-shead h1{margin-top:var(--cv3-s3);font-family:var(--cv3-serif);font-size:var(--cv3-d2);line-height:1.18;letter-spacing:-.02em}
+.cv3-spn{margin-top:var(--cv3-s3);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-sdek{max-width:408px;margin-top:var(--cv3-s4);font-size:var(--cv3-body);line-height:1.8}
+.cv3-sdek a,.cv3-snote a{border-bottom:1px solid var(--cv3-line)}
+
+/* 이름 칸 글 폭 408 = 시안 24em(17px 기준) · 그 회차의 글 — 이름표 13 · 제목 24/500 · 작은 제목 15/500 · 글 15 둘째 글 · 영상 204 */
+.cv3-snote{max-width:408px;margin-top:var(--cv3-s6);padding-top:var(--cv3-s4);border-top:1px solid var(--cv3-line)}
+.cv3-skk{font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-snote h2{margin-top:var(--cv3-s1);font-size:var(--cv3-k2);font-weight:500;line-height:1.3;letter-spacing:-.01em}
+.cv3-snote h3{margin-top:var(--cv3-s4);font-size:var(--cv3-ui);font-weight:500;line-height:1.4}
+.cv3-snote p{margin-top:var(--cv3-s2);font-size:var(--cv3-ui);line-height:1.7;color:var(--cv3-ink2)}
+.cv3-snote p.cv3-skk{margin-top:0;font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-snote > :first-child{margin-top:0}
+.cv3-snote figure{width:204px;max-width:100%;margin-top:var(--cv3-s4)}
+.cv3-snote figure:first-child{margin-top:0}
+.cv3-snote video{display:block;width:100%;height:auto;background:var(--cv3-stage)}
+.cv3-snote figcaption{margin-top:var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+
+/* 진열 안내 */
+.cv3-swh{max-width:408px;margin-top:var(--cv3-s6);padding-top:var(--cv3-s4);border-top:1px solid var(--cv3-line)}
+.cv3-swh p{font-size:var(--cv3-ui);line-height:1.6}
+.cv3-swh .cv3-snap{margin-top:var(--cv3-s1);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-sgo{display:block;width:fit-content;margin-top:var(--cv3-s3);font-size:var(--cv3-ui);line-height:1.4}
+.cv3-sgo + .cv3-sgo{margin-top:var(--cv3-s2)}
+
+/* ── 판 묶음(§6-7 회차 쪽 묶음 머리) ── 이름 15/500 + 수 13 흐림 · 아래 16 · 묶음 사이 48 */
+.cv3-sgrp + .cv3-sgrp{margin-top:var(--cv3-s6)}
+.cv3-sgrp-h{display:flex;align-items:baseline;gap:var(--cv3-s3);margin-bottom:var(--cv3-s3);line-height:1.4}
+.cv3-sgrp-h .cv3-sgk{font-size:var(--cv3-ui);font-weight:500;line-height:1.4;letter-spacing:0}
+.cv3-sgn{font-size:var(--cv3-sm);color:var(--cv3-muted)}
+.cv3-scards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--cv3-g);row-gap:var(--cv3-s6)}
+
+/* ── 회차 꼬리 칸(공유 투영 cv3-tail · site_session_v3) ── 늘 서는 빈 칸 = 상자 0 · 안에 서는 「이 판들이 나오는 글」의 모양은 cv-links.css 그대로 */
+.cv3-tail:empty{display:none}
+
+/* ── 회차 앞뒤(§6-9) ── 윗선 · 이전 = 첫 칸 · 다음 = 셋째 칸 */
+.cv3-spg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--cv3-g);margin-top:var(--cv3-s7);padding-top:var(--cv3-s5);
+  border-top:1px solid var(--cv3-line)}
+.cv3-spg a{display:flex;flex-direction:column;min-width:0}
+.cv3-spg-prev{grid-column:1}
+.cv3-spg-next{grid-column:3}
+.cv3-spk{display:flex;gap:var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-spk span + span::before{content:"·";margin-right:var(--cv3-s2)}
+.cv3-spt{max-width:408px;margin-top:var(--cv3-s1);font-size:var(--cv3-ui);line-height:1.6}
+
+/* ── 601 ~ 1199(시안 없음 · 앨범 목록 v3 과 같은 끊는 점) ── 한 열 · 판 카드 4열
+   목록 = 쪽 이름 · 보기 낱말 위 / 회차 = 휴대폰과 같은 차례(머리 → 판 → 소개 → 글 → 진열 안내) */
+@media (max-width:1199px){
+  .cv3-arr{grid-template-columns:minmax(0,1fr);padding-top:var(--cv3-s4)}
+  .cv3-arail,.cv3-amain{grid-column:1}
+  .cv3-achips{flex-direction:row;flex-wrap:wrap;gap:0 var(--cv3-s3);margin-top:var(--cv3-s3)}
+  .cv3-amain{margin-top:var(--cv3-s4);padding-top:var(--cv3-s4);border-top:1px solid var(--cv3-line)}
+  .cv3-sp{display:flex;flex-direction:column;align-items:stretch}
+  .cv3-srail{display:contents}
+  .cv3-shead{order:1}
+  .cv3-smain{order:2;margin-top:var(--cv3-s5)}
+  .cv3-sdek{order:3;margin-top:var(--cv3-s6)}
+  .cv3-snote{order:4;margin-top:var(--cv3-s5)}
+  .cv3-swh{order:5;margin-top:var(--cv3-s5)}
+  .cv3-sdek,.cv3-snote,.cv3-swh{max-width:660px}
+}
+@media (max-width:767px){
+  .cv3-scards{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* ── 600 이하 = 시안(390) ── 줄 목록 한 열 · 받침 96 · 판 카드 2열 · 줄 사이 32 */
+@media (max-width:600px){
+  .cv3-rws{grid-template-columns:minmax(0,1fr);row-gap:var(--cv3-s4)}
+  .cv3-rw{grid-template-columns:96px minmax(0,1fr)}
+  .cv3-amore{margin-top:var(--cv3-s5)}
+  .cv3-scards{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:var(--cv3-s5)}
+  .cv3-sgrp + .cv3-sgrp{margin-top:var(--cv3-s5)}
+  .cv3-sdek,.cv3-snote,.cv3-swh{max-width:none}
+  .cv3-spg{grid-template-columns:minmax(0,1fr);margin-top:var(--cv3-s6);padding-top:var(--cv3-s4)}
+  .cv3-spg-prev,.cv3-spg-next{grid-column:1}
+  .cv3-spg-prev + .cv3-spg-next{margin-top:var(--cv3-s4)}
+}
+
+@media print{.cv3-achips,.cv3-amore{display:none !important}}

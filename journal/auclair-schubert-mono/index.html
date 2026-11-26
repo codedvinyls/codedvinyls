@@ -8,6 +8,9 @@
 <meta name="description" content="슈베르트가 세상을 떠나기 열한 달 전에 쓴 바이올린과 피아노의 환상곡은 1828년 빈에서 차가운 평을 받았습니다. 1962년 바이올리니스트 미셸 오클레르가 피아니스트 주느비에브 주아와 에라토에 남긴 녹음, 그리고 그 뒤의 이야기.">
 <link rel="stylesheet" href="/assets/cv-nav.css?v=412c70b2fe94">
 <link rel="stylesheet" href="/assets/cv-frame.css?v=121c68b12605">
+<link rel="stylesheet" href="/assets/fonts/cv3-fonts.css?v=aaa19e971a4e">
+<link rel="stylesheet" href="/assets/cv3-base.css?v=60294dcaca21">
+<style data-cv3="max">:root{--max:1440px}</style>
 <link rel="canonical" href="https://codedvinyls.com/journal/auclair-schubert-mono/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="코디드바이닐즈">
@@ -25,153 +28,57 @@
 </script>
 <link rel="stylesheet" href="/assets/fonts/cv-fonts.css?v=7312f61dab8a">
 <link rel="stylesheet" href="/assets/cv-type.css?v=9770cfffc9db">
-<style>
-:root{
-  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
-  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
-  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
-  --mono:"Courier New",monospace;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
-.mono{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:.02em}
-.tick{display:inline-block;width:26px;height:3px;background:var(--yellow);vertical-align:middle;flex:none}
-
-.top-grid{display:grid;grid-template-columns:260px repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
-.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
-.logo-cell img{width:188px;height:auto}
-.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
-.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
-.nav-cell:last-child{border-right:0}
-.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
-.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
-.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
-.nav-cell.store .nav-dot{background:var(--ink);border-color:var(--ink)}
-.nav-cell.store:hover{background:var(--ink);color:var(--paper)}
-
-.crumb{border-bottom:1px solid var(--line);background:var(--surface);padding:16px 26px;font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.05em;display:flex;gap:10px;align-items:center}
-.crumb a:hover{color:var(--ink)}
-
-
-.sw{--ink:#1f1e1b;--line:#d8d2c6;--muted:#6b655a;--g:clamp(24px,4vw,56px);color:var(--ink);padding-bottom:64px}
-.sw *{box-sizing:border-box}
-.sw figure{margin:0}
-.sw figcaption{font-size:12.5px;line-height:1.6;color:var(--muted);padding:10px 0 0;border-top:1px solid var(--line);margin-top:10px}
-.sw figcaption .src{display:block;color:#8d867a}
-.sw figcaption a{color:inherit;text-underline-offset:3px}
-.sw-step-hero{max-width:820px;margin:0 auto;padding:52px var(--g) 0;text-align:center}
-.sw-step-hero h1{font-weight:400;font-size:clamp(36px,4.6vw,60px);line-height:1.18;margin:0;word-break:keep-all}
-.sw-step-hero .dek{font-size:clamp(18px,1.8vw,22px);margin:16px 0 0}
-.sw .sw-chain{max-width:1100px;margin:36px auto 10px;padding:0 var(--g)}
-.sw-chain svg{width:100%;height:auto;display:block}
-.sw-body{max-width:700px;margin:0 auto;padding:44px var(--g) 0}
-.sw-body h2{font-weight:400;font-size:clamp(22px,2.2vw,28px);line-height:1.35;margin:0 0 14px;word-break:keep-all}
-.sw-body p{font-size:17px;line-height:1.85;margin:0 0 22px;word-break:keep-all}
-.sw-body p+h2{margin-top:44px}
-.sw-body p a:not(sup a){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
-.sw sup{line-height:0;font-size:.68em;vertical-align:super}
-.sw sup a{padding:0 1px;text-decoration:none;color:var(--muted)}
-.sw-two{max-width:1100px;margin:22px auto 24px;padding:0 var(--g);display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,24px)}
-.sw-two.one{grid-template-columns:1fr;max-width:700px}
-.sw-two img,.sw-bleed img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
-.sw .sw-bleed{max-width:1100px;margin:22px auto 24px;padding:0 var(--g)}
-.sw .refs{max-width:700px;margin:56px auto 0;padding:16px var(--g) 0;border-top:1px solid var(--line);font-size:14px}
-.sw .refs summary{cursor:pointer;font-size:18px;margin-bottom:12px}
-.sw .refs ol{padding-left:20px;margin:0}
-.sw .refs li{margin:12px 0;line-height:1.65;scroll-margin-top:100px;overflow-wrap:anywhere}
-.sw .refs a{color:inherit;text-underline-offset:3px}
-.sw .refs-access{color:var(--muted);margin:16px 0 0}
-.sw figcaption a,.sw .refs li a:not([href^="#"]){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-@media (max-width:760px){
- .sw-chain{overflow-x:auto}.sw-chain svg{min-width:760px}
- .sw-two{grid-template-columns:1fr}
- .sw-body p{font-size:16px}
-}
-
-.sw .sw-prev{max-width:700px;margin:40px auto 0;padding:14px var(--g) 0;border-top:1px solid var(--line);font-size:17px}
-.sw .sw-prev a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
-
-.sw .sw-fig{margin:30px 0 34px}
-.sw .sw-fig svg{display:block;width:100%;height:auto}
-.sw .sw-photo{margin:30px 0 34px}
-.sw .sw-photo img{display:block;width:100%;height:auto}
-.sw .sw-prev{max-width:700px;margin:40px auto 0;padding:14px var(--g) 0;border-top:1px solid var(--line);font-size:17px}
-.sw .sw-prev a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
-.sw .sw-fig-hold{border:1px dashed var(--line);padding:40px 16px;text-align:center;color:var(--muted);font-size:14px}
-
-.sw .sw-photo{margin:30px 0 34px}
-.sw .sw-photo img{display:block;width:100%;height:auto}
-.sw .sw-ref-link{margin:6px 0 30px;font-size:17px}
-.sw .sw-ref-link a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
-.sw .dek,.sw figcaption{word-break:keep-all}</style>
-<link rel="stylesheet" href="/assets/cv-body.css?v=91537a25a6aa">
+<link rel="stylesheet" href="/assets/cv3-card.css?v=fed7c900cabc">
+<link rel="stylesheet" href="/assets/cv3-read.css?v=07bf6018f506">
 </head>
-<body class="cvf-on cvb-on cvb-jnl">
+<body class="cvf-on">
 <div class="page" id="top">
 
-  <header class="cvf-hd" data-cvf-hd>
-    <a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="168" height="13"></a>
-    <nav class="cvf-nav" aria-label="메뉴"><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/">아카이브</a><a href="/journal/" aria-current="page">저널</a><a href="/store.html">매장·온라인</a></nav>
-    <a class="cvf-menu" href="#cvf-sheet" aria-controls="cvf-sheet" aria-expanded="false">메뉴</a>
+  <div class="cv3-strip"><div class="cv3-strip-in"><p class="cv3-strip-notice" data-cv-projection="cv3-notice"><a href="/notice/"><span class="cv3-k">공지</span><span>이용약관·개인정보처리방침 변경 외 3건</span><span aria-hidden="true">→</span></a></p><p class="cv3-strip-hours">회현동 매장 · 월·화·목·금·토 13:00–19:30 · 수·일 정기 휴무</p></div></div>
+  <header class="cv3-hd">
+    <a class="cv3-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="168" height="13"></a>
+    <nav class="cv3-nav" aria-label="메뉴"><a href="/album/">앨범</a><span class="cv3-two"><a href="/archive/">아카이브</a><a href="/journal/" aria-current="page">저널</a></span><a href="/store.html#visit">회현동 매장</a></nav>
+    <form class="cv3-q" action="/album/" method="get" role="search"><label><span>찾기</span><input type="search" name="q" placeholder="아티스트 · 앨범 · 레이블" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></label></form>
+    <a class="cv3-q-go" href="/album/">찾기</a>
   </header>
-  <div class="cvf-sheet" id="cvf-sheet" role="dialog" aria-modal="true" aria-label="메뉴">
-    <div class="cvf-sheet-hd"><a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="118" height="9"></a><a class="cvf-close" href="#">닫기</a></div>
-    <nav class="cvf-sheet-nav"><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/">아카이브</a><a href="/journal/" aria-current="page">저널</a><a href="/store.html">매장·온라인</a></nav>
-    <p class="cvf-sheet-notice"><a href="/notice/"><span class="cvf-k">공지</span><span>이용약관·개인정보처리방침 변경 외 3건</span><span aria-hidden="true">→</span></a></p>
-    <p class="cvf-sheet-nap">코디드바이닐즈 회현 · 회현 지하쇼핑센터 마열 3호</p>
-  </div>
 
   <nav class="crumb" aria-label="경로"><a href="/journal/">저널</a></nav>
 
-  <article class="sw">
-<section class="sw-step-hero"><h1>비어 가던 홀의 환상곡</h1><p class="dek">1828년 빈에서 차가운 대접을 받은 슈베르트의 환상곡, 그리고 1962년 그 곡을 판에 남긴 미셸 오클레르와 주느비에브 주아.</p></section>
-<div class="sw-body"><figure class="sw-photo"><img src="/assets/jn-auclair-cover.jpg" alt="" width="1200" height="1200" loading="lazy"><figcaption><span class="src">사진 코디드바이닐즈 · 자켓 사진 Ohanna</span></figcaption></figure><h2>1828년, 빈</h2>
+  <main class="cv3-rd cv3-jn">
+    <div class="cv3-jh cv3-t3"><figure class="cv3-jcv"><span class="cv3-im"><img src="/assets/jn-auclair-cover.jpg" alt="" width="1200" height="1200" fetchpriority="high"></span><figcaption><span class="cv3-src">사진 코디드바이닐즈 · 자켓 사진 Ohanna</span></figcaption></figure><div class="cv3-jtx"><p class="cv3-kk">저널 · 2026. 10. 23</p><h1>비어 가던 홀의 환상곡</h1><p class="cv3-dek">1828년 빈에서 차가운 대접을 받은 슈베르트의 환상곡, 그리고 1962년 그 곡을 판에 남긴 미셸 오클레르와 주느비에브 주아.</p></div></div>
+    <div class="cv3-jb cv3-t3"><div class="cv3-body"><h2>1828년, 빈</h2>
 <p>1828년 2월, 빈의 한 잡지 평자는 슈베르트(Franz Schubert)의 새 환상곡이 연주되던 날을 이렇게 적었습니다. “홀은 조금씩 비어 갔고, 솔직히 필자 역시 이 곡이 어떻게 끝났는지는 아무것도 말할 수 없다.” 그가 보기에 이 곡은 빈 사람들이 음악회에서 기꺼이 들어 주는 시간보다 조금 길었습니다.<sup><a id="refcall-1-1" href="#ref-1" aria-label="참고문헌 1">1</a></sup> 바이올린과 피아노를 위한 이 환상곡은, 슈베르트가 세상을 떠나기 열한 달 전인 1827년 12월에 쓴 곡입니다. 곡의 한가운데에는 슈베르트가 1821년에 쓴 가곡 「Sei mir gegrüsst(그대에게 인사를)」가 변주로 놓여 있습니다. 1828년 1월 20일 빈에서 바이올리니스트 슬라비크(Josef Slavík)가 연 연주회에서, 그와 피아니스트 보클레트(Karl Maria von Bocklet)가 처음 연주했지요.<sup><a id="refcall-1-2" href="#ref-1" aria-label="참고문헌 1">1</a></sup> 4월에는 라이프치히의 한 음악 신문에도 이런 평이 실렸습니다. “새 환상곡은 전혀 호응을 얻지 못했다. 인기 있는 작곡가가 여기서는 아예 작곡을 그르쳤다고 말해도 무리가 없겠다.”</p>
-<figure class="sw-photo"><img src="/assets/jn-auclair-deutsch-1914-p450.jpg" alt="1828년 빈의 잡지와 라이프치히의 음악 신문에 실린 이 환상곡의 평 — 1914년에 엮인 슈베르트 문서집에 옮겨 실린 면" width="1400" height="831" loading="lazy"><figcaption>1828년 빈의 잡지와 라이프치히의 음악 신문에 실린 이 환상곡의 평 — 1914년에 엮인 슈베르트 문서집에 옮겨 실린 면<span class="src">Der Sammler 1828년 2월 7일 · Allgemeine musikalische Zeitung 1828년 4월 2일 · O. E. Deutsch 엮음 『Franz Schubert. Die Dokumente seines Lebens und Schaffens』 II/1(1914) 450쪽 · <a href="https://archive.org/details/franzschubertdie21deut">Internet Archive</a></span></figcaption></figure>
+<figure class="cv3-fig"><img src="/assets/jn-auclair-deutsch-1914-p450.jpg" alt="1828년 빈의 잡지와 라이프치히의 음악 신문에 실린 이 환상곡의 평 — 1914년에 엮인 슈베르트 문서집에 옮겨 실린 면" width="1400" height="831" loading="lazy"><figcaption>1828년 빈의 잡지와 라이프치히의 음악 신문에 실린 이 환상곡의 평 — 1914년에 엮인 슈베르트 문서집에 옮겨 실린 면<span class="cv3-src">Der Sammler 1828년 2월 7일 · Allgemeine musikalische Zeitung 1828년 4월 2일 · O. E. Deutsch 엮음 『Franz Schubert. Die Dokumente seines Lebens und Schaffens』 II/1(1914) 450쪽 · <a href="https://archive.org/details/franzschubertdie21deut">Internet Archive</a></span></figcaption></figure>
 <h2>피아노와 함께하는 바이올린</h2>
 <p>그로부터 백삼십여 년 뒤, 빈에서 그렇게 차가운 대접을 받은 이 곡을 판에 남긴 바이올리니스트가 있었습니다. 파리 음악원에서 자크 티보(Jacques Thibaud)에게 바이올린을 배운 미셸 오클레르(Michèle Auclair)입니다.<sup><a id="refcall-2-1" href="#ref-2" aria-label="참고문헌 2">2</a></sup> 그녀는 피아노나 관현악과 함께하는 바이올린을 좋아했습니다. 훗날 한 음반 해설에 실린 그녀의 말은 이렇습니다. “그래야 음악이 더 충만해지거든요. 제가 음악에 무엇보다 먼저 바라는 게 그 충만함이고, 그게 바로 예술가로 사는 이유예요.”</p>
 <p>1962년, 그녀는 피아니스트 주느비에브 주아(Geneviève Joy)와 짝을 이뤘습니다.<sup><a id="refcall-3-1" href="#ref-3" aria-label="참고문헌 3">3</a></sup> 주아는 작곡가 앙리 뒤티외(Henri Dutilleux)의 아내이자, 1952년에 바이올린 · 첼로 연주자와 함께 피아노 삼중주단 트리오 드 프랑스(Trio de France)를 만든 피아니스트였습니다.<sup><a id="refcall-4-1" href="#ref-4" aria-label="참고문헌 4">4</a>,<a id="refcall-5-1" href="#ref-5" aria-label="참고문헌 5">5</a></sup> 1962년 11월 두 사람은 프랑스 음반사 에라토(Erato)에서 이 환상곡을 녹음했고, 슈베르트가 바이올린과 피아노를 위해 쓴 곡을 모은 판은 두 장으로 나왔습니다.<sup><a id="refcall-3-2" href="#ref-3" aria-label="참고문헌 3">3</a></sup> 1953년에 문을 연 에라토는 잊히거나 덜 알려진 곡을 드러내는 일을 이어 오던 레이블이었습니다.<sup><a id="refcall-6-1" href="#ref-6" aria-label="참고문헌 6">6</a>,<a id="refcall-7-1" href="#ref-7" aria-label="참고문헌 7">7</a></sup></p>
-<figure class="sw-photo"><img src="/assets/jn-auclair-label-face1.jpg" alt="Vol.1 A면 레이블 — 환상곡과 그 네 악장, 두 연주자의 이름" width="1200" height="1200" loading="lazy"><figcaption>Vol.1 A면 레이블 — 환상곡과 그 네 악장, 두 연주자의 이름<span class="src">사진 코디드바이닐즈</span></figcaption></figure>
+<figure class="cv3-fig"><img src="/assets/jn-auclair-label-face1.jpg" alt="Vol.1 A면 레이블 — 환상곡과 그 네 악장, 두 연주자의 이름" width="1200" height="1200" loading="lazy"><figcaption>Vol.1 A면 레이블 — 환상곡과 그 네 악장, 두 연주자의 이름<span class="cv3-src">사진 코디드바이닐즈</span></figcaption></figure>
 <p>1828년의 그 평들을 옮겨 실은 이 판의 뒷면 해설에서, 필자는 슈베르트가 바이올린을 위해 남긴 몇 안 되는 훌륭한 곡들조차 “연주자들에게 크게 외면당해 왔다”고 썼습니다. 특히 프랑스에서는 “그의 걸작을 아는 사람이 너무 적다”는 말도 덧붙였습니다.</p>
 <h2>두 사람의 환상곡</h2>
 <p>1964년 6월, 프랑스의 한 음악 잡지 평자는 두 사람의 연주를 두고 이렇게 썼습니다. “섬세하고 결 고운 해석이 이 곡들을 유난히 돋보이게 하고, 슈베르트의 내밀하고 마음을 사로잡는 매력을 되살린다.”<sup><a id="refcall-8-1" href="#ref-8" aria-label="참고문헌 8">8</a></sup></p>
-<figure class="sw-photo"><img src="/assets/jn-auclair-em1964-p12.png" alt="1964년 6월, 프랑스 음악 잡지의 음반 평 가운데 두 사람의 연주를 다룬 문장" width="1080" height="146" loading="lazy"><figcaption>1964년 6월, 프랑스 음악 잡지의 음반 평 가운데 두 사람의 연주를 다룬 문장<span class="src">L'Éducation musicale 1964년 6월호(제109호) 12쪽 「Notre Discothèque」 · 글 A. Musson</span></figcaption></figure>
+<figure class="cv3-fig"><img src="/assets/jn-auclair-em1964-p12.png" alt="1964년 6월, 프랑스 음악 잡지의 음반 평 가운데 두 사람의 연주를 다룬 문장" width="1080" height="146" loading="lazy"><figcaption>1964년 6월, 프랑스 음악 잡지의 음반 평 가운데 두 사람의 연주를 다룬 문장<span class="cv3-src">L'Éducation musicale 1964년 6월호(제109호) 12쪽 「Notre Discothèque」 · 글 A. Musson</span></figcaption></figure>
 <p>이듬해 12월에는 미국의 한 음악 잡지 평자가, 1828년에 작곡을 그르쳤다는 말까지 들은 그 환상곡을 “이 곡들 가운데 단연 가장 좋은 음악이면서, 가장 덜 알려진 곡”이라고 했습니다. 같은 평자는 판에 함께 실린 론도에서는 두 사람의 서두르는 연주보다 다른 녹음의 차분한 연주가 더 마음에 든다고 했지만, 격정으로 가득한 환상곡만큼은 두 사람이 “넘치도록 쏟아붓는 다급한 기세”까지 감당할 수 있는 곡이라고 보았지요.<sup><a id="refcall-9-1" href="#ref-9" aria-label="참고문헌 9">9</a></sup></p>
 <p>1967년 4월에도 두 사람은 보르도의 그랑 테아트르(Grand Théâtre) 무대에서 이 곡을 함께 연주했고, 그 실황은 프랑스 국영 방송의 녹음으로 남았습니다. 2014년에야 CD로 처음 나온 그 실황을 다섯 해 전의 에라토 녹음과 견주어 들은 한 평자는, 두 녹음의 해석이 거의 같다며 이렇게 덧붙였습니다. “두 사람이 이 곡을 함께 여러 번 연주했고, 서로를 잘 안다는 게 분명합니다.”<sup><a id="refcall-10-1" href="#ref-10" aria-label="참고문헌 10">10</a></sup></p>
 <h2>무대를 떠난 뒤</h2>
 <p>그러나 오클레르는 자동차 사고를 당해 연주자의 길을 접어야 했습니다.<sup><a id="refcall-2-2" href="#ref-2" aria-label="참고문헌 2">2</a>,<a id="refcall-11-1" href="#ref-11" aria-label="참고문헌 11">11</a></sup> 그 뒤 그녀는 파리 음악원과 보스턴의 뉴잉글랜드 음악원(New England Conservatory)에서 오랫동안 바이올린을 가르쳤습니다.<sup><a id="refcall-2-3" href="#ref-2" aria-label="참고문헌 2">2</a></sup> 보스턴에서 그녀에게 배운 바이올리니스트 카롤린 비트만(Carolin Widmann)은 이렇게 회고합니다. “다른 선생님들과 달리, 그분은 지금 제가 사는 독주자의 삶을 살아 본 분이었어요.”<sup><a id="refcall-12-1" href="#ref-12" aria-label="참고문헌 12">12</a></sup> 피아노와 함께하는 바이올린을 좋아했던 그녀는, 실내악을 더 하지 못한 것을 늘 아쉬워했습니다. 이 판은 그녀가 남긴 몇 안 되는 녹음 가운데 하나입니다.</p>
 <p>환상곡이 열리면 피아노가 조용히 떨리듯 일렁이고, 그 위로 바이올린이 부드럽게 솟아오릅니다. 이어지는 빠른 대목에서는 한 악기가 낸 가락을 다른 악기가 뒤따라 받으며, 두 악기가 카논(Canon)처럼 줄다리기를 하는데요. 그 빠른 음들이 그친 뒤 짧은 침묵이 흐르고, 가곡 「Sei mir gegrüsst」의 가락과 그 변주가 시작됩니다.<sup><a id="refcall-13-1" href="#ref-13" aria-label="참고문헌 13">13</a></sup></p>
-<figure class="sw-photo" style="max-width:360px;margin-left:auto;margin-right:auto"><video controls preload="none" playsinline poster="/assets/listen/auclair-schubert-mono-poster.jpg" width="540" height="960" style="display:block;width:100%;height:auto"><source src="/assets/listen/auclair-schubert-mono-listen.mp4" type="video/mp4"></video><figcaption>회현동 매장 턴테이블의 A면 — 환상곡<span class="src">영상 코디드바이닐즈</span></figcaption></figure>
+<figure class="cv3-fig" style="max-width:360px;margin-left:auto;margin-right:auto"><video controls preload="none" playsinline poster="/assets/listen/auclair-schubert-mono-poster.jpg" width="540" height="960" style="display:block;width:100%;height:auto"><source src="/assets/listen/auclair-schubert-mono-listen.mp4" type="video/mp4"></video><figcaption>회현동 매장 턴테이블의 A면 — 환상곡<span class="cv3-src">영상 코디드바이닐즈</span></figcaption></figure>
 <p>회현동 매장의 턴테이블에 이 판을 올리면, 1828년 빈의 홀이 조금씩 비어 갔다던 그 곡이 한 면을 처음부터 끝까지 홀로 채웁니다.<sup><a id="refcall-1-3" href="#ref-1" aria-label="참고문헌 1">1</a></sup></p>
-<p>판본과 상태 기록 — <a href="/album/franz-schubert-michele-auclair-integrale-de-l-oeuvre-pour-violon-1186/">Intégrale De L&#x27;Œuvre Pour Violon Et Piano (Vol.1)</a></p>
-<p>관련 글 — <a href="/genre/classical/">클래식</a></p></div>
-<details class="refs" open><summary>참고문헌</summary><ol><li id="ref-1" tabindex="-1">Theaterzeitung 1828년 1월 17일 · Der Sammler 1828년 2월 7일 · Allgemeine musikalische Zeitung 1828년 4월 2일 — O. E. Deutsch 엮음, 『Franz Schubert. Die Dokumente seines Lebens und Schaffens』 II/1, München · Leipzig 1914, 450쪽 <a href="https://archive.org/details/franzschubertdie21deut">archive.org</a> <a href="#refcall-1-1" aria-label="본문 호출 1-1로 돌아가기">↩1</a> <a href="#refcall-1-2" aria-label="본문 호출 1-2로 돌아가기">↩2</a> <a href="#refcall-1-3" aria-label="본문 호출 1-3로 돌아가기">↩3</a></li><li id="ref-2" tabindex="-1">「AUCLAIR MICHÈLE (1924-2005)」, Encyclopædia Universalis <a href="https://www.universalis.fr/encyclopedie/michele-auclair/">www.universalis.fr</a> <a href="#refcall-2-1" aria-label="본문 호출 2-1로 돌아가기">↩1</a> <a href="#refcall-2-2" aria-label="본문 호출 2-2로 돌아가기">↩2</a> <a href="#refcall-2-3" aria-label="본문 호출 2-3로 돌아가기">↩3</a></li><li id="ref-3" tabindex="-1">Jonathan Woolf, MusicWeb International, 2012년 2월 <a href="https://musicweb-international.com/classrev/2012/Feb12/Debussy_Ravel_vlnsons_FR552.htm">musicweb-international.com</a> <a href="#refcall-3-1" aria-label="본문 호출 3-1로 돌아가기">↩1</a> <a href="#refcall-3-2" aria-label="본문 호출 3-2로 돌아가기">↩2</a></li><li id="ref-4" tabindex="-1">「JOY GENEVIÈVE (1919-2009)」, Encyclopædia Universalis <a href="https://www.universalis.fr/encyclopedie/genevieve-joy/">www.universalis.fr</a> <a href="#refcall-4-1" aria-label="본문 호출 4-1로 돌아가기">↩</a></li><li id="ref-5" tabindex="-1">「Geneviève Joy」, Larousse 『Dictionnaire de la musique』 <a href="https://www.larousse.fr/encyclopedie/musdico/Genevi%C3%A8ve_Joy/168528">www.larousse.fr</a> <a href="#refcall-5-1" aria-label="본문 호출 5-1로 돌아가기">↩</a></li><li id="ref-6" tabindex="-1">Alain Pâris, 「GARCIN MICHEL (1923-1995)」, Encyclopædia Universalis <a href="https://www.universalis.fr/encyclopedie/michel-garcin/">www.universalis.fr</a> <a href="#refcall-6-1" aria-label="본문 호출 6-1로 돌아가기">↩</a></li><li id="ref-7" tabindex="-1">「Étude des interfaces entre fichiers de bases de données et réalisation de programmes pour le catalogue de disques d&#x27;Erato」, Université Claude Bernard Lyon I, 1990 · ENSSIB 디지털 도서관 <a href="https://www.enssib.fr/bibliotheque-numerique/documents/62414-etude-des-interfaces-entre-fichiers-de-bases-de-donnees-et-realisation-de-programmes-pour-le-catalogue-de-disques-d-erato.pdf">www.enssib.fr</a> <a href="#refcall-7-1" aria-label="본문 호출 7-1로 돌아가기">↩</a></li><li id="ref-8" tabindex="-1">L&#x27;Éducation musicale 1964년 6월호(제109호) 12쪽 「Notre Discothèque」 · 글 A. Musson <a href="https://archive.org/download/EM-91-130/109.pdf">archive.org</a> <a href="#refcall-8-1" aria-label="본문 호출 8-1로 돌아가기">↩</a></li><li id="ref-9" tabindex="-1">High Fidelity 1965년 12월호 102쪽 「SCHUBERT: Music for Violin and Piano」 · 평 H.G. <a href="https://www.worldradiohistory.com/Archive-All-Audio/Archive-High-Fidelity/60s/High-Fidelity-1965-Dec.pdf">www.worldradiohistory.com</a> <a href="#refcall-9-1" aria-label="본문 호출 9-1로 돌아가기">↩</a></li><li id="ref-10" tabindex="-1">Stephen Greenbank, MusicWeb International, 2014년 7월 <a href="https://musicweb-international.com/classrev/2014/Jul14/Ravel_Schubert_Auclair_MC2014.htm">musicweb-international.com</a> <a href="#refcall-10-1" aria-label="본문 호출 10-1로 돌아가기">↩</a></li><li id="ref-11" tabindex="-1">Warner Classics, 「Schubert: Complete Works for Violin and Piano」, 2024년 11월 22일 <a href="https://www.warnerclassics.com/release/schubert-complete-works-violin-and-piano">www.warnerclassics.com</a> <a href="#refcall-11-1" aria-label="본문 호출 11-1로 돌아가기">↩</a></li><li id="ref-12" tabindex="-1">「&#x27;Everyone has something that makes them special&#x27; - Carolin Widmann&#x27;s life lessons」, The Strad, 2024년 1월 8일 <a href="https://www.thestrad.com/for-subscribers/everyone-has-something-that-makes-them-special-carolin-widmanns-life-lessons/17364.article">www.thestrad.com</a> <a href="#refcall-12-1" aria-label="본문 호출 12-1로 돌아가기">↩</a></li><li id="ref-13" tabindex="-1">Midori, 「Franz Schubert: Fantasie for Piano and Violin in C, D.934」, Melbourne Recital Centre 『Midori with Özgür Aydin, piano』 공연 프로그램, 2016년 6월 28일, 15쪽 <a href="https://mrc-assets.s3.amazonaws.com/assets/File/5820.pdf">mrc-assets.s3.amazonaws.com</a> <a href="#refcall-13-1" aria-label="본문 호출 13-1로 돌아가기">↩</a></li></ol><p class="refs-access">2026. 11. 18. 열람</p></details>
-</article>
+<p class="cv3-rel">관련 글 — <a href="/genre/classical/">클래식</a></p>
+<details class="cv3-refs" data-cv3-fold open><summary>참고문헌</summary><ol><li id="ref-1" tabindex="-1">Theaterzeitung 1828년 1월 17일 · Der Sammler 1828년 2월 7일 · Allgemeine musikalische Zeitung 1828년 4월 2일 — O. E. Deutsch 엮음, 『Franz Schubert. Die Dokumente seines Lebens und Schaffens』 II/1, München · Leipzig 1914, 450쪽 <a href="https://archive.org/details/franzschubertdie21deut">archive.org</a> <a href="#refcall-1-1" aria-label="본문 호출 1-1로 돌아가기">↩1</a> <a href="#refcall-1-2" aria-label="본문 호출 1-2로 돌아가기">↩2</a> <a href="#refcall-1-3" aria-label="본문 호출 1-3로 돌아가기">↩3</a></li><li id="ref-2" tabindex="-1">「AUCLAIR MICHÈLE (1924-2005)」, Encyclopædia Universalis <a href="https://www.universalis.fr/encyclopedie/michele-auclair/">www.universalis.fr</a> <a href="#refcall-2-1" aria-label="본문 호출 2-1로 돌아가기">↩1</a> <a href="#refcall-2-2" aria-label="본문 호출 2-2로 돌아가기">↩2</a> <a href="#refcall-2-3" aria-label="본문 호출 2-3로 돌아가기">↩3</a></li><li id="ref-3" tabindex="-1">Jonathan Woolf, MusicWeb International, 2012년 2월 <a href="https://musicweb-international.com/classrev/2012/Feb12/Debussy_Ravel_vlnsons_FR552.htm">musicweb-international.com</a> <a href="#refcall-3-1" aria-label="본문 호출 3-1로 돌아가기">↩1</a> <a href="#refcall-3-2" aria-label="본문 호출 3-2로 돌아가기">↩2</a></li><li id="ref-4" tabindex="-1">「JOY GENEVIÈVE (1919-2009)」, Encyclopædia Universalis <a href="https://www.universalis.fr/encyclopedie/genevieve-joy/">www.universalis.fr</a> <a href="#refcall-4-1" aria-label="본문 호출 4-1로 돌아가기">↩</a></li><li id="ref-5" tabindex="-1">「Geneviève Joy」, Larousse 『Dictionnaire de la musique』 <a href="https://www.larousse.fr/encyclopedie/musdico/Genevi%C3%A8ve_Joy/168528">www.larousse.fr</a> <a href="#refcall-5-1" aria-label="본문 호출 5-1로 돌아가기">↩</a></li><li id="ref-6" tabindex="-1">Alain Pâris, 「GARCIN MICHEL (1923-1995)」, Encyclopædia Universalis <a href="https://www.universalis.fr/encyclopedie/michel-garcin/">www.universalis.fr</a> <a href="#refcall-6-1" aria-label="본문 호출 6-1로 돌아가기">↩</a></li><li id="ref-7" tabindex="-1">「Étude des interfaces entre fichiers de bases de données et réalisation de programmes pour le catalogue de disques d&#x27;Erato」, Université Claude Bernard Lyon I, 1990 · ENSSIB 디지털 도서관 <a href="https://www.enssib.fr/bibliotheque-numerique/documents/62414-etude-des-interfaces-entre-fichiers-de-bases-de-donnees-et-realisation-de-programmes-pour-le-catalogue-de-disques-d-erato.pdf">www.enssib.fr</a> <a href="#refcall-7-1" aria-label="본문 호출 7-1로 돌아가기">↩</a></li><li id="ref-8" tabindex="-1">L&#x27;Éducation musicale 1964년 6월호(제109호) 12쪽 「Notre Discothèque」 · 글 A. Musson <a href="https://archive.org/download/EM-91-130/109.pdf">archive.org</a> <a href="#refcall-8-1" aria-label="본문 호출 8-1로 돌아가기">↩</a></li><li id="ref-9" tabindex="-1">High Fidelity 1965년 12월호 102쪽 「SCHUBERT: Music for Violin and Piano」 · 평 H.G. <a href="https://www.worldradiohistory.com/Archive-All-Audio/Archive-High-Fidelity/60s/High-Fidelity-1965-Dec.pdf">www.worldradiohistory.com</a> <a href="#refcall-9-1" aria-label="본문 호출 9-1로 돌아가기">↩</a></li><li id="ref-10" tabindex="-1">Stephen Greenbank, MusicWeb International, 2014년 7월 <a href="https://musicweb-international.com/classrev/2014/Jul14/Ravel_Schubert_Auclair_MC2014.htm">musicweb-international.com</a> <a href="#refcall-10-1" aria-label="본문 호출 10-1로 돌아가기">↩</a></li><li id="ref-11" tabindex="-1">Warner Classics, 「Schubert: Complete Works for Violin and Piano」, 2024년 11월 22일 <a href="https://www.warnerclassics.com/release/schubert-complete-works-violin-and-piano">www.warnerclassics.com</a> <a href="#refcall-11-1" aria-label="본문 호출 11-1로 돌아가기">↩</a></li><li id="ref-12" tabindex="-1">「&#x27;Everyone has something that makes them special&#x27; - Carolin Widmann&#x27;s life lessons」, The Strad, 2024년 1월 8일 <a href="https://www.thestrad.com/for-subscribers/everyone-has-something-that-makes-them-special-carolin-widmanns-life-lessons/17364.article">www.thestrad.com</a> <a href="#refcall-12-1" aria-label="본문 호출 12-1로 돌아가기">↩</a></li><li id="ref-13" tabindex="-1">Midori, 「Franz Schubert: Fantasie for Piano and Violin in C, D.934」, Melbourne Recital Centre 『Midori with Özgür Aydin, piano』 공연 프로그램, 2016년 6월 28일, 15쪽 <a href="https://mrc-assets.s3.amazonaws.com/assets/File/5820.pdf">mrc-assets.s3.amazonaws.com</a> <a href="#refcall-13-1" aria-label="본문 호출 13-1로 돌아가기">↩</a></li></ol><p class="cv3-refs-access">2026. 11. 18. 열람</p></details></div></div>
+  </main>
 
-  <footer class="cvf-ft">
-    <div class="cvf-ft-grid">
-      <div class="cvf-ft-col cvf-ft-store"><a class="cvf-ft-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="140" height="11"></a><span>코디드바이닐즈 회현</span><span>회현 지하쇼핑센터 마열 3호</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">인스타그램 @codedvinyls</a></div>
-      <div class="cvf-ft-col"><b class="cvf-ft-h">둘러보기</b><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/">아카이브</a><a href="/journal/">저널</a></div>
-      <div class="cvf-ft-col"><a class="cvf-ft-h" href="/store.html">매장·온라인</a><a href="/store.html#visit">회현동 매장</a><a href="/notice/">공지</a><a href="/cd/">매장 CD 코너</a><a href="/store.html#online">온라인 구매</a></div>
-      <div class="cvf-ft-col"><b class="cvf-ft-h">안내</b><a href="/guide/grading/">등급 기준</a><a href="/guide/archival-standard/">보존 관리 기준</a><a href="/guide/glossary/">용어 사전</a><a href="/shipping-returns.html">배송·교환·환불</a><a href="/terms.html">이용약관</a><a href="/privacy.html">개인정보처리방침</a><a href="/about.html">사업자 정보</a></div>
+  <footer class="cv3-ft">
+    <div class="cv3-ft-cols">
+      <div class="cv3-ft-col cv3-ft-store"><a class="cv3-ft-mark" href="/"><img src="/assets/cv_wordmark_paper.svg" alt="코디드바이닐즈" width="140" height="11"></a><span>코디드바이닐즈 회현</span><span>회현 지하쇼핑센터 마열 3호</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">인스타그램 @codedvinyls</a></div>
+      <div class="cv3-ft-col"><span class="cv3-ft-h">둘러보기</span><a href="/album/">앨범</a><a href="/arrivals/">입고</a><a href="/archive/">아카이브</a><a href="/journal/">저널</a><a href="/store.html#visit">회현동 매장</a></div>
+      <div class="cv3-ft-col"><a class="cv3-ft-h" href="/store.html">회현동 매장</a><a href="/cd/">매장 CD 코너</a></div>
+      <div class="cv3-ft-col"><span class="cv3-ft-h">안내</span><a href="/guide/grading/">등급 기준</a><a href="/guide/archival-standard/">보존 관리 기준</a><a href="/guide/glossary/">용어 사전</a><a href="/store.html#online">온라인 구매</a><a href="/shipping-returns.html">배송·교환·환불</a><a href="/terms.html">이용약관</a><a href="/privacy.html">개인정보처리방침</a><a href="/about.html">사업자 정보</a><a href="/notice/">공지</a></div>
     </div>
-    <div class="cvf-ft-base"><span class="cvf-ft-plate">THE VINYL ARCHIVE</span><div class="cvf-ft-biz"><span>상호 코디드바이닐즈 · 대표자 최준홍 · 사업자등록번호 286-51-00775</span><span>통신판매업 신고번호 제2026-서울강남-00575호 · <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2865100775" target="_blank" rel="noopener">공정거래위원회 사업자 정보 확인</a></span><span>서울시 강남구 논현로 38길 20 · 전화 <a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span><span>호스팅서비스 제공자 GitHub, Inc.</span></div></div>
+    <div class="cv3-ft-base"><span class="cv3-ft-plate cvf-ft-plate" data-i18n="ft-plate">THE VINYL ARCHIVE</span><div class="cv3-ft-biz cvf-ft-biz" data-i18n="ft-biz"><span>상호 코디드바이닐즈 · 대표자 최준홍 · 사업자등록번호 286-51-00775</span><span>통신판매업 신고번호 제2026-서울강남-00575호 · <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2865100775" target="_blank" rel="noopener">공정거래위원회 사업자 정보 확인</a></span><span>서울시 강남구 논현로 38길 20 · 전화 <a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span><span>호스팅서비스 제공자 GitHub, Inc.</span></div></div>
   </footer>
 </div>
 
-<script>
-(()=>{const refs=document.querySelector('.sw .refs');if(!refs)return;
- function reveal(){let id;try{id=decodeURIComponent(location.hash.slice(1));}catch(e){return;}
-  const el=document.getElementById(id);if(!el)return;const p=el.closest('details');if(p)p.open=true;
-  requestAnimationFrame(()=>{el.scrollIntoView({block:'start'});if(el.hasAttribute('tabindex'))el.focus({preventScroll:true});});}
- refs.open=false;window.addEventListener('hashchange',reveal);
- document.querySelectorAll('.sw a[href^="#ref"]').forEach(a=>a.addEventListener('click',()=>{const el=document.getElementById(a.hash.slice(1));if(el){const p=el.closest('details');if(p)p.open=true;}setTimeout(reveal,0);}));
- reveal();})();
-</script>
-<script src="/assets/cv-frame.js?v=36eca3bb7c07" defer></script>
+<script src="/assets/cv3-read.js?v=215d849adeaf" defer></script>
 </body>
 </html>

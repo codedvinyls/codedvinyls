@@ -8,6 +8,9 @@
 <meta name="description" content="재즈랜드는 1960년 리버사이드가 세운 자회사입니다. 오린 킵뉴스와 빌 그라우어가 꾸리던 리버사이드의 두 번째 간판으로, 출발은 창고의 리버사이드 음원을 다시 꺼내는 재발매였습니다 — 초기 십여 장이 그렇게 나왔고, 곧 자체 신녹음이 카탈로그의 다수를 채웁니다.">
 <link rel="stylesheet" href="/assets/cv-nav.css?v=412c70b2fe94">
 <link rel="stylesheet" href="/assets/cv-frame.css?v=121c68b12605">
+<link rel="stylesheet" href="/assets/fonts/cv3-fonts.css?v=aaa19e971a4e">
+<link rel="stylesheet" href="/assets/cv3-base.css?v=60294dcaca21">
+<style data-cv3="max">:root{--max:1440px}</style>
 <link rel="canonical" href="https://codedvinyls.com/label/jazzland/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="코디드바이닐즈">
@@ -25,172 +28,42 @@
 </script>
 <link rel="stylesheet" href="/assets/fonts/cv-fonts.css?v=7312f61dab8a">
 <link rel="stylesheet" href="/assets/cv-type.css?v=9770cfffc9db">
-<style>
-:root{
-  --paper:#f7f4ec; --surface:#fffdf8; --ink:#1f1e1b; --muted:#817b70;
-  --line:#e4dcd0; --yellow:#ffcd00; --max:1440px;
-  --sans:"Pretendard","Apple SD Gothic Neo",Arial,sans-serif;
-  --mono:"Courier New",monospace;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-text-size-adjust:100%}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-.page{max-width:var(--max);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
-.top-grid{display:grid;grid-template-columns:260px repeat(5,1fr);border-bottom:1px solid var(--line);background:var(--surface)}
-.logo-cell{min-height:104px;padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
-.logo-cell img{width:188px;height:auto}
-.logo-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
-.nav-cell{min-height:104px;border-right:1px solid var(--line);padding:26px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;display:flex;align-items:flex-start;justify-content:space-between}
-.nav-cell:last-child{border-right:0}
-.nav-dot{width:9px;height:9px;border:1px solid var(--line)}
-.nav-cell:hover .nav-dot,.nav-cell.active .nav-dot{background:var(--yellow);border-color:var(--yellow)}
-.nav-cell.store{background:var(--yellow);color:var(--ink);font-weight:700}
-.crumb{border-bottom:1px solid var(--line);background:var(--surface);padding:16px 26px;font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.05em;display:flex;gap:10px;align-items:center}
-.crumb a:hover{color:var(--ink)}
-.art-hero{padding:clamp(48px,6vw,96px) clamp(24px,4vw,56px) clamp(32px,4vw,48px);border-bottom:1px solid var(--line)}
-.art-hero .wrap{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
-.art-hero .kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.1em}
-.art-hero h1{margin:0;font-size:clamp(30px,4.6vw,52px);line-height:1.12;font-weight:800;letter-spacing:-.01em}
-.art-hero .meta{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.05em;border-top:1px solid var(--line);padding-top:14px;display:flex;gap:18px;flex-wrap:wrap}
-.prose{max-width:820px;margin:0 auto;padding:clamp(36px,4.5vw,64px) clamp(24px,4vw,56px) clamp(20px,3vw,36px)}
-.prose h2{margin:8px 0 16px;font-size:clamp(18px,2.2vw,23px);font-weight:800;display:flex;align-items:center;gap:12px}
-.prose h2 .tick{width:26px;height:3px;background:var(--yellow);display:inline-block}
-.prose p{margin:0 0 16px;font-size:16px;line-height:1.9;color:#2c2a26}
-.callout{margin:6px 0 8px;padding:22px 24px;background:var(--ink);color:var(--paper);border-left:3px solid var(--yellow)}
-.callout p{margin:0;font-size:15.5px;line-height:1.8;color:rgba(247,244,236,.92)}
-.archive{max-width:1080px;margin:0 auto;padding:clamp(28px,3.5vw,48px) clamp(20px,3vw,40px) clamp(48px,6vw,88px)}
-.archive .ah{display:flex;align-items:baseline;justify-content:space-between;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:0;flex-wrap:wrap}
-.archive .ah h2{margin:0;font-size:clamp(18px,2.2vw,23px);font-weight:800}
-.archive .ah .n{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em}
-.atable{width:100%;border-collapse:collapse;font-size:13.5px}
-.atable tr{border-bottom:1px solid var(--line)}
-.atable td{padding:12px 10px;vertical-align:top;line-height:1.5}
-.atable td.yr{font-family:var(--mono);color:var(--muted);white-space:nowrap;width:58px}
-.atable td.ti{color:var(--ink);font-weight:600}
-.atable td.ca{font-family:var(--mono);font-size:11.5px;color:var(--muted);white-space:nowrap}
-.atable td.og{font-family:var(--mono);font-size:11.5px;color:var(--muted);white-space:nowrap}
-.atable tr:hover{background:var(--surface)}
-.deep{max-width:820px;margin:0 auto;padding:0 clamp(24px,4vw,56px)}
-.deep>summary{cursor:pointer;list-style:none;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--ink);display:flex;align-items:center;gap:12px}
-.deep>summary::-webkit-details-marker{display:none}
-.deep>summary::before{content:"+";font-size:18px;color:var(--muted)}
-.deep[open]>summary::before{content:"–"}
-.deep>summary .sub{color:var(--muted);font-size:11.5px}
-.eintro{margin:22px 0 4px;font-size:15px;line-height:1.85;color:#3a372f;max-width:680px}
-.eras{padding:18px 0 8px}
-.era{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:130px 1fr;gap:20px}
-.era:last-child{border-bottom:0}
-.era .ey{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.5}
-.era .ey b{display:block;color:var(--ink);font-size:13px;font-weight:700;margin-bottom:4px}
-.era .ed{font-size:14.5px;line-height:1.8;color:#2c2a26}
-.era .eo{margin-top:8px;font-family:var(--mono);font-size:11.5px;color:var(--ink)}
-.era .eo b{color:var(--ink)}
-.fn{font-size:.7em;line-height:0;vertical-align:super}
-.fn a{color:var(--muted);font-family:var(--mono);padding:0 1px;border-bottom:0;text-decoration:none}
-.fn a:hover{color:var(--ink)}
-.refs{max-width:820px;margin:0 auto;padding:8px clamp(24px,4vw,56px) clamp(36px,4.5vw,56px)}
-.refs>summary{cursor:pointer;list-style:none;padding:14px 0;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted);border-top:1px solid var(--line)}
-.refs>summary::-webkit-details-marker{display:none}
-.refs>summary::before{content:"+ ";color:var(--muted)}
-.refs[open]>summary::before{content:"– "}
-.refs ol{margin:12px 0 0;padding-left:22px}
-.refs li{font-size:12.5px;line-height:1.7;color:#3a372f;margin-bottom:10px}
-.refs li>a{color:var(--muted);border-bottom:1px solid var(--line);word-break:break-all}
-.fnback{margin-left:6px;border-bottom:0!important;color:var(--muted)}
-.curate{max-width:1080px;margin:0 auto;padding:clamp(24px,3vw,40px) clamp(20px,3vw,40px) clamp(48px,6vw,80px)}
-.curate .ah{display:flex;align-items:baseline;justify-content:space-between;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:12px;flex-wrap:wrap}
-.curate .ah h2{margin:0;font-size:clamp(18px,2.2vw,23px);font-weight:800}
-.curate .ah .n{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em}
-.cplace{margin:26px 0 0;font-size:15.5px;line-height:1.9;color:#3a372f;max-width:680px}
-.cplace b{color:var(--ink);font-weight:700}
-.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0;margin-top:0;border-top:0}
-.ccard{padding:24px 2px 24px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px;margin-right:28px}
-.ccard:hover .ct{color:var(--muted)}
-.ccard .ct{font-size:17px;font-weight:800;line-height:1.3}
-.ccard .cn{font-size:14px;line-height:1.7;color:#3a372f;flex:1}
-.ccard .cgo{font-family:var(--mono);font-size:12px;color:var(--ink);border-bottom:1px solid var(--yellow);padding-bottom:2px;align-self:flex-start}
-footer{background:var(--ink);color:var(--paper);margin-top:0}
-.footer-docs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(247,244,236,.18)}
-.footer-docs a{padding:22px 26px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;display:flex;justify-content:space-between;border-right:1px solid rgba(247,244,236,.18)}
-.footer-docs a:last-child{border-right:0}
-.footer-docs a:hover{color:var(--yellow)}
-.footer-base{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 26px;font-family:var(--mono);font-size:12px;flex-wrap:wrap}
-@media(max-width:1080px){.top-grid{grid-template-columns:1fr 1fr}.logo-cell{grid-column:1/3}}
-@media(max-width:680px){
-  .page{border-left:0;border-right:0}
-  .atable td.ca,.archive .ah .n span.hide{display:none}
-  .footer-docs{grid-template-columns:1fr}
-}
-</style>
-<link rel="stylesheet" href="/assets/cv-album.css?v=2211d9c3a345">
-<link rel="stylesheet" href="/assets/cv-links.css?v=5db51e54fc8e">
-<link rel="stylesheet" href="/assets/cv-body.css?v=91537a25a6aa">
+<link rel="stylesheet" href="/assets/cv3-card.css?v=fed7c900cabc">
+<link rel="stylesheet" href="/assets/cv3-read.css?v=07bf6018f506">
 </head>
-<body class="cvf-on cvb-on cvb-lab">
+<body class="cvf-on">
 <div class="page" id="top">
 
-  <header class="cvf-hd" data-cvf-hd>
-    <a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="168" height="13"></a>
-    <nav class="cvf-nav" aria-label="메뉴"><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/" aria-current="page">아카이브</a><a href="/journal/">저널</a><a href="/store.html">매장·온라인</a></nav>
-    <a class="cvf-menu" href="#cvf-sheet" aria-controls="cvf-sheet" aria-expanded="false">메뉴</a>
-  </header>
-  <div class="cvf-sheet" id="cvf-sheet" role="dialog" aria-modal="true" aria-label="메뉴">
-    <div class="cvf-sheet-hd"><a class="cvf-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="118" height="9"></a><a class="cvf-close" href="#">닫기</a></div>
-    <nav class="cvf-sheet-nav"><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/" aria-current="page">아카이브</a><a href="/journal/">저널</a><a href="/store.html">매장·온라인</a></nav>
-    <p class="cvf-sheet-notice"><a href="/notice/"><span class="cvf-k">공지</span><span>이용약관·개인정보처리방침 변경 외 3건</span><span aria-hidden="true">→</span></a></p>
-    <p class="cvf-sheet-nap">코디드바이닐즈 회현 · 회현 지하쇼핑센터 마열 3호</p>
-  </div><nav class="crumb" aria-label="경로"><a href="/archive/">아카이브</a><span aria-hidden="true">/</span><a href="/label/">레이블</a></nav>
+  <div class="cv3-strip"><div class="cv3-strip-in"><p class="cv3-strip-notice" data-cv-projection="cv3-notice"><a href="/notice/"><span class="cv3-k">공지</span><span>이용약관·개인정보처리방침 변경 외 3건</span><span aria-hidden="true">→</span></a></p><p class="cv3-strip-hours">회현동 매장 · 월·화·목·금·토 13:00–19:30 · 수·일 정기 휴무</p></div></div>
+  <header class="cv3-hd">
+    <a class="cv3-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="168" height="13"></a>
+    <nav class="cv3-nav" aria-label="메뉴"><a href="/album/">앨범</a><span class="cv3-two"><a href="/archive/" aria-current="page">아카이브</a><a href="/journal/">저널</a></span><a href="/store.html#visit">회현동 매장</a></nav>
+    <form class="cv3-q" action="/album/" method="get" role="search"><label><span>찾기</span><input type="search" name="q" placeholder="아티스트 · 앨범 · 레이블" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></label></form>
+    <a class="cv3-q-go" href="/album/">찾기</a>
+  </header><nav class="crumb" aria-label="경로"><a href="/archive/">아카이브</a><span aria-hidden="true">/</span><a href="/label/">레이블</a></nav>
 
-  <article>
-    <div class="art-hero"><div class="wrap">
-      <span class="kicker">레이블</span>
-      <h1>Jazzland</h1>
-      <div class="meta"><span>USA</span><span>설립 1960</span><span>다룬 음반 18종</span></div>
-    </div></div>
+  <main class="cv3-rd cv3-lb">
+    <div class="cv3-lbp cv3-t3"><div class="cv3-rail"><p class="cv3-kk">레이블</p><h1>Jazzland</h1><p class="cv3-meta"><b>USA</b><span>설립 1960</span><span>다룬 음반 18종</span></p><div class="cv3-p"><p>재즈랜드는 1960년 리버사이드가 세운 자회사입니다. 오린 킵뉴스와 빌 그라우어가 꾸리던 리버사이드의 두 번째 간판으로, 출발은 창고의 리버사이드 음원을 다시 꺼내는 재발매였습니다 — 초기 십여 장이 그렇게 나왔고, 곧 자체 신녹음이 카탈로그의 다수를 채웁니다.</p><p>그 목록은 하드밥의 한가운데를 지납니다. 조니 그리핀과 에디 록조 데이비스의 투 테너, 주니어 맨스의 트리오, 웨스트코스트에서 녹음한 해럴드 랜드까지 — 본가 리버사이드 옆에서 더 거침없이 도는 자리였습니다.</p><p>짧게 산 레이블입니다. 1963년 12월 그라우어가 심장마비로 세상을 떠났고, 리버사이드는 이듬해 7월 파산을 신청합니다 — 재즈랜드의 신보도 거기서 멈췄습니다. 마스터는 오르페움의 재발매를 거쳐 1972년 판타지로 넘어가 지금은 콩코드 아래에 있습니다. 오렌지 모노와 블랙 스테레오 — 1964년 파산 전까지의 프레싱이 초반으로 묶입니다.</p></div></div><div class="cv3-main"><section class="cv3-plates" id="plates" aria-label="이 레이블의 판" data-first="now" data-n="12" data-step="24"><div class="cv3-lt"><div class="cv3-chips" role="group" aria-label="이 레이블의 판" hidden><button type="button" data-view="now" aria-pressed="true">판매 중</button><button type="button" data-view="all" aria-pressed="false">다룬 판 전체</button></div><a class="cv3-go" href="/album/?label=jazzland">모두 보기 →</a></div><div class="cv3-cards"><div class="cv3-pc" data-on="1"><a class="cv3-card" href="/album/johnny-lytle-nice-and-easy-1813/"><span class="cv3-jk"><img src="/assets/arrivals/ar-261114-21-017.jpg" width="1040" height="1040" alt="Johnny Lytle 〈Nice And Easy〉 자켓" fetchpriority="high" decoding="async"></span><span class="cv3-ar">Johnny Lytle</span><span class="cv3-al">Nice And Easy</span><span class="cv3-ed">US Reissue · 1966</span><span class="cv3-pr">₩59,000<span class="cv3-ch"> · 회현동 매장</span></span></a></div><div class="cv3-pc" data-on="1"><a class="cv3-card" href="/album/johnny-lytle-trio-moon-child-1588/"><span class="cv3-jk"><img src="/assets/arrivals/ar-261107-15-016.jpg" width="1040" height="1040" alt="Johnny Lytle Trio 〈Moon Child〉 자켓" decoding="async"></span><span class="cv3-ar">Johnny Lytle Trio</span><span class="cv3-al">Moon Child</span><span class="cv3-ed">US 1st Press · 1962</span><span class="cv3-pr">₩69,000<span class="cv3-ch"> · 회현동 매장</span></span></a></div><div class="cv3-pc" data-on="1"><a class="cv3-card" href="/album/junior-mance-the-soulful-piano-of-junior-mance-1533/"><span class="cv3-jk"><img src="/assets/arrivals/ar-261105-13-001.jpg" width="1040" height="1040" alt="Junior Mance 〈The Soulful Piano Of Junior Mance〉 자켓" decoding="async"></span><span class="cv3-ar">Junior Mance</span><span class="cv3-al">The Soulful Piano Of Junior Mance</span><span class="cv3-ed">US 1st Press · 1960</span><span class="cv3-pr">₩69,000<span class="cv3-ch"> · 회현동 매장</span></span></a></div><div class="cv3-pc" data-on="0"><a class="cv3-card" href="/album/frank-strozier-long-night-1289/"><span class="cv3-jk"><img src="/assets/arrivals/ar-261030-09-016.jpg" width="1040" height="1040" alt="Frank Strozier 〈Long Night〉 자켓" decoding="async"></span><span class="cv3-ar">Frank Strozier</span><span class="cv3-al">Long Night</span><span class="cv3-ed">US 1st Press · 1962</span><span class="cv3-pr"></span></a></div><div class="cv3-pc" data-on="1"><a class="cv3-card" href="/album/johnny-griffin-and-eddie-lookin-at-monk-831/"><span class="cv3-jk"><img src="/assets/online/op-260919-jazz-15.jpg" width="1040" height="1040" alt="Johnny Griffin And Eddie &quot;Lockjaw&quot; Davis Quintet 〈Lookin&#x27; At Monk!〉 자켓" loading="lazy" decoding="async"></span><span class="cv3-ar">Johnny Griffin And Eddie &quot;Lockjaw&quot; Davis Quintet</span><span class="cv3-al">Lookin&#x27; At Monk!</span><span class="cv3-ed">US 1st Press · 1961</span><span class="cv3-pr">₩89,000</span></a></div><div class="cv3-pc" data-on="1"><a class="cv3-card" href="/album/sonny-red-breezing-410/"><span class="cv3-jk"><img src="/assets/online/op-260731-jazz-11.jpg" width="1040" height="1040" alt="Sonny Red 〈Breezing〉 자켓" loading="lazy" decoding="async"></span><span class="cv3-ar">Sonny Red</span><span class="cv3-al">Breezing</span><span class="cv3-ed">US 1st Press · 1960</span><span class="cv3-pr">₩109,000</span></a></div></div><button type="button" class="cv3-more" hidden>더 보기</button></section></div></div>
+    <div class="cv3-dh cv3-t3"><div class="cv3-rail"><h2>초판을 어떻게 가리나</h2><span class="cv3-n">— 시대별 식별과 우리 분포</span></div><p class="cv3-dhp">초반을 가리는 표식은 시기마다 다릅니다. 라벨의 주소와 디자인, 런아웃의 각인이 시대에 따라 나타나고 사라지죠. 어느 표식이 언제 유효한지를 아래에 시대 순으로 정리했습니다.</p></div><div class="cv3-eras"><div class="cv3-era cv3-t3"><div class="cv3-ey"><b>오렌지 모노 / 블랙 스테레오</b><span class="cv3-yy">1960–1964년 무렵</span></div><div class="cv3-ed">재즈랜드의 오리지널 프레싱은 라벨 색으로 모노와 스테레오가 갈립니다 — 모노는 오렌지, 스테레오는 검정입니다.<sup><a href="#fn-ljc" id="fnref-ljc">1</a></sup><sup><a href="#fn-org" id="fnref-org">5</a></sup> 카탈로그 번호는 모노가 JLP 1번부터 90번대 후반까지, 스테레오는 9로 시작하는 900번대 번호에 S가 따라붙습니다 — JLP 916S, 953S 같은 식입니다.<sup><a href="#fn-ljc">1</a></sup><sup><a href="#fn-jzd" id="fnref-jzd">3</a></sup> 이 시기 판에는 딥그루브 — 라벨 안쪽에 깊게 파인 원형 골 — 가 남아 있습니다.<sup><a href="#fn-ljc">1</a></sup></div><div class="cv3-eo">코디드바이닐즈가 이 시기에서 다룬 음반 <b>15종</b></div></div><div class="cv3-era cv3-t3"><div class="cv3-ey"><b>파산 이후 — Orpheum·Fantasy</b><span class="cv3-yy">1965년 무렵부터</span></div><div class="cv3-ed">1964년 7월 리버사이드의 파산과 함께 재즈랜드의 신보도 멈춥니다.<sup><a href="#fn-wiki" id="fnref-wiki">4</a></sup> 이후의 재발매는 오르페움 프로덕션 명의 — 오렌지 대신 적갈색 마룬 라벨이고, 딥그루브가 없습니다.<sup><a href="#fn-ljcf" id="fnref-ljcf">2</a></sup><sup><a href="#fn-org">5</a></sup> 1972년 마스터가 판타지로 넘어가 OJC(Original Jazz Classics) 시리즈로 다시 눌렸고, 카탈로그는 현재 콩코드 소유입니다.<sup><a href="#fn-wiki">4</a></sup></div><div class="cv3-eo">코디드바이닐즈가 이 시기에서 다룬 음반 <b>2종</b></div></div><div class="cv3-era cv3-t3"><div class="cv3-ey"><b>연도 미상</b></div><div class="cv3-ed"></div><div class="cv3-eo">연도 표기가 없어 시대 분류를 보류한 음반 <b>1종</b></div></div></div>
+    
+    <div class="cv3-t3"><details class="cv3-refs2"><summary>참고문헌 5건 — 펼쳐 보기</summary><ol><li id="fn-ljc">LondonJazzCollector (n.d.) ‘Jazzland (Riverside labels guide)’. LondonJazzCollector. Available at: <a href="https://londonjazzcollector.wordpress.com/record-labels-guide/6-riverside/jazzland/" target="_blank" rel="noopener noreferrer">https://londonjazzcollector.wordpress.com/record-labels-guide/6-riverside/jazzland/</a> (Accessed: 2026-06-11). <a class="cv3-fnb" href="#fnref-ljc">↩</a></li>
+        <li id="fn-ljcf">LondonJazzCollector (2017) ‘Jazzland: The Missing Final Chapter’. LondonJazzCollector. Available at: <a href="https://londonjazzcollector.wordpress.com/2017/03/12/jazzland-the-missing-final-chapter/" target="_blank" rel="noopener noreferrer">https://londonjazzcollector.wordpress.com/2017/03/12/jazzland-the-missing-final-chapter/</a> (Accessed: 2026-06-11). <a class="cv3-fnb" href="#fnref-ljcf">↩</a></li>
+        <li id="fn-jzd">jazzdisco.org (n.d.) ‘<a data-cv-auto="entity" href="/label/riverside-records/">Riverside Records</a> Catalog: Jazzland series’. Jazz Discography Project. Available at: <a href="https://www.jazzdisco.org/riverside-records/catalog-jazzland-series/" target="_blank" rel="noopener noreferrer">https://www.jazzdisco.org/riverside-records/catalog-jazzland-series/</a> (Accessed: 2026-06-11). <a class="cv3-fnb" href="#fnref-jzd">↩</a></li>
+        <li id="fn-wiki">Wikipedia (n.d.) ‘Riverside Records’. Wikimedia Foundation. Available at: <a href="https://en.wikipedia.org/wiki/Riverside_Records" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Riverside_Records</a> (Accessed: 2026-06-11). <a class="cv3-fnb" href="#fnref-wiki">↩</a></li>
+        <li id="fn-org">organissimo forums (n.d.) ‘Orpheum Productions (The Vinyl Frontier)’. organissimo.org. Available at: <a href="https://www.organissimo.org/forum/topic/31663-orpheum-productions/" target="_blank" rel="noopener noreferrer">https://www.organissimo.org/forum/topic/31663-orpheum-productions/</a> (Accessed: 2026-06-11). <a class="cv3-fnb" href="#fnref-org">↩</a></li></ol></details></div>
+  </main>
 
-    <div class="prose">
-      <h2><span class="tick"></span>레이블</h2>
-      <p>재즈랜드는 1960년 리버사이드가 세운 자회사입니다. 오린 킵뉴스와 빌 그라우어가 꾸리던 리버사이드의 두 번째 간판으로, 출발은 창고의 리버사이드 음원을 다시 꺼내는 재발매였습니다 — 초기 십여 장이 그렇게 나왔고, 곧 자체 신녹음이 카탈로그의 다수를 채웁니다.</p>
-      <p>그 목록은 하드밥의 한가운데를 지납니다. 조니 그리핀과 에디 록조 데이비스의 투 테너, 주니어 맨스의 트리오, 웨스트코스트에서 녹음한 해럴드 랜드까지 — 본가 리버사이드 옆에서 더 거침없이 도는 자리였습니다.</p>
-      <p>짧게 산 레이블입니다. 1963년 12월 그라우어가 심장마비로 세상을 떠났고, 리버사이드는 이듬해 7월 파산을 신청합니다 — 재즈랜드의 신보도 거기서 멈췄습니다. 마스터는 오르페움의 재발매를 거쳐 1972년 판타지로 넘어가 지금은 콩코드 아래에 있습니다. 오렌지 모노와 블랙 스테레오 — 1964년 파산 전까지의 프레싱이 초반으로 묶입니다.</p>
+  <footer class="cv3-ft">
+    <div class="cv3-ft-cols">
+      <div class="cv3-ft-col cv3-ft-store"><a class="cv3-ft-mark" href="/"><img src="/assets/cv_wordmark_paper.svg" alt="코디드바이닐즈" width="140" height="11"></a><span>코디드바이닐즈 회현</span><span>회현 지하쇼핑센터 마열 3호</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">인스타그램 @codedvinyls</a></div>
+      <div class="cv3-ft-col"><span class="cv3-ft-h">둘러보기</span><a href="/album/">앨범</a><a href="/arrivals/">입고</a><a href="/archive/">아카이브</a><a href="/journal/">저널</a><a href="/store.html#visit">회현동 매장</a></div>
+      <div class="cv3-ft-col"><a class="cv3-ft-h" href="/store.html">회현동 매장</a><a href="/cd/">매장 CD 코너</a></div>
+      <div class="cv3-ft-col"><span class="cv3-ft-h">안내</span><a href="/guide/grading/">등급 기준</a><a href="/guide/archival-standard/">보존 관리 기준</a><a href="/guide/glossary/">용어 사전</a><a href="/store.html#online">온라인 구매</a><a href="/shipping-returns.html">배송·교환·환불</a><a href="/terms.html">이용약관</a><a href="/privacy.html">개인정보처리방침</a><a href="/about.html">사업자 정보</a><a href="/notice/">공지</a></div>
     </div>
-
-    <details class="deep" open><summary>초판을 어떻게 가리나 <span class="sub">— 시대별 식별과 우리 분포</span></summary>
-      <p class="eintro">초반을 가리는 표식은 시기마다 다릅니다. 라벨의 주소와 디자인, 런아웃의 각인이 시대에 따라 나타나고 사라지죠. 어느 표식이 언제 유효한지를 아래에 시대 순으로 정리했습니다.</p>
-      <div class="eras">
-        <div class="era"><div class="ey"><b>오렌지 모노 / 블랙 스테레오</b>1960–1964년 무렵</div><div class="ed">재즈랜드의 오리지널 프레싱은 라벨 색으로 모노와 스테레오가 갈립니다 — 모노는 오렌지, 스테레오는 검정입니다.<sup class="fn"><a href="#fn-ljc" id="fnref-ljc">1</a></sup><sup class="fn"><a href="#fn-org" id="fnref-org">5</a></sup> 카탈로그 번호는 모노가 JLP 1번부터 90번대 후반까지, 스테레오는 9로 시작하는 900번대 번호에 S가 따라붙습니다 — JLP 916S, 953S 같은 식입니다.<sup class="fn"><a href="#fn-ljc">1</a></sup><sup class="fn"><a href="#fn-jzd" id="fnref-jzd">3</a></sup> 이 시기 판에는 딥그루브 — 라벨 안쪽에 깊게 파인 원형 골 — 가 남아 있습니다.<sup class="fn"><a href="#fn-ljc">1</a></sup><div class="eo">코디드바이닐즈가 이 시기에서 다룬 음반 <b>15종</b></div></div></div>
-        <div class="era"><div class="ey"><b>파산 이후 — Orpheum·Fantasy</b>1965년 무렵부터</div><div class="ed">1964년 7월 리버사이드의 파산과 함께 재즈랜드의 신보도 멈춥니다.<sup class="fn"><a href="#fn-wiki" id="fnref-wiki">4</a></sup> 이후의 재발매는 오르페움 프로덕션 명의 — 오렌지 대신 적갈색 마룬 라벨이고, 딥그루브가 없습니다.<sup class="fn"><a href="#fn-ljcf" id="fnref-ljcf">2</a></sup><sup class="fn"><a href="#fn-org">5</a></sup> 1972년 마스터가 판타지로 넘어가 OJC(Original Jazz Classics) 시리즈로 다시 눌렸고, 카탈로그는 현재 콩코드 소유입니다.<sup class="fn"><a href="#fn-wiki">4</a></sup><div class="eo">코디드바이닐즈가 이 시기에서 다룬 음반 <b>2종</b></div></div></div><div class="era"><div class="ey"><b>연도 미상</b></div><div class="ed eo">연도 표기가 없어 시대 분류를 보류한 음반 <b>1종</b></div></div>
-      </div>
-    </details>
-
-    <section class="cva cval cvl" id="plates" data-first="now" data-n="8" data-step="24" data-more="더 보기"><h2 class="cva-sec"><span>이 레이블의 판</span><div class="cvl-chips" role="group" aria-label="이 레이블의 판" hidden><button type="button" data-view="now" aria-pressed="true">판매 중</button><button type="button" data-view="all" aria-pressed="false">다룬 판 전체</button></div></h2><ul class="cval-grid"><li class="cval-cell" data-on="1"><a href="/album/johnny-lytle-nice-and-easy-1813/"><span class="cval-img"><img src="/assets/arrivals/ar-261114-21-017.jpg" alt="Johnny Lytle 〈Nice And Easy〉 자켓" width="1040" height="1040" loading="lazy" decoding="async"></span><figcaption><span class="a">Johnny Lytle</span><span class="t">Nice And Easy</span><span class="l">Jazzland JLP 67</span></figcaption></a></li><li class="cval-cell" data-on="1"><a href="/album/johnny-lytle-trio-moon-child-1588/"><span class="cval-img"><img src="/assets/arrivals/ar-261107-15-016.jpg" alt="Johnny Lytle Trio 〈Moon Child〉 자켓" width="1040" height="1040" loading="lazy" decoding="async"></span><figcaption><span class="a">Johnny Lytle Trio</span><span class="t">Moon Child</span><span class="l">Jazzland JLP 81</span></figcaption></a></li><li class="cval-cell" data-on="1"><a href="/album/junior-mance-the-soulful-piano-of-junior-mance-1533/"><span class="cval-img"><img src="/assets/arrivals/ar-261105-13-001.jpg" alt="Junior Mance 〈The Soulful Piano Of Junior Mance〉 자켓" width="1040" height="1040" loading="lazy" decoding="async"></span><figcaption><span class="a">Junior Mance</span><span class="t">The Soulful Piano Of Junior Mance</span><span class="l">Jazzland JLP 30</span></figcaption></a></li><li class="cval-cell" data-on="0"><a href="/album/frank-strozier-long-night-1289/"><span class="cval-img"><img src="/assets/arrivals/ar-261030-09-016.jpg" alt="Frank Strozier 〈Long Night〉 자켓" width="1040" height="1040" loading="lazy" decoding="async"></span><figcaption><span class="a">Frank Strozier</span><span class="t">Long Night</span><span class="l">Jazzland JLP 56</span></figcaption></a></li><li class="cval-cell" data-on="1"><a href="/album/johnny-griffin-and-eddie-lookin-at-monk-831/"><span class="cval-img"><img src="/assets/online/op-260919-jazz-15.jpg" alt="Johnny Griffin And Eddie &quot;Lockjaw&quot; Davis Quintet 〈Lookin&#x27; At Monk!〉 자켓" width="1040" height="1040" loading="lazy" decoding="async"></span><figcaption><span class="a">Johnny Griffin And Eddie &quot;Lockjaw&quot; Davis Quintet</span><span class="t">Lookin&#x27; At Monk!</span><span class="l">Jazzland JLP 39</span></figcaption></a></li><li class="cval-cell" data-on="1"><a href="/album/sonny-red-breezing-410/"><span class="cval-img"><img src="/assets/online/op-260731-jazz-11.jpg" alt="Sonny Red 〈Breezing〉 자켓" width="1040" height="1040" loading="lazy" decoding="async"></span><figcaption><span class="a">Sonny Red</span><span class="t">Breezing</span><span class="l">Jazzland JLP 932S</span></figcaption></a></li></ul></section>
-
-    <details class="refs"><summary>참고문헌 5건 — 펼쳐 보기</summary>
-      <ol>
-        <li id="fn-ljc">LondonJazzCollector (n.d.) ‘Jazzland (Riverside labels guide)’. LondonJazzCollector. Available at: <a href="https://londonjazzcollector.wordpress.com/record-labels-guide/6-riverside/jazzland/" target="_blank" rel="noopener noreferrer">https://londonjazzcollector.wordpress.com/record-labels-guide/6-riverside/jazzland/</a> (Accessed: 2026-06-11). <a class="fnback" href="#fnref-ljc">↩</a></li>
-        <li id="fn-ljcf">LondonJazzCollector (2017) ‘Jazzland: The Missing Final Chapter’. LondonJazzCollector. Available at: <a href="https://londonjazzcollector.wordpress.com/2017/03/12/jazzland-the-missing-final-chapter/" target="_blank" rel="noopener noreferrer">https://londonjazzcollector.wordpress.com/2017/03/12/jazzland-the-missing-final-chapter/</a> (Accessed: 2026-06-11). <a class="fnback" href="#fnref-ljcf">↩</a></li>
-        <li id="fn-jzd">jazzdisco.org (n.d.) ‘<a class="entity-link" href="/label/riverside-records/">Riverside Records</a> Catalog: Jazzland series’. Jazz Discography Project. Available at: <a href="https://www.jazzdisco.org/riverside-records/catalog-jazzland-series/" target="_blank" rel="noopener noreferrer">https://www.jazzdisco.org/riverside-records/catalog-jazzland-series/</a> (Accessed: 2026-06-11). <a class="fnback" href="#fnref-jzd">↩</a></li>
-        <li id="fn-wiki">Wikipedia (n.d.) ‘Riverside Records’. Wikimedia Foundation. Available at: <a href="https://en.wikipedia.org/wiki/Riverside_Records" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Riverside_Records</a> (Accessed: 2026-06-11). <a class="fnback" href="#fnref-wiki">↩</a></li>
-        <li id="fn-org">organissimo forums (n.d.) ‘Orpheum Productions (The Vinyl Frontier)’. organissimo.org. Available at: <a href="https://www.organissimo.org/forum/topic/31663-orpheum-productions/" target="_blank" rel="noopener noreferrer">https://www.organissimo.org/forum/topic/31663-orpheum-productions/</a> (Accessed: 2026-06-11). <a class="fnback" href="#fnref-org">↩</a></li>
-      </ol>
-    </details>
-
-  </article>
-
-  <footer class="cvf-ft">
-    <div class="cvf-ft-grid">
-      <div class="cvf-ft-col cvf-ft-store"><a class="cvf-ft-mark" href="/"><img src="/assets/cv_wordmark_ink.svg" alt="코디드바이닐즈" width="140" height="11"></a><span>코디드바이닐즈 회현</span><span>회현 지하쇼핑센터 마열 3호</span><a href="https://www.instagram.com/codedvinyls/" target="_blank" rel="noopener">인스타그램 @codedvinyls</a></div>
-      <div class="cvf-ft-col"><b class="cvf-ft-h">둘러보기</b><a href="/arrivals/">입고</a><a href="/album/">앨범</a><a href="/archive/">아카이브</a><a href="/journal/">저널</a></div>
-      <div class="cvf-ft-col"><a class="cvf-ft-h" href="/store.html">매장·온라인</a><a href="/store.html#visit">회현동 매장</a><a href="/notice/">공지</a><a href="/cd/">매장 CD 코너</a><a href="/store.html#online">온라인 구매</a></div>
-      <div class="cvf-ft-col"><b class="cvf-ft-h">안내</b><a href="/guide/grading/">등급 기준</a><a href="/guide/archival-standard/">보존 관리 기준</a><a href="/guide/glossary/">용어 사전</a><a href="/shipping-returns.html">배송·교환·환불</a><a href="/terms.html">이용약관</a><a href="/privacy.html">개인정보처리방침</a><a href="/about.html">사업자 정보</a></div>
-    </div>
-    <div class="cvf-ft-base"><span class="cvf-ft-plate">THE VINYL ARCHIVE</span><div class="cvf-ft-biz"><span>상호 코디드바이닐즈 · 대표자 최준홍 · 사업자등록번호 286-51-00775</span><span>통신판매업 신고번호 제2026-서울강남-00575호 · <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2865100775" target="_blank" rel="noopener">공정거래위원회 사업자 정보 확인</a></span><span>서울시 강남구 논현로 38길 20 · 전화 <a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span><span>호스팅서비스 제공자 GitHub, Inc.</span></div></div>
+    <div class="cv3-ft-base"><span class="cv3-ft-plate cvf-ft-plate" data-i18n="ft-plate">THE VINYL ARCHIVE</span><div class="cv3-ft-biz cvf-ft-biz" data-i18n="ft-biz"><span>상호 코디드바이닐즈 · 대표자 최준홍 · 사업자등록번호 286-51-00775</span><span>통신판매업 신고번호 제2026-서울강남-00575호 · <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2865100775" target="_blank" rel="noopener">공정거래위원회 사업자 정보 확인</a></span><span>서울시 강남구 논현로 38길 20 · 전화 <a href="tel:050713772895">0507-1377-2895</a> · <a href="mailto:gm@codedvinyls.com">gm@codedvinyls.com</a></span><span>호스팅서비스 제공자 GitHub, Inc.</span></div></div>
   </footer>
 </div>
 
-<script src="/assets/cv-links.js?v=d4885667ddbc" defer></script>
-<script src="/assets/cv-frame.js?v=36eca3bb7c07" defer></script>
+<script src="/assets/cv3-read.js?v=215d849adeaf" defer></script>
 </body>
 </html>

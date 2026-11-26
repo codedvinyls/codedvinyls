@@ -1,0 +1,212 @@
+/* CODEDVINYLS 저널 · 아카이브 · 레이블 v3 (2026-11-22 · 구현 ⑥)
+   기준 = 261121 디자인 기준 문서 design_standard_blank_v1 (§4 머리 줄형 · 이름 칸형 · 글 쪽 · §6-5 이음 줄 · §6-9 구획 · 그림 칸 · 글 줄 · 글 칸 · 사이 글 · 참고문헌)
+   마크업 = _tools/site_read_v3.py · 판 카드 = _tools/site_card.py(모양은 cv3-card.css — 이 파일 앞에 건다) · 동작 = cv3-read.js(판 묶음 보기 낱말 · 「더 보기」 · 참고문헌 펼침).
+   스위치 = site_frame.json "journal3" · "archive3" · "label3"(틀 v3 위에서만 — 토큰 --cv3-… 은 cv3-base.css 가 정한다).
+   · 클래스 = cv3- · 전환 · 애니메이션 · 그림자 · 둥근 모서리 0 · 외부 주소 0 · 채운 단추 0. */
+
+/* ── 쪽 바탕 ── */
+.cv3-rd{box-sizing:border-box;width:auto;max-width:none;margin:0;padding:0 var(--cv3-m);background:var(--cv3-paper);color:var(--cv3-ink);
+  font-family:var(--cv3-sans);font-size:var(--cv3-ui);font-weight:400;font-style:normal;font-synthesis:none;line-height:1.6;
+  letter-spacing:0;text-align:left;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+.cv3-rd *{box-sizing:border-box}
+.cv3-rd a{color:inherit;text-decoration:none}
+.cv3-rd :where(h1,h2,h3,p,figure,ol){margin:0;padding:0;font-weight:400;font-style:normal;letter-spacing:0}
+.cv3-rd :where(b,strong){font-weight:500}
+.cv3-rd :where(em){font-style:normal}
+.cv3-rd img,.cv3-rd video{max-width:100%}
+.cv3-rd [hidden]{display:none !important}
+.cv3-rd a:focus-visible,.cv3-rd button:focus-visible,.cv3-rd summary:focus-visible{outline:2px solid var(--cv3-ink);outline-offset:2px}
+.cv3-rd sup{font-size:var(--cv3-sm);line-height:0;color:var(--cv3-muted)}
+.cv3-rd h1{font-family:var(--cv3-serif);font-size:var(--cv3-d2);line-height:1.18;letter-spacing:-.02em}
+.cv3-t3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--cv3-g)}
+.cv3-kk{font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-go{font-size:var(--cv3-ui);line-height:1.4;white-space:nowrap}
+
+/* ── 경로 줄(입고 · 회차 v3 과 같은 값) ── 13px · 위 24 · 낱말 사이 8 */
+.cvf-on .crumb{margin:0;padding:var(--cv3-s4) var(--cv3-m) 0;gap:var(--cv3-s2);font-family:var(--cv3-sans);font-size:var(--cv3-sm);
+  font-weight:400;line-height:1.4;letter-spacing:0;text-transform:none;color:var(--cv3-muted)}
+.cvf-on .crumb a{margin:0;padding:0;color:var(--cv3-muted)}
+.cvf-on .crumb > span{margin:0;padding:0;color:var(--cv3-muted)}
+
+/* ══ 머리 줄형(§4) ══ 쪽 이름(48) + 한 줄 소개(504) — 아카이브 머리 · 저널 목록 */
+.cv3-pgh{padding-top:var(--cv3-s5);align-items:baseline}
+.cv3-pgh .cv3-dek{grid-column:2 / 4;max-width:38em;font-size:var(--cv3-body);line-height:1.7;color:var(--cv3-ink2)}
+
+/* ── 구획(§6-9) ── 위 64 · 윗선 · 안 위 32 · 이름 칸 h2 24/500 */
+.cv3-sec{margin-top:var(--cv3-s7);padding-top:var(--cv3-s5);border-top:1px solid var(--cv3-line)}
+.cv3-sec > .cv3-rail,.cv3-dh > .cv3-rail{grid-column:1;min-width:0}
+.cv3-sec > .cv3-main{grid-column:2 / 4;min-width:0}
+.cv3-rail h2{font-size:var(--cv3-k2);font-weight:500;line-height:1.3;letter-spacing:-.01em}
+.cv3-rail .cv3-n{display:block;margin-top:var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-rail .cv3-go{display:inline-block;margin-top:var(--cv3-s3)}
+.cv3-rail .cv3-tx{max-width:24em;margin-top:var(--cv3-s3);font-size:var(--cv3-ui);line-height:1.7;color:var(--cv3-ink2)}
+
+/* ── 이음 줄(§6-5 두 선 꼴) ── 이름 24 + → (504) · 덧말 13 흐림(960) */
+.cv3-doors{display:block;margin:0;padding:0}
+.cv3-door{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--cv3-g);align-items:baseline;padding:var(--cv3-s3) 0;
+  border-top:1px solid var(--cv3-line)}
+.cv3-nm{font-size:var(--cv3-k2);line-height:1.3}
+.cv3-arr{white-space:nowrap}
+.cv3-mt{font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-main > .cv3-doors:first-child .cv3-door:first-child{padding-top:0;border-top:0}
+
+/* ── 그림 칸(§6-9) ── 판 카드와 같은 폭 · 받침 + 글 한 줄 */
+.cv3-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--cv3-g);row-gap:var(--cv3-s6)}
+.cv3-tile{display:flex;flex-direction:column;min-width:0}
+.cv3-tjk{display:block;aspect-ratio:1/1;padding:var(--cv3-s2);background:var(--cv3-stage);overflow:hidden}
+.cv3-tjk img{display:block;width:100%;height:100%;max-width:none;margin:0;object-fit:cover}
+.cv3-tjk.cv3-lg img{object-fit:contain}
+.cv3-tt{margin-top:var(--cv3-s3);font-size:var(--cv3-ui);line-height:1.4}
+
+/* ── 글 줄(§6-9 · 저널 목록) ── 그림 204(504 선) + 날짜 13 · 제목 17/500 · 소개 15 둘째 글(732 선) */
+.cv3-jl{display:flex;flex-direction:column;row-gap:var(--cv3-s6)}
+.cv3-jrow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto 1fr;column-gap:var(--cv3-g);align-items:start}
+.cv3-jrow .cv3-im{grid-column:1;grid-row:1 / 3;display:block;aspect-ratio:1/1;background:var(--cv3-stage);overflow:hidden}
+.cv3-jrow .cv3-im img{display:block;width:100%;height:100%;max-width:none;object-fit:cover}
+.cv3-jhd{grid-column:2 / 5;display:flex;flex-direction:column;min-width:0}
+.cv3-d{font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted);font-variant-numeric:tabular-nums}
+.cv3-t{margin-top:var(--cv3-s1);font-size:var(--cv3-body);font-weight:500;line-height:1.6}
+.cv3-dk{grid-column:2 / 5;max-width:38em;margin-top:var(--cv3-s2);font-size:var(--cv3-ui);line-height:1.7;color:var(--cv3-ink2)}
+
+/* ══ 글 쪽(§4 · 저널 글) ══ 그 글의 판(48 ~ 480) · 제목 · 본문(504 · 폭 660) */
+.cv3-jh{padding-top:var(--cv3-s5);align-items:start}
+.cv3-jcv{grid-column:1;min-width:0}
+.cv3-jcv .cv3-im{display:block;aspect-ratio:1/1;background:var(--cv3-stage);overflow:hidden}
+.cv3-jcv .cv3-im img{display:block;width:100%;height:100%;max-width:none;object-fit:cover}
+.cv3-jcv figcaption{margin-top:var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.6;color:var(--cv3-muted)}
+.cv3-jtx{grid-column:2 / 4;min-width:0}
+.cv3-jh h1{margin-top:var(--cv3-s2)}
+.cv3-jh .cv3-dek{max-width:38em;margin-top:var(--cv3-s4);font-size:var(--cv3-body);line-height:1.7;color:var(--cv3-ink2)}
+.cv3-jb{margin-top:var(--cv3-s7);padding-top:var(--cv3-s5);border-top:1px solid var(--cv3-line)}
+.cv3-body{grid-column:2 / 4;max-width:660px;min-width:0}
+.cv3-body h2{margin:var(--cv3-s7) 0 var(--cv3-s4);font-size:var(--cv3-k2);font-weight:500;line-height:1.3;letter-spacing:-.01em}
+.cv3-body > h2:first-child{margin-top:0}
+.cv3-body p{margin:0 0 var(--cv3-s4);font-size:var(--cv3-body);line-height:1.9}
+.cv3-body p a,.cv3-fig figcaption a,.cv3-jcv figcaption a{border-bottom:1px solid var(--cv3-line)}
+.cv3-body sup a{border-bottom:0}
+.cv3-fig{margin:var(--cv3-s6) 0}
+.cv3-fig img,.cv3-fig video{display:block;width:100%;height:auto}
+.cv3-fig figcaption{margin-top:var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.6;color:var(--cv3-muted)}
+.cv3-src{display:block}
+
+/* 글 끝 앨범 줄 — 이름표 + 아티스트 · 앨범 · 판본 줄 · 가격(가격은 판 카드와 같이 판본 줄 바로 아래 4) / 카드 꼴 = 판 카드 한 벌 */
+.cv3-endrec{margin:var(--cv3-s6) 0 var(--cv3-s5);padding-top:var(--cv3-s3);border-top:1px solid var(--cv3-line)}
+.cv3-body .cv3-endrec .cv3-kk{margin:0 0 var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.4}
+.cv3-hcard{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.cv3-hcard + .cv3-hcard{margin-top:var(--cv3-s3)}
+.cv3-hcard .cv3-ar{font-size:var(--cv3-ui);font-weight:500;line-height:1.4}
+.cv3-hcard .cv3-al{font-size:var(--cv3-ui);line-height:1.4}
+.cv3-hcard .cv3-ed{margin-top:var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-hcard .cv3-pr{margin-top:var(--cv3-s1);font-size:var(--cv3-ui);font-weight:500;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cv3-hcard .cv3-pr .cv3-ch{font-weight:400;color:var(--cv3-muted)}
+.cv3-hcard .cv3-pr.cv3-so{font-weight:400;color:var(--cv3-sold)}
+.cv3-hcard .cv3-ed:empty,.cv3-hcard .cv3-pr:empty{display:none}
+.cv3-endrec-c .cv3-cards{margin-top:var(--cv3-s3)}
+.cv3-body p.cv3-rel{font-size:var(--cv3-ui);line-height:1.6}
+
+/* 참고문헌(글 쪽) — 접히는 꼴 · 제목 15 · 내용 13 흐림 */
+.cv3-refs{margin-top:var(--cv3-s6);padding-top:var(--cv3-s3);border-top:1px solid var(--cv3-line);font-size:var(--cv3-sm);line-height:1.7;color:var(--cv3-muted)}
+.cv3-refs summary,.cv3-refs2 summary{font-size:var(--cv3-ui);color:var(--cv3-ink);cursor:pointer}
+.cv3-refs ol,.cv3-refs2 ol{margin-top:var(--cv3-s3);padding-left:var(--cv3-s4)}
+.cv3-refs li{margin-bottom:var(--cv3-s1);overflow-wrap:anywhere}
+.cv3-refs2 li{overflow-wrap:anywhere}
+.cv3-refs li:focus{outline:0;color:var(--cv3-ink)}
+.cv3-body .cv3-refs p{margin:var(--cv3-s3) 0 0;font-size:var(--cv3-sm);line-height:1.7}
+
+/* ══ 이름 칸형(§4 · 레이블 · 아카이브 글) ══ 왼쪽 1/3 = 이름표 · 쪽 이름 · 사실 줄 · 소개 / 오른쪽 2/3 = 판 묶음 */
+.cv3-lbp{padding-top:var(--cv3-s4);align-items:start}
+.cv3-lbp > .cv3-rail{grid-column:1;min-width:0}
+.cv3-lbp > .cv3-main{grid-column:2 / 4;min-width:0}
+.cv3-lbp h1{margin-top:var(--cv3-s2)}
+.cv3-meta{display:flex;flex-wrap:wrap;gap:var(--cv3-s1) var(--cv3-s3);margin-top:var(--cv3-s3);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-meta b{font-weight:500;color:var(--cv3-ink)}
+.cv3-p{margin-top:var(--cv3-s5);font-size:var(--cv3-body);line-height:1.8}
+.cv3-p p + p{margin-top:var(--cv3-s3)}
+.cv3-p a,.cv3-ey b a,.cv3-ed a,.cv3-dhp a,.cv3-dx p a,.cv3-figs figcaption a{border-bottom:1px solid var(--cv3-line)}
+.cv3-rd sup a{border-bottom:0}
+
+/* 판 묶음 — 머리 줄(이름 · 보기 낱말 · 모두 보기) + 판 카드 4열 + 「더 보기」 */
+.cv3-lt{display:flex;justify-content:space-between;align-items:baseline;gap:var(--cv3-s2) var(--cv3-s4);margin-bottom:var(--cv3-s3)}
+.cv3-ltk{font-size:var(--cv3-ui);font-weight:500;line-height:1.4}
+.cv3-chips{display:flex;gap:var(--cv3-s4)}
+.cv3-chips button{-webkit-appearance:none;appearance:none;margin:0;padding:var(--cv3-s1) 0;border:0;border-radius:0;background:none;box-shadow:none;
+  font:inherit;font-size:var(--cv3-ui);line-height:1.4;letter-spacing:0;color:var(--cv3-muted);cursor:pointer}
+.cv3-chips button[aria-pressed="true"]{color:var(--cv3-ink);box-shadow:inset 0 -1px 0 var(--cv3-ink)}
+.cv3-lt .cv3-go{margin-left:auto}
+.cv3-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--cv3-g);row-gap:var(--cv3-s6)}
+.cv3-pc{min-width:0}
+.cv3-js .cv3-pc.cv3-off,.cv3-js .cv3-pc.cv3-later{display:none}
+.cv3-more{-webkit-appearance:none;appearance:none;display:block;width:100%;margin:var(--cv3-s6) 0 0;padding:var(--cv3-s3) 0 0;border:0;
+  border-top:1px solid var(--cv3-line);border-radius:0;background:none;box-shadow:none;font:inherit;font-size:var(--cv3-ui);line-height:1.4;
+  color:inherit;letter-spacing:0;text-align:left;cursor:pointer}
+
+/* ── 글 구획(§6-9 글 칸 · 사이 글) ── 구획 이름(48) · 글 칸(504 · 폭 660) */
+.cv3-dh{margin-top:var(--cv3-s7);padding-top:var(--cv3-s5);border-top:1px solid var(--cv3-line)}
+.cv3-dhp{grid-column:2 / 4;max-width:38em;font-size:var(--cv3-body);line-height:1.8}
+.cv3-dx{grid-column:2 / 4;max-width:660px;min-width:0}
+.cv3-dx p{font-size:var(--cv3-body);line-height:1.8}
+.cv3-dx > * + p{margin-top:var(--cv3-s3)}
+.cv3-figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--cv3-g);margin-top:var(--cv3-s4)}
+.cv3-figs img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.cv3-figs figcaption{margin-top:var(--cv3-s2);font-size:var(--cv3-sm);line-height:1.6;color:var(--cv3-muted)}
+.cv3-cl{margin-top:var(--cv3-s4);padding:var(--cv3-s3) 0;border-top:1px solid var(--cv3-line);border-bottom:1px solid var(--cv3-line)}
+.cv3-dx .cv3-cl p{font-size:var(--cv3-ui);line-height:1.7;color:var(--cv3-ink2)}
+.cv3-dx .cv3-cl + p,.cv3-dx .cv3-figs + p{margin-top:var(--cv3-s4)}
+.cv3-dx > :first-child{margin-top:0}
+
+/* ── 시대 칸(레이블) ── 이름 · 연도(48) · 글(504) · 다룬 수(960) */
+.cv3-eras{margin-top:var(--cv3-s5);border-top:1px solid var(--cv3-line)}
+.cv3-era{padding:var(--cv3-s4) 0;border-bottom:1px solid var(--cv3-line);align-items:start}
+.cv3-ey b{display:block;font-size:var(--cv3-body);font-weight:500;line-height:1.6}
+.cv3-yy{display:block;margin-top:var(--cv3-s1);font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-ed{font-size:var(--cv3-body);line-height:1.8}
+.cv3-eo{font-size:var(--cv3-sm);line-height:1.4;color:var(--cv3-muted)}
+.cv3-eo b{display:block;font-size:var(--cv3-k2);font-weight:400;line-height:1.3;color:var(--cv3-ink)}
+
+/* 참고문헌(레이블 · 아카이브 글) — 504 선 */
+.cv3-refs2{grid-column:2 / 4;margin-top:var(--cv3-s6);font-size:var(--cv3-sm);line-height:1.7;color:var(--cv3-muted)}
+
+/* ── 601 ~ 1199(시안 없음 · 앨범 목록 · 회차 v3 과 같은 끊는 점) ── 한 열(이름 칸 위 · 내용 아래) · 판 카드 4열 · 글 폭 660 */
+@media (max-width:1199px){
+  .cv3-t3{grid-template-columns:minmax(0,1fr)}
+  .cv3-pgh .cv3-dek,.cv3-sec > .cv3-main,.cv3-jtx,.cv3-body,.cv3-lbp > .cv3-main,.cv3-dhp,.cv3-dx,.cv3-refs2,.cv3-jcv{grid-column:1}
+  .cv3-pgh .cv3-dek{margin-top:var(--cv3-s3)}
+  .cv3-sec > .cv3-main{margin-top:var(--cv3-s4)}
+  .cv3-jh{display:flex;flex-direction:column}
+  .cv3-jtx{order:1}
+  .cv3-jcv{order:2;width:100%;max-width:432px;margin-top:var(--cv3-s4)}
+  .cv3-lbp > .cv3-main{margin-top:var(--cv3-s5)}
+  .cv3-p,.cv3-rail .cv3-tx{max-width:660px}
+  .cv3-dhp,.cv3-dx{margin-top:var(--cv3-s3)}
+  .cv3-era{row-gap:var(--cv3-s2)}
+  .cv3-ed{max-width:660px}
+}
+@media (max-width:767px){
+  .cv3-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* ── 600 이하 = 시안(390) ── */
+@media (max-width:600px){
+  .cv3-pgh{padding-top:var(--cv3-s4)}
+  .cv3-sec,.cv3-dh{margin-top:var(--cv3-s6);padding-top:var(--cv3-s4)}
+  .cv3-tiles{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:var(--cv3-s5)}
+  .cv3-door{grid-template-columns:minmax(0,1fr);row-gap:var(--cv3-s1)}
+  .cv3-door .cv3-mt{order:-1}
+  .cv3-jl{row-gap:var(--cv3-s5)}
+  .cv3-jrow{grid-template-columns:96px minmax(0,1fr);grid-template-rows:auto}
+  .cv3-jrow .cv3-im{grid-row:1}
+  .cv3-jhd{grid-column:2}
+  .cv3-dk{grid-column:1 / -1;margin-top:var(--cv3-s3)}
+  .cv3-jh{padding-top:var(--cv3-s4)}
+  .cv3-jcv{max-width:none}
+  .cv3-jb{margin-top:var(--cv3-s6);padding-top:var(--cv3-s4)}
+  .cv3-body p{line-height:1.85}
+  .cv3-body h2{margin-top:var(--cv3-s6)}
+  .cv3-p{margin-top:var(--cv3-s4)}
+  .cv3-lt{flex-wrap:wrap}
+  .cv3-cards{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:var(--cv3-s5)}
+  .cv3-more{margin-top:var(--cv3-s5)}
+  .cv3-figs{column-gap:var(--cv3-s2)}
+}
+
+@media print{.cv3-chips,.cv3-more{display:none !important}}

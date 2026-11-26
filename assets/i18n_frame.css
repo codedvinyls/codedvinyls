@@ -55,6 +55,12 @@ html:lang(zh-Hans),html:lang(zh-CN){--cvf-sans:var(--cv-sans-sc);--sans:var(--cv
   --display:"Archivo",var(--cv-sans-sc);--mono:"IBM Plex Mono",ui-monospace,Menlo,"CV Sans SC","PingFang SC",monospace}
 html:lang(zh-Hant),html:lang(zh-TW),html:lang(zh-HK){--cvf-sans:var(--cv-sans-tc);--sans:var(--cv-sans-tc);--serif:var(--cv-serif-tc);--cvf-serif:var(--cv-serif-tc);
   --display:"Archivo",var(--cv-sans-tc);--mono:"IBM Plex Mono",ui-monospace,Menlo,"CV Sans TC","PingFang TC",monospace}
+/* ★261124 새 틀(v3 · cv3-base.css)의 글꼴 변수 --cv3-sans · --cv3-serif 도 언어별로 — 안 바꾸면 한국어 글꼴(IBM Plex Sans KR)에 든 한자만 그 글꼴로,
+   나머지 한자 · 가나는 뒤 글꼴로 그려져 한 낱말 안에서 글꼴이 섞인다(편집장 dg-1176 미결 ③ · 「入荷」「用語集」).
+   한자 = 지역판을 맨 앞에(unicode-range 가 한자 · 중국어 문장부호만 잡는다) → 라틴 = IBM Plex Sans KR(새 틀 글꼴 그대로) → 가나 · 그 밖 = Pretendard. */
+html:lang(ja){--cv3-sans:"CV Sans JP","IBM Plex Sans KR","Pretendard Variable","Pretendard","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo","Apple SD Gothic Neo",system-ui,sans-serif;--cv3-serif:var(--cv-serif-ja)}
+html:lang(zh-Hans),html:lang(zh-CN){--cv3-sans:"CV Sans SC","IBM Plex Sans KR","Pretendard Variable","Pretendard","PingFang SC","Microsoft YaHei","Apple SD Gothic Neo",system-ui,sans-serif;--cv3-serif:var(--cv-serif-sc)}
+html:lang(zh-Hant),html:lang(zh-TW),html:lang(zh-HK){--cv3-sans:"CV Sans TC","IBM Plex Sans KR","Pretendard Variable","Pretendard","PingFang TC","Microsoft JhengHei","Apple SD Gothic Neo",system-ui,sans-serif;--cv3-serif:var(--cv-serif-tc)}
 html:lang(ja) body.cvb-on{--cvb-serif:var(--cv-serif-ja)}
 html:lang(zh-Hans) body.cvb-on,html:lang(zh-CN) body.cvb-on{--cvb-serif:var(--cv-serif-sc)}
 html:lang(zh-Hant) body.cvb-on,html:lang(zh-TW) body.cvb-on,html:lang(zh-HK) body.cvb-on{--cvb-serif:var(--cv-serif-tc)}
